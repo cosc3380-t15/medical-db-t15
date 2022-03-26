@@ -1,0 +1,327 @@
+body {
+  margin: 0px;
+  background-color: rgb(0, 140, 255);
+  /* font-family: "Oxygen", sans-serif; */
+}
+.navbar {
+  background-color: rgb(0, 140, 255);
+  height: 100px;
+  padding-right: 80px;
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.nav-button {
+  margin-top: 30px;
+  margin-right: 30px;
+  padding: 10px 20px;
+  font-weight: 800;
+  color: rgb(0, 140, 255);
+  background-color: white;
+  border: none;
+  float: right;
+  border-radius: 2px;
+  border: 1px solid white;
+}
+.nav-button:hover {
+  margin-top: 30px;
+  margin-right: 30px;
+  padding: 10px 20px;
+  font-weight: 800;
+  color: white;
+  background-color: rgb(0, 140, 255);
+  border: none;
+  float: right;
+  border-radius: 2px;
+  border: 1px solid white;
+  transition: 0.5s;
+}
+.nav-login {
+  margin-top: 30px;
+  margin-right: 30px;
+  padding: 10px 20px;
+  font-weight: 800;
+  color: white;
+  background-color: rgb(0, 140, 255);
+  border: none;
+  float: right;
+  border-radius: 2px;
+  border: 1px solid white;
+}
+.nav-login:hover {
+  margin-top: 30px;
+  margin-right: 30px;
+  padding: 10px 20px;
+  font-weight: 800;
+  color: white;
+  background-color: rgb(83, 169, 240);
+  border: none;
+  float: right;
+  border-radius: 2px;
+  border: 1px solid white;
+  transition: 0.5s;
+}
+.logo {
+  margin-top: 30px;
+  margin-left: 80px;
+  float: left;
+  color: white;
+}
+.menu {
+  margin-top: 40px;
+  margin-left: 50px;
+  float: left;
+  color: white;
+  font-weight: 50;
+  padding-bottom: 10px;
+}
+.menu:hover {
+  margin-top: 40px;
+  margin-left: 50px;
+  float: left;
+  color: white;
+  font-weight: 50;
+  margin-top: 36px;
+  transition: 0.2s;
+}
+.menu-1 {
+  margin-top: 40px;
+  margin-left: 400px;
+  float: left;
+  color: white;
+  font-weight: 50;
+}
+.container {
+  padding-top: 100px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 0px;
+  margin-bottom: 150px;
+  width: auto;
+  height: auto;
+  background-color: rgb(0, 140, 255);
+  color: white;
+  display: flex;
+}
+.h1 {
+  font-size: 70px;
+  margin-top: 30px;
+  font-weight: 500;
+  color: white;
+  width: 800px;
+}
+.h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 300;
+  width: 600px;
+}
+.text {
+  width: 60%;
+  float: left;
+  height: 450px;
+}
+.image {
+  width: 100%;
+  height: 550px;
+  float: right;
+  /* background-image: url("imgg.png");
+  background-repeat: no-repeat; */
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+}
+p {
+  margin: 0px;
+  font-size: 20px;
+}
+h3 {
+  float: left;
+}
+.app-button {
+  margin-top: 100px;
+  margin-right: 30px;
+  padding: 10px 20px;
+  font-weight: 800;
+  color: rgb(0, 140, 255);
+  background-color: white;
+  border: none;
+  padding: 20px 50px;
+  border-radius: 2px;
+}
+.app-button:hover {
+  margin-top: 100px;
+  margin-right: 30px;
+  padding: 10px 20px;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 140, 255);
+  border: none;
+  padding: 20px 50px;
+  border: 1px solid white;
+  transition: 0.5s;
+}
+.container2 {
+  padding-top: 100px;
+  height: 700px;
+  width: 100%;
+  background-color: rgb(221, 238, 255);
+}
+.text2 {
+  width: 25%;
+  color: rgb(0, 140, 255);
+  font-size: 30px;
+  margin-left: 80px;
+  padding-top: 0px;
+  float: left;
+}
+.box {
+  width: 15%;
+  height: 400px;
+  float: left;
+  margin: 10px;
+  margin-top: 50px;
+  font-weight: 600;
+  background-color: white;
+  box-shadow: 0 0 50px rgb(93, 182, 255);
+  box-shadow: 0 0 55px rgb(161, 211, 252);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+.box-alt {
+  width: 15%;
+  height: 400px;
+  float: left;
+  margin: 10px;
+  margin-top: 150px;
+  font-weight: 600;
+  background-color: white;
+  box-shadow: 0 0 50px rgb(132, 199, 253);
+  box-shadow: 0 0 55px rgb(148, 206, 253);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+.imgg {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.pp {
+  font-size: 35px;
+  font-weight: 300;
+  color: rgb(0, 140, 255);
+}
+
+/* LOGIN PAGE */
+
+.login {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(221, 238, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-login {
+  width: 80%;
+  height: 80%;
+  background-color: rgb(0, 140, 255);
+  box-shadow: 0 0 50px rgb(132, 199, 253);
+  box-shadow: 0 0 55px rgb(148, 206, 253);
+  border-radius: 10%;
+}
+.half-box-login {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(0, 140, 255);
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+}
+.half-box-login2 {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+}
+.login-image {
+  width: 80%;
+}
+.login-form {
+  align-items: center;
+  padding: 10%;
+}
+.login-label {
+  display: flex;
+  font-size: 150%;
+  color: white;
+}
+.login-input {
+  display: flex;
+  margin-top: 5px;
+  width: 98%;
+  font-size: 180%;
+  border-radius: 35px;
+  border: 1px solid blue;
+  padding: 5px 15px;
+  background-color: rgb(221, 238, 255);
+}
+.login-button {
+  margin: 20px;
+  padding: 10px 35px;
+  font-weight: 800;
+  color: rgb(0, 140, 255);
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+.login-button:hover {
+  margin: 20px;
+  padding: 10px 35px;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 140, 255);
+  border: 1px solid white;
+  transition: 0.5s;
+}
+.login-buttons {
+  text-align: center;
+}
+.register-group {
+  display: flex;
+}
+.register-login {
+  margin: 20px;
+  padding: 10px 35px;
+  font-weight: 800;
+  color: white;
+  background-color: rgb(0, 140, 255);
+  border: 1px solid white;
+  border-radius: 20px;
+}
+.register-login:hover {
+  margin: 20px;
+  padding: 10px 35px;
+  font-weight: 800;
+  color: rgb(0, 140, 255);
+  background-color: rgb(148, 206, 253);
+  border: 1px solid white;
+  transition: 0.5s;
+}
+.width {
+  width: 99%;
+}
+.home-button {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  margin-top: 5px;
+  font-weight: 400;
+}
