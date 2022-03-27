@@ -240,7 +240,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10%;
+  border-radius: 8%;
 }
 .half-box-login2 {
   width: 50%;
@@ -249,14 +249,14 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10%;
+  border-radius: 8%;
 }
 .login-image {
   width: 80%;
 }
 .login-form {
   align-items: center;
-  padding: 10%;
+  padding: 5%;
 }
 .login-label {
   display: flex;
@@ -311,7 +311,7 @@ h3 {
   padding: 10px 35px;
   font-weight: 800;
   color: rgb(0, 140, 255);
-  background-color: rgb(148, 206, 253);
+  background-color: rgb(255, 255, 255);
   border: 1px solid white;
   transition: 0.5s;
 }
