@@ -5,7 +5,7 @@
 
 <head>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
 
 </head>
 
@@ -18,10 +18,11 @@
                     <input type="text" class="login-input" id="username">
 
                     <label for="text" class="login-label">Password:</label>
-                    <input type="password" class="login-input" id="username">
+                    <input type="password" class="login-input" id="password">
 
                     <div class="login-buttons">
-                        <button class="login-button">Log In</button>
+                        <!-- <button class="login-button">Log In</button> -->
+                        <button type="submit" class="login-button" onClick="auth(event)">Log In</button>
                         <a href="register.html"><button class="register-login">Register</button></a>
 
                     </div>
@@ -33,6 +34,21 @@
             </div>
         </div>
     </div>
+    <script>
+        function auth(event) {
+            event.preventDefault();
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if ((username === "admin" && password === "user") || (username === "drago" && password === "nonov")) {
+                window.location.replace("home.html");
+            } else {
+                alert("Invalid information");
+                return;
+            }
+        }
+    </script>
 </body>
 
 </html>
