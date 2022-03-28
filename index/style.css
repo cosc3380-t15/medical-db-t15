@@ -15,7 +15,7 @@ html,body {
 .navbar {
   display: flex;
   width: 86vw;
-  padding: 40px 7vw;
+  padding: 20px 7vw;
   background-color: rgb(0, 140, 255);
   z-index: 9999;
 }
@@ -99,7 +99,7 @@ html,body {
   background-color: rgb(0, 140, 255);
   color: white;
   display: flex;
-  scroll-margin-top: 121px;
+  scroll-margin-top: 81px;
 }
 .text {
   margin-top: auto;
@@ -178,7 +178,7 @@ p {
   display: flex;
   width: 100%;
   background-color: rgb(221, 238, 255);
-  scroll-margin-top: 121px;
+  scroll-margin-top: 81px;
 }
 .text2 {
   margin-top: auto;
@@ -236,7 +236,7 @@ p {
   flex-flow: column;
   width: 100%;
   background-color: rgb(159, 205, 252);
-  scroll-margin-top: 121px;
+  scroll-margin-top: 81px;
 }
 .title {
   display: inline;
@@ -293,7 +293,7 @@ p {
   /* height: 1000px; */
   width: 100%;
   background-color: rgb(221, 238, 255);
-  scroll-margin-top: 121px;
+  scroll-margin-top: 81px;
 }
 .panel {
   margin: 15px auto;
@@ -409,7 +409,7 @@ p {
   min-height: 100vh;
   width: 100%;
   background-color: rgb(159, 205, 252);
-  scroll-margin-top: 121px;
+  scroll-margin-top: 81px;
 }
 .title-doc {
   display: inline;
