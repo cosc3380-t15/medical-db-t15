@@ -18,6 +18,10 @@ html,body {
   padding: 20px 7vw;
   background-color: #008cff;
   z-index: 9999;
+  transition: 200ms ease-in-out;
+}
+.floatingNav {
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.199);
 }
 .sticky {
   position: fixed;
