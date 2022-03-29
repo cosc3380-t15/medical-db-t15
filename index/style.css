@@ -16,7 +16,7 @@ html,body {
   display: flex;
   width: 86vw;
   padding: 20px 7vw;
-  background-color: rgb(0, 140, 255);
+  background-color: #008cff;
   z-index: 9999;
 }
 .sticky {
@@ -27,24 +27,25 @@ html,body {
   vertical-align: middle;
   align-items: center;
   margin: 0px;
+  padding: 0 5px;
+  margin-right: 25px;
   float: left;
   color: white;
+  border-radius: 2px;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.logo:hover {
+  color: #008cff;
+  box-shadow: inset 125px 0 #fff;
 }
 .menu {
-  margin: 0px;
-  margin-top: 10px;
-  margin-left: 50px;
+  margin: 10px 25px 0;
   float: left;
   color: white;
   font-weight: 50;
 }
 .menu:hover {
-  margin: 0px;
-  margin-top: 5px;
-  margin-left: 50px;
-  float: left;
-  color: white;
-  font-weight: 50;
+  transform: translate(0, -.125em);
   transition: 0.2s;
 }
 .nav-login {
@@ -67,7 +68,7 @@ html,body {
   float: right;
   border-radius: 2px;
   border: 1px solid white;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .nav-button {
   padding: 10px 20px;
@@ -84,11 +85,10 @@ html,body {
   font-weight: 800;
   color: white;
   background-color: rgb(0, 140, 255);
-  border: none;
   float: right;
   border-radius: 2px;
-  border: 1px solid white;
-  transition: 0.5s;
+  outline: 1px solid white;
+  transition: 0.3s;
 }
 
 /********************************************************* CONTAINER ONE *********************************************/
@@ -131,9 +131,12 @@ p {
   margin-top: 20px;
   font-weight: 300;
 }
-.app-button {
-  max-width: 300px;
+.app-container {
+  width: fit-content;
+  height: fit-content;
   margin-top: 100px;
+}
+.app-button {
   padding: 10px 20px;
   font-weight: 800;
   color: rgb(0, 140, 255);
@@ -142,16 +145,12 @@ p {
   padding: 20px 50px;
   border-radius: 2px;
 }
-.app-button:hover {
-  margin-top: 100px;
-  padding: 10px 20px;
-  font-weight: 800;
+.app-button:hover,
+.app-button:focus {
   color: rgb(255, 255, 255);
   background-color: rgb(0, 140, 255);
-  border: none;
-  padding: 20px 50px;
-  border: 1px solid white;
-  transition: 0.5s;
+  outline: 1px solid white;
+  transition: 0.3s;
 }
 .image {
   margin-top: auto;
