@@ -32,7 +32,7 @@ html,body {
   float: left;
   color: white;
   border-radius: 2px;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  transition: 200ms ease-in-out;
 }
 .logo:hover {
   color: #008cff;
@@ -43,10 +43,10 @@ html,body {
   float: left;
   color: white;
   font-weight: 50;
+  transition: 100ms;
 }
 .menu:hover {
   transform: translate(0, -.125em);
-  transition: 0.2s;
 }
 .nav-login {
   margin-left: 30px;
@@ -57,18 +57,11 @@ html,body {
   border: none;
   float: right;
   border-radius: 2px;
-  border: 1px solid white;
+  outline: 1px solid white;
+  transition: 200ms ease-in-out;
 }
 .nav-login:hover {
-  padding: 10px 20px;
-  font-weight: 800;
-  color: white;
   background-color: rgb(83, 169, 240);
-  border: none;
-  float: right;
-  border-radius: 2px;
-  border: 1px solid white;
-  transition: 0.3s;
 }
 .nav-button {
   padding: 10px 20px;
@@ -78,17 +71,12 @@ html,body {
   border: none;
   float: right;
   border-radius: 2px;
-  border: 1px solid white;
+  outline: 1px solid white;
+  transition: 200ms ease-in-out;
 }
 .nav-button:hover {
-  padding: 10px 20px;
-  font-weight: 800;
   color: white;
   background-color: rgb(0, 140, 255);
-  float: right;
-  border-radius: 2px;
-  outline: 1px solid white;
-  transition: 0.3s;
 }
 
 /********************************************************* CONTAINER ONE *********************************************/
@@ -141,16 +129,18 @@ p {
   font-weight: 800;
   color: rgb(0, 140, 255);
   background-color: white;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.199);
   border: none;
   padding: 20px 50px;
   border-radius: 2px;
+  outline: 1px solid white;
+  transition: 200ms ease-in-out;
 }
 .app-button:hover,
 .app-button:focus {
   color: rgb(255, 255, 255);
   background-color: rgb(0, 140, 255);
-  outline: 1px solid white;
-  transition: 0.3s;
+  box-shadow: none;
 }
 .image {
   margin-top: auto;
@@ -186,7 +176,6 @@ p {
   width: 25%;
   color: rgb(0, 140, 255);
   font-size: 2vw;
-  /* font-size: 30px; */
   float: left;
 }
 .text3 {
@@ -194,9 +183,7 @@ p {
 }
 .pp {
   display: inline;
-
   font-size: 1.4vw;
-
   font-weight: 300;
   margin-bottom: 50px;
   color: rgb(0, 140, 255);
@@ -262,7 +249,8 @@ p {
   color: white;
   width: 25%;
   height: 250px;
-  background-color: rgb(102, 130, 255);
+  background-color: #6682ff;
+  box-shadow: 0 0 15px 1px #4f5ea8bb;
   margin: 25px;
   border-radius: 20px;
   display: flex;
@@ -276,7 +264,6 @@ p {
 }
 .tile-text {
   font-size: 18px;
-  /* margin: 10px; */
 }
 .tile-20 {
   display: flex;
@@ -298,7 +285,6 @@ p {
   display: flex;
   flex-flow: column;
   padding-bottom: 60px;
-  /* height: 1000px; */
   width: 100%;
   background-color: rgb(221, 238, 255);
   scroll-margin-top: 81px;
@@ -431,6 +417,7 @@ p {
   width: 33%;
   height: 250px;
   background-color: rgb(102, 130, 255);
+  box-shadow: 0 0 15px 1px #4f5ea8bb;
   margin: 30px;
   border-radius: 20px;
   display: flex;
@@ -448,11 +435,9 @@ p {
   justify-content: center;
   width: 70%;
   margin: auto 2%;
-  /* border: 1px solid black; */
 }
 .tile-50 {
   width: 75%;
-  /* border: 1px solid black; */
   color: white;
   text-align: left;
   margin-top: 15px;
