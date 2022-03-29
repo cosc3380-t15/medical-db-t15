@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans-serif">
+<script type="text/javascript" src="scroll.js"></script>
 
 <head>
 
@@ -247,6 +248,16 @@
         </div>
         
     </div>
+    <script>
+        window.addEventListener('scroll',(e)=>{
+          const navbar = document.querySelector('.navbar.sticky');
+          if(window.pageYOffset>0){
+            navbar.classList.add("floatingNav");
+          }else{
+            navbar.classList.remove("floatingNav");
+          }
+        });
+      </script>
 </body>
 
 </html>
