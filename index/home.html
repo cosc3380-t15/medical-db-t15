@@ -33,7 +33,7 @@
             <button class="nav-button">Contact Us</button>
         </div>
     </div>
-    <div id="home" class="container">
+    <div id="home" class="container shadow">
         <div class="text">
             <p>Lorem ipsum dolor sit amet</p>
             <p class="h11">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -76,7 +76,7 @@
             <p class="pp">Lorem ipsum</p>
         </div>
     </div>
-    <div id="ancor" class="container3">
+    <div id="ancor" class="container3 shadow">
         <div class="title">
             <h1>Lorem ipsum, dolor sit amet</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, ipsum voluptas? Nihil
@@ -153,7 +153,7 @@
         </div>
     </div>
     <div id="prices-ancor" class="container4">
-        <div class="title">
+        <div class="price-title">
             <h1>Lorem ipsum</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
         </div>
@@ -187,7 +187,7 @@
 
         </div>
     </div>
-    <div id="ancor-doctors" class="container5">
+    <div id="ancor-doctors" class="container5 shadow">
         <div class="title-doc">
             <h1>Lorem ipsum</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, ipsum voluptas? Nihil
@@ -252,9 +252,9 @@
         window.addEventListener('scroll',(e)=>{
           const navbar = document.querySelector('.navbar.sticky');
           if(window.pageYOffset>0){
-            navbar.classList.add("floatingNav");
+            navbar.classList.add("shadow");
           }else{
-            navbar.classList.remove("floatingNav");
+            navbar.classList.remove("shadow");
           }
         });
       </script>
