@@ -15,6 +15,15 @@ html,body {
     box-shadow: var(--shadow);
     z-index: 2;
 }
+.navbar {
+    display: flex;
+    position: sticky;
+    width: 98vw;
+    padding: 10px 1vw;
+    background-color: var(--dark);
+    z-index: 9999;
+    transition: box-shadow 200ms ease-in-out;
+}
 .div-w {
     vertical-align: middle;
     width: auto;
@@ -23,14 +32,6 @@ html,body {
     margin-left: auto;
     float: right;
 }
-.navbar {
-    display: flex;
-    width: 98vw;
-    padding: 20px 1vw;
-    background-color: var(--dark);
-    z-index: 9999;
-    transition: box-shadow 200ms ease-in-out;
-}
 .sticky {
     position: fixed;
     top: 0;
@@ -38,9 +39,7 @@ html,body {
 .logo {
     vertical-align: middle;
     align-items: center;
-    margin: 0px;
-    padding: 0 5px;
-    margin-right: 25px;
+    margin: 0;
     float: left;
     color: var(--light);
     border-radius: 2px;
@@ -58,8 +57,8 @@ html,body {
     transition: 100ms;
 }
 .nav-logout {
-    margin-left: 30px;
-    padding: 10px 20px;
+    margin-left: 10px;
+    padding: 10px 15px;
     font-weight: 800;
     color: var(--light);
     background-color: var(--dark);
@@ -73,3 +72,15 @@ html,body {
     background-color: var(--light);
     color: var(--dark);
 }
+.confirm {
+    display: none;
+    padding: 10px 15px;
+    font-weight: 800;
+    color: var(--dark);
+    background-color: var(--light);
+    border: none;
+    float: right;
+    border-radius: 2px;
+    outline: 1px solid var(--light);
+}
+.show {display:block;}
