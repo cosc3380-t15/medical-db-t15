@@ -32,10 +32,6 @@ html,body {
     margin-left: auto;
     float: right;
 }
-.sticky {
-    position: fixed;
-    top: 0;
-}
 .logo {
     vertical-align: middle;
     align-items: center;
