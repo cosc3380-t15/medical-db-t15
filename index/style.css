@@ -4,7 +4,8 @@ html,body {
 }
 :root {
   --shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.199);
-  --light: #F5F1EB;
+  --lighter: #F5F1EB;
+  --light: #dad5cf;
   --mid: #9FCDFC;
   --main: #008CFF;
   --accent: #4C72D2;
@@ -44,18 +45,18 @@ html,body {
   padding: 0 5px;
   margin-right: 25px;
   float: left;
-  color: var(--light);
+  color: var(--lighter);
   border-radius: 2px;
   transition: 200ms ease-in-out;
 }
 .logo:hover {
   color: var(--main);
-  box-shadow: inset 125px 0 var(--light);
+  box-shadow: inset 125px 0 var(--lighter);
 }
 .menu {
   margin: 10px 25px 0;
   float: left;
-  color: var(--light);
+  color: var(--lighter);
   font-weight: 50;
   transition: 100ms;
 }
@@ -66,12 +67,12 @@ html,body {
   margin-left: 30px;
   padding: 10px 20px;
   font-weight: 800;
-  color: var(--light);
+  color: var(--lighter);
   background-color: var(--main);
   border: none;
   float: right;
   border-radius: 2px;
-  outline: 1px solid var(--light);
+  outline: 1px solid var(--lighter);
   transition: 200ms ease-in-out;
 }
 .nav-login:hover {
@@ -81,15 +82,15 @@ html,body {
   padding: 10px 20px;
   font-weight: 800;
   color: var(--main);
-  background-color: var(--light);
+  background-color: var(--lighter);
   border: none;
   float: right;
   border-radius: 2px;
-  outline: 1px solid var(--light);
+  outline: 1px solid var(--lighter);
   transition: 200ms ease-in-out;
 }
 .nav-button:hover {
-  color: var(--light);
+  color: var(--lighter);
   background-color: var(--main);
 }
 
@@ -100,7 +101,7 @@ html,body {
   width: auto;
   height: 100vh;
   background-color: var(--main);
-  color: var(--light);
+  color: var(--lighter);
   display: flex;
   scroll-margin-top: 79px;
 }
@@ -143,17 +144,17 @@ p {
   padding: 10px 20px;
   font-weight: 800;
   color: var(--main);
-  background-color: var(--light);
+  background-color: var(--lighter);
   box-shadow: var(--shadow);
   border: none;
   padding: 20px 50px;
   border-radius: 2px;
-  outline: 1px solid var(--light);
+  outline: 1px solid var(--lighter);
   transition: 200ms ease-in-out;
 }
 .app-button:hover,
 .app-button:focus {
-  color: var(--light);
+  color: var(--lighter);
   background-color: var(--main);
   box-shadow: none;
 }
@@ -183,7 +184,7 @@ p {
   min-height: calc(100vh - 279px);
   display: flex;
   width: 100%;
-  background-color: var(--light);
+  background-color: var(--lighter);
   scroll-margin-top: 79px;
   z-index: 1;
 }
@@ -222,10 +223,10 @@ p {
   margin: 10px;
   margin-top: 50px;
   font-weight: 600;
-  background-color: var(--light);
+  background-color: var(--lighter);
   box-shadow: 0 0 50px rgb(93, 182, 255);
   box-shadow: 0 0 55px rgb(161, 211, 252);
-  background-color: var(--light);
+  background-color: var(--lighter);
   text-align: center;
 }
 .box-alt {
@@ -236,10 +237,10 @@ p {
   margin: 10px;
   margin-top: 150px;
   font-weight: 600;
-  background-color: var(--light);
+  background-color: var(--lighter);
   box-shadow: 0 0 50px rgb(132, 199, 253);
   box-shadow: 0 0 55px rgb(148, 206, 253);
-  background-color: var(--light);
+  background-color: var(--lighter);
   text-align: center;
 }
 
@@ -267,7 +268,7 @@ p {
 }
 .tile {
   padding-bottom: 10px;
-  color: var(--light);
+  color: var(--lighter);
   width: 25%;
   height: 250px;
   background-color: var(--main);
@@ -310,17 +311,17 @@ p {
   width: 100%;
   background-color: var(--dark);
   scroll-margin-top: 79px;
-  color: var(--light);
+  color: var(--lighter);
 }
 .price-title {
   display: inline;
-  color: var(--light);
+  color: var(--lighter);
   text-align: center;
   margin: auto;
 }
 .panel {
   margin: 15px auto;
-  background-color: var(--light);
+  background-color: var(--lighter);
   border-radius: 10px;
   padding: 15px 25px;
   width: 100%;
@@ -395,7 +396,7 @@ p {
 }
 .pricing-button.is-featured {
   background-color: var(--main);
-  color: var(--light);
+  color: var(--lighter);
 }
 .pricing-button.is-featured:hover {
   background-color: #269aff;
@@ -443,7 +444,7 @@ p {
 }
 .tile-doc {
   padding-bottom: 10px;
-  color: var(--light);
+  color: var(--lighter);
   width: 33%;
   height: 250px;
   background-color: var(--accent);
@@ -469,7 +470,7 @@ p {
 }
 .tile-50 {
   width: 75%;
-  color: var(--light);
+  color: var(--lighter);
   text-align: left;
   margin-top: 15px;
   margin-left: 10px;
