@@ -9,15 +9,21 @@ html,body {
     --main: #008CFF;
     --accent: #4C72D2;
     --dark: #2C4A98;
-    --darker: #203368; 
-
+    --darker: #203368;
 }
-
-  .shadow {
+.shadow {
     box-shadow: var(--shadow);
     z-index: 2;
 }
-
+.navbar {
+    display: flex;
+    position: sticky;
+    width: 98vw;
+    padding: 10px 1vw;
+    background-color: var(--dark);
+    z-index: 9999;
+    transition: box-shadow 200ms ease-in-out;
+}
 .div-w {
     vertical-align: middle;
     width: auto;
@@ -43,17 +49,15 @@ html,body {
 .logo {
     vertical-align: middle;
     align-items: center;
-    margin: 0px;
-    padding: 0 5px;
-    margin-right: 25px;
+    margin: 0;
     float: left;
     color: var(--light);
     border-radius: 2px;
     transition: 200ms ease-in-out;
 }
 .logo:hover {
-    color: var(--main);
-    box-shadow: inset 125px 0 var(--light);
+    color: var(--dark);
+    box-shadow: inset 120px 0 var(--light);
 }
 .menu {
     margin: 10px 25px 0;
@@ -62,28 +66,18 @@ html,body {
     font-weight: 50;
     transition: 100ms;
 }
-.nav-login {
-    margin-left: 30px;
-    padding: 10px 20px;
+.nav-logout {
+    margin-left: 10px;
+    padding: 10px 15px;
     font-weight: 800;
     color: var(--light);
     background-color: var(--dark);
-    background-color: var(--main);
     border: none;
     float: right;
     border-radius: 2px;
     outline: 1px solid var(--light);
     transition: 200ms ease-in-out;
 }
-.nav-login:hover {
-    background-color: var(--light);
-    color: var(--dark);
-}
-  
-  .nav-login:hover {
-    background-color: rgb(83, 169, 240);
-}
-
 .sidenav {
     height: 100%; 
     width: 200px; 
@@ -138,3 +132,19 @@ html,body {
   .container {
     padding: 2px 16px;
   }
+.nav-logout:hover {
+    background-color: var(--light);
+    color: var(--dark);
+}
+.confirm {
+    display: none;
+    padding: 10px 15px;
+    font-weight: 800;
+    color: var(--dark);
+    background-color: var(--light);
+    border: none;
+    float: right;
+    border-radius: 2px;
+    outline: 1px solid var(--light);
+}
+.show {display:block;}
