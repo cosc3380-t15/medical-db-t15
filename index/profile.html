@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+    <div class="navbar shadow">
+        <div class="div-w">
+            <a href="">
+                <h1 class="logo">Clinico</h1>
+            </a>
+        </div>
+        <div class="div-w2">
+            <button onclick="show()" class="nav-logout">Logout</button>
+            <a href="home.html"><button id="confirm" class="confirm">Are you sure?</button></a>
+        </div>
+    </div>
+    <script>
+        function show() {
+            document.getElementById("confirm").classList.toggle("show");
+        };
+    </script>
+    <div class="sidenav shadow">
+        <a href="#">Profile</a>
+        <a href="#">Lab results</a>
+        <a href="#">Appointments</a>
+        <a href="#">Prescriptions</a>
+    </div>
+    <div class = "main">
+        <div class="card">
+            <img src="images/patient.png" alt="Avatar" style="width:50%">
+            <div class="container">
+                <h4><b>John Doe</b></h4>
+                <p>Architect & Engineer</p>
+            </div>
+        </div> 
+    </div>
+</body>
