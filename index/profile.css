@@ -1,6 +1,7 @@
 html,body {
     margin: 0px;
     scroll-behavior: smooth;
+    background-color: var(--light);
   }
 :root {
     --shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.199);
@@ -19,6 +20,7 @@ html,body {
     display: flex;
     position: sticky;
     width: 98vw;
+    height: 39px;
     padding: 10px 1vw;
     background-color: var(--dark);
     z-index: 9999;
@@ -39,11 +41,11 @@ html,body {
     float: left;
     color: var(--light);
     border-radius: 2px;
-    transition: 200ms ease-in-out;
+    transition: color 200ms ease, box-shadow 200ms ease;
 }
 .logo:hover {
     color: var(--dark);
-    box-shadow: inset 120px 0 var(--light);
+    box-shadow: inset 100px 0 var(--light);
 }
 .menu {
     margin: 10px 25px 0;
@@ -80,3 +82,48 @@ html,body {
     outline: 1px solid var(--light);
 }
 .show {display:block;}
+
+.sidenav {
+    position: fixed;
+    display: inline-block;
+    top: 59px;
+    height: 100%;
+    padding: 20px 0px;
+    width: 200px; 
+    background-color: var(--darker); 
+    overflow: hidden;
+}
+.sidenav a {
+    padding: 6px 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--light);
+    display: block;
+    transition: color ease 200ms;
+}
+.sidenav a:hover { color: var(--mid); }
+
+.main { margin-left: 200px; }
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: inline-block;
+    background-color: var(--light);
+    transition: 0.3s;
+    vertical-align: middle;
+    position: flex;
+    width: 600px;
+}
+  /* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
+  /* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
