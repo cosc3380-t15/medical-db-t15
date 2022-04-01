@@ -1,0 +1,75 @@
+html,body {
+    margin: 0px;
+    scroll-behavior: smooth;
+  }
+  :root {
+    --shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.199);
+    --light: #F5F1EB;
+    --mid: #9FCDFC;
+    --main: #008CFF;
+    --accent: #4C72D2;
+    --dark: #2C4A98;
+    --darker: #203368; 
+  }
+  .shadow {
+    box-shadow: var(--shadow);
+    z-index: 2;
+}
+
+.div-w {
+    vertical-align: middle;
+    width: auto;
+}
+.div-w2 {
+    margin-left: auto;
+    float: right;
+}
+.navbar {
+    display: flex;
+    width: 86vw;
+    padding: 20px 7vw;
+    background-color: var(--main);
+    z-index: 9999;
+    transition: box-shadow 200ms ease-in-out;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+}
+.logo {
+    vertical-align: middle;
+    align-items: center;
+    margin: 0px;
+    padding: 0 5px;
+    margin-right: 25px;
+    float: left;
+    color: var(--light);
+    border-radius: 2px;
+    transition: 200ms ease-in-out;
+}
+.logo:hover {
+    color: var(--main);
+    box-shadow: inset 125px 0 var(--light);
+}
+.menu {
+    margin: 10px 25px 0;
+    float: left;
+    color: var(--light);
+    font-weight: 50;
+    transition: 100ms;
+}
+.nav-login {
+    margin-left: 30px;
+    padding: 10px 20px;
+    font-weight: 800;
+    color: var(--light);
+    background-color: var(--main);
+    border: none;
+    float: right;
+    border-radius: 2px;
+    outline: 1px solid var(--light);
+    transition: 200ms ease-in-out;
+  }
+  .nav-login:hover {
+    background-color: rgb(83, 169, 240);
+  }
