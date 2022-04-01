@@ -2,7 +2,11 @@ html,body {
     margin: 0px;
     scroll-behavior: smooth;
   }
+<<<<<<< HEAD
 :root {
+=======
+  :root {
+>>>>>>> origin/msummers
     --shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.199);
     --light: #F5F1EB;
     --mid: #9FCDFC;
@@ -10,8 +14,13 @@ html,body {
     --accent: #4C72D2;
     --dark: #2C4A98;
     --darker: #203368; 
+<<<<<<< HEAD
 }
 .shadow {
+=======
+  }
+  .shadow {
+>>>>>>> origin/msummers
     box-shadow: var(--shadow);
     z-index: 2;
 }
@@ -28,7 +37,11 @@ html,body {
     display: flex;
     width: 86vw;
     padding: 20px 7vw;
+<<<<<<< HEAD
     background-color: var(--dark);
+=======
+    background-color: var(--main);
+>>>>>>> origin/msummers
     z-index: 9999;
     transition: box-shadow 200ms ease-in-out;
 }
@@ -63,14 +76,25 @@ html,body {
     padding: 10px 20px;
     font-weight: 800;
     color: var(--light);
+<<<<<<< HEAD
     background-color: var(--dark);
+=======
+    background-color: var(--main);
+>>>>>>> origin/msummers
     border: none;
     float: right;
     border-radius: 2px;
     outline: 1px solid var(--light);
     transition: 200ms ease-in-out;
+<<<<<<< HEAD
 }
 .nav-login:hover {
     background-color: var(--light);
     color: var(--dark);
 }
+=======
+  }
+  .nav-login:hover {
+    background-color: rgb(83, 169, 240);
+  }
+>>>>>>> origin/msummers
