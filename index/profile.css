@@ -48,7 +48,7 @@ html,body {
 }
 .logo:hover {
     color: var(--dark);
-    box-shadow: inset 125px 0 var(--light);
+    box-shadow: inset 120px 0 var(--light);
 }
 .menu {
     margin: 10px 25px 0;
