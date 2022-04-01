@@ -3,7 +3,6 @@ html,body {
     scroll-behavior: smooth;
   }
 :root {
-  :root {
     --shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.199);
     --light: #F5F1EB;
     --mid: #9FCDFC;
@@ -11,10 +10,9 @@ html,body {
     --accent: #4C72D2;
     --dark: #2C4A98;
     --darker: #203368; 
-<<<<<<< HEAD
+
 }
-.shadow {
-  }
+
   .shadow {
     box-shadow: var(--shadow);
     z-index: 2;
@@ -80,7 +78,45 @@ html,body {
     background-color: var(--light);
     color: var(--dark);
 }
-  }
+  
   .nav-login:hover {
     background-color: rgb(83, 169, 240);
+}
+
+.sidenav {
+    height: 100%; 
+    width: 200px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 60px; 
+    left: 0;
+    background-color: var(--darker); 
+    overflow-x: hidden; 
+    padding-top: 20px;
+  }
+  
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--light);
+    display: block;
+  }
+  
+  
+  .sidenav a:hover {
+    color: var(--mid);
+  }
+  
+  
+  .main {
+    margin-left: 160px; 
+    padding: 0px 10px;
+  }
+  
+ 
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
   }
