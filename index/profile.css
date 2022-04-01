@@ -9,7 +9,7 @@ html,body {
     --main: #008CFF;
     --accent: #4C72D2;
     --dark: #2C4A98;
-    --darker: #203368;
+    --darker: #203368; 
 }
 .shadow {
     box-shadow: var(--shadow);
@@ -31,20 +31,6 @@ html,body {
 .div-w2 {
     margin-left: auto;
     float: right;
-}
-.navbar {
-    position: sticky;
-    display: flex;
-    width: 86vw;
-    padding: 20px 7vw;
-    background-color: var(--dark);
-    background-color: var(--main);
-    z-index: 9999;
-    transition: box-shadow 200ms ease-in-out;
-}
-.sticky {
-    position: fixed;
-    top: 0;
 }
 .logo {
     vertical-align: middle;
@@ -78,60 +64,6 @@ html,body {
     outline: 1px solid var(--light);
     transition: 200ms ease-in-out;
 }
-.sidenav {
-    height: 100%; 
-    width: 200px; 
-    position: fixed; 
-    z-index: 1; 
-    top: 60px; 
-    left: 0;
-    background-color: var(--darker); 
-    overflow-x: hidden; 
-    padding-top: 20px;
-  }
-  
-  
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: var(--light);
-    display: block;
-  }
-  
-  
-  .sidenav a:hover {
-    color: var(--mid);
-  }
-  
-  
-  .main {
-    margin-left: 160px; 
-    padding: 0px 10px;
-  }
-  
- 
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-  .card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    vertical-align: middle;
-    position: flex;
-  }
-  
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  /* Add some padding inside the card container */
-  .container {
-    padding: 2px 16px;
-  }
 .nav-logout:hover {
     background-color: var(--light);
     color: var(--dark);
