@@ -1,4 +1,4 @@
-<?php header('Location: index/home.html');
+<?php
 $servername = "eyiece.mynetgear.com";
 $username = "root";
 $password = "93U#muq!fPzZ";
