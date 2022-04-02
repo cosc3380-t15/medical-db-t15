@@ -8,26 +8,15 @@
 </head>
 
 <body>
-    <div class="navbar sticky">
+    <div class="navbar shadow">
         <div class="div-w">
-            <a href="#home">
+            <a href="">
                 <h1 class="logo">Clinico</h1>
-            </a>
-            <a href="#plug">
-                <h3 class="menu">Features</h3>
-            </a>
-            <a href="#ancor">
-                <h3 class="menu">Services</h3>
-            </a>
-            <a href="#prices-ancor">
-                <h3 class="menu">Prices</h3>
-            </a>
-            <a href="#ancor-doctors">
-                <h3 class="menu">Doctors</h3>
             </a>
         </div>
         <div class="div-w2">
-            <button class="nav-login">Log In / Register</button></a>
+            <button onclick="show()" class="nav-logout">Logout</button>
+            <a href="home.html"><button id="confirm" class="confirm">Are you sure?</button></a>
         </div>
     </div>
 </body>
@@ -61,4 +50,9 @@
         <input type="submit" value="Submit">
       </form>
 </body>
-    
+    <script>
+        function show() {
+            document.getElementById("confirm").classList.toggle("show");
+        };
+    </script>
+</body>
