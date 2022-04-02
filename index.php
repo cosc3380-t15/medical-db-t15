@@ -1,7 +1,7 @@
-<?php
+<?php header('Location: index/home.html');
 $servername = "eyiece.mynetgear.com";
 $username = "root";
-$password = "b01r18o11A!ae&";
+$password = "93U#muq!fPzZ";
 $database = "medical_db";
 
 // Create connection
@@ -12,5 +12,4 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully";
-mysqli_close($conn);
 ?>
