@@ -32,20 +32,38 @@
         <a class="menu-item">
             <span>Profile</span>
             <span class="arrow">></span>
-            <div class="submenu"></div>
         </a>
+        <div class="submenu">
+            <a>View Profile</a>
+            <a>Edit Profile</a>
+        </div>
+
         <a class="menu-item">
             <span>Lab results</span>
             <span class="arrow">></span>
         </a>
+        <div class="submenu">
+            <a>View Results</a>
+            <a>History</a>
+        </div>
+
         <a class="menu-item">
             <span>Apointments</span>
             <span class="arrow">></span>
         </a>
+        <div class="submenu">
+            <a>View Appointments</a>
+            <a>Schedule Appointment</a>
+        </div>
+
         <a class="menu-item">
             <span>Prescriptions</span>
             <span class="arrow">></span>
         </a>
+        <div class="submenu">
+            <a>View Prescriptions</a>
+            <a>Request Prescription</a>
+        </div>
     </div>
     <div class = "main">
         
@@ -55,15 +73,18 @@
         var i;
 
         for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "none";
-            } else {
-            dropdownContent.style.display = "block";
-            }
-        });
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var arrow = this.querySelector(".arrow");
+                arrow.classList.toggle("open");
+                var dropdownContent = this.nextElementSibling;
+                
+                if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                } else {
+                dropdownContent.style.display = "block";
+                }
+            });
         }
     </script>
 </body>
