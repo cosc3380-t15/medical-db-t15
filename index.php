@@ -1,9 +1,9 @@
 <?php
-$cleardb_url = parse_url(getenv("DATABASE_URL"));
-$cleardb_server = $cleardb_url["host"];
-$cleardb_username = $cleardb_url["user"];
-$cleardb_password = $cleardb_url["pass"];
-$cleardb_db = substr($cleardb_url["path"],1);
+// $cleardb_url = parse_url(getenv("DATABASE_URL"));
+$cleardb_server = "eyiece.mynetgear.com";
+$cleardb_username = "root";
+$cleardb_password = "93U#muq!fPzZ";
+$cleardb_db = "medical_db";
 
 $active_group = 'default';
 $query_builder = TRUE;
