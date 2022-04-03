@@ -1,5 +1,5 @@
 <?php
-include_once 'index/index.php';
+include_once '/index.php';
 ?>
 
 <html>
@@ -97,7 +97,7 @@ include_once 'index/index.php';
     </form>
 
 
-    <a href="/index.php">TEST CONNECTION</a>
+  ]
     
         <?php
         $sql = "SELECT * FROM doctor;";
