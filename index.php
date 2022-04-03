@@ -1,8 +1,4 @@
 <?php
-$servername = "eyiece.mynetgear.com";
-$username = "root";
-$password = "93U#muq!fPzZ";
-$database = "medical_db";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
