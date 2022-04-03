@@ -26,7 +26,8 @@ header('Location: index/home.html');
 </head>
 
 <body>
-    <?php
+    <h1>
+        <?php
         $sql = "SELECT * FROM doctor;";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
@@ -39,6 +40,8 @@ header('Location: index/home.html');
 
 
     ?>
+    </h1>
+
 
 
 
