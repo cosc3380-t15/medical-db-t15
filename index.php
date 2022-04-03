@@ -5,7 +5,7 @@ $password = "93U#muq!fPzZ";
 $database = "medical_db";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conn = mysqli_connect($servername, $username, $password, $database, 3306);
 
 // Check connection
 if ($conn->connect_error) {
