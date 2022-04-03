@@ -1,15 +1,18 @@
 <?php
 $servername = "eyiece.mynetgear.com";
-$username = "root";
-$password = "93U#muq!fPzZ";
+$username = "DNonov";
+$password = "D27m03r94!@#";
 $database = "medical_db";
 // Create connection
-$conn = mysqli_connect($DATABASE_URL, $username, $password, $database);
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+try{
+  $con = new PDO("mysql:host=$servername;dbname=$database",$username, $password);
+
+  $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connection Success";
 }
-echo "Connected successfully";
-header('Location: index/home.html');
+catch (PDOException $e){
+  echo "Error is connection " . $e->getMessage();
+}
+
 ?>
