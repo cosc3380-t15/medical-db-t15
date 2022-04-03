@@ -13,12 +13,13 @@ html,body {
     --accent: #4C72D2;
     --dark: #2C4A98;
     --darker: #203368;
-    --nav-width: 200px;
+    --nav-width: 225px;
 }
 .shadow {
     box-shadow: var(--shadow);
     z-index: 2;
 }
+/* ----------------------navbar---------------------- */
 .navbar {
     display: flex;
     position: sticky;
@@ -67,14 +68,17 @@ html,body {
     float: right;
     border-radius: 2px;
     outline: 1px solid var(--lighter);
-    transition: 200ms ease-in-out;
+    transition: background-color 200ms ease-in-out, 
+            color 200ms ease-in-out;
 }
 .nav-logout:hover {
     background-color: var(--lighter);
     color: var(--dark);
 }
 .confirm {
-    display: none;
+    display: block;
+    pointer-events: none;
+    opacity: 0%;
     padding: 10px 15px;
     font-weight: 800;
     color: var(--dark);
@@ -83,50 +87,52 @@ html,body {
     float: right;
     border-radius: 2px;
     outline: 1px solid var(--lighter);
+    transition: opacity 200ms ease;
 }
-.show {display:block;}
+.show { opacity: 1; pointer-events: all;}
 
+/* ----------------------sidebar---------------------- */
 .sidenav {
     position: fixed;
     display: inline-block;
     top: 59px;
     height: 100%;
-    padding: 20px 0px;
+    padding: 0px;
     width: var(--nav-width); 
     background-color: var(--darker); 
     overflow: hidden;
 }
-.sidenav a {
-    padding: 6px 10px;
-    text-decoration: none;
+.welcome {
+    display: block;
+    background-color: var(--light);
     font-size: 25px;
+    padding: 30px 10px;
+}
+.welcome p {
+    color: var(--darker);
+    margin: 0;
+    font-weight: 400;
+}
+.welcome span {
+    color: var(--darker);
+    margin: 0;
+    font-weight: 800;
+}
+.menu-item {
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
     color: var(--lighter);
     display: block;
     transition: color ease 200ms;
 }
-.sidenav a:hover { color: var(--mid); }
+.menu-item:hover { color: var(--mid); }
+.menu-item span { user-select: none; }
+.arrow { float: right; transition: transform 100ms ease }
+.open { transform: rotate(.25turn); }
 
+.submenu {
+    display: none;
+}
 .main { margin-left: var(--nav-width); }
-
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-}
-.card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    display: inline-block;
-    background-color: var(--lighter);
-    transition: 0.3s;
-    vertical-align: middle;
-    position: flex;
-    width: 600px;
-}
-  /* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
-}
-  /* Add some padding inside the card container */
-.container {
-    padding: 2px 16px;
-}

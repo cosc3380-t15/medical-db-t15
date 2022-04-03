@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="pat_nav.css">
 </head>
 
 <body>
@@ -23,18 +23,47 @@
         };
     </script>
     <div class="sidenav shadow">
-        <a href="#">Profile</a>
-        <a href="#">Lab results</a>
-        <a href="#">Appointments</a>
-        <a href="#">Prescriptions</a>
+
+        <div class = "welcome">
+            <p>Welcome, </p>
+            <span>Lorem Ipsum</span>
+        </div>
+
+        <a class="menu-item">
+            <span>Profile</span>
+            <span class="arrow">></span>
+            <div class="submenu"></div>
+        </a>
+        <a class="menu-item">
+            <span>Lab results</span>
+            <span class="arrow">></span>
+        </a>
+        <a class="menu-item">
+            <span>Apointments</span>
+            <span class="arrow">></span>
+        </a>
+        <a class="menu-item">
+            <span>Prescriptions</span>
+            <span class="arrow">></span>
+        </a>
     </div>
     <div class = "main">
-        <div class="card">
-            <img src="images/patient.png" alt="Avatar" style="width:50%">
-            <div class="container">
-                <h4><b>John Doe</b></h4>
-                <p>Architect & Engineer</p>
-            </div>
-        </div> 
+
     </div>
+    <script>
+        var dropdown = document.getElementsByClassName("menu-item");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+        });
+        }
+    </script>
 </body>
