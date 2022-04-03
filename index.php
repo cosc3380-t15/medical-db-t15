@@ -1,6 +1,6 @@
 <?php
 // $cleardb_url = parse_url(getenv("DATABASE_URL"));
-$dbhost = "eyiece.mynetgear.com";
+$dbhost = getenv("DBHOST");
 $dbuser = "root";
 $dbpass = "93U#muq!fPzZ";
 $dbname = "medical_db";
