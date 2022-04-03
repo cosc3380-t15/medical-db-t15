@@ -3,8 +3,8 @@ $servername = "eyiece.mynetgear.com";
 $username = "DNonov";
 $password = "D27m03r94!@#";
 $database = "medical_db";
-
 // Create connection
+
 try{
   $con = new PDO("mysql:host=$servername;dbname=$database",$username, $password);
 
