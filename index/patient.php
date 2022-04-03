@@ -96,6 +96,8 @@ include_once 'index/index.php';
         </table>
     </form>
 
+
+    <a href="index/index.php"></a>
     
         <?php
         $sql = "SELECT * FROM doctor;";
