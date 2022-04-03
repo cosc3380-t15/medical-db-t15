@@ -148,8 +148,9 @@ input[type=submit] {
   background-color: #04AA6D;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin-left: auto;
   border: none;
+  text-align: center;
   border-radius: 4px;
   cursor: pointer;
 }
