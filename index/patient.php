@@ -1,18 +1,5 @@
 <?php
-$servername = "eyiece.mynetgear.com";
-$username = "root";
-$password = "93U#muq!fPzZ";
-$database = "medical_db";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
-header('Location: index/home.html');
+include_once 'index/index.php';
 ?>
 
 <html>
@@ -27,6 +14,22 @@ header('Location: index/home.html');
 
 <body>
 <h1><?php echo "This message is from server side." ?></h1>
+    
+        <?php
+        $sql = "SELECT * FROM doctor;";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+
+        if ($resultCheck > 0){
+            while ($row = mysqli_fetch_assoc($result)){
+                echo $row['Doc_First'];
+            }    
+        }
+
+
+    ?>
+    
+
 
 
 
