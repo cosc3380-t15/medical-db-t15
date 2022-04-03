@@ -1,6 +1,6 @@
 # medical-db-t15
 
-Webapp location: https://medical-db-team15.herokuapp.com/index/home.html
+Webapp location: https://medical-db-team15.herokuapp.com/
 
 Any changes to 'main' will automatically redeploy the webapp.
 
