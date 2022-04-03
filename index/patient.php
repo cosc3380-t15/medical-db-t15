@@ -97,7 +97,7 @@ include_once 'index/index.php';
     </form>
 
 
-    <a href="index/index.php">TEST CONNECTION</a>
+    <a href="/index.php">TEST CONNECTION</a>
     
         <?php
         $sql = "SELECT * FROM doctor;";
