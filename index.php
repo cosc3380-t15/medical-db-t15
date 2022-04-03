@@ -5,12 +5,14 @@ $password = "D27m03r94!@#";
 $database = "medical_db";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $database, 3306);
+try{
+  $con = new PDO("mysql:host=$servername;dbname=$database",$username, $password);
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+  $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connection Success";
 }
-echo "Connected successfully";
-// header('Location: index/home.html');
+catch (PDOException $e){
+  echo "Error is connection " . $e->getMessage();
+}
+
 ?>
