@@ -1,9 +1,8 @@
 <?php
-// $cleardb_url = parse_url(getenv("DATABASE_URL"));
 $dbhost = getenv("DBHOST");
-$dbuser = "root";
-$dbpass = "93U#muq!fPzZ";
-$dbname = "medical_db";
+$dbuser = getenv("DBUSER");
+$dbpass = getenv("DBPASS");
+$dbname = getenv("DBNAME");
 
 $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
 mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
@@ -14,7 +13,7 @@ $result = mysqli_query($link, $test_query);
 $tblCnt = 0;
 while($tbl = mysqli_fetch_array($result)) {
   $tblCnt++;
-  #echo $tbl[0]."<br />\n";
+  echo $tbl[0]."<br />\n";
 }
 
 if (!$tblCnt) {
