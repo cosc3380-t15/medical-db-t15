@@ -13,7 +13,7 @@ include_once '/index.php';
 </head>
 
 <body>
-    <form action="addpatient.php" method="post">
+    <!-- <form action="addpatient.php" method="post">
         <table>
             <tr>
                 <td>
@@ -94,10 +94,8 @@ include_once '/index.php';
                 </td>
             </tr>
         </table>
-    </form>
+    </form> -->
 
-
-  ]
     
         <?php
         $sql = "SELECT * FROM doctor;";
