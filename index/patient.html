@@ -1,3 +1,20 @@
+<?php
+$servername = "eyiece.mynetgear.com";
+$username = "root";
+$password = "93U#muq!fPzZ";
+$database = "medical_db";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+header('Location: index/home.html');
+?>
+
 <html>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans-serif">
 
@@ -9,8 +26,24 @@
 </head>
 
 <body>
+    <?php
+        $sql = "SELECT * FROM doctor;";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
 
-    <form action="addpatient.php" method="post">
+        if ($resultCheck > 0){
+            while ($row = mysqli_fetch_assoc($result)){
+                echo $row['Doc_First'];
+            }    
+        }
+
+
+    ?>
+
+
+
+
+    <!-- <form action="addpatient.php" method="post">
         <table>
             <tr>
                 <td>
@@ -53,12 +86,6 @@
                     <input type="date" name="dob">
                 </td>
             </tr>
-            <!-- <tr>
-                <td>
-                    <label for="">Allergies:</label>
-                    <input type="text" name="allergies">
-                </td>
-            </tr> -->
 
             <tr>
                 <td>
@@ -97,7 +124,8 @@
                 </td>
             </tr>
         </table>
-    </form>
+    </form> -->
+
 </body>
 
 </html>
