@@ -104,7 +104,7 @@ include_once '/index.php';
 
         if ($resultCheck > 0){
             while ($row = mysqli_fetch_assoc($result)){
-                echo $row['Doc_First'];
+                echo $row['Doc_Spec'];
             }    
         }
 
