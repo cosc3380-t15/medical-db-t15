@@ -1,7 +1,7 @@
 <?php
 $servername = "eyiece.mynetgear.com";
-$username = "root";
-$password = "93U#muq!fPzZ";
+$username = "DNonov";
+$password = "D27m03r94!@#";
 $database = "medical_db";
 
 // Create connection
