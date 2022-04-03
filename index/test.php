@@ -1,13 +1,32 @@
 <?php
-include '/index.php'
-$sql = "SELECT * FROM doctor;";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
 
-if ($resultCheck > 0){
-    while ($row = mysqli_fetch_assoc($result)){
-        echo $row['Doc_Spec'];
-    }    
+$idtest = $_POST['idtest'];
+$test = $_POST['test'];
+
+if (!empty($fname)) {
+    if (!empty($minit)) {
+      include "/index.php";
+
+            $query1 = "INSERT INTO patient (idtest, test) VALUES ('$idtest','$test')";
+
+            if (mysqli_query($conn, $query1)) {
+      
+            echo "<script type = 'text/javastript'>alert('Success')</script>";
+
+            }else {
+            echo "<script type = 'text/javastript'>alert('Failure')</script>";
+            }
+            mysqli_close($conn);
+        }
+        echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
+        
 }
 
+
+
+
+
 ?>
+
+
+
