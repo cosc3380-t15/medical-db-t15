@@ -45,43 +45,43 @@ if (!empty($fname)) {
                             
                                                     }
                                                     echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
-                                                    header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html')
+                                                    header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html');
                                                 }
                                                 echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
-                                                header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html')
+                                                header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html');
                                             }
                                             echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
-                                            header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html')
+                                            header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html');
                                         }
                                         echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
-                                        header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html')
+                                        header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html');
                                     }
                                     echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
-                                    header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html')
+                                    header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html');
                                 }
                                 echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
-                                header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html')
+                                header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html');
                             }
                             echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
-                            header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html')
+                            header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html');
                         }
                         echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
-                        header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html')
+                        header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html');
                     }
                     echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
-                    header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html')
+                    header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html');
                 }
                 echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
-                header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html')
+                header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html');
             }
             echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
-            header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html')
+            header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html');
         }
         echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
-        header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html')
+        header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html');
     }
     echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
-    header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html')
+    header('Refresh: .1; URL=https://medical-db-team15.herokuapp.com/index/home.html');
 }
 
 

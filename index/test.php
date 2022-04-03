@@ -1,4 +1,5 @@
 <?php
+      include ".env";
       $query1 = "INSERT INTO `medical_db`.`race_code` (`Race_Code`, `Race_Text`) VALUES ('m', 'Male');";
 
       if (mysqli_query($conn, $query1)) {
@@ -10,6 +11,3 @@
       }
       mysqli_close($conn);
 ?>
-
-
-
