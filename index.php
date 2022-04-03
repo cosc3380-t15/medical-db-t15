@@ -12,5 +12,5 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully";
-header('Location: index/home.html');
+// header('Location: index/home.html');
 ?>
