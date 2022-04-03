@@ -126,6 +126,7 @@ html,body {
     color: var(--lighter);
     display: block;
     transition: color ease 200ms;
+    user-select: none;
 }
 .menu-item:hover { color: var(--mid); }
 .menu-item span { user-select: none; }
@@ -134,5 +135,17 @@ html,body {
 
 .submenu {
     display: none;
+    background-color: var(--dark);
+    width: auto;
+}
+.submenu a {
+    padding: 10px 0px 10px 30px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--lighter);
+    display: block;
+    transition: color ease 200ms;
+    box-shadow: 0 1px 0 var(--accent), 0 -1px 0 var(--accent);
 }
 .main { margin-left: var(--nav-width); }
