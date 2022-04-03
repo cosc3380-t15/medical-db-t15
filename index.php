@@ -1,17 +1,25 @@
 <?php
 // $cleardb_url = parse_url(getenv("DATABASE_URL"));
-$cleardb_server = "eyiece.mynetgear.com";
-$cleardb_username = "root";
-$cleardb_password = "93U#muq!fPzZ";
-$cleardb_db = "medical_db";
+$dbhost = "eyiece.mynetgear.com";
+$dbuser = "root";
+$dbpass = "93U#muq!fPzZ";
+$dbname = "medical_db";
 
-$active_group = 'default';
-$query_builder = TRUE;
-// Connect to DB
-$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db, 3306, "mysql2");
+$link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
+mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+$test_query = "SHOW TABLES FROM $dbname";
+$result = mysqli_query($link, $test_query);
+
+$tblCnt = 0;
+while($tbl = mysqli_fetch_array($result)) {
+  $tblCnt++;
+  #echo $tbl[0]."<br />\n";
 }
-echo "Connected successfully";
+
+if (!$tblCnt) {
+  echo "There are no tables<br />\n";
+} else {
+  echo "There are $tblCnt tables<br />\n";
+}
 ?>
