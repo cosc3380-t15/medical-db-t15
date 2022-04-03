@@ -1,5 +1,5 @@
 <?php
-$servername = "eyiece.mynetgear.com";
+$servername = "eyiece.mynetgear.com:3306";
 $username = "root";
 $password = "93U#muq!fPzZ";
 $database = "medical_db";
