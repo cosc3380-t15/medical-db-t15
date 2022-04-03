@@ -1,4 +1,5 @@
-<?php
+<?php header('Location: index/home.html');
+
 $servername = "eyiece.mynetgear.com";
 $username = "root";
 $password = "93U#muq!fPzZ";
@@ -11,5 +12,5 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully";
-// header('Location: index/home.html');
+
 ?>
