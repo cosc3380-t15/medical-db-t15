@@ -1,5 +1,5 @@
 <?php
-
+$id = $_POST['id']
 $fname = $_POST['fname'];
 $minit = $_POST['minit'];
 $lname = $_POST['lname'];
@@ -30,19 +30,25 @@ if (!empty($fname)) {
                                                 if (!empty($state)) {
                                                     if (!empty($zip)) {
                                                         # code...
-                                                        include "/backend/connect.php";
+                                                        $dbhost = getenv("DBHOST");
+                                                        $dbuser = getenv("DBUSER");
+                                                        $dbpass = getenv("DBPASS");
+                                                        $dbname = getenv("DBNAME");
 
+                                                        $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
+                                                        mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
+
+                                                        
                                                         $query1 = "INSERT INTO patient (Pat_ID, Pat_First, Pat_last,Pat_M_init,Pat_Email,Pat_Phone,Pat_Gender,Pat_Race,Pat_DOB,Pat_Height,Pat_Weight,Pat_Street_Addr,Pat_City_Addr,Pat_State_Addr,Pat_Zip_Addr)
-                                                        VALUES (1005, "drago", "nonov","r","qwdasds@gmail.vom","234234456",2,2,"1990-12-11",211,344,"123 asder","houston","texas",77077);";
+                                                        VALUES ('$id','$fname','$minit','$lname','$email','$phone','$gender','$race','$dob','$height','$weight','$address','$city','$state','$zip')";
 
-                                                        if (mysqli_query($conn, $query1)) {
-                                                            # code...
-                                                            echo "<script type = 'text/javastript'>alert('Success')</script>";
 
-                                                        }else {
-                                                            echo "<script type = 'text/javastript'>alert('Failure')</script>";
+                                                        if ($link->query($query1) === TRUE) {
+                                                            echo "New record created successfully";
+                                                        } else {
+                                                            echo "Error: " . $query1 . "<br>" . $link->error;
                                                         }
-                                                        mysqli_close($conn);
+                                                        mysqli_close($link)
                             
                                                     }
                                                     echo "<script type = 'text/javascript'>alert('First name cannot be ampty')</script>";
@@ -89,5 +95,3 @@ if (!empty($fname)) {
 ?>
 
 
-INSERT INTO patient (Pat_ID, Pat_First, Pat_last,Pat_M_init,Pat_Email,Pat_Phone,Pat_Gender,Pat_Race,Pat_DOB,Pat_Height,Pat_Weight,Pat_Street_Addr,Pat_City_Addr,Pat_State_Addr,Pat_Zip_Addr)
-VALUES (1000, "drago", "nonov","r","qwdasds@gmail.vom","234234456",2,2,"1990-12-11",211,344,"123 asder","houston","texas",77077);
