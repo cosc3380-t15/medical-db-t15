@@ -1,19 +1,19 @@
 <?php
 $id = $_POST['id']
-$fname = $_POST['fname'];
-$minit = $_POST['minit'];
-$lname = $_POST['lname'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$gender = $_POST['gender'];
-$race = $_POST['race'];
-$dob = $_POST['dob'];
-$height = $_POST['height'];
-$weight = $_POST['weight'];
-$address = $_POST['address'];
-$city = $_POST['city'];
-$state = $_POST['state'];
-$zip = $_POST['zip'];
+$fname = $_POST['fname']
+$minit = $_POST['minit']
+$lname = $_POST['lname']
+$email = $_POST['email']
+$phone = $_POST['phone']
+$gender = $_POST['gender']
+$race = $_POST['race']
+$dob = $_POST['dob']
+$height = $_POST['height']
+$weight = $_POST['weight']
+$address = $_POST['address']
+$city = $_POST['city']
+$state = $_POST['state']
+$zip = $_POST['zip']
 
 if (!empty($fname)) {
     if (!empty($minit)) {
