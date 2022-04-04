@@ -15,12 +15,12 @@ html,body {
     --darker: #203368;
     --nav-width: 225px;
 }
-.shadow {
+.profile-shadow {
     box-shadow: var(--shadow);
     z-index: 2;
 }
 /* ----------------------navbar---------------------- */
-.navbar {
+.profile-navbar {
     display: flex;
     position: sticky;
     width: 98vw;
@@ -30,15 +30,15 @@ html,body {
     z-index: 9999;
     transition: box-shadow 200ms ease-in-out;
 }
-.div-w {
+.profile-div-w {
     vertical-align: middle;
     width: auto;
 }
-.div-w2 {
+.profile-div-w2 {
     margin-left: auto;
     float: right;
 }
-.logo {
+.profile-logo {
     vertical-align: middle;
     align-items: center;
     margin: 0;
@@ -47,18 +47,18 @@ html,body {
     border-radius: 2px;
     transition: color 200ms ease, box-shadow 200ms ease;
 }
-.logo:hover {
+.profile-logo:hover {
     color: var(--dark);
     box-shadow: inset 100px 0 var(--lighter);
 }
-.menu {
+.profile-menu {
     margin: 10px 25px 0;
     float: left;
     color: var(--lighter);
     font-weight: 50;
     transition: 100ms;
 }
-.nav-logout {
+.profile-nav-logout {
     margin-left: 10px;
     padding: 10px 15px;
     font-weight: 800;
@@ -71,11 +71,11 @@ html,body {
     transition: background-color 200ms ease-in-out, 
             color 200ms ease-in-out;
 }
-.nav-logout:hover {
+.profile-nav-logout:hover {
     background-color: var(--lighter);
     color: var(--dark);
 }
-.confirm {
+.profile-confirm {
     display: block;
     pointer-events: none;
     opacity: 0%;
@@ -89,10 +89,10 @@ html,body {
     outline: 1px solid var(--lighter);
     transition: opacity 200ms ease;
 }
-.show { opacity: 1; pointer-events: all;}
+.profile-show { opacity: 1; pointer-events: all;}
 
 /* ----------------------sidebar---------------------- */
-.sidenav {
+.profile-sidenav {
     position: fixed;
     display: inline-block;
     top: 59px;
@@ -102,23 +102,23 @@ html,body {
     background-color: var(--darker); 
     overflow: hidden;
 }
-.welcome {
+.profile-welcome {
     display: block;
     background-color: var(--light);
     font-size: 25px;
     padding: 30px 10px;
 }
-.welcome p {
+.profile-welcome p {
     color: var(--darker);
     margin: 0;
     font-weight: 400;
 }
-.welcome span {
+.profile-welcome span {
     color: var(--darker);
     margin: 0;
     font-weight: 800;
 }
-.menu-item {
+.profile-menu-item {
     padding: 10px 15px;
     margin: 0;
     font-size: 20px;
@@ -128,17 +128,20 @@ html,body {
     transition: color ease 200ms;
     user-select: none;
 }
-.menu-item:hover { color: var(--mid); }
-.menu-item span { user-select: none; }
-.arrow { float: right; transition: transform 100ms ease }
-.open { transform: rotate(.25turn); }
+.profile-menu-item:hover { color: var(--mid); }
+.profile-menu-item span { user-select: none; }
+.profile-arrow { float: right; transition: transform 100ms ease }
 
-.submenu {
+.profile-active {color: var(--mid);}
+.profile-open { transform: rotate(.25turn); }
+
+.profile-submenu {
     display: none;
     background-color: var(--dark);
     width: auto;
+    user-select: none;
 }
-.submenu a {
+.profile-submenu-item {
     padding: 10px 0px 10px 30px;
     margin: 0;
     font-size: 15px;
@@ -148,4 +151,8 @@ html,body {
     transition: color ease 200ms;
     box-shadow: 0 1px 0 var(--accent), 0 -1px 0 var(--accent);
 }
-.main { margin-left: var(--nav-width); }
+.profile-submenu-item:hover { background-color: var(--mid); color: var(--dark); }
+.profile-main {
+    margin-left: var(--nav-width);
+    height: 10px;
+}
