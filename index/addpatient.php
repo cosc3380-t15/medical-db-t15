@@ -17,28 +17,43 @@ $zip = $_POST['zip'];
 
 
                                                         # code...
-                                                        $dbhost = getenv("DBHOST");
-                                                        $dbuser = getenv("DBUSER");
-                                                        $dbpass = getenv("DBPASS");
-                                                        $dbname = getenv("DBNAME");
+$dbhost = getenv("DBHOST");
+$dbuser = getenv("DBUSER");
+$dbpass = getenv("DBPASS"); 
+$dbname = getenv("DBNAME");
+$link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
 
-                                                        $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
-                                                        mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
+mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
                                                         
-                                                        $query1 = "INSERT INTO patient (Pat_First, Pat_last,Pat_M_init,Pat_Email,Pat_Phone,Pat_Gender,Pat_Race,Pat_DOB,Pat_Height,Pat_Weight,Pat_Street_Addr,Pat_City_Addr,Pat_State_Addr,Pat_Zip_Addr)
-                                                        VALUES ('$firstname','$minit','$lname','$email','$phone','$gender','$race','$dob','$height','$weight','$address','$city','$state','$zip')";
+$query1 = "INSERT INTO patient (Pat_First, Pat_last,Pat_M_init,Pat_Email,Pat_Phone,Pat_Gender,Pat_Race,Pat_DOB,Pat_Height,Pat_Weight,Pat_Street_Addr,Pat_City_Addr,Pat_State_Addr,Pat_Zip_Addr)
+VALUES ('$firstname','$minit','$lname','$email','$phone','$gender','$race','$dob','$height','$weight','$address','$city','$state','$zip')";
 
 
-                                                        if ($link->query($query1) === TRUE) {
-                                                            echo "New record created successfully";
-                                                        } else {
-                                                            echo "Error: " . $query1 . "<br>" . $link->error;
-                                                        }
-                                                        mysqli_close($link)
+if ($link->query($query1) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $query1 . "<br>" . $link->error;                                                           
+    }
+mysqli_close($link)                                                     
                             
 
 
 ?>
+<!DOCTYPE html>
+<html>
 
+<head>
+    <link rel="stylesheet" href="card.css">
+</head>
+
+<body>
+
+<div class="card">
+    <div class="container">
+        <a href="/index/patient.html">BACK</a>
+    </div>
+</div>
+
+</body>
 
