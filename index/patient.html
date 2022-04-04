@@ -4,84 +4,85 @@
 <head>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
 
 
 </head>
 
 <body>
-    <form action="addpatient.php" method="post">
+    <!-- <form action="addpatient.php" method="post">
         <table>
             <tr>
                 <td>
                     <label for="">First Name:</label>
-                    <input type="text" name="fname">
+                    <input type="text" name="fname" required>
                 </td>
                 <td>
                     <label for="">Middle Initial:</label>
-                    <input type="text" name="minit">
+                    <input type="text" name="minit" required>
                 </td>
                 <td>
                     <label for="">Last Name:</label>
-                    <input type="text" name="lname">
+                    <input type="text" name="lname" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="">Email:</label>
-                    <input type="text" name="email">
+                    <input type="text" name="email" required>
                 </td>
                 <td>
                     <label for="">Phone Number:</label>
-                    <input type="text" name="phone">
+                    <input type="text" name="phone" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="">Gender:</label>
-                    <input type="radio" name="gender" value="1">Male
-                    <input type="radio" name="gender" value="2">Female
+                    <input type="radio" name="gender" value="1" required>Male
+                    <input type="radio" name="gender" value="2" required>Female
                 </td>
                 <td>
                     <label for="">Race:</label>
-                    <input type="text" name="race">
+                    <input type="text" name="race" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="">Date of Birth: </label>
-                    <input type="date" name="dob">
+                    <input type="date" name="dob" required>
                 </td>
             </tr>
 
             <tr>
                 <td>
                     <label for="">Height:</label>
-                    <input type="text" name="height">
+                    <input type="text" name="height" required>
                 </td>
                 <td>
                     <label for="">Weight:</label>
-                    <input type="text" name="weight">
+                    <input type="text" name="weight" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="">Address line 1:</label>
-                    <input type="text" name="address">
+                    <input type="text" name="address" required>
                 </td>
             </tr>
 
             <tr>
                 <td>
                     <label for="">City:</label>
-                    <input type="text" name="city">
+                    <input type="text" name="city" required>
                 </td>
                 <td>
                     <label for="">State:</label>
-                    <input type="text" name="state">
+                    <input type="text" name="state" required>
                 </td>
                 <td>
                     <label for="">Zip Code:</label>
-                    <input type="text" name="zip">
+                    <input type="text" name="zip" required>
                 </td>
             </tr>
             <tr>
@@ -91,7 +92,88 @@
             </tr>
         </table>
     </form>
-    <a href="test.php">test</a>
+    <a href="test.php">test</a> -->
+
+
+
+
+    <div class="container-form11">
+        <form action="addpatient.php" method="post">
+            <div class="row">
+                <h4>Patient Information</h4>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="First Name" name="fname" required />
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="Middle Name" name="minit" required />
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="Last Name" name="lname" required />
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="email" placeholder="Email Adress" name="email" required />
+                    <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="Phone Number" name="phone" required />
+                    <div class="input-icon"><i class="fa fa-key"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <label for="">
+                        <h4> Date of Birth: </h4>
+                    </label>
+                    <input type="date" name="dob" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>Gender</h4>
+                <div class="input-group">
+                    <input id="gender-male" type="radio" name="gender" value="1" required />
+                    <label for="gender-male">Male</label>
+                    <input id="gender-female" type="radio" name="gender" value="2" required />
+                    <label for="gender-female">Female</label>
+                </div>
+            </div>
+
+            <div class="input-group input-group-icon">
+                <input type="text" placeholder="Race" name="race" required />
+                <div class="input-icon"><i class="fa fa-user"></i></div>
+            </div>
+
+
+            <div class="row">
+                <div class="input-group">
+                    <div class="col-half">
+                        <input type="text" placeholder="Weight" name="weight" required />
+                    </div>
+                    <div class="col-half">
+                        <input type="text" placeholder="Height" name="height" required />
+                    </div>
+                </div>
+
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="Address" name="address" required />
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="input-group">
+                    <div class="col-third">
+                        <input type="text" placeholder="City:" name="city" required />
+                    </div>
+                    <div class="col-third">
+                        <input type="text" placeholder="State:" name="state" required />
+                    </div>
+                    <div class="col-third">
+                        <input type="text" placeholder="Zip Code:" name="zip" required />
+                    </div>
+
+                </div>
+                <input class="button" type="submit" name="" id="">
+        </form>
+    </div>
 
     <!-- <form action="test.php" method="post">
         <table>
