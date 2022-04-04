@@ -150,8 +150,11 @@ html,body {
     color: var(--lighter);
     display: block;
     transition: color ease 200ms;
-    box-shadow: 0 1px 0 var(--accent), 0 -1px 0 var(--accent);
+    box-shadow: 0 2px 0 var(--accent);
     text-decoration: none;
+}
+.profile-submenu-item:last-of-type {
+    box-shadow: none;
 }
 .profile-submenu-item:hover { background-color: var(--mid); color: var(--dark); }
 .profile-main {
