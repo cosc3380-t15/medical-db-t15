@@ -44,15 +44,16 @@ mysqli_close($link)
 <html>
 
 <head>
-    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="form.css">
 </head>
 
 <body>
 
 <div class="card">
-    <div class="container">
-        <a href="/index/patient.html">BACK</a>
-    </div>
+    
+        <a href="/index/patient.html"><input class="button" type="submit" name="" id=""></a>
+    
+    
 </div>
 
 </body>
