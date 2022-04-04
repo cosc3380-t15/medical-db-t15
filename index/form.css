@@ -1,10 +1,5 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
 body {
-  padding: 1em;
+  padding: 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   color: #b9b9b9;
@@ -18,6 +13,7 @@ input[type="radio"] + label,
 input[type="checkbox"] + label:before,
 select option,
 select {
+  box-sizing: border-box;
   width: 100%;
   padding: 1em;
   line-height: 1.4;
@@ -48,7 +44,6 @@ select {
   display: inline-block;
   width: 50%;
   text-align: center;
-  float: left;
   border-radius: 0;
 }
 input[type="radio"] + label:first-of-type {
