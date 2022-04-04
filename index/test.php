@@ -13,10 +13,10 @@ $query1 = "INSERT INTO patient (Pat_ID, Pat_First, Pat_last,Pat_M_init,Pat_Email
 VALUES (5555,'john','nonov','r','qwdasds@gmail.vom','234234456',2,2,'1990-12-11',211,344,'123 asder','houston','texas',77077)";
 
 
-if ($conn->query($query1) === TRUE) {
+if ($link->query($query1) === TRUE) {
     echo "New record created successfully";
   } else {
-    echo "Error: " . $query1 . "<br>" . $conn->error;
+    echo "Error: " . $query1 . "<br>" . $link->error;
   }
 mysqli_close($link)
 
