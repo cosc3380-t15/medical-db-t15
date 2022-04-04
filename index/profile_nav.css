@@ -154,5 +154,4 @@ html,body {
 .profile-submenu-item:hover { background-color: var(--mid); color: var(--dark); }
 .profile-main {
     margin-left: var(--nav-width);
-    height: 10px;
 }
