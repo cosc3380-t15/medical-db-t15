@@ -51,7 +51,8 @@ mysqli_close($link)
 
 <div class="card">
     
-        <a href="/index/patient.html"><input class="button" type="submit" name="" id=""></a>
+        <!-- <a href="/index/patient.html"><input class="button" type="submit" value="Back"></a> -->
+        <input href="/index/patient.html" class="button" type="submit" value="Back">
     
     
 </div>
