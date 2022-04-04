@@ -1,5 +1,5 @@
 <?php
-$id = $_POST['id'];
+
 $firstname = $_POST['fname'];
 $minit = $_POST['minit'];
 $lname = $_POST['lname'];
@@ -27,7 +27,7 @@ $zip = $_POST['zip'];
 
                                                         
                                                         $query1 = "INSERT INTO patient (Pat_ID, Pat_First, Pat_last,Pat_M_init,Pat_Email,Pat_Phone,Pat_Gender,Pat_Race,Pat_DOB,Pat_Height,Pat_Weight,Pat_Street_Addr,Pat_City_Addr,Pat_State_Addr,Pat_Zip_Addr)
-                                                        VALUES ('$id','$firstname','$minit','$lname','$email','$phone','$gender','$race','$dob','$height','$weight','$address','$city','$state','$zip')";
+                                                        VALUES ('$firstname','$minit','$lname','$email','$phone','$gender','$race','$dob','$height','$weight','$address','$city','$state','$zip')";
 
 
                                                         if ($link->query($query1) === TRUE) {
