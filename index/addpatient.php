@@ -30,7 +30,7 @@ if (!empty($fname)) {
                                                 if (!empty($state)) {
                                                     if (!empty($zip)) {
                                                         # code...
-                                                        include "/index.php";
+                                                        include "/backend/connect.php";
 
                                                         $query1 = "INSERT INTO patient (Pat_First, Pat_M_init, Pat_Last, Pat_Email, Pat_Phone, Pat_Gender, Pat_Race, Pat_DOB, Pat_Height, Pat_Weight, Pat_Street_Addr, Pat_City_Addr, Pat_State_addr, Pat_Zip_Addr) VALUES ('$fname','$minit','$lname','$email','$phone','$gender','$race','$dob','$height','$weight','$address','$city','$state','$zip')";
 
