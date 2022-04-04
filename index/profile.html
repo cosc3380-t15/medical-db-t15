@@ -3,80 +3,81 @@
 
 <head>
     <link rel="stylesheet" href="pat_nav.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="navbar shadow">
-        <div class="div-w">
+    <div class="profile-navbar profile-shadow">
+        <div class="profile-div-w">
             <a href="">
-                <h1 class="logo">Clinico</h1>
+                <h1 class="profile-logo">Clinico</h1>
             </a>
         </div>
-        <div class="div-w2">
-            <button onclick="show()" class="nav-logout">Logout</button>
-            <a href="home.html"><button id="confirm" class="confirm">Are you sure?</button></a>
+        <div class="profile-div-w2">
+            <button onclick="show()" class="profile-nav-logout">Logout</button>
+            <a href="home.html"><button id="confirm" class="profile-confirm">Are you sure?</button></a>
         </div>
     </div>
     <script>
         function show() {
-            document.getElementById("confirm").classList.toggle("show");
+            document.getElementById("confirm").classList.toggle("profile-show");
         };
     </script>
-    <div class="sidenav shadow">
+    <div class="profile-sidenav profile-shadow">
 
-        <div class = "welcome">
+        <div class="profile-welcome">
             <p>Welcome, </p>
             <span>Lorem Ipsum</span>
         </div>
 
-        <a class="menu-item">
+        <a class="profile-menu-item">
             <span>Profile</span>
-            <span class="arrow">></span>
+            <span class="profile-arrow">></span>
         </a>
-        <div class="submenu">
-            <a>View Profile</a>
-            <a>Edit Profile</a>
+        <div class="profile-submenu">
+            <a href ="#" class="profile-submenu-item" onclick="load_html('card.html')">View Profile</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('home.html')">Edit Profile</a>
         </div>
 
-        <a class="menu-item">
+        <a class="profile-menu-item">
             <span>Lab results</span>
-            <span class="arrow">></span>
+            <span class="profile-arrow">></span>
         </a>
-        <div class="submenu">
-            <a>View Results</a>
-            <a>History</a>
+        <div class="profile-submenu">
+            <a href ="#" class="profile-submenu-item" onclick="load_html()">View Results</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html()">History</a>
         </div>
 
-        <a class="menu-item">
+        <a class="profile-menu-item">
             <span>Apointments</span>
-            <span class="arrow">></span>
+            <span class="profile-arrow">></span>
         </a>
-        <div class="submenu">
-            <a>View Appointments</a>
-            <a>Schedule Appointment</a>
+        <div class="profile-submenu">
+            <a href ="#" class="profile-submenu-item" onclick="load_html()">View Appointments</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html()">Schedule Appointment</a>
         </div>
 
-        <a class="menu-item">
+        <a class="profile-menu-item">
             <span>Prescriptions</span>
-            <span class="arrow">></span>
+            <span class="profile-arrow">></span>
         </a>
-        <div class="submenu">
-            <a>View Prescriptions</a>
-            <a>Request Prescription</a>
+        <div class="profile-submenu">
+            <a href ="#" class="profile-submenu-item" onclick="load_html()">View Prescriptions</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html()">Request Prescription</a>
         </div>
     </div>
-    <div class = "main">
+    <div id="content" class="profile-main">
         
     </div>
     <script>
-        var dropdown = document.getElementsByClassName("menu-item");
+        var dropdown = document.getElementsByClassName("profile-menu-item");
         var i;
 
         for (i = 0; i < dropdown.length; i++) {
             dropdown[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var arrow = this.querySelector(".arrow");
-                arrow.classList.toggle("open");
+                this.classList.toggle("profile-active");
+                var arrow = this.querySelector(".profile-arrow");
+                arrow.classList.toggle("profile-open");
                 var dropdownContent = this.nextElementSibling;
                 
                 if (dropdownContent.style.display === "block") {
@@ -85,6 +86,11 @@
                 dropdownContent.style.display = "block";
                 }
             });
+        }
+
+        function load_html(file) {
+            document.getElementById("content").innerHTML = "";
+            $("#content").load(file);
         }
     </script>
 </body>
