@@ -1,12 +1,20 @@
 body {
   padding: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  color: #b9b9b9;
-  background-color: #e3e3e3;
+  background-color: var(--light);
 }
-h4 {
-  color: #002cf0;
+:root {
+  --shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.199);
+  --lighter: #F5F1EB;
+  --light: #dad5cf;
+  --mid: #9FCDFC;
+  --main: #008CFF;
+  --accent: #4C72D2;
+  --dark: #2C4A98;
+  --darker: #203368;
+  --nav-width: 225px;
+}
+.row h4 {
+  color: var(--main);
 }
 input,
 input[type="radio"] + label,
@@ -17,32 +25,33 @@ select {
   width: 100%;
   padding: 1em;
   line-height: 1.4;
-  background-color: #f9f9f9;
-  border: 1px solid #e5e5e5;
+  background-color: var(--lighter);
+  border: 1px solid var(--light);
   border-radius: 3px;
-  -webkit-transition: 0.35s ease-in-out;
-  -moz-transition: 0.35s ease-in-out;
-  -o-transition: 0.35s ease-in-out;
-  transition: 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  -moz-transition: 200ms ease-in-out;
+  -o-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 input:focus {
   outline: 0;
-  border-color: #0058bd;
+  border-color: var(--accent);
 }
 input:focus + .input-icon i {
-  color: #0400f0;
+  color: var(--main);
 }
 input:focus + .input-icon:after {
-  border-right-color: #0010f0;
+  border-right-color: var(--main);
 }
 input[type="radio"] {
   display: none;
 }
 input[type="radio"] + label,
 select {
+  color: var(--main);
   display: inline-block;
-  width: 50%;
+  width: 49%;
   text-align: center;
   border-radius: 0;
 }
@@ -61,9 +70,9 @@ input[type="radio"]:checked + label,
 input:checked + label:before,
 select:focus,
 select:active {
-  background-color: #0010f0;
-  color: #fff;
-  border-color: #001cbd;
+  background-color: var(--main);
+  color: var(--lighter);
+  border-color: var(--accent);
 }
 input[type="checkbox"] {
   display: none;
@@ -88,7 +97,7 @@ input[type="checkbox"] + label:after {
   top: 0.45em;
   left: 0.2em;
   font-size: 0.8em;
-  color: #fff;
+  color: var(--lighter);
   opacity: 0;
   font-family: FontAwesome;
   content: "\f00c";
@@ -113,8 +122,8 @@ select:active {
   outline: 0;
 }
 select option {
-  background-color: #0010f0;
-  color: #fff;
+  background-color: var(--main);
+  color: var(--lighter);
 }
 .input-group {
   margin-bottom: 1em;
@@ -150,26 +159,26 @@ select option {
   bottom: 0.6em;
   left: 3.4em;
   display: block;
-  border-right: 1px solid #e5e5e5;
+  border-right: 1px solid var(--light);
   content: "";
-  -webkit-transition: 0.35s ease-in-out;
-  -moz-transition: 0.35s ease-in-out;
-  -o-transition: 0.35s ease-in-out;
-  transition: 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  -moz-transition: 200ms ease-in-out;
+  -o-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 .input-group-icon .input-icon i {
-  -webkit-transition: 0.35s ease-in-out;
-  -moz-transition: 0.35s ease-in-out;
-  -o-transition: 0.35s ease-in-out;
-  transition: 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  -moz-transition: 200ms ease-in-out;
+  -o-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 .container-form11 {
-  max-width: 38em;
+  max-width: 60em;
   padding: 1em 3em 2em 3em;
   margin: 0em auto;
-  background-color: #fff;
+  background-color: var(--lighter);
   border-radius: 4.2px;
   box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
 }
@@ -185,17 +194,17 @@ select option {
   clear: both;
 }
 .col-half {
-  padding-right: 10px;
+  padding-right: 2%;
   float: left;
-  width: 50%;
+  width: 49%;
 }
 .col-half:last-of-type {
   padding-right: 0;
 }
 .col-third {
-  padding-right: 10px;
+  padding-right: 2%;
   float: left;
-  width: 33.333333333%;
+  width: 32%;
 }
 .col-third:last-of-type {
   padding-right: 0;
@@ -207,6 +216,6 @@ select option {
   }
 }
 .button:hover{
-    background-color: #0010f0;
-    color: white;
+    background-color: var(--main);
+    color: var(--lighter);
 }
