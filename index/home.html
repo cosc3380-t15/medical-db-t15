@@ -1,9 +1,9 @@
+<!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans-serif">
 
 <head>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 
 </head>
 
@@ -31,7 +31,7 @@
             <button class="nav-button">Contact Us</button>
         </div>
     </div>
-    <div id="home" class="container">
+    <div id="home" class="container shadow">
         <div class="text">
             <p>Lorem ipsum dolor sit amet</p>
             <p class="h11">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -40,7 +40,7 @@
                 eget nulla facilisi etiam. Congue eu consequat ac felis donec et odio pellentesque diam. Aliquam purus sit amet luctus venenatis lectus magna. 
                 Dignissim diam quis enim lobortis scelerisque fermentum dui. Risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. 
                 Sodales ut eu sem integer vitae justo eget magna. Amet nulla facilisi morbi tempus iaculis urna id.</p>
-            <a href="login.html">
+            <a class="app-container" href="login.html">
                 <button class="app-button">Make Appointment</button>
             </a>
 
@@ -51,12 +51,10 @@
     </div>
     <div id="plug" class="container2">
         <div class="text2">
-            <h2>Why We Are The No.1 In Medicle Care?</h2>
-            <p class="text3">We provide world class service to our patients. We have experts doctors who have years of
-                experiance. We
-                provide world class service to our patients. We have experts doctors who have years of experiance. We
-                provide world class service to our patients. We have experts doctors who have years of experiance.</p>
-
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+            <p class="text3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Morbi leo urna molestie at elementum eu. Quis vel eros donec ac. Ac orci phasellus egestas tellus. Leo vel fringilla est ullamcorper 
+                eget nulla facilisi etiam.
         </div>
         <div class="box-alt">
             <img class="imgg" src="images/contacts-new.png">
@@ -68,7 +66,7 @@
         </div>
         <div class="box-alt">
             <img class="imgg" src="images/expertss.png">
-            <p class="pp">We Have Experts</p>
+            <p class="pp">Lorem ipsum</p>
 
         </div>
         <div class="box">
@@ -76,7 +74,7 @@
             <p class="pp">Lorem ipsum</p>
         </div>
     </div>
-    <div id="ancor" class="container3">
+    <div id="ancor" class="container3 shadow">
         <div class="title">
             <h1>Lorem ipsum, dolor sit amet</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, ipsum voluptas? Nihil
@@ -153,7 +151,7 @@
         </div>
     </div>
     <div id="prices-ancor" class="container4">
-        <div class="title">
+        <div class="price-title">
             <h1>Lorem ipsum</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
         </div>
@@ -187,7 +185,7 @@
 
         </div>
     </div>
-    <div id="ancor-doctors" class="container5">
+    <div id="ancor-doctors" class="container5 shadow">
         <div class="title-doc">
             <h1>Lorem ipsum</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, ipsum voluptas? Nihil
@@ -248,6 +246,16 @@
         </div>
         
     </div>
+    <script>
+        window.addEventListener('scroll',(e)=>{
+          const navbar = document.querySelector('.navbar.sticky');
+          if(window.pageYOffset>0){
+            navbar.classList.add("shadow");
+          }else{
+            navbar.classList.remove("shadow");
+          }
+        });
+    </script>
 </body>
 
 </html>
