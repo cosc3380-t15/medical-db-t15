@@ -1,12 +1,13 @@
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    display: inline-block;
     background-color: var(--lighter);
     transition: 0.3s;
     vertical-align: middle;
     position: flex;
-    width: 600px;
+    max-width: 60em;
+    margin: 0em auto;
+    justify-content: center;
 }
   /* On mouse-over, add a deeper shadow */
 .card:hover {
@@ -14,5 +15,13 @@
 }
   /* Add some padding inside the card container */
 .container {
-    padding: 2px 16px;
+  position: flex;
+  padding: 2px 16px;
+  margin: 0em auto;
+  text-align: center;
+}
+.card img {
+  max-width: 230px;
+  display: block;
+  margin: 0em auto;
 }
