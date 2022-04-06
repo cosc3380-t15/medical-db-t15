@@ -28,9 +28,35 @@
     <div class="container">
         <div class="container-child">
             <p>Patient ID</p>
+            <div class="container">
+                <ul> 
+                <?php
+                $count = 0;
+                foreach($result as $row){ //loop over all the results?>
+                <li class="<?php // if this is the first row output the first-row class, 
+                            // otherwise output other-row class
+                echo $count==0 ? 'first-row' : 'other-row'; ?>">
+                <?php echo $row["Pat_ID"]; ?></li>
+                <?php $count++; // increment my count var
+                } // endforeach?>
+                </ul>
+            </div>
         </div>
         <div class="container-child">
             <p>Name</p>
+            <div class="container">
+                <ul> 
+                <?php
+                $count = 0;
+                foreach($result as $row){ //loop over all the results?>
+                <li class="<?php // if this is the first row output the first-row class, 
+                            // otherwise output other-row class
+                echo $count==0 ? 'first-row' : 'other-row'; ?>">
+                <?php echo $row["Pat_First"]; ?></li>
+                <?php $count++; // increment my count var
+                } // endforeach?>
+                </ul>
+            </div>
         </div>
         <div class="container-child">
             <p>Email</p>
@@ -41,7 +67,6 @@
     </div>
 
         <div class="container">
-
         <ul> 
             <?php
             $count = 0;
