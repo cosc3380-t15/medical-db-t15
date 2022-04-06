@@ -53,18 +53,21 @@ $result = $link->query($sql);
 
 
 if($result){ // only execute this if there are results ?>
-    <ul> 
+<div>
+      <ul> 
     <?php
     $count = 0;
     foreach($result as $row){ //loop over all the results?>
+    <h4>Patient ID:</h2>
        <li class="<?php // if this is the first row output the first-row class, 
                        // otherwise output other-row class
            echo $count==0 ? 'first-row' : 'other-row'; ?>">
-           <h2>Patient ID   Name        Email           Phone</h2>
            <?php echo "Patient ID:  " . $row["Pat_ID"]. "  Name: " . $row["Pat_First"]. " " . $row["Pat_Last"]. "  Email  " . $row["Pat_Email"]. "  Phone  " . $row["Pat_Phone"]. "<br>"; ?><button class="float-right">Delete</button></li>
 <?php $count++; // increment my count var
     } // endforeach?>
    </ul>
+</div>
+  
 
 <?php 
 } //end if?>
