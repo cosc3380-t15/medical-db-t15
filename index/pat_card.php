@@ -1,4 +1,5 @@
 <?php                                                    # code...
+    session_start();
     $dbhost = getenv("DBHOST");
     $dbuser = getenv("DBUSER");
     $dbpass = getenv("DBPASS"); 
@@ -6,7 +7,7 @@
     $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
     
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
-    $sql = "SELECT * FROM patient WHERE Pat_ID=1012219 LIMIT 1";
+    $sql = "SELECT * FROM patient WHERE Pat_Email = '".$_SESSION['username']."' LIMIT 1";
     $result = $link->query($sql);
     if($result){ // only execute this if there are results ?>
 <!DOCTYPE html>

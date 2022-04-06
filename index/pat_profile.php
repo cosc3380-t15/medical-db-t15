@@ -1,3 +1,19 @@
+<?php
+    session_start();
+    if($_SESSION['loggedin'] != true and $_SESSION['role'] != "Patient") {
+        header("Location: login.php");
+    }
+    $dbhost = getenv("DBHOST");
+    $dbuser = getenv("DBUSER");
+    $dbpass = getenv("DBPASS"); 
+    $dbname = getenv("DBNAME");
+    $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
+    
+    mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
+    $query1 = "SELECT Pat_First, Pat_Last FROM patient WHERE Pat_Email = '".$_SESSION['username']."' LIMIT 1";
+    $result = $link->query($query1);
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -15,7 +31,7 @@
         </div>
         <div class="profile-div-w2">
             <button onclick="show()" class="profile-nav-logout">Logout</button>
-            <a href="home.html"><button id="confirm" class="profile-confirm">Are you sure?</button></a>
+            <a href="../backend/logout.php"><button id="confirm" class="profile-confirm">Are you sure?</button></a>
         </div>
     </div>
     <script>
@@ -27,43 +43,43 @@
 
         <div class="profile-welcome">
             <p>Welcome, </p>
-            <span>Lorem Ipsum</span>
+            <span><?php foreach($result as $row){ echo $row["Pat_First"]. " " .$row["Pat_Last"]; }?></span>
         </div>
 
         <a class="profile-menu-item">
-            <span>Lorem Ipsum</span>
+            <span>Profile</span>
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('pat_card.php')">View Profile</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('patient-create-profile.html')">Edit Profile</a>
         </div>
 
         <a class="profile-menu-item">
-            <span>Lorem Ipsum</span>
+            <span>Apointments</span>
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('appointment-viewer.html')">View Appointments</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('appointment-scheduler.html')">Schedule Appointment</a>
         </div>
 
         <a class="profile-menu-item">
-            <span>Lorem Ipsum</span>
+            <span>Lab results</span>
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html()">View Results</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html()">History</a>
         </div>
 
         <a class="profile-menu-item">
-            <span>Lorem Ipsum</span>
+            <span>Prescriptions</span>
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('prescription.html')">View Prescriptions</a>
+            <!-- <a href ="#" class="profile-submenu-item" onclick="load_html()">Request Prescription</a> -->
         </div>
     </div>
     <div id="content" class="profile-main">
