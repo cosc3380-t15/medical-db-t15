@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
 <html>
 
 <head>
-    <link rel="stylesheet" href="form.css">
+ 
     <link rel="stylesheet" href="/index/styles/test.css">
 </head>
 
@@ -49,6 +49,7 @@ if ($result->num_rows > 0) {
     $result = $link->query($sql);
     if($result){ // only execute this if there are results ?>
     <div class="container-fahter">
+
     <div class="container">
         <div class="container-child">
             <p>Patient ID</p>
