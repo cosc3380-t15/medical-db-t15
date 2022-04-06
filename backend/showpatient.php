@@ -49,6 +49,20 @@ if ($result->num_rows > 0) {
     $result = $link->query($sql);
     if($result){ // only execute this if there are results ?>
     <div class="container-fahter">
+    <div class="container">
+        <div class="container-child">
+            <p>Patient ID</p>
+        </div>
+        <div class="container-child">
+            <p>Name</p>
+        </div>
+        <div class="container-child">
+            <p>Email</p>
+        </div>
+        <div class="container-child">
+            <p>Phone</p>
+        </div>
+    </div>
 
         <div class="container">
             <h4>Patient ID:</h2>
