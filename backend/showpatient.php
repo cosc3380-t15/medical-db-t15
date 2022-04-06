@@ -29,6 +29,7 @@ if ($result->num_rows > 0) {
 
 <head>
     <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="/index/styles/test.css">
 </head>
 
 <body>
