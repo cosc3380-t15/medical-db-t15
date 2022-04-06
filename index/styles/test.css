@@ -13,3 +13,7 @@
 .float-right{
     float: right;
 }
+.container{
+    display: flex;
+    width: 20%;
+}
