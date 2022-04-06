@@ -13,28 +13,27 @@
     <div class="login">
         <div class="box-login">
             <div class="half-box-login">
-                <div class="login-form">
+                <form action="../backend/validate_login.php" class="login-form" method="post">
                     <label for="text" class="login-label">Username:</label>
-                    <input type="text" class="login-input" id="username">
+                    <input type="text" class="login-input" id="username" name="email">
 
                     <label for="text" class="login-label">Password:</label>
-                    <input type="password" class="login-input" id="password">
+                    <input type="password" class="login-input" id="password" name="pass">
 
                     <div class="login-buttons">
                         <!-- <button class="login-button">Log In</button> -->
                         <button type="submit" class="login-button" onClick="auth(event)">Log In</button>
                         <a href="register.html"><button class="register-login">Register</button></a>
-
                     </div>
                     <a href="home.html" class="home-button">Back</a>
-                </div>
+                </form>
             </div>
             <div class="half-box-login2">
                 <img class="login-image" src="images/logo.png" alt="">
             </div>
         </div>
     </div>
-    <script>
+    <!-- <script>
         function auth(event) {
             event.preventDefault();
 
@@ -50,7 +49,7 @@
                 return;
             }
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
