@@ -14,7 +14,7 @@ $address = $_POST['address'];
 $city = $_POST['city'];
 $state = $_POST['state'];
 $zip = $_POST['zip'];
-$allergy = $_POST['allergies']
+$allergy = $_POST['allergies'];
 
 
                                                         # code...
