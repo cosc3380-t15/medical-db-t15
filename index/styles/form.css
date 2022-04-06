@@ -126,8 +126,13 @@ select option {
   color: var(--lighter);
 }
 .input-group {
+  /* display: flex;
+  justify-content: center; */
   margin-bottom: 1em;
   zoom: 1;
+}
+.float-right{
+  float: right;
 }
 .input-group:before,
 .input-group:after {
@@ -184,6 +189,7 @@ select option {
 }
 .row {
   zoom: 1;
+  
 }
 .row:before,
 .row:after {
