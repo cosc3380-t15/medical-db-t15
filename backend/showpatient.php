@@ -23,3 +23,38 @@ if ($result->num_rows > 0) {
   $link->close();
 
 ?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+
+<div class="card">
+    
+        <a href="/index/patient.html"><input class="button" type="submit" value="Back"></a>
+        <?php
+                                                        # code...
+
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+      echo "Patient ID:  " . $row["Pat_ID"]. "  Name: " . $row["Pat_First"]. " " . $row["Pat_Last"]. "  Email  " . $row["Pat_Email"]. "  Phone  " . $row["Pat_Phone"]. <button>Delete</button> "<br>";
+    }
+  } else {
+    echo "0 results";
+  }
+
+  $link->close();
+
+?>
+
+    
+</div>
+
+</body>
+
