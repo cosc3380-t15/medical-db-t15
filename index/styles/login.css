@@ -80,6 +80,7 @@ body {
   text-align: center;
 }
 .register-login {
+  pointer-events: none;
   margin: 20px;
   padding: 10px 35px;
   font-weight: 800;
