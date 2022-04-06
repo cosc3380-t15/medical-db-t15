@@ -1,8 +1,12 @@
 .first-row {
-    color:rgb(0, 102, 255);
+    font-size: large;
+    color:rgb(255, 255, 255);
     font-weight:700;
+    background-color: blue;
 } 
 .other-row {
-    color:rgb(3, 163, 236);
+    font-size: large;
+    color:rgb(255, 255, 255);
     font-weight:normal;
+    background-color: rgb(0, 153, 255);
 }
