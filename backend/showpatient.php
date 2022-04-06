@@ -52,7 +52,7 @@
                 <li class="<?php // if this is the first row output the first-row class, 
                             // otherwise output other-row class
                 echo $count==0 ? 'first-row' : 'other-row'; ?>">
-                <?php echo $row["Pat_First"]; ?></li>
+                <?php echo $row["Pat_First"]. "" .$row["Pat_First"]."" ?></li>
                 <?php $count++; // increment my count var
                 } // endforeach?>
                 </ul>
@@ -60,28 +60,39 @@
         </div>
         <div class="container-child">
             <p>Email</p>
+            <div class="container">
+                <ul> 
+                <?php
+                $count = 0;
+                foreach($result as $row){ //loop over all the results?>
+                <li class="<?php // if this is the first row output the first-row class, 
+                            // otherwise output other-row class
+                echo $count==0 ? 'first-row' : 'other-row'; ?>">
+                <?php echo $row["Pat_Email"]; ?></li>
+                <?php $count++; // increment my count var
+                } // endforeach?>
+                </ul>
+            </div>
         </div>
         <div class="container-child">
             <p>Phone</p>
+            <div class="container">
+                <ul> 
+                <?php
+                $count = 0;
+                foreach($result as $row){ //loop over all the results?>
+                <li class="<?php // if this is the first row output the first-row class, 
+                            // otherwise output other-row class
+                echo $count==0 ? 'first-row' : 'other-row'; ?>">
+                <?php echo $row["Pat_Phone"]; ?></li>
+                <?php $count++; // increment my count var
+                } // endforeach?>
+                </ul>
+            </div>
         </div>
     </div>
 
-        <div class="container">
-        <ul> 
-            <?php
-            $count = 0;
-            foreach($result as $row){ //loop over all the results?>
-        <li class="<?php // if this is the first row output the first-row class, 
-                        // otherwise output other-row class
-            echo $count==0 ? 'first-row' : 'other-row'; ?>">
-            <?php echo "  " . $row["Pat_ID"]. "  ------------------------------------------------------------------------- " . $row["Pat_First"]. "  " . $row["Pat_Last"]. " ------------------------------------------------------   " . $row["Pat_Email"]. " ------------------------------------------------------   " . $row["Pat_Phone"]. ""; ?><button class="float-right">Delete</button></li>
-            <?php $count++; // increment my count var
-            } // endforeach?>
-            </ul>
-        </div>
-        
 
-    </div>
     
   
 
