@@ -48,47 +48,52 @@ if ($result->num_rows > 0) {
     $sql = "SELECT Pat_ID, Pat_First, Pat_Last, Pat_Email, Pat_Phone FROM patient";
     $result = $link->query($sql);
     if($result){ // only execute this if there are results ?>
-    <div class="container">
-        <h4>Patient ID:</h2>
-      <ul> 
-        <?php
-        $count = 0;
-        foreach($result as $row){ //loop over all the results?>
-       <li class="<?php // if this is the first row output the first-row class, 
-                       // otherwise output other-row class
-           echo $count==0 ? 'first-row' : 'other-row'; ?>">
-           <?php echo $row["Pat_ID"]; ?><button class="float-right">Delete</button></li>
-        <?php $count++; // increment my count var
-        } // endforeach?>
-        </ul>
+    <div class="container-fahter">
+
+        <div class="container">
+            <h4>Patient ID:</h2>
+        <ul> 
+            <?php
+            $count = 0;
+            foreach($result as $row){ //loop over all the results?>
+        <li class="<?php // if this is the first row output the first-row class, 
+                        // otherwise output other-row class
+            echo $count==0 ? 'first-row' : 'other-row'; ?>">
+            <?php echo $row["Pat_ID"]; ?><button class="float-right">Delete</button></li>
+            <?php $count++; // increment my count var
+            } // endforeach?>
+            </ul>
+        </div>
+        <div class="container">
+            <h4>Name:</h2>
+        <ul> 
+            <?php
+            $count = 0;
+            foreach($result as $row){ //loop over all the results?>
+        <li class="<?php // if this is the first row output the first-row class, 
+                        // otherwise output other-row class
+            echo $count==0 ? 'first-row' : 'other-row'; ?>">
+            <?php echo $row["Pat_First"]; ?><button class="float-right">Delete</button></li>
+            <?php $count++; // increment my count var
+            } // endforeach?>
+            </ul>
+        </div>
+        <div class="container">
+        <ul> 
+            <?php
+            $count = 0;
+            foreach($result as $row){ //loop over all the results?>
+        <li class="<?php // if this is the first row output the first-row class, 
+                        // otherwise output other-row class
+            echo $count==0 ? 'first-row' : 'other-row'; ?>">
+            <?php echo $row["Pat_Last"]; ?><button class="float-right">Delete</button></li>
+            <?php $count++; // increment my count var
+            } // endforeach?>
+            </ul>
+        </div>
+
     </div>
-    <div class="container">
-        <h4>Name:</h2>
-      <ul> 
-        <?php
-        $count = 0;
-        foreach($result as $row){ //loop over all the results?>
-       <li class="<?php // if this is the first row output the first-row class, 
-                       // otherwise output other-row class
-           echo $count==0 ? 'first-row' : 'other-row'; ?>">
-           <?php echo $row["Pat_First"]; ?><button class="float-right">Delete</button></li>
-        <?php $count++; // increment my count var
-        } // endforeach?>
-        </ul>
-    </div>
-    <div class="container">
-      <ul> 
-        <?php
-        $count = 0;
-        foreach($result as $row){ //loop over all the results?>
-       <li class="<?php // if this is the first row output the first-row class, 
-                       // otherwise output other-row class
-           echo $count==0 ? 'first-row' : 'other-row'; ?>">
-           <?php echo $row["Pat_Last"]; ?><button class="float-right">Delete</button></li>
-        <?php $count++; // increment my count var
-        } // endforeach?>
-        </ul>
-    </div>
+    
   
 
     <?php 
