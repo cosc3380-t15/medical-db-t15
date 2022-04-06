@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if($_SESSION['loggedin'] != true  and $_SESSION['role'] != "Doc") {
+        header("Location: login.php");
+    }
+?>
 <!DOCTYPE html>
 <html>
 

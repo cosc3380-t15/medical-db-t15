@@ -9,95 +9,8 @@
 </head>
 
 <body>
-    <!-- <form action="addpatient.php" method="post">
-        <table>
-            <tr>
-                <td>
-                    <label for="">First Name:</label>
-                    <input type="text" name="fname" required>
-                </td>
-                <td>
-                    <label for="">Middle Initial:</label>
-                    <input type="text" name="minit" required>
-                </td>
-                <td>
-                    <label for="">Last Name:</label>
-                    <input type="text" name="lname" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Email:</label>
-                    <input type="text" name="email" required>
-                </td>
-                <td>
-                    <label for="">Phone Number:</label>
-                    <input type="text" name="phone" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Gender:</label>
-                    <input type="radio" name="gender" value="1" required>Male
-                    <input type="radio" name="gender" value="2" required>Female
-                </td>
-                <td>
-                    <label for="">Race:</label>
-                    <input type="text" name="race" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Date of Birth: </label>
-                    <input type="date" name="dob" required>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <label for="">Height:</label>
-                    <input type="text" name="height" required>
-                </td>
-                <td>
-                    <label for="">Weight:</label>
-                    <input type="text" name="weight" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Address line 1:</label>
-                    <input type="text" name="address" required>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <label for="">City:</label>
-                    <input type="text" name="city" required>
-                </td>
-                <td>
-                    <label for="">State:</label>
-                    <input type="text" name="state" required>
-                </td>
-                <td>
-                    <label for="">Zip Code:</label>
-                    <input type="text" name="zip" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" name="" id="">
-                </td>
-            </tr>
-        </table>
-    </form>
-    <a href="test.php">test</a> -->
-
-
-
-
     <div class="container-form11">
-        <form action="/backend/addpatient.php" method="post">
+        <form action="../backend/create_pat_profile.php" method="post" onsubmit="return Validate();">
             <div class="row">
                 <h4>Patient Information</h4>
                 <div class="input-group input-group-icon">
@@ -105,7 +18,7 @@
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Middle Name" name="minit" required />
+                    <input type="text" placeholder="Middle Name" name="minit"/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
@@ -120,6 +33,19 @@
                     <input type="text" placeholder="Phone Number" name="phone" required />
                     <div class="input-icon"><i class="fa fa-key"></i></div>
                 </div>
+            </div>
+            <div class="row">
+                <h4>Password</h4>
+                <div class="input-group input-group-icon">
+                    <input type="password" id="pw" placeholder="Enter Password" name="password" minlength="8" required />
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="password" id="pwc" placeholder="Retype Password" name="confirm-pass" minlength="8" required />
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+            </div>
+            <div class="row">    
                 <div class="input-group input-group-icon">
                     <label for="">
                         <h4> Date of Birth: </h4>
@@ -195,40 +121,20 @@
         </form>
     </div>
 
-    <!-- <form action="test.php" method="post">
-        <table>
-            <tr>
-                <td>
-                    <label for="">First Name:</label>
-                    <input type="text" name="idtest">
-                </td>
-                <td>
-                    <label for="">Middle Initial:</label>
-                    <input type="text" name="test">
-                </td>
-        </table>
-    </form>
-    <a href="test.php">test</a> -->
+    <script>
+        function Validate() {
+            var pw1 = document.getElementById("pw").value;
+            var pw2 = document.getElementById("pwc").value;
 
-    <!-- <?php
-        $sql = "SELECT * FROM doctor;";
-        $result = mysqli_query($conn, $sql);
-        $resultCheck = mysqli_num_rows($result);
-
-        if ($resultCheck > 0){
-            while ($row = mysqli_fetch_assoc($result)){
-                echo $row['Doc_Spec'];
-            }    
+            if(pw1 == pw2) {
+                alert("Account Created Successfully!");
+                return true;
+            } else {
+                alert("Passwords do not match!");
+                return false;
+            }
         }
-
-
-    ?>
-
-
- -->
-
-
-
+    </script>
 </body>
 
 </html>
