@@ -60,7 +60,7 @@ if($result){ // only execute this if there are results ?>
        <li class="<?php // if this is the first row output the first-row class, 
                        // otherwise output other-row class
            echo $count==0 ? 'first-row' : 'other-row'; ?>">
-           <?php echo $row['Pat_ID']; ?></li>
+           <?php echo $row['Pat_ID'] " " . $row["Pat_First"]. " " . $row["Pat_Last"]. " " . $row["Pat_Email"]. "  " . $row["Pat_Phone"]. "<br>"; ?></li>
 <?php $count++; // increment my count var
     } // endforeach?>
    </ul>
