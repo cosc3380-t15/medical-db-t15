@@ -14,6 +14,7 @@ $address = $_POST['address'];
 $city = $_POST['city'];
 $state = $_POST['state'];
 $zip = $_POST['zip'];
+$allergy = $_POST['allergies']
 
 
                                                         # code...
@@ -26,8 +27,8 @@ $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '
 mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
                                                         
-$query1 = "INSERT INTO patient (Pat_First, Pat_last,Pat_M_init,Pat_Email,Pat_Phone,Pat_Gender,Pat_Race,Pat_DOB,Pat_Height,Pat_Weight,Pat_Street_Addr,Pat_City_Addr,Pat_State_Addr,Pat_Zip_Addr)
-VALUES ('$firstname','$minit','$lname','$email','$phone','$gender','$race','$dob','$height','$weight','$address','$city','$state','$zip')";
+$query1 = "INSERT INTO patient (Pat_First, Pat_last,Pat_M_init,Pat_Email,Pat_Phone,Pat_Gender,Pat_Race,Pat_DOB,Pat_Height,Pat_Weight,Pat_Street_Addr,Pat_City_Addr,Pat_State_Addr,Pat_Zip_Addr,Pat_Allergy)
+VALUES ('$firstname','$minit','$lname','$email','$phone','$gender','$race','$dob','$height','$weight','$address','$city','$state','$zip','$allergy')";
 
 
 if ($link->query($query1) === TRUE) {
