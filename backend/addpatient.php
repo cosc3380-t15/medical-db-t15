@@ -31,28 +31,12 @@ $query1 = "INSERT INTO patient (Pat_First,Pat_M_init,Pat_last,Pat_Email,Pat_Phon
 VALUES ('$firstname','$minit','$lname','$email','$phone','$gender','$race','$dob','$height','$weight','$address','$city','$state','$zip','$allergy')";
 
 
-if ($link->query($query1) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $query1 . "<br>" . $link->error;                                                           
-    }
-mysqli_close($link)                                                     
-                            
+if ($link->query($query1) !== TRUE) {
+    echo "Error: " . $query1 . "<br>" . $link->error;
+} mysqli_close($link);
+
+header('Location: ../index/patient-create-profile');                 
 
 
 ?>
-<!DOCTYPE html>
-<html>
-
-<head>
-    <link rel="stylesheet" href="form.css">
-</head>
-
-<body>
-
-<div class="card">
-        <a href="../index/patient-create-profile.html"><input class="button" type="submit" value="Back"></a>
-</div>
-
-</body>
 
