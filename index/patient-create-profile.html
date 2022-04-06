@@ -97,7 +97,7 @@
 
 
     <div class="container-form11">
-        <form action="/backend/addpatient.php" method="post">
+        <form action="/backend/addpatient.php" method="post" onsubmit="return Validate();">
             <div class="row">
                 <h4>Patient Information</h4>
                 <div class="input-group input-group-icon">
@@ -105,7 +105,7 @@
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Middle Name" name="minit" required />
+                    <input type="text" placeholder="Middle Name" name="minit"/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
@@ -120,6 +120,19 @@
                     <input type="text" placeholder="Phone Number" name="phone" required />
                     <div class="input-icon"><i class="fa fa-key"></i></div>
                 </div>
+            </div>
+            <div class="row">
+                <h4>Password</h4>
+                <div class="input-group input-group-icon">
+                    <input type="password" id="pw" placeholder="Enter Password" name="password" minlength="8" required />
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="password" id="pwc" placeholder="Retype Password" name="confirm-pass" minlength="8" required />
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+            </div>
+            <div class="row">    
                 <div class="input-group input-group-icon">
                     <label for="">
                         <h4> Date of Birth: </h4>
@@ -194,6 +207,20 @@
             <input class="button" type="submit">
         </form>
     </div>
+
+    <script>
+        function Validate() {
+            var pw1 = document.getElementById("pw").value;
+            var pw2 = document.getElementById("pwc").value;
+
+            if(pw1 == pw2) {
+                return true;
+            } else {
+                alert("Passwords do not match!");
+                return false;
+            }
+        }
+    </script>
 
     <!-- <form action="test.php" method="post">
         <table>
