@@ -35,7 +35,7 @@ if ($link->query($query1) !== TRUE) {
     echo "Error: " . $query1 . "<br>" . $link->error;
 } mysqli_close($link);
 
-header('Location: ../index/patient-create-profile');                 
+header('Location: ../index/patient-create-profile.html');                 
 
 
 ?>
