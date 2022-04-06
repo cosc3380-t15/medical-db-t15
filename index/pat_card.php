@@ -17,13 +17,13 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../index/styles/card.css">
+    <link rel="stylesheet" href="/styles/card.css">
 </head>
 
 <body>
 
 <div class="card">
-    <img src="../index/images/patient.png" alt="Avatar" style="width:50%">
+    <img src="/images/patient.png" alt="Avatar" style="width:50%">
     <div class="container">
         <h4><b><?php foreach($result as $row){ echo $row["Pat_First"]. " " .$row["Pat_Last"];?></b></h4>
         <p><?php echo $row["Pat_Email"];?></p>
