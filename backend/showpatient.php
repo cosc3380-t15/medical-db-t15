@@ -66,6 +66,7 @@ if ($result->num_rows > 0) {
     </div>
 
         <div class="container">
+
         <ul> 
             <?php
             $count = 0;
@@ -73,7 +74,7 @@ if ($result->num_rows > 0) {
         <li class="<?php // if this is the first row output the first-row class, 
                         // otherwise output other-row class
             echo $count==0 ? 'first-row' : 'other-row'; ?>">
-            <?php echo "        " . $row["Pat_ID"]. "       " . $row["Pat_First"]. "        " . $row["Pat_Last"]. "         " . $row["Pat_Email"]. "        " . $row["Pat_Phone"].; ?><button class="float-right">Delete</button></li>
+            <?php echo " " . $row["Pat_ID"]. "  " . $row["Pat_First"]. " " . $row["Pat_Last"]. "    " . $row["Pat_Email"]. "    " . $row["Pat_Phone"]. ; ?><button class="float-right">Delete</button></li>
             <?php $count++; // increment my count var
             } // endforeach?>
             </ul>
