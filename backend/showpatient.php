@@ -9,7 +9,7 @@ $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '
 mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
 $sql = "SELECT Pat_ID, Pat_First, Pat_Last, Pat_Email, Pat_Phone FROM patient";
-$result = $conn->query($sql);
+$result = $link->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
