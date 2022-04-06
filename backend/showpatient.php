@@ -29,6 +29,7 @@ if ($result->num_rows > 0) {
 
 <head>
     <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="/index/styles/test.css">
 </head>
 
 <body>
@@ -49,7 +50,7 @@ mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 $sql = "SELECT Pat_ID, Pat_First, Pat_Last, Pat_Email, Pat_Phone FROM patient";
 $result = $link->query($sql);
 
-//////////////////////////////////////////////////////
+
 
 if($result){ // only execute this if there are results ?>
     <ul> 
@@ -59,30 +60,13 @@ if($result){ // only execute this if there are results ?>
        <li class="<?php // if this is the first row output the first-row class, 
                        // otherwise output other-row class
            echo $count==0 ? 'first-row' : 'other-row'; ?>">
-           <?php echo $row['Pat_ID']; ?></li>
+           <?php echo $row['Pat_ID','Pat_First','Pat_Last','Pat_Email','Pat_Phone' ]; ?></li>
 <?php $count++; // increment my count var
     } // endforeach?>
    </ul>
 
 <?php 
 } //end if?>
-
-
-////////////////////////////////////
-
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-      echo "Patient ID:  " . $row["Pat_ID"]. "  Name: " . $row["Pat_First"]. " " . $row["Pat_Last"]. "  Email  " . $row["Pat_Email"]. "  Phone  " . $row["Pat_Phone"]. "<br>";
-    }
-  } else {
-    echo "0 results";
-  }
-
-  $link->close();
-
-?>
 
     
 </div>
