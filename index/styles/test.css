@@ -28,6 +28,9 @@
     padding-left: 10px;
 }
 ul{
-    margin: 0;
+    margin: 2px;
     padding: 0;
+}
+p{
+    margin: 2px;
 }
