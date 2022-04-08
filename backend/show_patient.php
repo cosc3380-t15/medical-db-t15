@@ -12,7 +12,7 @@
         $delete=mysqli_query($link, "DELETE FROM `patient `WHERE `Pat_ID`= '$id'");
    } 
 
-    $select="SELECT * FROM patient"
+    $select="SELECT * FROM patient";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
