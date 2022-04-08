@@ -52,8 +52,8 @@
                         <td>".$result['Pat_Phone']."</td>
                         <td>".$result['Pat_Email']."</td>
                         <td>
-                            <a href='show_patient.php?' id=".$result['Pat_ID']."' 
-                                class='btn'>Delete</a>
+                            <a href='show_patient.php?id=".$result['Pat_ID']."'class='btn'>Delete</a>
+                            
                         </td>
             
                     </tr>
@@ -65,6 +65,6 @@
     ?>
     
     </table>
-
+   
 
 </body>
