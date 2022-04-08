@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+session_start(); 
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -35,8 +38,13 @@
             </a>
         </div>
         <div class="div-w2">
-            <a href="login.php"><button class="nav-login">Log In / Register</button></a>
-            <button class="nav-button">Contact Us</button>
+            <?php if($_SESSION['login']) {?>
+
+            <?php } else {
+            echo
+            '<a href="login.php"><button class="nav-loggedin">Log In / Register</button></a>
+            <button class="nav-button">Contact Us</button>';
+            ?>
         </div>
     </div>
     <div id="home" class="container shadow">
