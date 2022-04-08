@@ -25,7 +25,7 @@
                         <button type="submit" class="login-button" onClick="auth(event)">Log In</button>
                         <a href="register.html"><button class="register-login">Register</button></a>
                     </div>
-                    <a href="home.html" class="home-button">Back</a>
+                    <a href="home.php" class="home-button">Back</a>
                 </form>
             </div>
             <div class="half-box-login2">
