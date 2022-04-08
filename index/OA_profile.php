@@ -24,7 +24,7 @@
 <body>
     <div class="profile-navbar profile-shadow">
         <div class="profile-div-w">
-            <a href="">
+            <a href="home.php">
                 <h1 class="profile-logo">Clinico</h1>
             </a>
         </div>
