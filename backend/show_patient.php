@@ -9,8 +9,8 @@
 
 
    if (isset($_GET['Pat_ID'])) {  
-    $id = $_GET['Pat_ID'];  
-    $query = "DELETE FROM `patient` WHERE Pat_ID = '$id'";  
+    $Pat_ID = $_GET['Pat_ID'];  
+    $query = "DELETE FROM `patient` WHERE Pat_ID = '$Pat_ID'";  
     $run = mysqli_query($link,$query);  
     if ($run) {  
          header('location:index.php');  
@@ -52,7 +52,7 @@
                         <td>".$result['Pat_Phone']."</td>
                         <td>".$result['Pat_Email']."</td>
                         <>
-                            <a href='/backend/show_patient.php?id=".$result['Pat_ID']."'class='btn'>Delete</a>
+                            <a href='/backend/show_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Delete</a>
                             
                         </td>
             
@@ -63,7 +63,7 @@
         }
     
     ?>
-                        <a href='delete.php?id=".$result['id']."' id='btn'>Delete</a></td>  
+    
     </table>
    
 
