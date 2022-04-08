@@ -36,15 +36,15 @@
                 echo "
                 
                 <tr>
-                    <td>".$result['Pat_ID']"</td>
-                    <td>".$result['Pat_First']"</td>
-                    <td>".$result['Pat_Last']"</td>
-                    <td>".$result['Pat_Email']"</td>
-                    <td>".$result['Pat_Phone']"</td>
+                    <td>".$result['Pat_ID']."</td>
+                    <td>".$result['Pat_First']."</td>
+                    <td>".$result['Pat_Last']."</td>
+                    <td>".$result['Pat_Email']."</td>
+                    <td>".$result['Pat_Phone']."</td>
                 </tr>
                 
             
-                "
+                ";
             }
         }
 
