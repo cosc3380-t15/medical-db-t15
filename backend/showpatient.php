@@ -84,7 +84,7 @@
                 <li class="<?php // if this is the first row output the first-row class, 
                             // otherwise output other-row class
                 echo $count==0 ? 'first-row' : 'other-row'; ?>">
-                <?php echo $row["Pat_Phone"]; ?> <div>&nbsp;&nbsp;<button>Edint</button>&nbsp;&nbsp;<button>Delete</button></div></li>
+                <?php echo $row["Pat_Phone"]; ?> &nbsp;&nbsp;<button>Edint</button>&nbsp;&nbsp;<button>Delete</button></li>
                 <?php $count++; // increment my count var
                 } // endforeach?>
                 </ul>
