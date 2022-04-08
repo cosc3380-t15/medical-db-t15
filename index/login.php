@@ -1,3 +1,17 @@
+<?php
+session_start();
+if($_SESSION['loggedin']) {
+    switch($_SESSION['role']) {
+        case 'Patient':
+            header("Location: pat_profile.php"); break;
+        case 'Doc':
+            header("Location: doc_profile.php"); break;
+        case 'OA':
+            header("Location: OA_profile.php"); break;
+    }
+}
+?>
+
 <html
     class="js sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers"
     lang="zxx">

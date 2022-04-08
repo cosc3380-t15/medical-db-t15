@@ -1,6 +1,7 @@
 <?php
-session_start(); 
-
+session_start();
+$_SESSION['loggedin']=true; 
+$_SESSION['role']="OA";
 ?>
 
 <!DOCTYPE html>
@@ -38,12 +39,15 @@ session_start();
             </a>
         </div>
         <div class="div-w2">
-            <?php if($_SESSION['login']) {?>
-
-            <?php } else {
+            <?php if($_SESSION['loggedin']) {
+                echo
+                '
+                <a href="../backend/logout.php"><button class="nav-login">Log Out</button></a>
+                <a href="login.php"><button class="nav-button">View Profile</button></a>';
+            } else {
             echo
-            '<a href="login.php"><button class="nav-loggedin">Log In / Register</button></a>
-            <button class="nav-button">Contact Us</button>';
+            '<a href="login.php"><button class="nav-login">Log In / Register</button></a>';
+            }
             ?>
         </div>
     </div>
