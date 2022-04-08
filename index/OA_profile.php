@@ -30,7 +30,7 @@
         </div>
         <div class="profile-div-w2">
             <button onclick="show()" class="profile-nav-logout">Logout</button>
-            <a href="home.php"><button id="confirm" class="profile-confirm">Are you sure?</button></a>
+            <a href="../backend/logout.php"><button id="confirm" class="profile-confirm">Are you sure?</button></a>
         </div>
     </div>
     <script>
