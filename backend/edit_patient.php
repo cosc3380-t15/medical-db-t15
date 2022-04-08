@@ -23,7 +23,7 @@ if (isset($_SESSION['status'])) {
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="First Name" name="fname" required />
+                    <input type="text" placeholder="First Name" name="fname"  />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
@@ -31,15 +31,15 @@ if (isset($_SESSION['status'])) {
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Last Name" name="lname" required />
+                    <input type="text" placeholder="Last Name" name="lname"  />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="email" placeholder="Email Adress" name="email" required />
+                    <input type="email" placeholder="Email Adress" name="email"  />
                     <div class="input-icon"><i class="fa fa-envelope"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Phone Number" name="phone" required />
+                    <input type="text" placeholder="Phone Number" name="phone"  />
                     <div class="input-icon"><i class="fa fa-key"></i></div>
                 </div>
             </div>
@@ -49,16 +49,16 @@ if (isset($_SESSION['status'])) {
                     <label for="">
                         <h4> Date of Birth: </h4>
                     </label>
-                    <input type="date" name="dob" required>
+                    <input type="date" name="dob" >
                 </div>
             </div>
 
             <div class="row">
                 <h4>Gender</h4>
                 <div class="input-group">
-                    <input class="col-half" id="gender-male" type="radio" name="gender" value="Male" required />
+                    <input class="col-half" id="gender-male" type="radio" name="gender" value="Male"  />
                     <label for="gender-male">Male</label>
-                    <input class="col-half" id="gender-female" type="radio" name="gender" value="Female" required />
+                    <input class="col-half" id="gender-female" type="radio" name="gender" value="Female"  />
                     <label class="float-right" for="gender-female">Female</label>
                 </div>
             </div>
@@ -66,10 +66,10 @@ if (isset($_SESSION['status'])) {
             <div class="row">
                 <div class="input-group">
                     <div class="col-half">
-                        <input type="text" placeholder="Weight" name="weight" required />
+                        <input type="text" placeholder="Weight" name="weight"  />
                     </div>
                     <div class="col-half">
-                        <input type="text" placeholder="Height" name="height" required />
+                        <input type="text" placeholder="Height" name="height"  />
                     </div>
                 </div>
             </div>
@@ -101,18 +101,18 @@ if (isset($_SESSION['status'])) {
             </div>
 
             <div class="input-group input-group-icon">
-                <input type="text" placeholder="Address" name="address" required />
+                <input type="text" placeholder="Address" name="address"  />
                 <div class="input-icon"><i class="fa fa-user"></i></div>
             </div>
             <div class="input-group">
                 <div class="col-third">
-                    <input type="text" placeholder="City" name="city" required />
+                    <input type="text" placeholder="City" name="city"  />
                 </div>
                 <div class="col-third">
-                    <input type="text" placeholder="State" name="state" required />
+                    <input type="text" placeholder="State" name="state"  />
                 </div>
                 <div class="col-third">
-                    <input type="text" placeholder="Zip Code" name="zip" required />
+                    <input type="text" placeholder="Zip Code" name="zip"  />
                 </div>
 
             </div>
