@@ -1,5 +1,5 @@
 <?php
-$rollNo1=$_REQUEST['rollNo'];
+$rollNo1=$_REQUEST['pat_id'];
 
 $dbhost = getenv("DBHOST");
 $dbuser = getenv("DBUSER");
