@@ -18,6 +18,12 @@ if (isset($_SESSION['status'])) {
         <form action="/backend/update_patient_data.php" method="post" onsubmit="return Validate();">
             <div class="row">
                 <h4>Update Patient Information</h4>
+                <?php
+if (isset($_SESSION['status'])) {
+    echo "<h4>".$_SESSION['status']."</h4>";
+    unset($_SESSION['status']);
+}
+?>
                 <div class="input-group input-group-icon">
                     <input type="text" placeholder="Patient ID" name="pat_id" required />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
