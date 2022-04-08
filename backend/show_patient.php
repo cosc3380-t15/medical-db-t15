@@ -7,17 +7,17 @@
                                                         
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
-   if (isset($_GET['Pat_ID'])){
-        $id=$_GET['Pat_ID'];
 
-
-        
-
-
-
-
-        $delete=mysqli_query($link, "DELETE FROM patient WHERE Pat_ID = '$id'");
-   } 
+   if (isset($_GET['Pat_ID'])) {  
+    $id = $_GET['Pat_ID'];  
+    $query = "DELETE FROM `patient` WHERE Pat_ID = '$id'";  
+    $run = mysqli_query($link,$query);  
+    if ($run) {  
+         header('location:index.php');  
+    }else{  
+         echo "Error: ".mysqli_error($link);  
+    }  
+}
 
     $select="SELECT * FROM patient";
     $query=mysqli_query($link,$select);
