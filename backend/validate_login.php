@@ -3,8 +3,6 @@ session_start();
 $email = $_POST['email'];
 $pass = $_POST['pass'];
 
-
-                                                        # code...
 $dbhost = getenv("DBHOST");
 $dbuser = getenv("DBUSER");
 $dbpass = getenv("DBPASS"); 
@@ -13,31 +11,34 @@ $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '
 
 mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
-$query1 = "SELECT Pat_Email, Pat_Password FROM patient WHERE Pat_Email = '$email' AND Pat_password = '$pass'";
+$query1 = "SELECT Pat_ID FROM patient WHERE Pat_Email = '$email' AND Pat_password = '$pass'";
 $result = $link->query($query1);
+foreach($result as $row) { $id = $row['Pat_ID']; }
 if(mysqli_num_rows($result) === 1) {
     mysqli_close($link);
     $_SESSION['loggedin'] = true;
-    $_SESSION['username'] = $email;
+    $_SESSION['id'] = $id;
     $_SESSION['role'] = "Patient";
     header('Location: ../index/pat_profile.php');
 } else {
 
-    $query2 = "SELECT Doc_Email, Doc_Password FROM doctor WHERE Doc_Email = '$email' AND Doc_password = '$pass'";
+    $query2 = "SELECT Doc_ID FROM doctor WHERE Doc_Email = '$email' AND Doc_password = '$pass'";
     $result = $link->query($query2);
+    foreach($result as $row) { $id = $row['Doc_ID']; }
     if(mysqli_num_rows($result) === 1) {
         $_SESSION['loggedin'] = true;
-        $_SESSION['username'] = $email;
+        $_SESSION['id'] = $id;
         $_SESSION['role'] = "Doc";
         mysqli_close($link);
         header('Location: ../index/doc_profile.php');
     } else {
 
-        $query3 = "SELECT Ad_Email, Ad_Password FROM admin WHERE Ad_Email = '$email' AND Ad_password = '$pass'";
+        $query3 = "SELECT Ad_ID FROM admin WHERE Ad_Email = '$email' AND Ad_password = '$pass'";
         $result = $link->query($query3);
+        foreach($result as $row) { $id = $row['Ad_ID']; }
         if(mysqli_num_rows($result) === 1) {
             $_SESSION['loggedin'] = true;
-            $_SESSION['username'] = $email;
+            $_SESSION['id'] = $id;
             $_SESSION['role'] = "OA";
             mysqli_close($link);
             header('Location: ../index/OA_profile.php');

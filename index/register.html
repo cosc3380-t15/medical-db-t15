@@ -9,93 +9,6 @@
 </head>
 
 <body>
-    <!-- <form action="addpatient.php" method="post">
-        <table>
-            <tr>
-                <td>
-                    <label for="">First Name:</label>
-                    <input type="text" name="fname" required>
-                </td>
-                <td>
-                    <label for="">Middle Initial:</label>
-                    <input type="text" name="minit" required>
-                </td>
-                <td>
-                    <label for="">Last Name:</label>
-                    <input type="text" name="lname" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Email:</label>
-                    <input type="text" name="email" required>
-                </td>
-                <td>
-                    <label for="">Phone Number:</label>
-                    <input type="text" name="phone" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Gender:</label>
-                    <input type="radio" name="gender" value="1" required>Male
-                    <input type="radio" name="gender" value="2" required>Female
-                </td>
-                <td>
-                    <label for="">Race:</label>
-                    <input type="text" name="race" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Date of Birth: </label>
-                    <input type="date" name="dob" required>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <label for="">Height:</label>
-                    <input type="text" name="height" required>
-                </td>
-                <td>
-                    <label for="">Weight:</label>
-                    <input type="text" name="weight" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Address line 1:</label>
-                    <input type="text" name="address" required>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <label for="">City:</label>
-                    <input type="text" name="city" required>
-                </td>
-                <td>
-                    <label for="">State:</label>
-                    <input type="text" name="state" required>
-                </td>
-                <td>
-                    <label for="">Zip Code:</label>
-                    <input type="text" name="zip" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" name="" id="">
-                </td>
-            </tr>
-        </table>
-    </form>
-    <a href="test.php">test</a> -->
-
-
-
-
     <div class="container-form11">
         <a href="login.php">< Back<a>
         <form action="/backend/create_pat_profile.php" method="post" onsubmit="return Validate();">
@@ -158,7 +71,7 @@
                         <input type="text" placeholder="Weight" name="weight" required />
                     </div>
                     <div class="col-half">
-                        <input type="text" placeholder="Height" name="height" required />
+                        <input type="text" placeholder="Height (cm)" name="height" required />
                     </div>
                 </div>
             </div>
@@ -222,41 +135,6 @@
             }
         }
     </script>
-
-    <!-- <form action="test.php" method="post">
-        <table>
-            <tr>
-                <td>
-                    <label for="">First Name:</label>
-                    <input type="text" name="idtest">
-                </td>
-                <td>
-                    <label for="">Middle Initial:</label>
-                    <input type="text" name="test">
-                </td>
-        </table>
-    </form>
-    <a href="test.php">test</a> -->
-
-    <!-- <?php
-        $sql = "SELECT * FROM doctor;";
-        $result = mysqli_query($conn, $sql);
-        $resultCheck = mysqli_num_rows($result);
-
-        if ($resultCheck > 0){
-            while ($row = mysqli_fetch_assoc($result)){
-                echo $row['Doc_Spec'];
-            }    
-        }
-
-
-    ?>
-
-
- -->
-
-
-
 </body>
 
 </html>

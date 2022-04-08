@@ -1,8 +1,17 @@
 <?php
     session_start();
-    if($_SESSION['loggedin'] != true  and $_SESSION['role'] != "OA") {
+    if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "OA") {
         header("Location: login.php");
     }
+    $dbhost = getenv("DBHOST");
+    $dbuser = getenv("DBUSER");
+    $dbpass = getenv("DBPASS"); 
+    $dbname = getenv("DBNAME");
+    $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
+    
+    mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
+    $query1 = "SELECT Ad_First, Ad_Last FROM admin WHERE Ad_ID = '".$_SESSION['id']."' LIMIT 1";
+    $result = $link->query($query1);
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,20 +42,20 @@
 
         <div class="profile-welcome">
             <p>Welcome, </p>
-            <span>Lorem Ipsum</span>
+            <span><?php foreach($result as $row){ echo $row["Ad_First"]. " " .$row["Ad_Last"]; }?></span>
         </div>
 
         <a class="profile-menu-item">
-            <span>Lorem Ipsum</span>
+            <span>Profile</span>
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html()">View Profile</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html()">Edit Profile</a>
         </div>
 
         <a class="profile-menu-item">
-            <span>Lorem Ipsum</span>
+            <span>Patients</span>
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">

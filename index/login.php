@@ -33,23 +33,6 @@
             </div>
         </div>
     </div>
-    <!-- <script>
-        function auth(event) {
-            event.preventDefault();
-
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-
-            if ((username === "admin" && password === "user") || (username === "drago" && password === "nonov")) {
-                window.location.replace("pat_profile.html");
-            } else if (username === "pat" && password === "pat") {
-                window.location.replace("pat_profile.html");
-            } else {
-                alert("Invalid information");
-                return;
-            }
-        }
-    </script> -->
 </body>
 
 </html>
