@@ -21,7 +21,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<body>
+<body onload="load_html('doc_card.php')">
     <div class="profile-navbar profile-shadow">
         <div class="profile-div-w">
             <a href="home.php">
@@ -46,11 +46,11 @@
         </div>
 
         <a class="profile-menu-item">
-            <span>Lorem Ipsum</span>
+            <span>Profile</span>
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('doc_card.php')">View Profile</a>
             <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
         </div>
 
