@@ -19,11 +19,11 @@ if (isset($_SESSION['status'])) {
             <div class="row">
                 <h4>Update Patient Information</h4>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Patient ID" name="pat_id" onkeyup="GetDetail(this.value)" required />
+                    <input type="text" placeholder="Patient ID" name="pat_id" id="pat_id" onkeyup="GetDetail(this.value)" value="" required />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="First Name" name="fname" id="P_fname" />
+                    <input type="text" placeholder="First Name" name="fname" id="first_name" />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
@@ -31,7 +31,7 @@ if (isset($_SESSION['status'])) {
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Last Name" name="lname" id="P_lname"  />
+                    <input type="text" placeholder="Last Name" name="lname" id="last_name"  />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
@@ -121,26 +121,59 @@ if (isset($_SESSION['status'])) {
     </div>
     /////new///////////////////////////////////////////////////////
 <script>
-    function GetDetail(str){
-        if (str.lenght == 0) {
-            document.getElementById("P_fname").value ="";
-            document.getElementById("P_lname").value ="";
-            return;
-        }else{
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function(){
-                if (this.readyState == 4 && this.status == 200) {
-                    var myObj = JSON.parse(this.responseText);
-                    document.getElementById("P_fname").value = myObj[0];
-                    document.getElementById("P_lname").value = myObj[1];
-                }
-            };  
-            xmlhttp.open("GET", "/backend/search.php?rollNo=" + str, true);
-            xmlhttp.send(); 
-        }
-    }
+  
+  // onkeyup event will occur when the user 
+  // release the key and calls the function
+  // assigned to this event
+  function GetDetail(str) {
+      if (str.length == 0) {
+          document.getElementById("first_name").value = "";
+          document.getElementById("last_name").value = "";
+          return;
+      }
+      else {
+
+          // Creates a new XMLHttpRequest object
+          var xmlhttp = new XMLHttpRequest();
+          xmlhttp.onreadystatechange = function () {
+
+              // Defines a function to be called when
+              // the readyState property changes
+              if (this.readyState == 4 && 
+                      this.status == 200) {
+                    
+                  // Typical action to be performed
+                  // when the document is ready
+                  var myObj = JSON.parse(this.responseText);
+
+                  // Returns the response data as a
+                  // string and store this array in
+                  // a variable assign the value 
+                  // received to first name input field
+                    
+                  document.getElementById
+                      ("first_name").value = myObj[0];
+                    
+                  // Assign the value received to
+                  // last name input field
+                  document.getElementById(
+                      "last_name").value = myObj[1];
+              }
+          };
+
+          // xhttp.open("GET", "filename", true);
+          xmlhttp.open("GET", "gfg.php?user_id=" + str, true);
+            
+          // Sends the request to the server
+          xmlhttp.send();
+      }
+  }
 </script>
 /////new/////////////////////////////////////////////////////////
+
+
+
+
 </body>
 
 </html>
