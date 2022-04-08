@@ -20,7 +20,7 @@
 <body>
 
 <div class="card">
-    <img src="images/Patient.png" alt="Avatar" style="width:50%">
+    <img src="images/card_doctor.png" alt="Avatar" style="width:50%">
     <div class="container">
         <h4><b><?php foreach($result as $row){ echo $row["Doc_First"]. " " .$row["Doc_Last"];?></b></h4>
         <p><?php echo $row["Doc_Email"];?></p>
