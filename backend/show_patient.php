@@ -13,7 +13,7 @@
     $query = "DELETE FROM `patient` WHERE Pat_ID = '$Pat_ID'";  
     $run = mysqli_query($link,$query);  
     if ($run) {  
-         header('location:index.php');  
+         header('/backend/show_patient.php');  
     }else{  
          echo "Error: ".mysqli_error($link);  
     }  
@@ -52,7 +52,7 @@
                         <td>".$result['Pat_Phone']."</td>
                         <td>".$result['Pat_Email']."</td>
                         <td>
-                            <a href='/index.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Delete</a>
+                            <a href='/backend/show_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Delete</a>
                             
                         </td>
             
