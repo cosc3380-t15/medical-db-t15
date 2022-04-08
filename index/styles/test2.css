@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 74, 83);
+}
+table{
+    border-collapse: collapse;
+    width: 75%;
+    border: 1px solid black;
+}
+table th{
+    color: aliceblue;
+    padding: 10px;
+}
+table td{
+    padding: 10px;
+    color: aliceblue;
+    font-size: 1.2em;
+    text-align: center;
+
+}
+.btn{
+    background: white;
+    color: darkcyan;
+    font-size: 1.2em;
+    padding: 5px 30px;
+    text-decoration: none;
+}
+.btn:hover{
+    background: darkcyan;
+    color: white;
+}
