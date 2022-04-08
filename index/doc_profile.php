@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if($_SESSION['loggedin'] != true  and $_SESSION['role'] != "Doc") {
+    if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "Doc") {
         header("Location: login.php");
     }
 ?>

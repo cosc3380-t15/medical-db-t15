@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if($_SESSION['loggedin'] != true and $_SESSION['role'] != "Patient") {
+    if($_SESSION['loggedin'] != true or $_SESSION['role'] != "Patient") {
         header("Location: login.php");
     }
     $dbhost = getenv("DBHOST");
