@@ -8,7 +8,7 @@
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
    if (isset($_GET['Pat_ID'])){
-        $id=$_GET['Pat_ID']
+        $id=$_GET['Pat_ID'];
         $delete=mysqli_query($link, "DELETE FROM `patient `WHERE `Pat_ID`= '$id'");
    } 
 
