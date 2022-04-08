@@ -18,18 +18,12 @@ if (isset($_SESSION['status'])) {
         <form action="/backend/update_patient_data.php" method="post" onsubmit="return Validate();">
             <div class="row">
                 <h4>Update Patient Information</h4>
-                <?php
-if (isset($_SESSION['status'])) {
-    echo "<h4>".$_SESSION['status']."</h4>";
-    unset($_SESSION['status']);
-}
-?>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Patient ID" name="pat_id" required />
+                    <input type="text" placeholder="Patient ID" name="pat_id" onkeyup="GetDetail(this.value)" required />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="First Name" name="fname"  />
+                    <input type="text" placeholder="First Name" name="fname" id="P_fname" />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
@@ -37,7 +31,7 @@ if (isset($_SESSION['status'])) {
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Last Name" name="lname"  />
+                    <input type="text" placeholder="Last Name" name="lname" id="P_lname"  />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
@@ -125,8 +119,28 @@ if (isset($_SESSION['status'])) {
             <input class="button" type="submit" name="update_patient_data">
         </form>
     </div>
-
-
+    /////new///////////////////////////////////////////////////////
+<script>
+    function GetDetail(str){
+        if (str.lenght == 0) {
+            document.getElementById("P_fname").value ="";
+            document.getElementById("P_lname").value ="";
+            return;
+        }else{
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200) {
+                    var myObj = JSON.parse(this.responseText);
+                    document.getElementById("P_fname").value = myObj[0];
+                    document.getElementById("P_lname").value = myObj[1];
+                }
+            };  
+            xmlhttp.open("GET", "/backend/search.php?rollNo=" + str, true);
+            xmlhttp.send(); 
+        }
+    }
+</script>
+/////new/////////////////////////////////////////////////////////
 </body>
 
 </html>
