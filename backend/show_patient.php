@@ -9,12 +9,22 @@
 
    if (isset($_GET['Pat_ID'])){
         $id=$_GET['Pat_ID'];
-        $delete=mysqli_query($link, "DELETE FROM patient WHERE Pat_ID = '$id'");
-   } 
 
-    $select="SELECT * FROM patient";
-    $query=mysqli_query($link,$select);
-?>    
+        $query = "DELETE FROM `patient` WHERE Pat_ID = '$id'";  
+       $run = mysqli_query($link,$query);  
+      if ($run) {  
+           header('/backend/show_patient.php');  
+      }else{  
+           echo "Error: ".mysqli_error($link);  
+      }  
+ }  
+ ?>  
+
+
+
+
+
+  
 <!DOCTYPE html>
 <html>
 
