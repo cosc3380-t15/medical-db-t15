@@ -1,8 +1,4 @@
-<?php
-session_start();
-$_SESSION['loggedin']=true; 
-$_SESSION['role']="OA";
-?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html>
