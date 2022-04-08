@@ -51,9 +51,9 @@
                         <td>".$result['Pat_Last']."</td>
                         <td>".$result['Pat_Phone']."</td>
                         <td>".$result['Pat_Email']."</td>
-                        <td>
+                        <>
                             <a href='/backend/show_patient.php?id=".$result['Pat_ID']."'class='btn'>Delete</a>
-                            
+                            <a href='/backend/show_patient.php?id=".$result['Pat_ID']."' id='btn'>Delete</a>
                         </td>
             
                     </tr>
@@ -63,7 +63,7 @@
         }
     
     ?>
-
+                        <a href='delete.php?id=".$result['id']."' id='btn'>Delete</a></td>  
     </table>
    
 
