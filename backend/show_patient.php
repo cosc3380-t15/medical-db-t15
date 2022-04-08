@@ -53,7 +53,7 @@
                         <td>".$result['Pat_Email']."</td>
                         <>
                             <a href='/backend/show_patient.php?id=".$result['Pat_ID']."'class='btn'>Delete</a>
-                            <a href='/backend/show_patient.php?id=".$result['Pat_ID']."' id='btn'>Delete</a>
+                            
                         </td>
             
                     </tr>
