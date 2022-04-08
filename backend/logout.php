@@ -1,5 +1,6 @@
 <?php
 session_start();
 session_destroy();
-header('Location: ../index/home.html');
+sleep(1);
+header('Location: ../index/home.php');
 ?>

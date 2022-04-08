@@ -26,8 +26,6 @@
         <p><?php echo $row["Pat_Email"];?></p>
         <p><?php echo $row["Pat_Phone"];?></p>
         <p>DOB: <?php echo $row["Pat_DOB"];?></p>
-        <p>Gender: Male</p>
-        <p>Race: White</p>
         <p>Weight: <?php echo $row["Pat_Weight"];?> lbs</p>
         <p>Height: <?php echo $row["Pat_Height"];?> cm</p>
         <p>Address: <?php echo $row["Pat_Street_Addr"];?></p>

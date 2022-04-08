@@ -24,13 +24,13 @@
 <body>
     <div class="profile-navbar profile-shadow">
         <div class="profile-div-w">
-            <a href="">
+            <a href="home.php">
                 <h1 class="profile-logo">Clinico</h1>
             </a>
         </div>
         <div class="profile-div-w2">
             <button onclick="show()" class="profile-nav-logout">Logout</button>
-            <a href="home.html"><button id="confirm" class="profile-confirm">Are you sure?</button></a>
+            <a href="../backend/logout.php"><button id="confirm" class="profile-confirm">Are you sure?</button></a>
         </div>
     </div>
     <script>
