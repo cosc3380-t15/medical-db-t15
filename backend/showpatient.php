@@ -27,6 +27,30 @@
     <div class="container-fahter">
 
     <div class="container">
+    <?php
+        $select="SELECT * FROM patient";
+        $query=mysqli_query($link,$select);
+        $num=mysqli_num_rows($query);
+        if ($num>0) {
+            while ($result=mysqli_fetch_assoc($query)) {
+                echo "
+                
+                <tr>
+                    <td>".$result['Pat_ID']"</td>
+                    <td>".$result['Pat_First']"</td>
+                    <td>".$result['Pat_Last']"</td>
+                    <td>".$result['Pat_Email']"</td>
+                    <td>".$result['Pat_Phone']"</td>
+                </tr>
+                
+            
+                "
+            }
+        }
+
+    ?>
+
+
         <div class="container-child">
             <p>Patient ID</p>
             <div class="container">
@@ -85,7 +109,7 @@
                 <li class="<?php // if this is the first row output the first-row class, 
                             // otherwise output other-row class
                 echo $count==0 ? 'first-row' : 'other-row'; ?>">
-                <?php echo $row["Pat_Phone"]; ?> &nbsp;&nbsp;<button id="<?php $sql_id;?>">Edint</button>&nbsp;&nbsp;<button id="">Delete</button></li>
+                <?php echo $row["Pat_Phone"]; ?> &nbsp;&nbsp;<button id="<?php $sql_id;?>">Edint</button>&nbsp;&nbsp;<button id="<?php $sql_id;?>">Delete</button></li>
                 <?php $count++; // increment my count var
                 } // endforeach?>
                 </ul>
