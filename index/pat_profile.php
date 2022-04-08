@@ -22,7 +22,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<body>
+<body onload="load_html('pat_card.php')">
     <div class="profile-navbar profile-shadow">
         <div class="profile-div-w">
             <a href="home.php">
