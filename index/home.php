@@ -28,7 +28,7 @@
                 <h3 class="menu">Doctors</h3>
             </a>
             <a href="/backend/show_patient.php">
-                <h3 class="menu">show patients(test)</h3>
+                <h3 class="menu">show patients-test</h3>
             </a>
             <!-- <a href="/backend/edit_patient.php">
                 <h3 class="menu">edit patients(test)</h3>
