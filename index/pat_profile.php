@@ -13,9 +13,19 @@
     $query1 = "SELECT Pat_ID, Pat_First, Pat_Last FROM patient WHERE Pat_ID = '".$_SESSION['id']."' LIMIT 1";
     $result = $link->query($query1);
 
+    if (isset($_GET['Pat_ID'])) {  
+        $Pat_ID = $_GET['Pat_ID'];  
+        $query = "DELETE FROM `patient` WHERE Pat_ID = '$Pat_ID'";  
+        $run = mysqli_query($link,$query);  
+        if ($run) {  
+            header('location:/backend/show_patient.php');  
+        }else{  
+            echo "Error: ".mysqli_error($link);  
+        }  
+    }
+
     $select="SELECT * FROM patient";
     $query=mysqli_query($link,$select);
-    $result1=mysqli_fetch_assoc($query)
 ?>
 
 <!DOCTYPE html>
