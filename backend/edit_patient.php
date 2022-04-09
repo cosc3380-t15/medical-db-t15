@@ -23,7 +23,7 @@ if (isset($_SESSION['status'])) {
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="First Name" name="fname" id="first_name" />
+                    <input type="text" placeholder="First Name" name="fname" id="first_name" value="<?php echo $row['Pat_First']; ?>" />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
