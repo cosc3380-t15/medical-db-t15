@@ -10,8 +10,8 @@ mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
 $result = mysqli_query($link,"SELECT * FROM patient WHERE Pat_ID='" .$_GET['Pat_ID']. "'");
 $row= mysqli_fetch_array($result);
-
-
+$id = $row['Pat_ID'];
+$_SESSION['id'] = $id;
 
 ?>
 <!DOCTYPE html>
