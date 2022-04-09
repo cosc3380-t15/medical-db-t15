@@ -30,7 +30,10 @@
 </head>
 
 <body>
-<a href="/index/home.php" class="back-button" >Back</a>
+    <div class="back-button">
+       <a href="/index/home.php" class="back-button" >Back</a> 
+    </div>
+
     <table border="1" cellpadding="0">
     <tr>
         <th>Patient ID</th>
