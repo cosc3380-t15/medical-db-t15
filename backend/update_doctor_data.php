@@ -10,7 +10,7 @@ mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
 if (isset($_POST['update_doctor_data'])) {
 
-    $id = $_POST['pat_id'];
+    $id = $_POST['doc_id'];
     $occupation = $_POST['occupation'];
     $name = $_POST['fname'];
     $minit = $_POST['minit'];
