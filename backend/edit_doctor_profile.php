@@ -29,7 +29,7 @@ if (isset($_SESSION['status'])) {
 }
 ?>
     <div class="container-form11">
-        <form action="/backend/update_patient_data.php" method="post" onsubmit="return Validate();">
+        <form action="/backend/update_doctor_data.php" method="post" onsubmit="return Validate();">
             <div class="row">
                 <h4>Update Patient Information</h4>
                 <div class="input-group input-group-icon">
