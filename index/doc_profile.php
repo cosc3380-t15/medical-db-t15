@@ -55,16 +55,16 @@
         </div>
 
         <a class="profile-menu-item">
-            <span>Lorem Ipsum</span>
+            <span>Patients</span>
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_patient.php')">Show Patients</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html()">Show Prescription</a>
         </div>
 
         <a class="profile-menu-item">
-            <span>Lorem Ipsum</span>
+            <span>Appointments</span>
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
