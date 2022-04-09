@@ -51,7 +51,7 @@
         </a>
         <div class="profile-submenu">
             <a href ="#" class="profile-submenu-item" onclick="load_html('doc_card.php')">View Profile</a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/edit_doctor_profile.php')">Edit Profile</a>
         </div>
 
         <a class="profile-menu-item">
