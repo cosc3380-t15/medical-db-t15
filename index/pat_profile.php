@@ -57,7 +57,7 @@
             <tr>
                 <td>
                     <?php 
-            echo"<a href='/backend/edit_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Edit</a>";
+            echo"<a href='/backend/edit_patient.php?Pat_ID=".$result['Pat_ID']."'>Edit</a>";
             ?> 
                 </td>
             </tr>
