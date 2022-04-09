@@ -34,7 +34,7 @@ if (isset($_SESSION['status'])) {
             <div class="row">
                 <h4>Update Patient Information</h4>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Patient ID" name="pat_id"  value="<?php echo $row['Pat_ID']; ?>" required />
+                    <input type="text" placeholder="Patient ID" name="pat_id"  value="<?php echo $row['Pat_ID']; ?>" required disabled/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
