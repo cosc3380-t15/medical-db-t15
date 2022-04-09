@@ -30,7 +30,7 @@
 </head>
 
 <body>
-
+<a href="/index/home.php">Back</a>
     <table border="1" cellpadding="0">
     <tr>
         <th>Patient ID</th>
