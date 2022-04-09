@@ -49,7 +49,6 @@ table td{
     color: var(--darker);
 }
 #back-button{
-    float: left;
     background-color: #008CFF;
     padding: 5px;
     font-size: larger;
