@@ -92,7 +92,7 @@ if (isset($_SESSION['status'])) {
             <div class="row">
                 <div class="input-group">
                     <h4 class="col-half">Race:</h4>
-                    <select class="float-right" name="race" id="allergies">
+                    <select class="float-right" name="race" id="allergies" value="<?php echo $row['Pat_Race']; ?>">
                         <option value="100">White</option>
                         <option value="101">Black or African American</option>
                         <option value="102">Asian</option>
@@ -104,7 +104,7 @@ if (isset($_SESSION['status'])) {
             <div class="row">
                 <div class="input-group">
                     <h4 class="col-half">Are you allergic to one of the following?</h4>
-                    <select class="float-right" name="allergies" id="allergies">
+                    <select class="float-right" name="allergies" id="allergies" value="<?php echo $row['Pat_Allergy']; ?>">
                         <option value="200">N/A</option>
                         <option value="201">Amoxicillin</option>
                         <option value="202">Aspirin</option>
