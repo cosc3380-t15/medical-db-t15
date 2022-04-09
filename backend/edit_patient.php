@@ -64,7 +64,7 @@ if (isset($_SESSION['status'])) {
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Middle Name" name="minit" />
+                    <input type="text" placeholder="Middle Name" name="minit" value="TEST"/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
