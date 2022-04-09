@@ -33,12 +33,12 @@ if (isset($_SESSION['status'])) {
         <form action="/backend/update_patient_data.php" method="post" onsubmit="return Validate();">
             <div class="row">
                 <h4>Update Patient Information</h4>
-                <!-- <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Patient ID" name="pat_id" value="" required />
-                    <div class="input-icon"><i class="fa fa-user"></i></div>
-                </div> -->
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="First Name" name="fname" id="first_name" value="<?php echo $row['Pat_First']; ?>" />
+                    <input type="text" placeholder="Patient ID" name="pat_id"  value="<?php echo $row['Pat_ID']; ?>" required />
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="First Name" name="fname"  value="<?php echo $row['Pat_First']; ?>" />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
@@ -46,7 +46,7 @@ if (isset($_SESSION['status'])) {
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Last Name" name="lname" id="last_name" value="<?php echo $row['Pat_Last']; ?>" />
+                    <input type="text" placeholder="Last Name" name="lname"  value="<?php echo $row['Pat_Last']; ?>" />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
