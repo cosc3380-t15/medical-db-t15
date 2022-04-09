@@ -54,6 +54,29 @@
         <div class="profile-submenu">
             <a href ="#" class="profile-submenu-item" onclick="load_html('pat_card.php')">View Profile</a>
             <a href ="#" onclick="load_html('/backend/edit_patient_profile.php')" class="profile-submenu-item" >Edit Profile</a>
+            <?php 
+        $num=mysqli_num_rows($query);
+        if ($num>0) {
+            while ($result=mysqli_fetch_assoc($query)) {
+                echo "
+                    <tr>
+                        <td>".$result['Pat_ID']."</td>
+                        <td>".$result['Pat_First']."</td>
+                        <td>".$result['Pat_Last']."</td>
+                        <td>".$result['Pat_Phone']."</td>
+                        <td>".$result['Pat_Email']."</td>
+                        <td>
+                            <a href='/backend/show_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Delete</a>
+                            <a href='/backend/edit_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Edit</a>
+                        </td>
+            
+                    </tr>
+                
+                ";
+            }
+        }
+    
+    ?>
          
            
            
