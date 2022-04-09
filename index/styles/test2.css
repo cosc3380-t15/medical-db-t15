@@ -48,3 +48,6 @@ table td{
     background: var(--lighter);
     color: var(--darker);
 }
+.back-button{
+    display: inline;
+}
