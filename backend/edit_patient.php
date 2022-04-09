@@ -30,7 +30,7 @@ if (count($_POST)>0) {
     $query = "UPDATE patient SET Pat_First='$name', Pat_M_init='$minit', Pat_Last='$lname', Pat_Email='$email', Pat_Phone='$phone', Pat_Gender='$gender', Pat_Race='$race', Pat_DOB='$dob', Pat_Height='$height', Pat_Weight='$weight', Pat_Street_Addr='$address', Pat_City_Addr='$city', Pat_State_Addr='$state', Pat_Zip_Addr='$zip', Pat_Allergy='$allergies' WHERE Pat_ID='$id' ";
     $query_run = mysqli_query($link,$query);
 }
-$result = mysqli_query($link,"SELECT * FROM patient WHERE Pat_ID='" .$_GET['id']. "'");
+$result = mysqli_query($link,"SELECT * FROM patient WHERE Pat_ID='" .$_GET['Pat_ID']. "'");
 $row= mysqli_fetch_array($result);
 
 
@@ -56,7 +56,7 @@ if (isset($_SESSION['status'])) {
             <div class="row">
                 <h4>Update Patient Information</h4>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Patient ID" name="pat_id" id="pat_id" value="" required />
+                    <input type="text" placeholder="Patient ID" name="pat_id" value="" required />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
