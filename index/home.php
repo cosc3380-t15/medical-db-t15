@@ -30,9 +30,9 @@
             <a href="/backend/show_patient.php">
                 <h3 class="menu">show patients(test)</h3>
             </a>
-            <a href="/backend/edit_patient.php">
+            <!-- <a href="/backend/edit_patient.php">
                 <h3 class="menu">edit patients(test)</h3>
-            </a>
+            </a> -->
         </div>
         <div class="div-w2">
             <?php if($_SESSION['loggedin']) {
