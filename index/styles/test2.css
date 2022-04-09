@@ -9,13 +9,7 @@
     --dark: #2C4A98;
     --darker: #203368; 
 }
-body{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--light);
-}
+
 table{
     border-collapse: collapse;
     width: 75%;
