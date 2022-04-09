@@ -32,8 +32,9 @@ if (isset($_POST['update_patient_data'])) {
     $query_run = mysqli_query($link,$query);
 
     if ($query_run) {
-        $_SESSION['status'] = "Data Updated Successfully ";
         header("Location:show_patient.php");
+        $_SESSION['status'] = "Data Updated Successfully ";
+        
     }else {
         $_SESSION['status'] = "Not Updated ";
         header("Location:edit_patient.php");
