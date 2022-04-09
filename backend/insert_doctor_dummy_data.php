@@ -12,7 +12,6 @@ mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
 $query1 = "INSERT INTO `medical_db`.`doctor` (`Doc_Spec`, `Doc_First`, `Doc_M_Init`, `Doc_Last`, `Doc_Email`, `Doc_Phone`, `Doc_Gender`, `Doc_DOB`, `Doc_Street_Addr`, `Doc_City_Addr`, `Doc_State_Addr`, `Doc_Zip_Addr`, `Doc_Password`) 
 VALUES ('Dentist', 'Clark  ', 'H', 'Nolan', 'nolan@clinico.org', '2347653487', 'Male', '1980-08-09', '65 dary ashford dr', 'katy', 'texas', '66778', 'nolan1234');";
-
 $query10 = "INSERT INTO `medical_db`.`doctor` (`Doc_Spec`, `Doc_First`, `Doc_M_Init`, `Doc_Last`, `Doc_Email`, `Doc_Phone`, `Doc_Gender`, `Doc_DOB`, `Doc_Street_Addr`, `Doc_City_Addr`, `Doc_State_Addr`, `Doc_Zip_Addr`, `Doc_Password`) 
 VALUES ('Pediatrician', 'Lucie', 'H', 'East', 'east@clinico.org', '7651235409', 'Female', '1988-04-12', '654 dunvale dr', 'houston', 'texas', '77877', 'east1234');";
 $query2 = "INSERT INTO `medical_db`.`doctor` (`Doc_Spec`, `Doc_First`, `Doc_M_Init`, `Doc_Last`, `Doc_Email`, `Doc_Phone`, `Doc_Gender`, `Doc_DOB`, `Doc_Street_Addr`, `Doc_City_Addr`, `Doc_State_Addr`, `Doc_Zip_Addr`, `Doc_Password`) 
@@ -33,7 +32,7 @@ $query9 = "INSERT INTO `medical_db`.`doctor` (`Doc_Spec`, `Doc_First`, `Doc_M_In
 VALUES ('Radiologists', 'Clarissa', 'H', 'Barrera', 'barrera@clinico.org', '6657768798', 'MaFemalele', '1986-12-12', '5632 pine road', 'houston', 'texas', '77582', 'barrera1234');";
 
 
-if ($link->query($query1,$query2,$query3,$query4,$query5,$query6,$query7,$query8,$query9,$query10,) !== TRUE) {
+if ($link->query($query1,$query2) !== TRUE) {
     echo "Error: " . $query1 . "<br>" . $link->error;
 } mysqli_close($link);
 
