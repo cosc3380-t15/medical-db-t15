@@ -1,4 +1,13 @@
 <?php
+session_start();
+$dbhost = getenv("DBHOST");
+$dbuser = getenv("DBUSER");
+$dbpass = getenv("DBPASS"); 
+$dbname = getenv("DBNAME");
+$link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
+                                                    
+mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
+
 $result = mysqli_query($link,"SELECT * FROM patient WHERE Pat_ID='" .$_GET['Pat_ID']. "'");
 $row= mysqli_fetch_array($result);
 
