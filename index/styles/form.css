@@ -230,3 +230,6 @@ select option {
     background-color: var(--main);
     color: var(--lighter);
 }
+#pat-id{
+  display: none;
+}
