@@ -56,7 +56,7 @@
         </a>
         <div class="profile-submenu">
             <a href ="#" class="profile-submenu-item" onclick="load_html('pat_card.php')">View Profile</a>
-            <a href ="href='/backend/edit_patient.php?Pat_ID=".$result1['Pat_ID']."'" class="profile-submenu-item" onclick="load_html('/backend/edit_patient.php')">Edit Profile</a>
+            <a href ="href='/backend/edit_patient.php?Pat_ID=".$result1['Pat_ID']."'" class="profile-submenu-item" >Edit Profile</a>
             
         </div>
 
