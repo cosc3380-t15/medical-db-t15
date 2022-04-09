@@ -56,7 +56,7 @@
             <a href ="#" onclick='/backend/edit_patient.php?Pat_ID=".$result['Pat_ID']."' class="profile-submenu-item" >Edit Profile</a>
             <div>
                <?php 
-            echo"button";
+            echo"<a href='/backend/edit_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Edit</a>";
             ?> 
             </div>
             
