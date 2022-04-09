@@ -24,7 +24,7 @@ if (isset($_POST['update_doctor_data'])) {
     $state = $_POST['state'];
     $zip = $_POST['zip'];
 
-    $query = "UPDATE doctor SET Doc_Spec='$occupation', Doc_First='$name', Doc_M_init='$minit', Doc_Last='$lname', Doc_Email='$email', Doc_Phone='$phone', Doc_Gender='$gender', Doc_DOB='$dob', Doc_Street_Addr='$address', Doc_City_Addr='$city', Doc_State_Addr='$state', Doc_Zip_Addr='$zip',  WHERE Doc_ID='$id' ";
+    $query = "UPDATE doctor SET Doc_Spec='$occupation', Doc_First='$name', Doc_M_init='$minit', Doc_Last='$lname', Doc_Email='$email', Doc_Phone='$phone', Doc_Gender='$gender', Doc_DOB='$dob', Doc_Street_Addr='$address', Doc_City_Addr='$city', Doc_State_Addr='$state', Doc_Zip_Addr='$zip'  WHERE Doc_ID='$id' ";
     $query_run = mysqli_query($link,$query);
 
     if ($query_run) {
