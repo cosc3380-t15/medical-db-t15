@@ -13,19 +13,6 @@
     $query1 = "SELECT Pat_ID, Pat_First, Pat_Last FROM patient WHERE Pat_ID = '".$_SESSION['id']."' LIMIT 1";
     $result = $link->query($query1);
 
-    if (isset($_GET['Pat_ID'])) {  
-        $Pat_ID = $_GET['Pat_ID'];  
-        $query = "DELETE FROM `patient` WHERE Pat_ID = '$Pat_ID'";  
-        $run = mysqli_query($link,$query);  
-        if ($run) {  
-            header('location:/backend/show_patient.php');  
-        }else{  
-            echo "Error: ".mysqli_error($link);  
-        }  
-    }
-
-    $select="SELECT * FROM patient";
-    $query=mysqli_query($link,$select);
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +54,10 @@
         <div class="profile-submenu">
             <a href ="#" class="profile-submenu-item" onclick="load_html('pat_card.php')">View Profile</a>
             <a href ="#" onclick='/backend/edit_patient.php?Pat_ID=".$result['Pat_ID']."' class="profile-submenu-item" >Edit Profile</a>
-            <a href='/backend/edit_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Edit</a>
+            <?php 
+            echo "<a href='/backend/edit_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Edit</a>";
+            ?>
+           
             
         </div>
 
