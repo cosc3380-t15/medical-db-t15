@@ -48,7 +48,7 @@ table td{
     background: var(--lighter);
     color: var(--darker);
 }
-.back-button{
+#back-button{
     float: left;
     background-color: #008CFF;
     padding: 5px;

@@ -31,7 +31,7 @@
 
 <body>
     <div class="back-button">
-       <a href="/index/home.php" class="back-button" >Back</a> 
+       <a href="/index/home.php" id="back-button" >Back</a> 
     </div>
 
     <table border="1" cellpadding="0">
