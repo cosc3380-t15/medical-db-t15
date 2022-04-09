@@ -49,5 +49,5 @@ table td{
     color: var(--darker);
 }
 .back-button{
-    display: inline;
+    float: left;
 }
