@@ -27,7 +27,10 @@ if (count($_POST)>0) {
     $state = $_POST['state'];
     $zip = $_POST['zip'];
 
-    $query = "UPDATE patient SET Pat_First='$name', Pat_M_init='$minit', Pat_Last='$lname', Pat_Email='$email', Pat_Phone='$phone', Pat_Gender='$gender', Pat_Race='$race', Pat_DOB='$dob', Pat_Height='$height', Pat_Weight='$weight', Pat_Street_Addr='$address', Pat_City_Addr='$city', Pat_State_Addr='$state', Pat_Zip_Addr='$zip', Pat_Allergy='$allergies' WHERE Pat_ID='$id' ";
+    $query = "UPDATE patient SET Pat_First='$name', Pat_M_init='$minit', Pat_Last='$lname', 
+    Pat_Email='$email', Pat_Phone='$phone', Pat_Gender='$gender', Pat_Race='$race', Pat_DOB='$dob', 
+    Pat_Height='$height', Pat_Weight='$weight', Pat_Street_Addr='$address', Pat_City_Addr='$city', 
+    Pat_State_Addr='$state', Pat_Zip_Addr='$zip', Pat_Allergy='$allergies' WHERE Pat_ID='$id' ";
     $query_run = mysqli_query($link,$query);
 }
 $result = mysqli_query($link,"SELECT * FROM patient WHERE Pat_ID='" .$_GET['Pat_ID']. "'");
@@ -55,28 +58,28 @@ if (isset($_SESSION['status'])) {
         <form action="/backend/update_patient_data.php" method="post" onsubmit="return Validate();">
             <div class="row">
                 <h4>Update Patient Information</h4>
-                <div class="input-group input-group-icon">
+                <!-- <div class="input-group input-group-icon">
                     <input type="text" placeholder="Patient ID" name="pat_id" value="" required />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
-                </div>
+                </div> -->
                 <div class="input-group input-group-icon">
                     <input type="text" placeholder="First Name" name="fname" id="first_name" value="<?php echo $row['Pat_First']; ?>" />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Middle Name" name="minit" value="TEST"/>
+                    <input type="text" placeholder="Middle Name" name="minit" value="TEST" value="<?php echo $row['Pat_M_init']; ?>"/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Last Name" name="lname" id="last_name"  />
+                    <input type="text" placeholder="Last Name" name="lname" id="last_name" value="<?php echo $row['Pat_Last']; ?>" />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="email" placeholder="Email Adress" name="email"  />
+                    <input type="email" placeholder="Email Adress" name="email"  value="<?php echo $row['Pat_Email']; ?>"/>
                     <div class="input-icon"><i class="fa fa-envelope"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Phone Number" name="phone"  />
+                    <input type="text" placeholder="Phone Number" name="phone" value="<?php echo $row['Pat_Phone']; ?>"/>
                     <div class="input-icon"><i class="fa fa-key"></i></div>
                 </div>
             </div>
@@ -86,7 +89,7 @@ if (isset($_SESSION['status'])) {
                     <label for="">
                         <h4> Date of Birth: </h4>
                     </label>
-                    <input type="date" name="dob" >
+                    <input type="date" name="dob" value="<?php echo $row['Pat_DOB']; ?>">
                 </div>
             </div>
 
@@ -103,10 +106,10 @@ if (isset($_SESSION['status'])) {
             <div class="row">
                 <div class="input-group">
                     <div class="col-half">
-                        <input type="text" placeholder="Weight" name="weight"  />
+                        <input type="text" placeholder="Weight" name="weight"  value="<?php echo $row['Pat_Weight']; ?>"/>
                     </div>
                     <div class="col-half">
-                        <input type="text" placeholder="Height" name="height"  />
+                        <input type="text" placeholder="Height" name="height"  value="<?php echo $row['Pat_Height']; ?>"/>
                     </div>
                 </div>
             </div>
@@ -138,18 +141,18 @@ if (isset($_SESSION['status'])) {
             </div>
 
             <div class="input-group input-group-icon">
-                <input type="text" placeholder="Address" name="address"  />
+                <input type="text" placeholder="Address" name="address"  value="<?php echo $row['Pat_Street_Addr']; ?>"/>
                 <div class="input-icon"><i class="fa fa-user"></i></div>
             </div>
             <div class="input-group">
                 <div class="col-third">
-                    <input type="text" placeholder="City" name="city"  />
+                    <input type="text" placeholder="City" name="city"  value="<?php echo $row['Pat_City_Addr']; ?>"/>
                 </div>
                 <div class="col-third">
-                    <input type="text" placeholder="State" name="state"  />
+                    <input type="text" placeholder="State" name="state"  value="<?php echo $row['Pat_State_Addr']; ?>"/>
                 </div>
                 <div class="col-third">
-                    <input type="text" placeholder="Zip Code" name="zip"  />
+                    <input type="text" placeholder="Zip Code" name="zip"  value="<?php echo $row['Pat_Zip_Addr']; ?>"/>
                 </div>
 
             </div>
