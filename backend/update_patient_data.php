@@ -33,7 +33,7 @@ if (isset($_POST['update_patient_data'])) {
 
     if ($query_run) {
         $_SESSION['status'] = "Data Updated Successfully ";
-        header("Location:index/pat_profile.php");
+        header("Location:/index/pat_profile.php");
     }else {
         $_SESSION['status'] = "Not Updated ";
         header("Location:edit_patient.php");
