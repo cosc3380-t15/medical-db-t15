@@ -33,16 +33,19 @@ if (isset($_SESSION['status'])) {
     <div class="container-form11">
         <form action="/backend/update_patiiient_data.php" method="post" onsubmit="return Validate();">
             <div class="row">
-                <h4>Update Patient Information</h4>
+                <h4>Perscribe Medicine</h4>
                 <div class="input-group input-group-icon">
+                    <h4>Doctor ID</h4>
                     <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i" value="<?php echo $_SESSION['id']; ?>" required />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
+                    <h4>Patient ID</h4>
                     <input type="text" placeholder="Patient ID" name="pat_id" id="pat-i" value="<?php echo $row['Pat_ID']; ?>" required />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
+                    <h4>Patient Name</h4>
                     <input type="text" placeholder="First Name" name="fname"  value="<?php echo $row['Pat_First']; ?>" />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
@@ -54,9 +57,11 @@ if (isset($_SESSION['status'])) {
             <div class="row">
                 <div class="input-group">
                     <div class="col-half">
+                        <h4>Patient Weight</h4>
                         <input type="text" placeholder="Weight" name="weight"  value="<?php echo $row['Pat_Weight']; ?>"/>
                     </div>
                     <div class="col-half">
+                        <h4>Patient Height</h4>
                         <input type="text" placeholder="Height" name="height"  value="<?php echo $row['Pat_Height']; ?>"/>
                     </div>
                 </div>
