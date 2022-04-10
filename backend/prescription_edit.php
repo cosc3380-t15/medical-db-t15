@@ -8,7 +8,7 @@ $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '
                                                     
 mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
-$result = mysqli_query($link,"SELECT * FROM patient WHERE Pat_ID='" .$_GET['Pat_ID']. "'");
+$result = mysqli_query($link,"SELECT * FROM patient");
 $result2 = mysqli_query($link,"SELECT * FROM prescription WHERE Per_ID='" .$_GET['Per_ID']. "'");
 $row= mysqli_fetch_array($result);
 $row2= mysqli_fetch_array($result2);
