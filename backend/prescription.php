@@ -46,11 +46,11 @@ if (isset($_SESSION['status'])) {
                 </div>
                 <div class="input-group input-group-icon">
                     <h4>Patient Name</h4>
-                    <input type="text" placeholder="First Name" name="fname"  value="<?php echo $row['Pat_First']; ?>" />
+                    <input type="text" placeholder="First Name" name="fname"  value="<?php echo $row['Pat_First']; ?>" disable/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Last Name" name="lname"  value="<?php echo $row['Pat_Last']; ?>" />
+                    <input type="text" placeholder="Last Name" name="lname"  value="<?php echo $row['Pat_Last']; ?>" disable/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
             </div>
@@ -58,18 +58,18 @@ if (isset($_SESSION['status'])) {
                 <div class="input-group">
                     <div class="col-half">
                         <h4>Patient Weight</h4>
-                        <input type="text" placeholder="Weight" name="weight"  value="<?php echo $row['Pat_Weight']; ?>"/>
+                        <input type="text" placeholder="Weight" name="weight"  value="<?php echo $row['Pat_Weight']; ?>" disable/>
                     </div>
                     <div class="col-half">
                         <h4>Patient Height</h4>
-                        <input type="text" placeholder="Height" name="height"  value="<?php echo $row['Pat_Height']; ?>"/>
+                        <input type="text" placeholder="Height" name="height"  value="<?php echo $row['Pat_Height']; ?>"disable/>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="input-group">
                     <h4 class="col-half">Prescribe:</h4>
-                    <select class="float-right" name="allergies" id="allergies" value="<?php echo $row['Pat_Allergy']; ?>">
+                    <select class="float-right" name="allergies" id="allergies" >
                         <option value="200">N/A</option>
                         <option value="201">Amoxicillin</option>
                         <option value="202">Aspirin</option>
