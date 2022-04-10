@@ -10,7 +10,7 @@
 
     if (isset($_GET['Per_ID'])) {  
         $Per_ID = $_GET['Per_ID'];  
-        $query = "DELETE FROM `precsription` WHERE Per_ID = '$Per_ID'";  
+        $query = "DELETE FROM `prescription` WHERE Per_ID = '$Per_ID'";  
         $run = mysqli_query($link,$query);  
         if ($run) {  
             header('location:/index/doc_profile.php');  
@@ -50,8 +50,8 @@
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Per_Desc']."</td>
                         <td>
-                            <a href='/backend/prescription.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Edit</a>
-                            <a href='/backend/prescription.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Delete</a>
+                            <a href='/backend/prescription.php?Pat_ID=".$result['Per_ID']."'class='btn'>Edit</a>
+                            <a href='/backend/prescription.php?Pat_ID=".$result['Per_ID']."'class='btn'>Delete</a>
                         </td>
             
                     </tr>
