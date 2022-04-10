@@ -1,5 +1,4 @@
 <?php
-                                                        # code...
     $dbhost = getenv("DBHOST");
     $dbuser = getenv("DBUSER");
     $dbpass = getenv("DBPASS"); 
@@ -18,8 +17,6 @@
             echo "Error: ".mysqli_error($link);  
         }  
     }
-
-   
 
     $select="SELECT * FROM prescription ";
     $query=mysqli_query($link,$select);
@@ -50,8 +47,8 @@
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Per_Desc']."</td>
                         <td>
-                            <a href='/backend/prescription.php?Pat_ID=".$result['Per_ID']."'class='btn'>Edit</a>
-                            <a href='/backend/prescription.php?Pat_ID=".$result['Per_ID']."'class='btn'>Delete</a>
+                            <a href='/backend/prescription.php?Per_ID=".$result['Per_ID']."'class='btn'>Edit</a>
+                            <a href='/backend/prescription.php?Per_ID=".$result['Per_ID']."'class='btn'>Delete</a>
                         </td>
             
                     </tr>
