@@ -49,7 +49,7 @@ if (isset($_SESSION['status'])) {
                 </div>
                 <div class="input-group input-group-icon">
                     <h4>Patient ID</h4>
-                    <input type="text" placeholder="Patient ID" name="pat_id" id="pat-i" value="<?php echo $row['Pat_ID']; ?>" required readonly/>
+                    <input type="text" placeholder="Patient ID" name="pat_id" id="pat-i" value="<?php echo $row2['Pat_ID']; ?>" required readonly/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
