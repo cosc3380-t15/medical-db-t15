@@ -8,10 +8,13 @@ $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '
                                                     
 mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
-$result = mysqli_query($link,"SELECT * FROM patient");
+// $result = mysqli_query($link,"SELECT * FROM patient ");
+// $row= mysqli_fetch_array($result);
+
 $result2 = mysqli_query($link,"SELECT * FROM prescription WHERE Per_ID='" .$_GET['Per_ID']. "'");
-$row= mysqli_fetch_array($result);
 $row2= mysqli_fetch_array($result2);
+
+
 
 
 // $result2 = mysqli_query($link,"SELECT * FROM doctor WHERE Doc_ID='" .$_SESSION['id']. "'");
@@ -52,28 +55,7 @@ if (isset($_SESSION['status'])) {
                     <input type="text" placeholder="Patient ID" name="pat_id" id="pat-i" value="<?php echo $row2['Pat_ID']; ?>" required readonly/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
-                <div class="input-group input-group-icon">
-                    <h4>Patient Name</h4>
-                    <input type="text" placeholder="First Name" name="fname"  value="<?php echo $row['Pat_First']; ?>" readonly/>
-                    <div class="input-icon"><i class="fa fa-user"></i></div>
-                </div>
-                <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Last Name" name="lname"  value="<?php echo $row['Pat_Last']; ?>" readonly/>
-                    <div class="input-icon"><i class="fa fa-user"></i></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-group">
-                    <div class="col-half">
-                        <h4>Patient Weight</h4>
-                        <input type="text" placeholder="Weight" name="weight"  value="<?php echo $row['Pat_Weight']; ?>" readonly/>
-                    </div>
-                    <div class="col-half">
-                        <h4>Patient Height</h4>
-                        <input type="text" placeholder="Height" name="height"  value="<?php echo $row['Pat_Height']; ?>"readonly/>
-                    </div>
-                </div>
-            </div>
+               
             <div class="row">
                 <div class="input-group">
                     <h4 class="col-half">Prescribe:</h4>
