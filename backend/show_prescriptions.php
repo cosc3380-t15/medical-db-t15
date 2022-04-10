@@ -18,7 +18,7 @@
         }  
     }
 
-    $select="SELECT * FROM prescription ";
+    $select="SELECT * FROM prescription WHERE Doc_ID = '$_SESSION['id']' ";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
