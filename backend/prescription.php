@@ -31,7 +31,7 @@ if (isset($_SESSION['status'])) {
 }
 ?>
     <div class="container-form11">
-        <form action="/backend/update_patiiient_data.php" method="post" onsubmit="return Validate();">
+        <form action="/backend/create_prescription.php" method="post" onsubmit="return Validate();">
             <div class="row">
                 <h4>Perscribe Medicine</h4>
                 <div class="input-group input-group-icon">
@@ -69,7 +69,7 @@ if (isset($_SESSION['status'])) {
             <div class="row">
                 <div class="input-group">
                     <h4 class="col-half">Prescribe:</h4>
-                    <select class="float-right" name="allergies" id="allergies" >
+                    <select class="float-right" name="prescription" id="allergies" >
                         <option value="200">N/A</option>
                         <option value="201">Amoxicillin</option>
                         <option value="202">Aspirin</option>
