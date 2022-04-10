@@ -50,7 +50,7 @@
                         <td>".$result['Per_Desc']."</td>
                         <td>
                             <a href='/index/doc_profile.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Edit</a>
-                            <a href='/index/doc_profile.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Delete</a>
+                            <a href='/backend/show_prescriptions.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Delete</a>
                         </td>
             
                     </tr>
