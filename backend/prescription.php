@@ -11,8 +11,8 @@ mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 $result = mysqli_query($link,"SELECT * FROM patient WHERE Pat_ID='" .$_GET['Pat_ID']. "'");
 $row= mysqli_fetch_array($result);
 
-$result2 = mysqli_query($link,"SELECT * FROM doctor WHERE Doc_ID='" .$_SESSION['id']. "'");
-$row2= mysqli_fetch_array($result);
+// $result2 = mysqli_query($link,"SELECT * FROM doctor WHERE Doc_ID='" .$_SESSION['id']. "'");
+// $row2= mysqli_fetch_array($result);
 
 ?>
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ if (isset($_SESSION['status'])) {
             <div class="row">
                 <h4>Update Patient Information</h4>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i" value="<?php echo $row['Doc_ID']; ?>" required />
+                    <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i" value="<?php echo $_SESSION['id']; ?>" required />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
