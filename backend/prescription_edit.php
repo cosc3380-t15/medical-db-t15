@@ -9,7 +9,10 @@ $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '
 mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
 $result = mysqli_query($link,"SELECT * FROM patient WHERE Pat_ID='" .$_GET['Pat_ID']. "'");
+$result2 = mysqli_query($link,"SELECT * FROM prescription WHERE Pat_ID='" .$_GET['Pat_ID']. "'");
 $row= mysqli_fetch_array($result);
+$row2= mysqli_fetch_array($result2);
+
 
 // $result2 = mysqli_query($link,"SELECT * FROM doctor WHERE Doc_ID='" .$_SESSION['id']. "'");
 // $row2= mysqli_fetch_array($result);
@@ -40,8 +43,8 @@ if (isset($_SESSION['status'])) {
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <h4>Patient ID</h4>
-                    <input type="text" placeholder="Prescription ID" name="per_id" id="pat-i" value="<?php echo $row['Per_ID']; ?>" required readonly/>
+                    <h4>Prescription ID</h4>
+                    <input type="text" placeholder="Prescription ID" name="per_id" id="pat-i" value="<?php echo $row2['Per_ID']; ?>" required readonly/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
