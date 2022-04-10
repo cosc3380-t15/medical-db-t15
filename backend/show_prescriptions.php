@@ -18,7 +18,7 @@
         }  
     }
 
-    $select="SELECT * FROM prescription WHERE Doc_ID='" .$_SESSION['id']. "' ";
+    $select="SELECT * FROM prescription WHERE Doc_ID='2000000' ";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
