@@ -36,21 +36,21 @@ if (isset($_SESSION['status'])) {
                 <h4>Perscribe Medicine</h4>
                 <div class="input-group input-group-icon">
                     <h4>Doctor ID</h4>
-                    <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i" value="<?php echo $_SESSION['id']; ?>" required />
+                    <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i" value="<?php echo $_SESSION['id']; ?>" required readonly/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
                     <h4>Patient ID</h4>
-                    <input type="text" placeholder="Patient ID" name="pat_id" id="pat-i" value="<?php echo $row['Pat_ID']; ?>" required />
+                    <input type="text" placeholder="Patient ID" name="pat_id" id="pat-i" value="<?php echo $row['Pat_ID']; ?>" required readonly/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
                     <h4>Patient Name</h4>
-                    <input type="text" placeholder="First Name" name="fname"  value="<?php echo $row['Pat_First']; ?>" disable/>
+                    <input type="text" placeholder="First Name" name="fname"  value="<?php echo $row['Pat_First']; ?>" readonly/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Last Name" name="lname"  value="<?php echo $row['Pat_Last']; ?>" disable/>
+                    <input type="text" placeholder="Last Name" name="lname"  value="<?php echo $row['Pat_Last']; ?>" readonly/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
             </div>
@@ -58,11 +58,11 @@ if (isset($_SESSION['status'])) {
                 <div class="input-group">
                     <div class="col-half">
                         <h4>Patient Weight</h4>
-                        <input type="text" placeholder="Weight" name="weight"  value="<?php echo $row['Pat_Weight']; ?>" disable/>
+                        <input type="text" placeholder="Weight" name="weight"  value="<?php echo $row['Pat_Weight']; ?>" readonly/>
                     </div>
                     <div class="col-half">
                         <h4>Patient Height</h4>
-                        <input type="text" placeholder="Height" name="height"  value="<?php echo $row['Pat_Height']; ?>"disable/>
+                        <input type="text" placeholder="Height" name="height"  value="<?php echo $row['Pat_Height']; ?>"readonly/>
                     </div>
                 </div>
             </div>
