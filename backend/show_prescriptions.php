@@ -44,6 +44,7 @@
             while ($result=mysqli_fetch_assoc($query)) {
                 echo "
                     <tr>
+                        <td>".$result['Per_ID']."</td>
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Per_Desc']."</td>
                         <td>
