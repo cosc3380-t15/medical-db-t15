@@ -9,7 +9,7 @@
 
     if (isset($_GET['Pat_ID'])) {  
         $Pat_ID = $_GET['Pat_ID'];  
-        $query = "DELETE FROM `prescription` WHERE Pat_ID = '$Pat_ID' AND Doc_ID = '$_SESSION['id']'";  
+        $query = "DELETE FROM `prescription` WHERE Pat_ID = '$Pat_ID'";  
         $run = mysqli_query($link,$query);  
         if ($run) {  
             header('location:/index/doc_profile.php');  
