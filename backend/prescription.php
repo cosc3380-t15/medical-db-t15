@@ -70,12 +70,12 @@ if (isset($_SESSION['status'])) {
                 <div class="input-group">
                     <h4 class="col-half">Prescribe:</h4>
                     <select class="float-right" name="prescription" id="allergies" >
-                        <option value="200">N/A</option>
-                        <option value="201">Amoxicillin</option>
-                        <option value="202">Aspirin</option>
-                        <option value="203">Insulin</option>
-                        <option value="204">Carbamazepine</option>
-                        <option value="205">Ibuprofen</option>
+                        <option value="N/A">N/A</option>
+                        <option value="Amoxicillin">Amoxicillin</option>
+                        <option value="Aspirin">Aspirin</option>
+                        <option value="Insulin">Insulin</option>
+                        <option value="Carbamazepine">Carbamazepine</option>
+                        <option value="Ibuprofen">Ibuprofen</option>
                     </select>
                 </div>
             </div>
