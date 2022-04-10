@@ -21,7 +21,7 @@ if (isset($_POST['update_perscription_data'])) {
         header("Location:show_patient.php");
     }else {
         $_SESSION['status'] = "Not Updated ";
-        header("Location:edit_patient.php");
+        header("Location:doc_profile.php");
     }
 }
 
