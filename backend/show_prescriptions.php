@@ -40,6 +40,7 @@
                         <td>".$result['Per_Desc']."</td>
                         <td>
                             <a href='/backend/prescription.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Edit</a>
+                            <a href='/backend/prescription.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Delete</a>
                         </td>
             
                     </tr>
