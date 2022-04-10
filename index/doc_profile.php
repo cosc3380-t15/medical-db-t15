@@ -60,7 +60,7 @@
         </a>
         <div class="profile-submenu">
             <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_patients_doctor.php')">Show Patients</a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Show Prescription</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_prescriptions.php')">Show Prescription</a>
         </div>
 
         <a class="profile-menu-item">
