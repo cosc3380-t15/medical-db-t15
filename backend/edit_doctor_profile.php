@@ -33,7 +33,7 @@ if (isset($_SESSION['status'])) {
             <div class="row">
                 <h4>Update Doctor Information</h4>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i" value="<?php echo $_SESSION["id"]; ?>" required />
+                    <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i" value="<?php echo $_SESSION["id"]; ?>" required readonly/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
