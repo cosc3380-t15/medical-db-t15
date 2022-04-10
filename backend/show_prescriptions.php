@@ -35,6 +35,7 @@
 
     <table border="1" cellpadding="0">
     <tr>
+        <th>Prescription ID</th>
         <th>Patient ID</th>
         <th>Prescription</th>
     </tr>
