@@ -55,8 +55,8 @@
                         <td>".$result['Pat_Phone']."</td>
                         <td>".$result['Pat_Email']."</td>
                         <td>
-                            <a href='/backend/show_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Delete</a>
-                            <a href='/backend/edit_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Edit</a>
+                            <a href='/backend/show_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Prescribe Medicine</a>
+                            
                         </td>
             
                     </tr>
