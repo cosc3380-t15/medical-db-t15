@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $dbhost = getenv("DBHOST");
     $dbuser = getenv("DBUSER");
     $dbpass = getenv("DBPASS"); 
@@ -18,7 +19,7 @@
         }  
     }
 
-    $select="SELECT * FROM prescription WHERE Doc_ID='2000000' ";
+    $select="SELECT * FROM prescription WHERE Doc_ID='".$_SESSION['id']."' ";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
