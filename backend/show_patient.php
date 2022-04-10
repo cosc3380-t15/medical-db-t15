@@ -25,7 +25,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/index/styles/test2.css">
+    <link rel="stylesheet" href="/index/styles/show_patients.css">
 </head>
 
 <body>
