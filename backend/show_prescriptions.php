@@ -1,4 +1,5 @@
-<?php                                                    # code...
+<?php
+                                                        # code...
     $dbhost = getenv("DBHOST");
     $dbuser = getenv("DBUSER");
     $dbpass = getenv("DBPASS"); 
@@ -7,10 +8,20 @@
                                                         
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
+    if (isset($_GET['Per_ID'])) {  
+        $Per_ID = $_GET['Per_ID'];  
+        $query = "DELETE FROM `precsription` WHERE Per_ID = '$Per_ID'";  
+        $run = mysqli_query($link,$query);  
+        if ($run) {  
+            header('location:/index/doc_profile.php');  
+        }else{  
+            echo "Error: ".mysqli_error($link);  
+        }  
+    }
 
    
 
-    $select="SELECT * FROM prescription";
+    $select="SELECT * FROM prescription ";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
