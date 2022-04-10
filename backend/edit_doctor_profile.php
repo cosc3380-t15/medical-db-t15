@@ -31,7 +31,7 @@ if (isset($_SESSION['status'])) {
     <div class="container-form11">
         <form action="/backend/update_doctor_data.php" method="post" onsubmit="return Validate();">
             <div class="row">
-                <h4>Update Patient Information</h4>
+                <h4>Update Doctor Information</h4>
                 <div class="input-group input-group-icon">
                     <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i" value="<?php echo $_SESSION["id"]; ?>" required />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
