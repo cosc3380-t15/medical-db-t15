@@ -8,9 +8,9 @@
                                                         
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
-    if (isset($_GET['Pat_ID'])) {  
-        $Pat_ID = $_GET['Pat_ID'];  
-        $query = "DELETE FROM `prescription` WHERE Pat_ID = '$Pat_ID'";  
+    if (isset($_GET['Per_ID'])) {  
+        $Per_ID = $_GET['Per_ID'];  
+        $query = "DELETE FROM `prescription` WHERE Per_ID = '$Per_ID'";  
         $run = mysqli_query($link,$query);  
         if ($run) {  
             header('location:/index/doc_profile.php');  
@@ -50,8 +50,8 @@
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Per_Desc']."</td>
                         <td>
-                            <a href='/backend/prescription_edit.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Edit</a>
-                            <a href='/backend/show_prescriptions.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Delete</a>
+                            <a href='/backend/prescription_edit.php?Per_ID=".$result['Per_ID']."'class='btn'>Edit</a>
+                            <a href='/backend/show_prescriptions.php?Per_ID=".$result['Per_ID']."'class='btn'>Delete</a>
                         </td>
             
                     </tr>
