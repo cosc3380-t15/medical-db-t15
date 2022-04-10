@@ -31,7 +31,7 @@ if (isset($_SESSION['status'])) {
 }
 ?>
     <div class="container-form11">
-        <form action="/backend/create_prescription.php" method="post" onsubmit="return Validate();">
+        <form action="/backend/edit_prescription.php" method="post" onsubmit="return Validate();">
             <div class="row">
                 <h4>Perscribe Medicine</h4>
                 <div class="input-group input-group-icon">
