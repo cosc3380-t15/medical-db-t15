@@ -48,8 +48,8 @@
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Per_Desc']."</td>
                         <td>
-                            <a href='/backend/prescription.php?Per_ID=".$result['Per_ID']."'class='btn'>Edit</a>
-                            <a href='/backend/prescription.php?Per_ID=".$result['Per_ID']."'class='btn'>Delete</a>
+                            <a href='/index/doc_profile.php?Per_ID=".$result['Per_ID']."'class='btn'>Edit</a>
+                            <a href='/index/doc_profile.php?Per_ID=".$result['Per_ID']."'class='btn'>Delete</a>
                         </td>
             
                     </tr>
