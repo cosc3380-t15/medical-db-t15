@@ -10,7 +10,7 @@
 
    
 
-    $select="SELECT * FROM presctription";
+    $select="SELECT * FROM prescription";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
