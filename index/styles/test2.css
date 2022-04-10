@@ -11,6 +11,7 @@
 }
 
 table{
+    margin: 20px;
     border-collapse: collapse;
     width: 75%;
     border: 1px solid var(--darker);
