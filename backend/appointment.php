@@ -44,38 +44,32 @@ if (isset($_SESSION['status'])) {
                     <input type="text" placeholder="Patient ID" name="pat_id" id="pat-i" value="<?php echo $_SESSION['id']; ?>" required readonly/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
-                <div class="input-group input-group-icon">
-                    <h4>Patient Name</h4>
-                    <input type="text" placeholder="First Name" name="fname"  value="<?php echo $row['Pat_First']; ?>" readonly/>
-                    <div class="input-icon"><i class="fa fa-user"></i></div>
-                </div>
-                <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Last Name" name="lname"  value="<?php echo $row['Pat_Last']; ?>" readonly/>
-                    <div class="input-icon"><i class="fa fa-user"></i></div>
-                </div>
-            </div>
             <div class="row">
                 <div class="input-group">
-                    <div class="col-half">
-                        <h4>Patient Weight</h4>
-                        <input type="text" placeholder="Weight" name="weight"  value="<?php echo $row['Pat_Weight']; ?>" readonly/>
-                    </div>
-                    <div class="col-half">
-                        <h4>Patient Height</h4>
-                        <input type="text" placeholder="Height" name="height"  value="<?php echo $row['Pat_Height']; ?>"readonly/>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-group">
-                    <h4 class="col-half">Prescribe:</h4>
+                    <h4 class="col-half">Location</h4>
                     <select class="float-right" name="prescription" id="allergies" >
-                        <option value="N/A">N/A</option>
-                        <option value="Amoxicillin">Amoxicillin</option>
-                        <option value="Aspirin">Aspirin</option>
-                        <option value="Insulin">Insulin</option>
-                        <option value="Carbamazepine">Carbamazepine</option>
-                        <option value="Ibuprofen">Ibuprofen</option>
+                        <option value="Houston">Houston</option>
+                        <option value="SugarLand">Sugar Land</option>
+                        <option value="Caty">Caty</option>
+                        <option value="Woodlands">The Woodlands</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group input-group-icon">
+                    <input type="date" name="dob" required />
+                    <div class="input-icon"><span style="color:red;">*</span></div>
+                </div>
+            <div class="row">
+                <div class="input-group">
+                    <h4 class="col-half">Time</h4>
+                    <select class="float-right" name="prescription" id="allergies" >
+                        <option value="08:00:00">08:00AM</option>
+                        <option value="09:00:00">09:00AM</option>
+                        <option value="10:00:00">10:00AM</option>
+                        <option value="11:00:00">11:00AM</option>
+                        <option value="12:00:00">12:00AM</option>
+                        <option value="13:00:00">13:00AM</option>
+                        <option value="14:00:00">14:00AM</option>
                     </select>
                 </div>
             </div>
