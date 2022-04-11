@@ -41,13 +41,13 @@
             while ($result=mysqli_fetch_assoc($query)) {
                 echo "
                     <tr>
-                        <td>".$result['a.Pat_ID']."</td>
-                        <td>".$result['p.Pat_First']."</td>
-                        <td>".$result['p.Pat_Last']."</td>
-                        <td>".$result['a.Off_ID']."</td>
-                        <td>".$result['a.Appt_Time']."</td>
-                        <td>".$result['a.Appt_Specialization']."</td>
-                        <td>".$result['a.Doc_ID']."</td>
+                        <td>".$result['Pat_ID']."</td>
+                        <td>".$result['Pat_First']."</td>
+                        <td>".$result['Pat_Last']."</td>
+                        <td>".$result['Off_ID']."</td>
+                        <td>".$result['Appt_Time']."</td>
+                        <td>".$result['Appt_Specialization']."</td>
+                        <td>".$result['Doc_ID']."</td>
                         
             
                     </tr>
