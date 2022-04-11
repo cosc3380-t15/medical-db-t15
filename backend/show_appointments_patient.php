@@ -19,7 +19,7 @@
         }  
     }
 
-    $select="SELECT a.Pat_ID, a.Doc_ID, a.Off_ID, a.Appt_Time, a.Appt_Specialization, p.Pat_First, p.Pat_Last
+    $select="SELECT a.Pat_ID, a.Doc_ID, a.Off_ID, a.Appt_Time, a.Appt_Specialization, p.Pat_First, p.Pat_Last, a.Appt_ID
     FROM appointment AS a, patient AS p
     WHERE a.Pat_ID = '".$_SESSION['id']."' AND p.Pat_ID = a.Pat_ID";
     $query=mysqli_query($link,$select);
