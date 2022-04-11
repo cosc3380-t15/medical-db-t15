@@ -27,12 +27,12 @@
             <a href="#ancor-doctors">
                 <h3 class="menu">Doctors</h3>
             </a>
-            <a href="/backend/show_patient.php">
+            <!-- <a href="/backend/show_patient.php">
                 <h3 class="menu">show patients-test</h3>
-            </a>
-            <a href="/backend/show_appointments.php">
+            </a> -->
+            <!-- <a href="/backend/show_appointments.php">
                 <h3 class="menu">show appt - test</h3>
-            </a>
+            </a> -->
         </div>
         <div class="div-w2">
             <?php if($_SESSION['loggedin']) {
