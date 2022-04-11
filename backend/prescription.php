@@ -8,7 +8,7 @@ $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '
                                                     
 mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
-$result = mysqli_query($link,"SELECT * FROM patient WHERE Pat_ID='" .$_GET['Pat_ID']. "'");
+$result = mysqli_query($link,"SELECT * FROM doctor WHERE Doc_ID='" .$_GET['Doc_ID']. "'");
 $row= mysqli_fetch_array($result);
 
 // $result2 = mysqli_query($link,"SELECT * FROM doctor WHERE Doc_ID='" .$_SESSION['id']. "'");
@@ -41,7 +41,7 @@ if (isset($_SESSION['status'])) {
                 </div>
                 <div class="input-group input-group-icon">
                     <h4>Patient ID</h4>
-                    <input type="text" placeholder="Patient ID" name="pat_id" id="pat-i" value="<?php echo $row['Pat_ID']; ?>" required readonly/>
+                    <input type="text" placeholder="Patient ID" name="pat_id" id="pat-i" value="<?php echo $row['Doc_ID']; ?>" required readonly/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
