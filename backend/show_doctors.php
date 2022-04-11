@@ -46,7 +46,7 @@
                         <td>".$result['Doc_Email']."</td>
                         <td>".$result['Doc_Phone']."</td>
                         <td>
-                            <a href='/backend/prescription.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Schedule Appointment</a>
+                            <a href='/backend/appointment.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Schedule Appointment</a>
                         </td>
             
                     </tr>
