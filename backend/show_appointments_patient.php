@@ -60,7 +60,7 @@
                         <td>".$result['Appt_Specialization']."</td>
                         <td>".$result['Doc_ID']."</td>
                         <td>
-                            <a href='/backend/show_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Cancel</a>
+                            <a href='/index/pat_profile.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Cancel</a>
                         </td>
                         
             
