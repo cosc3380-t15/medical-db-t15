@@ -10,7 +10,7 @@
 
     $select="SELECT a.Pat_ID, a.Doc_ID, a.Off_ID, a.Appt_Time, a.Appt_Specialization, p.Pat_First, p.Pat_Last
     FROM appointment AS a, patient AS p
-    WHERE a.Doc_ID = '2000000' AND p.Pat_ID = a.Pat_ID";
+    WHERE a.Doc_ID = '".$_SESSION['id']."' AND p.Pat_ID = a.Pat_ID";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>

@@ -68,7 +68,7 @@
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Show Appointments</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_appointments.php')">Show Appointments</a>
             <!-- <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a> -->
         </div>
 
