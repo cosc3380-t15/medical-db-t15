@@ -61,18 +61,18 @@
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
-            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_appointments_patient.php')">View Appointments</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_appointments_patient.php')">Your Appointments</a>
             <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_doctors.php')">Schedule Appointment</a>
         </div>
 
-        <a class="profile-menu-item">
+        <!-- <a class="profile-menu-item">
             <span>Lab results</span>
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
             <a href ="#" class="profile-submenu-item" onclick="load_html()">View Results</a>
             <a href ="#" class="profile-submenu-item" onclick="load_html()">History</a>
-        </div>
+        </div> -->
 
         <a class="profile-menu-item">
             <span>Prescriptions</span>
