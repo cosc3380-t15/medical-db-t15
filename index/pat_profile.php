@@ -62,7 +62,7 @@
         </a>
         <div class="profile-submenu">
             <a href ="#" class="profile-submenu-item" onclick="load_html('appointment-viewer.html')">View Appointments</a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html('appointment-scheduler.html')">Schedule Appointment</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_appointments.php')">Schedule Appointment</a>
         </div>
 
         <a class="profile-menu-item">
