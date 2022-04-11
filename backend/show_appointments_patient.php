@@ -7,6 +7,17 @@
     $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
                                                         
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
+    
+    if (isset($_GET['Pat_ID'])) {  
+        $Pat_ID = $_GET['Pat_ID'];  
+        $query = "DELETE FROM `patient` WHERE Pat_ID = '$Pat_ID'";  
+        $run = mysqli_query($link,$query);  
+        if ($run) {  
+            header('location:/backend/show_patient.php');  
+        }else{  
+            echo "Error: ".mysqli_error($link);  
+        }  
+    }
 
     $select="SELECT a.Pat_ID, a.Doc_ID, a.Off_ID, a.Appt_Time, a.Appt_Specialization, p.Pat_First, p.Pat_Last
     FROM appointment AS a, patient AS p
@@ -48,6 +59,9 @@
                         <td>".$result['Appt_Time']."</td>
                         <td>".$result['Appt_Specialization']."</td>
                         <td>".$result['Doc_ID']."</td>
+                        <td>
+                            <a href='/backend/show_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Cancel</a>
+                        </td>
                         
             
                     </tr>
