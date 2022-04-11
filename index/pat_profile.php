@@ -79,7 +79,7 @@
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
-            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_appointments_patient.php')">View Prescriptions</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_prescriptions_patient.php')">View Prescriptions</a>
             <!-- <a href ="#" class="profile-submenu-item" onclick="load_html()">Request Prescription</a> -->
         </div>
     </div>
