@@ -53,10 +53,10 @@ if (isset($_SESSION['status'])) {
                 <div class="input-group">
                     <h4 class="col-half">Location</h4>
                     <select class="float-right" name="location" id="allergies" >
-                        <option value="Houston">Houston</option>
-                        <option value="SugarLand">Sugar Land</option>
-                        <option value="Caty">Caty</option>
-                        <option value="Woodlands">The Woodlands</option>
+                        <option value="1">Houston</option>
+                        <option value="2">Sugar Land</option>
+                        <option value="3">Caty</option>
+                        <option value="4">The Woodlands</option>
                     </select>
                 </div>
             </div>
