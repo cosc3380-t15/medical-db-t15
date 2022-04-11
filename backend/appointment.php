@@ -44,10 +44,15 @@ if (isset($_SESSION['status'])) {
                     <input type="text" placeholder="Patient ID" name="pat_id" id="pat-i" value="<?php echo $_SESSION['id']; ?>" required readonly/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
+                <div class="input-group input-group-icon">
+                    <h4>Patient ID</h4>
+                    <input type="text" placeholder="Patient ID" name="doc_spec" id="pat-i" value="<?php echo $row['Doc_Spec']; ?>" required readonly/>
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
             <div class="row">
                 <div class="input-group">
                     <h4 class="col-half">Location</h4>
-                    <select class="float-right" name="prescription" id="allergies" >
+                    <select class="float-right" name="location" id="allergies" >
                         <option value="Houston">Houston</option>
                         <option value="SugarLand">Sugar Land</option>
                         <option value="Caty">Caty</option>
@@ -56,13 +61,13 @@ if (isset($_SESSION['status'])) {
                 </div>
             </div>
             <div class="input-group input-group-icon">
-                    <input type="date" name="dob" required />
+                    <input type="date" name="date" required />
                     <div class="input-icon"><span style="color:red;">*</span></div>
                 </div>
             <div class="row">
                 <div class="input-group">
                     <h4 class="col-half">Time</h4>
-                    <select class="float-right" name="prescription" id="allergies" >
+                    <select class="float-right" name="time" id="allergies" >
                         <option value="08:00:00">08:00AM</option>
                         <option value="09:00:00">09:00AM</option>
                         <option value="10:00:00">10:00AM</option>
@@ -73,7 +78,7 @@ if (isset($_SESSION['status'])) {
                     </select>
                 </div>
             </div>
-            <input class="button" type="submit" name="update_patient_data">
+            <input class="button" type="submit" name="update_appointment_data">
         </form>
     </div>
   
