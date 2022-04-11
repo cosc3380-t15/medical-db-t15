@@ -12,8 +12,8 @@ $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '
 mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
                                                         
-$query1 = "INSERT INTO prescription (Pat_ID,Doc_ID,Per_Desc)
-VALUES ('$patid','$docid','$prescription')";
+$query1 = "INSERT INTO prescription (Pat_ID,Doc_ID,Per_Desc,Per_Status)
+VALUES ('$patid','$docid','$prescription','PENDING')";
 
 
 if ($link->query($query1) !== TRUE) {
