@@ -45,6 +45,8 @@
         <th>Appointment Time</th>
         <th>Appointment Specialization</th>
         <th>Doctor ID</th>
+        <th>Appointment ID</th>
+
     </tr>
     <?php 
         $num=mysqli_num_rows($query);
@@ -59,6 +61,7 @@
                         <td>".$result['Appt_Time']."</td>
                         <td>".$result['Appt_Specialization']."</td>
                         <td>".$result['Doc_ID']."</td>
+                        <td>".$result['Appt_ID']."</td>
                         <td>
                             <a href='/backend/show_appointments_patient.php?Appt_ID=".$result['Appt_ID']."'class='btn'>Cancel</a>
                         </td>
