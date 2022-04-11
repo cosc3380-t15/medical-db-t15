@@ -36,7 +36,7 @@ if (isset($_SESSION['status'])) {
                 <h4>Perscribe Medicine</h4>
                 <div class="input-group input-group-icon">
                     <h4>Doctor ID</h4>
-                    <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i" value="<?php echo $row['Doc_First'];  ?>" required readonly/>
+                    <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i" value="<?php echo $row['Doc_ID'];  ?>" required readonly/>
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
