@@ -30,8 +30,8 @@
         <th>Doctor Specialty</th>
         <th>First Name</th>
         <th>Last Name</th>
-        <th>Phone</th>
         <th>Email</th>
+        <th>Phone</th>
         <th>Operation</th>
     </tr>
     <?php 
