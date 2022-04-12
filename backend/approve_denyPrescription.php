@@ -70,8 +70,8 @@ I AM SURE THE TABLE IS PRINTED ITS THE APPROVE AND DENY THAT ARE CAUSING PROBLEM
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Per_Desc']."</td>
                         <td>
-                            <a href='/backend/test_prescription.php?Pet_ID=".$result['Pet_ID']."&status='APPROVED''class='btn'>APPROVE</a>
-                            <a href='/backend/test_prescription.php?Pet_ID=".$result['Pet_ID']."&status='DENIED''class='btn'>DENY</a>
+                            <a href='/backend/test_prescription.php?Pet_ID=".$result['Pet_ID']."&status='APPROVED' class='btn'>APPROVE</a>
+                            <a href='/backend/test_prescription.php?Pet_ID=".$result['Pet_ID']."&status='DENIED' class='btn'>DENY</a>
                         </td>
             
                     </tr>
