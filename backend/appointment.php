@@ -37,7 +37,6 @@ if (isset($_SESSION['status'])) {
                 <h4 style="color: var(--accent)">Schedule Appointment</h4>
                 <h4>Doctor ID</h4>
                 <div class="input-group input-group-icon">
-                    
                     <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i" value="<?php echo $row['Doc_ID'];  ?>" required readonly/>
                     <div class="input-icon"><span style="color:green;">&#10003;</span></div>
                 </div>
