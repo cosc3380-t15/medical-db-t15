@@ -20,7 +20,7 @@
     if (isset($_GET['Per_ID'])) {  
         $Per_ID = $_GET['Per_ID'];  
         $status = $_GET['choice'];
-        $query = "UPDATE SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
+        $query = "UPDATE prescription SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
         $run = mysqli_query($link,$query);  
         if ($run) {  
             header('location:/backend/approve_denyPrescription.php');  
