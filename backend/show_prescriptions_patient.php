@@ -7,19 +7,10 @@
     $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
                                                         
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
+    $id = $_SESSION['id'];
 
-    if (isset($_GET['Per_ID'])) {  
-        $Per_ID = $_GET['Per_ID'];  
-        $query = "DELETE FROM `prescription` WHERE Per_ID = '$Per_ID'";  
-        $run = mysqli_query($link,$query);  
-        if ($run) {  
-            header('location:/index/doc_profile.php');  
-        }else{  
-            echo "Error: ".mysqli_error($link);  
-        }  
-    }
 
-    $select="SELECT * FROM prescription WHERE Doc_ID='".$_SESSION['id']."' ";
+    $select="SELECT * FROM prescription WHERE Pat_ID='$id' AND Per_Status = 'APPROVED' ";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
@@ -40,7 +31,6 @@
         <th>Patient ID</th>
         <th>Prescription</th>
         <th>Status</th>
-
     </tr>
     <?php 
         $num=mysqli_num_rows($query);
@@ -52,10 +42,6 @@
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Per_Status']."</td>
-                        <td>
-                            <a href='/backend/prescription_edit.php?Per_ID=".$result['Per_ID']."'class='btn'>Edit</a>
-                            <a href='/backend/show_prescriptions.php?Per_ID=".$result['Per_ID']."'class='btn'>Delete</a>
-                        </td>
             
                     </tr>
                 

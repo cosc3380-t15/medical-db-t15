@@ -72,11 +72,14 @@ I AM SURE THE TABLE IS PRINTED ITS THE APPROVE AND DENY THAT ARE CAUSING PROBLEM
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
+
                             <form method='post' action=''>
                             <input type='submit' name='action' value='APPROVE'/>
                             <input type='submit' name='action' value='DENY'/>
                             <input type='hidden' name='id' value= ".$result['Per_ID']."/>
                       </form>
+
+                           
                         </td>
             
                     </tr>
@@ -110,3 +113,4 @@ if ($_POST['action'] && $_POST['id']) {
 
 
 </body>
+</html>

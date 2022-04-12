@@ -26,8 +26,6 @@
         <p><?php echo $row["Doc_Email"];?></p>
         <p><?php echo $row["Doc_Phone"];?></p>
         <p>DOB: <?php echo $row["Doc_DOB"];?></p>
-        <p>Weight: <?php echo $row["Doc_Weight"];?> lbs</p>
-        <p>Height: <?php echo $row["Doc_Height"];?> cm</p>
         <p>Address: <?php echo $row["Doc_Street_Addr"];?></p>
         <p><?php echo $row["Doc_City_Addr"]. ", " .$row["Doc_State_Addr"]. " " .$row["Doc_Zip_Addr"]; }?></p>
         <?php } else {

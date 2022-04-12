@@ -27,11 +27,11 @@
             <a href="#ancor-doctors">
                 <h3 class="menu">Doctors</h3>
             </a>
-            <a href="/backend/show_patient.php">
-                <h3 class="menu">show patients-test</h3>
+            <a href="/backend/show_doctors.php">
+                <h3 class="menu">show doctors-test</h3>
             </a>
-            <!-- <a href="/backend/edit_patient.php">
-                <h3 class="menu">edit patients(test)</h3>
+            <!-- <a href="/backend/show_appointments.php">
+                <h3 class="menu">show appt - test</h3>
             </a> -->
         </div>
         <div class="div-w2">

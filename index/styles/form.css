@@ -126,8 +126,6 @@ select option {
   color: var(--lighter);
 }
 .input-group {
-  /* display: flex;
-  justify-content: center; */
   margin-bottom: 1em;
   zoom: 1;
 }
@@ -168,20 +166,6 @@ select option {
   text-align: center;
   pointer-events: none;
 }
-/* .input-group-icon .input-icon:after {
-  position: absolute;
-  top: 0.6em;
-  bottom: 0.6em;
-  left: 3.4em;
-  display: block;
-  border-right: 1px solid var(--light);
-  content: "";
-  -webkit-transition: 200ms ease-in-out;
-  -moz-transition: 200ms ease-in-out;
-  -o-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-} */
 .input-group-icon .input-icon i {
   -webkit-transition: 200ms ease-in-out;
   -moz-transition: 200ms ease-in-out;

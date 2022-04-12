@@ -33,6 +33,7 @@ THERE IS A YOUTUBE VID BUT IT USES JAVA IDK IF WANA DO THAT YET
 <!DOCTYPE HTML>
 <html>
 <head>
+<link rel="stylesheet" href="/index/styles/show_patients.css">
     <title></title>
 </head>
 <body>

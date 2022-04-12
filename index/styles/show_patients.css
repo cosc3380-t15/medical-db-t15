@@ -13,7 +13,7 @@
 table{
     margin: 20px;
     border-collapse: collapse;
-    width: 75%;
+    width: 95%;
     border: 1px solid var(--darker);
 }
 table th{
@@ -39,7 +39,10 @@ table td{
     color: var(--darker);
 }
 #back-button{
-    background-color: #008CFF;
+    background-color: var(--main);
     padding: 5px;
     font-size: larger;
+}
+tr:nth-child(even) {
+    background-color: var(--lighter);
 }
