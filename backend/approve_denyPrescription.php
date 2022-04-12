@@ -1,5 +1,5 @@
 <!--
-    WORD FOR WORD THE SHOW PATIENT JUST PASSING MORE DATA IN HREF AND UPDATING INSTEAD OF DELETING
+    WORD FOR WORD THE SHOW PATIENT JUST PASSING MORE DATA IN HREF AND UPDATING INSTEAD OF DELETING. something happened adding something here so i can send to mamoon branch to merge main.
 -->
 
 
@@ -20,7 +20,7 @@
     if (isset($_GET['Per_ID'])) {  
         $Per_ID = $_GET['Per_ID'];  
         $status = $_GET['choice'];
-        $query = "UPDATE SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
+        $query = "UPDATE prescription SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
         $run = mysqli_query($link,$query);  
         if ($run) {  
             header('location:/backend/approve_denyPrescription.php');  
