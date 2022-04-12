@@ -7,10 +7,10 @@
     $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
                                                         
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
+    $id = $_SESSION['id'];
 
 
-
-    $select="SELECT * FROM prescription WHERE Pat_ID='".$_SESSION['id']."' ";
+    $select="SELECT * FROM prescription WHERE Pat_ID='$id' AND Per_Status = 'APPROVED' ";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
@@ -30,6 +30,7 @@
         <th>Prescription ID</th>
         <th>Patient ID</th>
         <th>Prescription</th>
+        <th>Status</th>
     </tr>
     <?php 
         $num=mysqli_num_rows($query);
@@ -40,6 +41,7 @@
                         <td>".$result['Per_ID']."</td>
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Per_Desc']."</td>
+                        <td>".$result['Per_Status']."</td>
             
                     </tr>
                 

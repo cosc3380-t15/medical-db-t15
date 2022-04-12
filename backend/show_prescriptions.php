@@ -39,6 +39,8 @@
         <th>Prescription ID</th>
         <th>Patient ID</th>
         <th>Prescription</th>
+        <th>Status</th>
+
     </tr>
     <?php 
         $num=mysqli_num_rows($query);
@@ -49,6 +51,7 @@
                         <td>".$result['Per_ID']."</td>
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Per_Desc']."</td>
+                        <td>".$result['Per_Status']."</td>
                         <td>
                             <a href='/backend/prescription_edit.php?Per_ID=".$result['Per_ID']."'class='btn'>Edit</a>
                             <a href='/backend/show_prescriptions.php?Per_ID=".$result['Per_ID']."'class='btn'>Delete</a>
