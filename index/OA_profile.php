@@ -55,7 +55,18 @@
         </div>
 
         <a class="profile-menu-item">
-            <span>Patients</span>
+            <!-- changing it to record cause we can
+             just make this be the look up where we can do the seach through tables later -->
+            <span>Records</span>
+            <span class="profile-arrow">></span>
+        </a>
+        <div class="profile-submenu">
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/approve_denyPrescription.php')">patients</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+        </div>
+
+        <a class="profile-menu-item">
+            <span>Appointment</span>
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
@@ -64,20 +75,12 @@
         </div>
 
         <a class="profile-menu-item">
-            <span>Lorem Ipsum</span>
+            <span>Prescriptions</span>
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
-        </div>
-
-        <a class="profile-menu-item">
-            <span>Lorem Ipsum</span>
-            <span class="profile-arrow">></span>
-        </a>
-        <div class="profile-submenu">
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+            <!-- SAME AS DONE IN DOCS PROFILE DOESNT WORK ANYMORE IDK WHY -->
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/approve_denyPrescription.php')">Pending presciption </a>
             <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
         </div>
     </div>
