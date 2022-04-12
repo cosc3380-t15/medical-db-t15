@@ -1,8 +1,5 @@
 <!--
-PLEASE TEST ON YOUR ENDS CAUSE NOTHING IS WORKING HOW ITS SUPPOSED TO ON MY SIDE,
-IF SOMETHING IS BROKEN JUST @ME ON DISCORD IDK WHAT ELSE I COULD DO.
-I SPENT 4 HRS DEBUGGING IT ON MY END AND FOUND OUT NOTHING WAS WORKING FOR ME AGAIN.
-I AM SURE THE TABLE IS PRINTED ITS THE APPROVE AND DENY THAT ARE CAUSING PROBLEMS
+    WORD FOR WORD THE SHOW PATIENT JUST PASSING MORE DATA IN HREF AND UPDATING INSTEAD OF DELETING
 -->
 
 
@@ -19,18 +16,19 @@ I AM SURE THE TABLE IS PRINTED ITS THE APPROVE AND DENY THAT ARE CAUSING PROBLEM
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
 
-    // This is similar to the show_patient, where you use href to pass values (DID THE EXACT SAME BUT WITH TWO VALUES)
-    // if (isset($_GET['status'])) { 
-    //     $status= $_GET['status']; 
-    //     $id = $_GET['id'];  
-    //     $query = "UPDATE 'prescription' SET 'Pre_Status' = 'APPROVED' WHERE 'Pet_ID' = '$id'";  
-    //     $run = mysqli_query($link,$query);  
-    //     if ($run) {  
-    //         header('location:/backend/approve_denyPrescription.php');  
-    //     }else{  
-    //         echo "Error: ".mysqli_error($link);  
-    //     }  
-    // }
+    //This is similar to the show_patient, where you use href to pass values (DID THE EXACT SAME BUT WITH TWO VALUES)
+    if (isset($_GET['Per_ID'])) {  
+        $Per_ID = $_GET['Per_ID'];  
+        $status = $_GET['choice'];
+        $query = "UPDATE SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
+        $run = mysqli_query($link,$query);  
+        if ($run) {  
+            header('location:/backend/approve_denyPrescription.php');  
+        }else{  
+            echo "Error: ".mysqli_error($link);  
+        }  
+    }
+
 
     // this is the main query and it works
     $select="SELECT * FROM prescription AS p, patient AS pp 
@@ -45,9 +43,9 @@ I AM SURE THE TABLE IS PRINTED ITS THE APPROVE AND DENY THAT ARE CAUSING PROBLEM
 </head>
 
 <body>
-    <!-- <div class="back-button">
+     <div class="back-button">
        <a href="/index/home.php" id="back-button" >Back</a> 
-    </div> -->
+    </div> 
 
     <table border="1" cellpadding="0">
     <!-- This is just the heading of each columns -->
@@ -72,14 +70,8 @@ I AM SURE THE TABLE IS PRINTED ITS THE APPROVE AND DENY THAT ARE CAUSING PROBLEM
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
-
-                            <form method='post' action=''>
-                            <input type='submit' name='action' value='APPROVE'/>
-                            <input type='submit' name='action' value='DENY'/>
-                            <input type='hidden' name='id' value= ".$result['Per_ID']."/>
-                      </form>
-
-                           
+                            <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=APPROVED'class='btn'>Approve</a>
+                            <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=DENIED'class='btn'>Deny</a>   
                         </td>
             
                     </tr>
@@ -91,26 +83,5 @@ I AM SURE THE TABLE IS PRINTED ITS THE APPROVE AND DENY THAT ARE CAUSING PROBLEM
     ?>
     
     </table>
-    
-
-
-
-
-<?php 
-// if the button is pressed it is gonna se values and if they contaion aything these should be true
-if ($_POST['action'] && $_POST['id']) {
-    //just in case
-  if ($_POST['action'] == 'APPROVE') {
-    $id = $_POST['id'];
-    $updateQuery = "UPDATE prescription SET Pre_Status = 'APPROVED' WHERE Pet_ID = '$id'"; 
-    $run=mysqli_query($link,$updateQuery);
-  }else{
-    $id = $_POST['id'];
-    $updateQuery = "UPDATE prescription SET Pre_Status = 'DENIED' WHERE Pet_ID = '$id'"; 
-    $run=mysqli_query($link,$updateQuery);
-  }
-}?>
-
 
 </body>
-</html>
