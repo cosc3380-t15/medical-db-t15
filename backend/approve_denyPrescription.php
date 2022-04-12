@@ -20,10 +20,10 @@
     if (isset($_GET['Per_ID'])) {  
         $Per_ID = $_GET['Per_ID'];  
         $status = $_GET['choice'];
-        $query = "UPDATE SET Per_Status = '$status' WHERE Per_ID = '$Pat_ID'";  
+        $query = "UPDATE SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
         $run = mysqli_query($link,$query);  
         if ($run) {  
-            header('location:/backend/show_patient.php');  
+            header('location:/backend/approve_denyPrescription.php');  
         }else{  
             echo "Error: ".mysqli_error($link);  
         }  
@@ -71,8 +71,7 @@
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
                             <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=APPROVED'class='btn'>Approve</a>
-                            <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=DENIED'class='btn'>Deny</a>
-                      </form>
+                            <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=DENIED'class='btn'>Deny</a>   
                         </td>
             
                     </tr>

@@ -7,19 +7,21 @@
     $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
                                                         
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
-
-    if (isset($_GET['Per_ID'])) {  
-        $Per_ID = $_GET['Per_ID'];  
-        $query = "DELETE FROM `prescription` WHERE Per_ID = '$Per_ID'";  
+    
+    if (isset($_GET['Appt_ID'])) {  
+        $Appt_ID = $_GET['Appt_ID'];  
+        $query = "DELETE FROM `appointment` WHERE Appt_ID = '$Appt_ID'";  
         $run = mysqli_query($link,$query);  
         if ($run) {  
-            header('location:/index/doc_profile.php');  
+            header('location:/index/pat_profile.php');  
         }else{  
             echo "Error: ".mysqli_error($link);  
         }  
     }
 
-    $select="SELECT * FROM prescription WHERE Doc_ID='".$_SESSION['id']."' ";
+    $select="SELECT a.Pat_ID, a.Doc_ID, a.Off_ID, a.Appt_Time, a.Appt_Specialization, p.Pat_First, p.Pat_Last, a.Appt_ID
+    FROM appointment AS a, patient AS p
+    WHERE a.Pat_ID = '".$_SESSION['id']."' AND p.Pat_ID = a.Pat_ID";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
@@ -36,10 +38,15 @@
 
     <table border="1" cellpadding="0">
     <tr>
-        <th>Prescription ID</th>
         <th>Patient ID</th>
-        <th>Prescription</th>
-        <th>Status</th>
+        <th>Patient First Nane</th>
+        <th>Patient Last Nane</th>
+        <th>Office ID</th>
+        <th>Appointment Time</th>
+        <th>Appointment Specialization</th>
+        <th>Doctor ID</th>
+        <th>Appointment ID</th>
+        <th>Opperation</th>
 
     </tr>
     <?php 
@@ -48,14 +55,18 @@
             while ($result=mysqli_fetch_assoc($query)) {
                 echo "
                     <tr>
-                        <td>".$result['Per_ID']."</td>
                         <td>".$result['Pat_ID']."</td>
-                        <td>".$result['Per_Desc']."</td>
-                        <td>".$result['Per_Status']."</td>
+                        <td>".$result['Pat_First']."</td>
+                        <td>".$result['Pat_Last']."</td>
+                        <td>".$result['Off_ID']."</td>
+                        <td>".$result['Appt_Time']."</td>
+                        <td>".$result['Appt_Specialization']."</td>
+                        <td>".$result['Doc_ID']."</td>
+                        <td>".$result['Appt_ID']."</td>
                         <td>
-                            <a href='/backend/prescription_edit.php?Per_ID=".$result['Per_ID']."'class='btn'>Edit</a>
-                            <a href='/backend/show_prescriptions.php?Per_ID=".$result['Per_ID']."'class='btn'>Delete</a>
+                            <a href='/backend/show_appointments_patient.php?Appt_ID=".$result['Appt_ID']."'class='btn'>Cancel</a>
                         </td>
+                        
             
                     </tr>
                 

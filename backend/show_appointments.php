@@ -8,18 +8,9 @@
                                                         
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
-    if (isset($_GET['Per_ID'])) {  
-        $Per_ID = $_GET['Per_ID'];  
-        $query = "DELETE FROM `prescription` WHERE Per_ID = '$Per_ID'";  
-        $run = mysqli_query($link,$query);  
-        if ($run) {  
-            header('location:/index/doc_profile.php');  
-        }else{  
-            echo "Error: ".mysqli_error($link);  
-        }  
-    }
-
-    $select="SELECT * FROM prescription WHERE Doc_ID='".$_SESSION['id']."' ";
+    $select="SELECT a.Pat_ID, a.Doc_ID, a.Off_ID, a.Appt_Time, a.Appt_Specialization, p.Pat_First, p.Pat_Last
+    FROM appointment AS a, patient AS p
+    WHERE a.Doc_ID = '".$_SESSION['id']."' AND p.Pat_ID = a.Pat_ID";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
@@ -36,11 +27,13 @@
 
     <table border="1" cellpadding="0">
     <tr>
-        <th>Prescription ID</th>
         <th>Patient ID</th>
-        <th>Prescription</th>
-        <th>Status</th>
-
+        <th>Patient First Nane</th>
+        <th>Patient Last Nane</th>
+        <th>Office ID</th>
+        <th>Appointment Time</th>
+        <th>Appointment Specialization</th>
+        <th>Doctor ID</th>
     </tr>
     <?php 
         $num=mysqli_num_rows($query);
@@ -48,14 +41,14 @@
             while ($result=mysqli_fetch_assoc($query)) {
                 echo "
                     <tr>
-                        <td>".$result['Per_ID']."</td>
                         <td>".$result['Pat_ID']."</td>
-                        <td>".$result['Per_Desc']."</td>
-                        <td>".$result['Per_Status']."</td>
-                        <td>
-                            <a href='/backend/prescription_edit.php?Per_ID=".$result['Per_ID']."'class='btn'>Edit</a>
-                            <a href='/backend/show_prescriptions.php?Per_ID=".$result['Per_ID']."'class='btn'>Delete</a>
-                        </td>
+                        <td>".$result['Pat_First']."</td>
+                        <td>".$result['Pat_Last']."</td>
+                        <td>".$result['Off_ID']."</td>
+                        <td>".$result['Appt_Time']."</td>
+                        <td>".$result['Appt_Specialization']."</td>
+                        <td>".$result['Doc_ID']."</td>
+                        
             
                     </tr>
                 
