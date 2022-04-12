@@ -65,7 +65,7 @@ I AM SURE THE TABLE IS PRINTED ITS THE APPROVE AND DENY THAT ARE CAUSING PROBLEM
                 // this is to fill the tables done exactly same as show_patient but 
                 echo "
                     <tr>
-                        <td>".$result['Pet_ID']."</td>
+                        <td>".$result['Per_ID']."</td>
                         <td>".$result['Doc_ID']."</td>
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Per_Desc']."</td>
