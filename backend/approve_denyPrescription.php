@@ -34,7 +34,7 @@ I AM SURE THE TABLE IS PRINTED ITS THE APPROVE AND DENY THAT ARE CAUSING PROBLEM
     }
 
     // this is the main query and it works
-    $select="SELECT * FROM prescription WHERE p.Per_Status = 'PENDING' ";  
+    $select="SELECT * FROM prescription WHERE Per_Status = 'PENDING' ";  
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
