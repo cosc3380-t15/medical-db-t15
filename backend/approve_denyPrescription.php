@@ -34,7 +34,8 @@ I AM SURE THE TABLE IS PRINTED ITS THE APPROVE AND DENY THAT ARE CAUSING PROBLEM
     }
 
     // this is the main query and it works
-    $select="SELECT * FROM prescription WHERE Per_Status = 'PENDING' ";  
+    $select="SELECT * FROM prescription AS p, patient AS pp 
+    WHERE p.Per_Status = 'PENDING' AND p.Pat_ID = pp.Pat_ID";  
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
@@ -55,7 +56,8 @@ I AM SURE THE TABLE IS PRINTED ITS THE APPROVE AND DENY THAT ARE CAUSING PROBLEM
         <th>prescription ID</th>
         <th>Doc ID</th>
         <th>Patient ID</th>
-        <th>description </th>
+        <th>Description </th>
+        <th>Patient Allergy </th>
         <th>buttons </th>
     </tr>
     <?php 
@@ -69,6 +71,7 @@ I AM SURE THE TABLE IS PRINTED ITS THE APPROVE AND DENY THAT ARE CAUSING PROBLEM
                         <td>".$result['Doc_ID']."</td>
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Per_Desc']."</td>
+                        <td>".$result['Pat_Allergy']."</td>
                         <td>
                             <a href='/backend/test_prescription.php?Pet_ID=".$result['Pet_ID']."&status='APPROVED' class='btn'>APPROVE</a>
                             <a href='/backend/test_prescription.php?Pet_ID=".$result['Pet_ID']."&status='DENIED' class='btn'>DENY</a>
