@@ -84,9 +84,12 @@
             <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
         </div>
     </div>
-    <div id="content" class="profile-main">
-    <iframe src="/backend/approve_denyPrescription.php" height="1000px" width="100%" title="Iframe Example"></iframe>    
-    </div>
+    
+    <iframe src="/backend/approve_denyPrescription.php" height="1000px" width="100%" title="Iframe Example">
+        <div id="content" class="profile-main"> 
+        </div>     
+    </iframe>    
+   
     <script>
         var dropdown = document.getElementsByClassName("profile-menu-item");
         var i;
