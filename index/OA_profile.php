@@ -85,7 +85,7 @@
         </div>
     </div>
     <div id="content" class="profile-main">
-        
+    <iframe src="/backend/approve_denyPrescription.php" height="200" width="300" title="Iframe Example"></iframe>    
     </div>
     <script>
         var dropdown = document.getElementsByClassName("profile-menu-item");
