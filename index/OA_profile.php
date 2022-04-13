@@ -85,7 +85,7 @@
         </div>
     </div>
     
-    <iframe src="/backend/approve_denyPrescription.php" height="1000px" width="100%" title="Iframe Example">
+    <iframe src="#" height="1000px" width="100%" title="Iframe Example">
         <div id="content" class="profile-main"> 
         </div>     
     </iframe>    
