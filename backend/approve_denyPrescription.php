@@ -71,7 +71,9 @@
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
                             <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=APPROVED'class='btn'>Approve</a>
-                            <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=DENIED'class='btn'>Deny</a>   
+                            <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=DENIED'class='btn'>Deny</a>
+                            <iframe src="/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=DENIED'" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" >
+                                </iframe>
                         </td>
             
                     </tr>
