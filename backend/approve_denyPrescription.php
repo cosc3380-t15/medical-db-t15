@@ -29,8 +29,8 @@
     //     }  
     // }
 
-    if(isset($_GET['button1'])) {
-        $Per_ID = $_GET['ID']; 
+    if(isset($_POST['button1'])) {
+        $Per_ID = $_POST['ID']; 
         $status = 'APPROVED';
         $query = "UPDATE prescription SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
         $run = mysqli_query($link,$query);  
@@ -42,8 +42,8 @@
     }
     
     
-    if(isset($_GET['button2'])) {
-        $Per_ID = $_GET['ID']; 
+    if(isset($_POST['button2'])) {
+        $Per_ID = $_POST['ID']; 
         $status = 'DENIED';
         $query = "UPDATE prescription SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
         $run = mysqli_query($link,$query);  
@@ -95,7 +95,7 @@
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
-                        <form action='/backend/approve_denyPrescription.php' method='get'>
+                        <form action='/backend/approve_denyPrescription.php' method='post'>
                             <input type='hidden' id='ID' name='ID' value=".$result['Per_ID'].">
                             <input type='submit' name='button1'
                                     value='Approve'/>
