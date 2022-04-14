@@ -8,7 +8,7 @@
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
     if (isset($_REQUEST['delete'])) {
-        $sql = "DELETE FROM patient WHERE id=8";
+        $sql = "DELETE FROM patient WHERE id=. $row["Pat_ID"] .";
         if ($link->query($sql)===TRUE) {
             echo "DELETED";
         }else {
@@ -52,7 +52,7 @@
                         <td>".$result['Pat_Phone']."</td>
                         <td>".$result['Pat_Email']."</td>
                         <td>
-                       
+                        <form action="" method="POST"><input type="hidden" name="id" value=' . $row["Pat_ID"] .'><input type="submit" name="delete" value="Delete"></form>
                         </td>
             
                     </tr>
