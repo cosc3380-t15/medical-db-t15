@@ -1,6 +1,8 @@
 <!--
     WORD FOR WORD THE SHOW PATIENT JUST PASSING MORE DATA IN HREF AND UPDATING INSTEAD OF DELETING. something happened adding something here so i can send to mamoon branch to merge main.
--->
+
+    There was a problem i hope this new add cures it
+    -->
 
 
 
@@ -94,13 +96,13 @@
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
                             <form method='post'>
-                            <input type='hidden' id='ID' name='ID' value=".$result['Per_ID'].">
+                            <input type='hidden' name='ID' value=".$result['Per_ID'].">
                             <input type='submit' name='button1'
                                     value='Approve'/>
                             
                             <input type='submit' name='button2'
                                     value='Deny'/>
-                    </form>
+                           </form>
                         </td>
             
                     </tr>
