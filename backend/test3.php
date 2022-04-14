@@ -55,7 +55,7 @@
                     ";
                         echo '<td>
                         <form action="" method="POST">
-                        <input type="hidden" name="Pat_ID" value='.$result["Pat_ID"].'>
+                        <input type="hidden" name="Pat_ID" value='.$result['Pat_ID'].'>
                         <input type="submit" name="delete" value="Delete">
                         </form>
                         </td>';
