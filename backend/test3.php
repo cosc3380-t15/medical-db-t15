@@ -8,7 +8,7 @@
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
     if (isset($_REQUEST['delete'])) {
-        $sql = "DELETE FROM patient WHERE id='".$row["Pat_ID"]."'";
+        $sql = "DELETE FROM patient WHERE id=8";
         if ($link->query($sql)===TRUE) {
             echo "DELETED";
         }else {
@@ -45,19 +45,18 @@
         if ($num>0) {
             while ($result=mysqli_fetch_assoc($query)) {
                 
-                echo " <tr> ";
-                        echo "
+                echo "<tr>";
+                    echo "
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Pat_First']."</td>
                         <td>".$result['Pat_Last']."</td>
                         <td>".$result['Pat_Phone']."</td>
                         <td>".$result['Pat_Email']."</td>
-                         ";
-echo '<td>
+                    ";
+                        echo '<td>
                         <form action="" method="POST"><input type="hidden" name="id" value=' . $row["Pat_ID"] .'><input type="submit" name="delete" value="Delete"></form>
                         </td>';
-
-   echo " </tr> ";
+                echo " </tr> ";
                   
                      
                      
