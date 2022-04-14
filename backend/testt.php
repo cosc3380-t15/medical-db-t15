@@ -28,27 +28,27 @@
     <body>
         <div>
             <?php
-                $sql = "SELECT * FROM patient";
+                $sql = "SELECT * FROM doctor";
                 $result = $link->query($sql);
                 if ($result->num_rows > 0) {
                     echo '<table>';
                     echo "<thead>";
-                    echo "<tr>";
-                    echo "<th>ID</th>";
-                    echo "<th>F Name</th>";
-                    echo "<th>L Name</th>";
-                    echo "<th>Phone</th>";
-                    echo "<th>Action</th>";
-                    echo "</tr>";
+                        echo "<tr>";
+                            echo "<th>ID</th>";
+                            echo "<th>F Name</th>";
+                            echo "<th>L Name</th>";
+                            echo "<th>Phone</th>";
+                            echo "<th>Action</th>";
+                        echo "</tr>";
                     echo "</thead>";
                     echo "<tbody>";
                         while ($row = $result ->fetch_assos()) {
                             echo "<tr>";
-                            echo "<td>" . $row["Pat_ID"] . "</td>";
-                            echo "<td>" . $row["Pat_First"] . "</td>";
-                            echo "<td>" . $row["Pat_Last"] . "</td>";
-                            echo "<td>" . $row["Pat_Phone"] . "</td>";
-                            echo '<td><form action="" method="POST"><input type="hidden" name="id" value=' . $row["Pat_ID"] .'><input type="submit" name="delete" value="Delete"></form></td>';
+                            echo "<td>" . $row["Doc_ID"] . "</td>";
+                            echo "<td>" . $row["Doc_First"] . "</td>";
+                            echo "<td>" . $row["Doc_Last"] . "</td>";
+                            echo "<td>" . $row["Doc_Phone"] . "</td>";
+                            echo '<td><form action="" method="POST"><input type="hidden" name="id" value=' . $row["Doc_ID"] .'><input type="submit" name="delete" value="Delete"></form></td>';
                             # code...
                         }
                         echo "</tbody>";
