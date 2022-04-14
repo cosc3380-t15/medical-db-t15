@@ -30,7 +30,6 @@
             <?php
                 $sql = "SELECT * FROM doctor";
                 $result = $link->query($sql);
-                
                 if ($result->num_rows > 0) {
                     echo '<table>';
                     echo "<thead>";
@@ -49,7 +48,7 @@
                             echo "<td>" . $row["Doc_First"] . "</td>";
                             echo "<td>" . $row["Doc_Last"] . "</td>";
                             echo "<td>" . $row["Doc_Phone"] . "</td>";
-                           
+                            echo '<td><form action="" method="POST"><input type="hidden" name="id" value=' . $row["Doc_ID"] .'><input type="submit" name="delete" value="Delete"></form></td>';
                             # code...
                         }
                         echo "</tbody>";
