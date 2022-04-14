@@ -1,8 +1,6 @@
 <!--
     WORD FOR WORD THE SHOW PATIENT JUST PASSING MORE DATA IN HREF AND UPDATING INSTEAD OF DELETING. something happened adding something here so i can send to mamoon branch to merge main.
-
-    There was a problem i hope this new add cures it
-    -->
+-->
 
 
 
@@ -31,8 +29,8 @@
     //     }  
     // }
 
-    if(isset($_POST['button1'])) {
-        $Per_ID = $_POST['ID']; 
+    if(isset($_GET['button1'])) {
+        $Per_ID = $_GET['ID']; 
         $status = 'APPROVED';
         $query = "UPDATE prescription SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
         $run = mysqli_query($link,$query);  
@@ -42,8 +40,10 @@
             echo "Error: ".mysqli_error($link);  
         }  
     }
-    if(isset($_POST['button2'])) {
-        $Per_ID = $_POST['ID']; 
+    
+    
+    if(isset($_GET['button2'])) {
+        $Per_ID = $_GET['ID']; 
         $status = 'DENIED';
         $query = "UPDATE prescription SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
         $run = mysqli_query($link,$query);  
@@ -68,8 +68,6 @@
 </head>
 
 <body>
-
-
      <div class="back-button">
        <a href="/index/home.php" id="back-button" >Back</a> 
     </div> 
@@ -97,20 +95,14 @@
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
-
-                            <form method='post'>
-                            <input type='hidden' name='ID' value=".$result['Per_ID'].">
+                        <form action='/approve_denyPrescription.php' method='get'>
+                            <input type='hidden' id='ID' name='ID' value=".$result['Per_ID'].">
                             <input type='submit' name='button1'
                                     value='Approve'/>
                             
                             <input type='submit' name='button2'
                                     value='Deny'/>
-                           </form>
-
-                            <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=APPROVED' class='btn'>Approve</a>
-                            <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=DENIED'class='btn'>Deny</a>
-                           
-
+                    </form>
                         </td>
             
                     </tr>
@@ -121,11 +113,12 @@
         }
     ?>
 
+
+    
+    </table>
+
+</body>
     <!--THis works
     <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=APPROVED'class='btn'>Approve</a>
     <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=DENIED'class='btn'>Deny</a>   
     -->
-    
-    </table>
-    
-</body>

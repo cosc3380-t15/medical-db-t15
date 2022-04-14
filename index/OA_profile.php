@@ -62,7 +62,7 @@
         </a>
         <div class="profile-submenu">
             <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_patient.php')">Patients</a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/DoctorDataReport.php')">Lorem Ipsum</a>
         </div>
 
         <a class="profile-menu-item">
