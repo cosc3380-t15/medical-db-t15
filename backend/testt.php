@@ -23,8 +23,7 @@
 
 <html>
     <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     </head>
     <body>
         <div>
@@ -49,7 +48,7 @@
                             echo "<td>" . $row["Doc_First"] . "</td>";
                             echo "<td>" . $row["Doc_Last"] . "</td>";
                             echo "<td>" . $row["Doc_Phone"] . "</td>";
-                            
+                           
                             # code...
                         }
                         echo "</tbody>";
