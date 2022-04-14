@@ -54,7 +54,10 @@
                         <td>".$result['Pat_Email']."</td>
                     ";
                         echo '<td>
-                        <form action="" method="POST"><input type="hidden" name="id" value=' . $row["Pat_ID"] .'><input type="submit" name="delete" value="Delete"></form>
+                        <form action="" method="POST">
+                        <input type="hidden" name="Pat_ID" value=' . $row["Pat_ID"] .'>
+                        <input type="submit" name="delete" value="Delete">
+                        </form>
                         </td>';
                 echo " </tr> ";
                   
