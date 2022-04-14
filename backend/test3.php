@@ -51,13 +51,14 @@
                         <td>".$result['Pat_Last']."</td>
                         <td>".$result['Pat_Phone']."</td>
                         <td>".$result['Pat_Email']."</td>
-                        <td>
-                        <form  method="POST"><input type="hidden" name="id" value=' . $row["Pat_ID"] .'><input type="submit" name="delete" value="Delete"></form>
-                        </td>
-            
                     </tr>
-                
-                ";
+                     ";
+                     
+                     echo '<td>
+                        <form action="" method="POST"><input type="hidden" name="id" value=' . $row["Pat_ID"] .'><input type="submit" name="delete" value="Delete"></form>
+                        </td>';
+                        
+               
             }
         }
     
