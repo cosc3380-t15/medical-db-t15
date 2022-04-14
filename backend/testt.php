@@ -47,12 +47,10 @@
                         echo "<td>".$row['Pat_ID']."</td>";
                         echo "<td>".$row['Per_Desc']."</td>";
                         echo "<td>".$row['Pat_Allergy']."</td>";
-                    }else{
+                    } 
+            }  else{
                         echo "0 results";
-                    }
-            }   
-
-
-        ?>
+                    } 
+            ?>
     </body>
 </html>
