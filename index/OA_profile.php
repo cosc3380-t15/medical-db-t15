@@ -85,10 +85,10 @@
         </div>
     </div>
     
-    <iframe src="#" height="400px" width="400px" title="Iframe Example">
+ 
         <div id="content" class="profile-main"> 
         </div>     
-    </iframe>    
+   
    
     <script>
         var dropdown = document.getElementsByClassName("profile-menu-item");
