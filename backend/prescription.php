@@ -32,26 +32,27 @@ if (isset($_SESSION['status'])) {
 ?>
     <div class="container-form11">
         <form action="/backend/create_prescription.php" method="post" onsubmit="return Validate();">
-            <div class="row">
-                <h4>Perscribe Medicine</h4>
+        <a href="../index/doc_profile.php">&#8592; Back<a></a>    
+        <div class="row">
+                <h4 style="color: var(--accent)">Perscribe Medicine</h4>
+                <h4>Doctor ID</h4>
                 <div class="input-group input-group-icon">
-                    <h4>Doctor ID</h4>
                     <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i" value="<?php echo $_SESSION['id']; ?>" required readonly/>
-                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                    <div class="input-icon"><span style="color:green;">&#10003;</span></div>
                 </div>
+                <h4>Patient ID</h4>
                 <div class="input-group input-group-icon">
-                    <h4>Patient ID</h4>
                     <input type="text" placeholder="Patient ID" name="pat_id" id="pat-i" value="<?php echo $row['Pat_ID']; ?>" required readonly/>
-                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                    <div class="input-icon"><span style="color:green;">&#10003;</span></div>
                 </div>
-                <div class="input-group input-group-icon">
-                    <h4>Patient Name</h4>
+                <h4>Patient Name</h4>
+                <div class="input-group input-group-icon col-half">               
                     <input type="text" placeholder="First Name" name="fname"  value="<?php echo $row['Pat_First']; ?>" readonly/>
-                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                    <div class="input-icon"><span style="color:green;">&#10003;</span></div>
                 </div>
-                <div class="input-group input-group-icon">
+                <div class="input-group input-group-icon col-half">
                     <input type="text" placeholder="Last Name" name="lname"  value="<?php echo $row['Pat_Last']; ?>" readonly/>
-                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                    <div class="input-icon"><span style="color:green;">&#10003;</span></div>
                 </div>
             </div>
             <div class="row">
