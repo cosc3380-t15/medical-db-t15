@@ -11,11 +11,13 @@
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
 
-    $sql = "UPDATE prescription SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";
-    if (mysqli_query($link, $sql)) {
-        echo "Successfull!";
-    } else{
-        echo "error";
+    if (isset($_REQUEST['delete'])) {
+        $sql = "DELETE FROM patient WHERE id=8";
+        if ($link->query($sql)===TRUE) {
+            echo "DELETED";
+        }else {
+            echo "not deleted";
+        }
     }
 ?>
 
@@ -24,35 +26,38 @@
 
     </head>
     <body>
-        <?php
-            $sql = "SELECT * FROM patient";
-            $test = "SELECT * FROM prescription AS p, patient AS pp 
-            WHERE p.Per_Status = 'PENDING' AND p.Pat_ID = pp.Pat_ID";
-            $result = mysqli_query($link, $sql);
-            if (mysqli_num_roes($result) > 0) {
-                echo'<table>';
-                echo "thead";
-                echo "<tr>";
-                    echo "<th>prescription ID</th>";
-                    echo "<th>Doc ID</th>";
-                    echo "<th>Patient ID</th>";
-                    echo "<th>Description </th>";
-                    echo "<th>Patient Allergy </th>";
-                    echo "<th>buttons </th>";
-                echo "</tr>"; 
-                echo "</thead>";
-                echo "<tbody>";
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<td>".$row['Per_ID']."</td>";
-                        echo "<td>".$row['Doc_ID']."</td>";
-                        echo "<td>".$row['Pat_ID']."</td>";
-                        echo "<td>".$row['Per_Desc']."</td>";
-                        echo "<td>".$row['Pat_Allergy']."</td>";
-                    } 
-            }else{
-                echo "0 results";
-            } 
+        <div>
+            <?php
+                $sql = "SELECT * FROM patient";
+                $result = $link->query($sql);
+                if ($result->num_rows > 0) {
+                    echo '<table>';
+                    echo "<thead>";
+                    echo "<tr>";
+                    echo "<th>ID</th>";
+                    echo "<th>F Name</th>";
+                    echo "<th>L Name</th>";
+                    echo "<th>Phone</th>";
+                    echo "<th>Action</th>";
+                    echo "</tr>";
+                    echo "</thead>";
+                    echo "<tbody>";
+                        while ($row = $result ->fetch_assos()) {
+                            echo "<tr>";
+                            echo "<td>" . $row["Pat_ID"] . "</td>";
+                            echo "<td>" . $row["Pat_First"] . "</td>";
+                            echo "<td>" . $row["Pat_Last"] . "</td>";
+                            echo "<td>" . $row["Pat_Phone"] . "</td>";
+                            echo '<td><form action="" method="POST"><input type="hidden" name="id" value=' . $row["Pat_ID"] .'><input type="submit" name="delete" value="Delete"></form></td>';
+                            # code...
+                        }
+                        echo "</tbody>";
+                        echo "</table>";
+                }else {
+                    echo "0 Results";
+                }
             ?>
-            <p>asdasd</p>
+        </div>
+           
     </body>
 </html>
