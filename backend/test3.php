@@ -7,7 +7,7 @@
                                                         
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
-    if (isset($_REQUEST['Pat_ID'])) {
+    if (isset($_REQUEST['delete'])) {
         $sql = "DELETE FROM patient WHERE Pat_ID='".$result['Pat_ID']."'";
         if ($link->query($sql)===TRUE) {
             echo "DELETED";
