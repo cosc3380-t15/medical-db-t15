@@ -25,7 +25,8 @@
     </head>
     <body>
         <?php
-            $sql = "SELECT * FROM prescription AS p, patient AS pp 
+            $sql = "SELECT * FROM patient";
+            $test = "SELECT * FROM prescription AS p, patient AS pp 
             WHERE p.Per_Status = 'PENDING' AND p.Pat_ID = pp.Pat_ID";
             $result = mysqli_query($link, $sql);
             if (mysqli_num_roes($result) > 0) {
@@ -48,9 +49,10 @@
                         echo "<td>".$row['Per_Desc']."</td>";
                         echo "<td>".$row['Pat_Allergy']."</td>";
                     } 
-            }  else{
-                        echo "0 results";
-                    } 
+            }else{
+                echo "0 results";
+            } 
             ?>
+            <p>asdasd</p>
     </body>
 </html>
