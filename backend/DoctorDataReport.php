@@ -169,10 +169,8 @@
                             }else{
                                 // ends here cause we wana close while loop and run else
                                 ?>
-
                                 <tr>
                                     <td>NO RECORDS</td>
-                               
                                 </tr>
                                 <?php
                             // closes inner else
@@ -187,7 +185,7 @@
                         $query=mysqli_query($link,$select);
                         $num=mysqli_num_rows($query);
                         if ($num>0) {
-                            while($row = mysqli_fetch_assoc($data)){
+                            while($row = mysqli_fetch_assoc($query)){
                                 $Doc_ID = $row['Doc_ID'];
                                 $Doc_Spec = $row['Doc_Spec'];
                                 $Doc_First = $row['Doc_First'];
