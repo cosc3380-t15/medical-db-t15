@@ -43,6 +43,8 @@
 </head>
 
 <body>
+<iframe src="/backend/approve_denyPrescription.php" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" >
+
      <div class="back-button">
        <a href="/index/home.php" id="back-button" >Back</a> 
     </div> 
@@ -84,5 +86,5 @@
     ?>
     
     </table>
-
+    </iframe>
 </body>
