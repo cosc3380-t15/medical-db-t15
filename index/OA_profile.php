@@ -84,9 +84,12 @@
             <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
         </div>
     </div>
-    <div id="content" class="profile-main">
-        
-    </div>
+    
+ 
+        <div id="content" class="profile-main"> 
+        </div>     
+   
+   
     <script>
         var dropdown = document.getElementsByClassName("profile-menu-item");
         var i;

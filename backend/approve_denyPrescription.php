@@ -68,6 +68,8 @@
 </head>
 
 <body>
+
+
      <div class="back-button">
        <a href="/index/home.php" id="back-button" >Back</a> 
     </div> 
@@ -95,6 +97,7 @@
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
+
                             <form method='post'>
                             <input type='hidden' name='ID' value=".$result['Per_ID'].">
                             <input type='submit' name='button1'
@@ -103,6 +106,11 @@
                             <input type='submit' name='button2'
                                     value='Deny'/>
                            </form>
+
+                            <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=APPROVED' class='btn'>Approve</a>
+                            <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=DENIED'class='btn'>Deny</a>
+                           
+
                         </td>
             
                     </tr>
@@ -119,5 +127,5 @@
     -->
     
     </table>
-
+    
 </body>
