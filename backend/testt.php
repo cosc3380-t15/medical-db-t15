@@ -25,9 +25,9 @@
     </head>
     <body>
         <?php
-            $sql2 = "SELECT * FROM prescription AS p, patient AS pp 
+            $sql = "SELECT * FROM prescription AS p, patient AS pp 
             WHERE p.Per_Status = 'PENDING' AND p.Pat_ID = pp.Pat_ID";
-            $result = mysqli_query($link, $sql2);
+            $result = mysqli_query($link, $sql);
             if (mysqli_num_roes($result) > 0) {
                 echo'<table>';
                 echo "thead";
