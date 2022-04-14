@@ -95,7 +95,7 @@
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
-                        <form action='/approve_denyPrescription.php' method='get'>
+                        <form action='/backend/approve_denyPrescription.php' method='get'>
                             <input type='hidden' id='ID' name='ID' value=".$result['Per_ID'].">
                             <input type='submit' name='button1'
                                     value='Approve'/>
