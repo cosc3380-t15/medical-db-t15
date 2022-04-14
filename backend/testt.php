@@ -30,6 +30,7 @@
             <?php
                 $sql = "SELECT * FROM doctor";
                 $result = $link->query($sql);
+                $num_rows=mysqli_num_rows($sql);
                 if ($result->num_rows > 0) {
                     echo '<table>';
                     echo "<thead>";
