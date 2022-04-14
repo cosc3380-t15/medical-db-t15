@@ -9,10 +9,31 @@
 
     $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");                                                   
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
+    
+    if (isset($_POST['submit']))
+    {
+        $ID = $_POST['ID'];
+        $Spec = $_POST['Spec'];
+        $FName = $_POST['Fname'];
+        $Mname = $_POST['Mname'];
+        $Lname = $_POST['Lname'];
+        $Gender = $_POST['gender'];
+        $DOB = $_POST['DOB'];
 
+        if ($ID != '' ||$Spec != '' ||$ID != '' ||$FName != '' ||$Mname != '' ||$Lname != '' ||$Gender != '' ||$DOB != '')
+        {
+            // something changed so do this
+            $select = "SELECT * FROM doctor WHERE Doc_ID = '$ID' or Doc_Spec = '$Spec' or Doc_Gender = '$Gender' or Doc_First = '$FName' or Doc_M_Init = '$Mname' or Doc_Last = '$Lname' or Doc_DOB = '$DOB' ";
+        }else{
+            // if nothing set and pressed submit
+            $select = "SELECT * FROM doctor";
+        }
+    }else{
+        // if nothing set the print all
+        $select = "SELECT * FROM doctor";
+    }
 
-
-
+    $query = mysqli_query($link,$select);
 
 ?>
 
@@ -108,23 +129,61 @@
                 </tr>
             </thead>
             <tbody>
-                <?php
-                    if (isset($_POST['submit']))
-                    {
-                        $ID = $_POST['ID'];
-                        $Spec = $_POST['Spec'];
-                        $FName = $_POST['Fname'];
-                        $Mname = $_POST['Mname'];
-                        $Lname = $_POST['Lname'];
-                        $Gender = $_POST['gender'];
-                        $DOB = $_POST['DOB'];
+                <?php 
+                $num=mysqli_num_rows($query);
+                if ($num>0) {
+                    while ($result=mysqli_fetch_assoc($query)) {
+                        // this is to fill the tables done exactly same as show_patient but 
+                        echo "
+                            <tr>
+                                <td>".$result['Doc_ID']." </td>
+                                <td> ".$result['Doc_Spec']." </td>
+                                <td> ".$result['Doc_First']." </td>
+                                <td> ".$result['Doc_M_Init']." </td>
+                                <td> ".$result['Doc_Last']." </td>
+                                <td> ".$result['Doc_Email']." </td>
+                                <td> ".$result['Doc_Phone']." </td>
+                                <td> ".$result['Doc_Gender']." </td>
+                                <td> ".$result['Doc_DOB']." </td>
+                                <td> ".$result['Doc_Street_Addr']." </td>
+                                <td> ".$result['Doc_City_Addr']." </td>
+                                <td> ".$result['Doc_State_Addr']." </td>
+                                <td> ".$result['Doc_Zip_Addr']." </td>
+                                <td>
+                                    <form  method='post'>
+                                        <input type='hidden' id='ID' name='ID' value=".$result['Doc_ID'].">
+                                        <input type='submit' name='button1'
+                                                value='Delete'/>
+                                        
+                                        <input type='submit' name='button2'
+                                                value='edit'/>
+                                    </form>
+                                </td>
+                    
+                            </tr>
+                        
+                        ";
+                        // soo i changed the links to a buttons, the hiddent isn't seen by the user but it holds the value
+                        // this is for the form it works then action='/backend/approve_denyPrescription.php' testing without
+                    }
+                }else{
+                     ?>
+                        <tr>
+                            <td> NO RECORDS </td>
+                        </tr>
+                    <?php
+                }
+                ?>
+            </tbody>
+        </table>
 
-                        if ($ID != '' ||$Spec != '' ||$ID != '' ||$FName != '' ||$Mname != '' ||$Lname != '' ||$Gender != '' ||$DOB != '')
-                        {
-                            $query = "SELECT * FROM doctor WHERE Doc_ID = '$ID' or Doc_Spec = '$Spec' or Doc_Gender = '$Gender' or Doc_First = '$FName' or Doc_M_Init = '$Mname' or Doc_Last = '$Lname' or Doc_DOB = '$DOB' ";
-                            $data = mysqli_query($link,$query);
+</body>
 
-                            if(mysqli_num_rows($data)>0)
+
+
+
+
+if(mysqli_num_rows($data)>0)
                             {
                                 while($row = mysqli_fetch_assoc($data)){
                                     $Doc_ID = $row['Doc_ID'];
@@ -175,62 +234,3 @@
                                 <?php
                             // closes inner else
                             }
-                            
-                        // closes outer if
-                        }
-                    //close the if from isset   
-                    }else{
-                        // started the main else  which prints all data
-                        $select="SELECT * FROM doctor";
-                        $query=mysqli_query($link,$select);
-                        $num=mysqli_num_rows($query);
-                        if ($num>0) {
-                            while($row = mysqli_fetch_assoc($query)){
-                                $Doc_ID = $row['Doc_ID'];
-                                $Doc_Spec = $row['Doc_Spec'];
-                                $Doc_First = $row['Doc_First'];
-                                $Doc_M_Init = $row['Doc_M_Init'];
-                                $Doc_Last = $row['Doc_Last'];
-                                $Doc_Email = $row['Doc_Email'];
-                                $Doc_Phone = $row['Doc_Phone'];
-                                $Doc_Gender = $row['Doc_Gender'];
-                                $Doc_DOB = $row['Doc_DOB'];
-                                $Doc_Street_Addr = $row['Doc_Street_Addr'];
-                                $Doc_State_Addr = $row['Doc_State_Addr'];
-                                $Doc_Zip_Addr = $row['Doc_Zip_Addr'];
-                                $Doc_City_Addr = $row['Doc_City_Addr'];
-                                
-                            ?>
-                            <tr>
-                                <td><?php $Doc_ID ?></td>
-                                <td><?php $Doc_Spec ?></td>
-                                <td><?php $Doc_First ?></td>
-                                <td><?php $Doc_M_Init ?></td>
-                                <td><?php $Doc_Last ?></td>
-                                <td><?php $Doc_Email ?></td>
-                                <td><?php $Doc_Phone ?></td>
-                                <td><?php $Doc_Gender ?></td>
-                                <td><?php $Doc_DOB ?></td>
-                                <td><?php $Doc_Street_Addr ?></td>
-                                <td><?php $Doc_City_Addr ?></td>
-                                <td><?php $Doc_State_Addr ?></td>
-                                <td><?php $Doc_Zip_Addr ?></td>
-                                <td>
-                                    <!-- this will link to edit forms and delete button -->
-                                    <a href="<a href='/backend/DoctorDataReport.php?Pat_ID='.$result['Pat_ID']." class='btn' >Delete</a>
-                                    <a href='#?temp=Edit&ID=".$Doc_ID."'>Edit</a>
-                                </td>
-                            </tr>
-                            <?php 
-                            // close while
-                            }
-                        //closes inner if
-                        }
-                    }
-
-                ?>
-            </tbody>
-        </table>
-
-
-</body>
