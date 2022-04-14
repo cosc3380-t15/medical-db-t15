@@ -56,7 +56,7 @@
                         echo '<td>
                         <form action="" method="POST">
                         <input type="hidden" name="Pat_ID" value=' . $row["Pat_ID"] .'>
-                        <input type="submit" name="delete" value="Delete">
+                        <input type="submit" name="delete" value=' . $row["Pat_ID"] .'>
                         </form>
                         </td>';
                 echo " </tr> ";
