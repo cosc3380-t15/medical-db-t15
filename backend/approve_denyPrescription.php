@@ -95,7 +95,7 @@
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
-                        <form action='/backend/approve_denyPrescription.php' method='post'>
+                        <form  method='post'>
                             <input type='hidden' id='ID' name='ID' value=".$result['Per_ID'].">
                             <input type='submit' name='button1'
                                     value='Approve'/>
@@ -109,6 +109,7 @@
                 
                 ";
                 // soo i changed the links to a buttons, the hiddent isn't seen by the user but it holds the value
+                // this is for the form it works then action='/backend/approve_denyPrescription.php' testing without
             }
         }
     ?>
