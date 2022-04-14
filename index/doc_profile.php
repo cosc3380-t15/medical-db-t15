@@ -24,7 +24,7 @@
 <body onload="load_html('doc_card.php')">
 <?php
 if (isset($_SESSION['status'])) {
-    echo "alert: (".$_SESSION['status'].");";
+    echo "alert(".$_SESSION['status'].");";
     unset($_SESSION['status']);
 }
 ?>
