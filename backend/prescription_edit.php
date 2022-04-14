@@ -30,12 +30,6 @@ $row2= mysqli_fetch_array($result2);
 </head>
 
 <body>
-<?php
-if (isset($_SESSION['status'])) {
-    echo "<h4>".$_SESSION['status']."</h4>";
-    unset($_SESSION['status']);
-}
-?>
     <div class="container-form11">
         <form action="/backend/edit_prescription.php" method="post" onsubmit="return Validate();">
             <a href="../index/login.php">&#8592; Back<a></a>
@@ -75,11 +69,12 @@ if (isset($_SESSION['status'])) {
             <input class="button" type="submit" name="update_perscription_data">
         </form>
     </div>
-  
-
-
-
-
+<?php
+if (isset($_SESSION['status'])) {
+    echo "<h4>".$_SESSION['status']."</h4>";
+    unset($_SESSION['status']);
+}
+?>
 </body>
 
 </html>
