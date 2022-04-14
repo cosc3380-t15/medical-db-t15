@@ -70,7 +70,7 @@
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
-                            <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=APPROVED'class='btn'>Approve</a>
+                            <a onclick="load_html('/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=APPROVED')" class='btn'>Approve</a>
                             <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=DENIED'class='btn'>Deny</a>
                             
                         </td>
