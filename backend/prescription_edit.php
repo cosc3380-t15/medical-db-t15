@@ -45,7 +45,7 @@ if (isset($_SESSION['status'])) {
 ?>
     <div class="container-form11">
         <form action="/backend/edit_prescription.php" method="post" onsubmit="return Validate();">
-            <a href="login.php">&#8592; Back<a></a>
+            <a href="../index/login.php">&#8592; Back<a></a>
             <div class="row">
                 <h4 style="color: var(--accent);">Perscribe Medicine</h4>
                 <h4>Doctor ID</h4>
