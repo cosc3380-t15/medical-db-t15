@@ -9,16 +9,27 @@
 
     $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");                                                   
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
-    
-    if (isset($_POST['submit']))
+     
+    if (isset($_GET['Per_ID'])) {  
+        $Doc_ID = $_GET['Per_ID'];  
+        $query = "DELETE FROM `doctor` WHERE Doc_ID = '$Doc_ID'";  
+        $run = mysqli_query($link,$query);  
+        if ($run) {  
+            header('location:/backend/approve_denyPrescription.php');  
+        }else{  
+            echo "Error: ".mysqli_error($link);  
+        }  
+    }
+   
+    if (isset($_GET['submit']))
     {
-        $ID = $_POST['ID'];
-        $Spec = $_POST['Spec'];
-        $FName = $_POST['Fname'];
-        $Mname = $_POST['Mname'];
-        $Lname = $_POST['Lname'];
-        $Gender = $_POST['gender'];
-        $DOB = $_POST['DOB'];
+        $ID = $_GET['ID'];
+        $Spec = $_GET['Spec'];
+        $FName = $_GET['Fname'];
+        $Mname = $_GET['Mname'];
+        $Lname = $_GET['Lname'];
+        $Gender = $_GET['gender'];
+        $DOB = $_GET['DOB'];
 
         if ($ID != '' ||$Spec != '' ||$ID != '' ||$FName != '' ||$Mname != '' ||$Lname != '' ||$Gender != '' ||$DOB != '')
         {
@@ -32,7 +43,31 @@
         // if nothing set the print all
         $select = "SELECT * FROM doctor";
     }
-
+   
+    if(isset($_POST['button1'])) {
+        $Per_ID = $_POST['ID']; 
+        $status = 'APPROVED';
+        $query = "UPDATE prescription SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
+        $run = mysqli_query($link,$query);  
+        if ($run) {  
+            header('location:/backend/approve_denyPrescription.php');  
+        }else{  
+            echo "Error: ".mysqli_error($link);  
+        }  
+    }
+    
+    
+    if(isset($_POST['button2'])) {
+        $Per_ID = $_POST['ID']; 
+        $status = 'DENIED';
+        $query = "UPDATE prescription SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
+        $run = mysqli_query($link,$query);  
+        if ($run) {  
+            header('location:/backend/approve_denyPrescription.php');  
+        }else{  
+            echo "Error: ".mysqli_error($link);  
+        }  
+    }
     $query = mysqli_query($link,$select);
 
 ?>
@@ -45,7 +80,7 @@
 <body>
     <!-- Making Search Fields to scan through when needed-->
     <div> 
-        <form action = "/backend/DoctorDataReport.php" method  = "POST">
+        <form action = "/backend/DoctorDataReport.php" method  = "GET">
             
             <div>
                 <label > Doctor ID </label>
@@ -150,14 +185,8 @@
                                 <td> ".$result['Doc_State_Addr']." </td>
                                 <td> ".$result['Doc_Zip_Addr']." </td>
                                 <td>
-                                    <form  method='post'>
-                                        <input type='hidden' id='ID' name='ID' value=".$result['Doc_ID'].">
-                                        <input type='submit' name='button1'
-                                                value='Delete'/>
-                                        
-                                        <input type='submit' name='button2'
-                                                value='edit'/>
-                                    </form>
+                                <a href='/backend/DoctorDataReport.php?Per_ID=".$result['Doc_ID']." 'class='btn'>DELETE</a>
+                                <a href='/index/OA_profile.php? 'class='btn'>Edit</a>   
                                 </td>
                     
                             </tr>
