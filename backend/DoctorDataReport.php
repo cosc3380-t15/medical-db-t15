@@ -136,7 +136,12 @@
                     <input type = "date" name = "DOB" value = "">
                 </div>
             </div> -->
-
+            <div >
+                <label > Last Name </label>
+                <div >
+                <input type='submit' name='submit' value='SEARCH'/>
+                </div>
+            </div>   
 
         </form>
     </div>
