@@ -7,9 +7,6 @@
                                                         
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
-
-   
-
     $select="SELECT * FROM patient";
     $query=mysqli_query($link,$select);
 ?>    

@@ -7,15 +7,13 @@
                                                         
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
-    if (isset($_GET['Pat_ID'])) {  
-        $Pat_ID = $_GET['Pat_ID'];  
-        $query = "DELETE FROM `patient` WHERE Pat_ID = '$Pat_ID'";  
-        $run = mysqli_query($link,$query);  
-        if ($run) {  
-            header('location:/backend/show_patient.php');  
-        }else{  
-            echo "Error: ".mysqli_error($link);  
-        }  
+    if (isset($_REQUEST['delete'])) {
+        $sql = "DELETE FROM patient WHERE Pat_ID=8";
+        if ($link->query($sql)===TRUE) {
+            echo "DELETED";
+        }else {
+            echo "not deleted";
+        }
     }
 
     $select="SELECT * FROM patient";
@@ -29,9 +27,9 @@
 </head>
 
 <body>
-    <!-- <div class="back-button">
+    <div class="back-button">
        <a href="/index/OA_profile.php" id="back-button" >Back</a> 
-    </div> -->
+    </div>
 
     <table border="1" cellpadding="0">
     <tr>
@@ -46,21 +44,27 @@
         $num=mysqli_num_rows($query);
         if ($num>0) {
             while ($result=mysqli_fetch_assoc($query)) {
-                echo "
-                    <tr>
+                
+                echo "<tr>";
+                    echo "
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Pat_First']."</td>
                         <td>".$result['Pat_Last']."</td>
                         <td>".$result['Pat_Phone']."</td>
                         <td>".$result['Pat_Email']."</td>
-                        <td>
-                            <a href='/backend/edit_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Edit</a>
-                            <a href='/backend/show_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn deny'>Delete</a>
-                        </td>
-            
-                    </tr>
-                
-                ";
+                    ";
+                        echo '<td>
+                        <form action="" method="POST">
+                        <input type="hidden" name="Pat_ID" value='.$result['Pat_ID'].'>
+                        <input type="submit" name="delete" value="Delete">
+                        </form>
+                        </td>';
+                echo " </tr> ";
+                  
+                     
+                     
+                        
+               
             }
         }
     

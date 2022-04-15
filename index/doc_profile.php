@@ -22,6 +22,12 @@
 </head>
 
 <body onload="load_html('doc_card.php')">
+<?php
+if (isset($_SESSION['status'])) {
+    echo "<script>alert('".$_SESSION['status']."');</script>";
+    unset($_SESSION['status']);
+}
+?>
     <div class="profile-navbar profile-shadow">
         <div class="profile-div-w">
             <a href="home.php">

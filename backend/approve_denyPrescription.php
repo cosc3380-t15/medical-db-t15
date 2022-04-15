@@ -11,15 +11,39 @@
     $dbuser = getenv("DBUSER");
     $dbpass = getenv("DBPASS"); 
     $dbname = getenv("DBNAME");
-
     $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");                                                   
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
-
+    // works but tryna update it to buttons
     //This is similar to the show_patient, where you use href to pass values (DID THE EXACT SAME BUT WITH TWO VALUES)
-    if (isset($_GET['Per_ID'])) {  
-        $Per_ID = $_GET['Per_ID'];  
-        $status = $_GET['choice'];
+    // if (isset($_GET['Per_ID'])) {  
+    //     $Per_ID = $_GET['Per_ID'];  
+    //     $status = $_GET['choice'];
+    //     $query = "UPDATE prescription SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
+    //     $run = mysqli_query($link,$query);  
+    //     if ($run) {  
+    //         header('location:/backend/approve_denyPrescription.php');  
+    //     }else{  
+    //         echo "Error: ".mysqli_error($link);  
+    //     }  
+    // }
+
+    if(isset($_POST['button1'])) {
+        $Per_ID = $_POST['ID']; 
+        $status = 'APPROVED';
+        $query = "UPDATE prescription SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
+        $run = mysqli_query($link,$query);  
+        if ($run) {  
+            header('location:/backend/approve_denyPrescription.php');  
+        }else{  
+            echo "Error: ".mysqli_error($link);  
+        }  
+    }
+    
+    
+    if(isset($_POST['button2'])) {
+        $Per_ID = $_POST['ID']; 
+        $status = 'DENIED';
         $query = "UPDATE prescription SET Per_Status = '$status' WHERE Per_ID = '$Per_ID'";  
         $run = mysqli_query($link,$query);  
         if ($run) {  
@@ -43,11 +67,9 @@
 </head>
 
 <body>
-
-
-     <div class="back-button">
+    <!-- <div class="back-button">
        <a href="/index/home.php" id="back-button" >Back</a> 
-    </div> 
+    </div>  removing this for now, its weird because it's loaded into content-->
 
     <table border="1" cellpadding="0">
     <!-- This is just the heading of each columns -->
@@ -72,19 +94,31 @@
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
-                            <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=APPROVED'class='btn'>Approve</a>
-                            <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=DENIED'class='btn'>Deny</a>
-                            <button type='button' href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=DENIED'class='btn'></button>
+                        <form  method='post'>
+                            <input type='hidden' id='ID' name='ID' value=".$result['Per_ID'].">
+                            <input class='btn approve' type='submit' name='button1'
+                                    value='Approve'/>
+                            
+                            <input class='btn deny' type='submit' name='button2'
+                                    value='Deny'/>
+                    </form>
                         </td>
             
                     </tr>
                 
                 ";
                 // soo i changed the links to a buttons, the hiddent isn't seen by the user but it holds the value
+                // this is for the form it works then action='/backend/approve_denyPrescription.php' testing without
             }
         }
     ?>
+
+
     
     </table>
-    
+
 </body>
+    <!--THis works
+    <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=APPROVED'class='btn'>Approve</a>
+    <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=DENIED'class='btn'>Deny</a>   
+    -->

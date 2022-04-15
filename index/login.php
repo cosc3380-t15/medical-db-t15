@@ -28,6 +28,12 @@ if($_SESSION['loggedin']) {
         <div class="box-login">
             <div class="half-box-login">
                 <form action="../backend/validate_login.php" class="login-form" method="post">
+                    <?php
+                        if (isset($_SESSION['status'])) {
+                            echo "<h4 class = 'login-label' style='color:#aa1111;'>".$_SESSION['status']."</h4>";
+                            unset($_SESSION['status']);
+                        }
+                    ?>
                     <label for="text" class="login-label">Username:</label>
                     <input type="text" class="login-input" id="username" name="email">
 

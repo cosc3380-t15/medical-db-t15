@@ -21,7 +21,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<body>
+<body onload="load_html('OA_card.php')">
+    <?php
+    if (isset($_SESSION['status'])) {
+        echo "<script>alert('".$_SESSION['status']."');</script>";
+        unset($_SESSION['status']);
+    }
+    ?>
     <div class="profile-navbar profile-shadow">
         <div class="profile-div-w">
             <a href="home.php">
@@ -50,7 +56,7 @@
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">View Profile</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('OA_card.php')">View Profile</a>
             <a href ="#" class="profile-submenu-item" onclick="load_html()">Edit Profile</a>
         </div>
 
@@ -62,7 +68,7 @@
         </a>
         <div class="profile-submenu">
             <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_patient.php')">Patients</a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/DoctorDataReport.php')">Doctors</a>
         </div>
 
         <a class="profile-menu-item">

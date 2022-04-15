@@ -42,7 +42,10 @@ if(mysqli_num_rows($result) === 1) {
             $_SESSION['role'] = "OA";
             mysqli_close($link);
             header('Location: ../index/OA_profile.php');
-        } else { mysqli_close($link); header('Location: ../index/login.php');}
+        } else { mysqli_close($link);
+            $_SESSION['status'] = "Your Username or Password is incorrect";
+            header('Location: ../index/login.php');
+        }
     }
 }
 mysqli_close($link);
