@@ -20,7 +20,8 @@ VALUES ('$pat_id','$doc_id','$location','$appt_spec','$date','$time')";
 
 
 if ($link->query($query1) !== TRUE) {
-    echo "Error: " . $query1 . "<br>" . $link->error;
+    mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
+    printf("Error message: %s\n", $mysqli->error);
 } mysqli_close($link);
 
 header('Location: ../index/pat_profile.php');                 

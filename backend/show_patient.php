@@ -29,9 +29,9 @@
 </head>
 
 <body>
-    <div class="back-button">
+    <!-- <div class="back-button">
        <a href="/index/OA_profile.php" id="back-button" >Back</a> 
-    </div>
+    </div> -->
 
     <table border="1" cellpadding="0">
     <tr>
@@ -54,8 +54,8 @@
                         <td>".$result['Pat_Phone']."</td>
                         <td>".$result['Pat_Email']."</td>
                         <td>
-                            <a href='/backend/show_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Delete</a>
                             <a href='/backend/edit_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn'>Edit</a>
+                            <a href='/backend/show_patient.php?Pat_ID=".$result['Pat_ID']."'class='btn deny'>Delete</a>
                         </td>
             
                     </tr>
