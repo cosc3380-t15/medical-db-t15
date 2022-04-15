@@ -29,6 +29,7 @@
     <table border="1" cellpadding="0">
     <tr>
         <th>Location</th>
+        <th>Date</th>
         <th>Has reached 75% capacity</th>
         
     </tr>
