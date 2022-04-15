@@ -38,7 +38,7 @@
                 echo "
                     <tr>
                         <td>".$result['location']."</td>
-                        <td>".$result['max_capacity_reaching']."</td>
+                        <td class='btn deny'>".$result['max_capacity_reaching']."</td>
                     </tr>
                 
                 ";
