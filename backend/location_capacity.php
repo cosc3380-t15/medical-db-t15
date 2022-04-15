@@ -9,7 +9,7 @@
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
     $select="SELECT a.location, a.max_capacity_reaching, m.Appt_Date
-    FROM max_capacity AS a AND appointment AS m
+    FROM max_capacity AS, appointment AS m
     WHERE a.max_capacity_reaching = 'TRUE'";
     $query=mysqli_query($link,$select);
 ?>    
