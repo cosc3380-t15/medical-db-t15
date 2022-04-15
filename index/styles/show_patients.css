@@ -7,7 +7,9 @@
     --main: #008CFF;
     --accent: #4C72D2;
     --dark: #2C4A98;
-    --darker: #203368; 
+    --darker: #203368;
+    --green: #138808;
+    --red: #CD5C5C;
 }
 
 table{
@@ -33,6 +35,12 @@ table td{
     font-size: 1.2em;
     padding: 5px 30px;
     text-decoration: none;
+}
+.approve {
+    background: var(--green);
+}
+.deny {
+    background: var(--red);
 }
 .btn:hover{
     background: var(--lighter);
