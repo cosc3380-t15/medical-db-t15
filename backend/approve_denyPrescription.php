@@ -11,7 +11,6 @@
     $dbuser = getenv("DBUSER");
     $dbpass = getenv("DBPASS"); 
     $dbname = getenv("DBNAME");
-
     $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");                                                   
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
@@ -68,9 +67,9 @@
 </head>
 
 <body>
-     <div class="back-button">
+    <!-- <div class="back-button">
        <a href="/index/home.php" id="back-button" >Back</a> 
-    </div> 
+    </div>  removing this for now, its weird because it's loaded into content-->
 
     <table border="1" cellpadding="0">
     <!-- This is just the heading of each columns -->
@@ -97,10 +96,10 @@
                         <td>
                         <form  method='post'>
                             <input type='hidden' id='ID' name='ID' value=".$result['Per_ID'].">
-                            <input type='submit' name='button1'
+                            <input class='btn approve' type='submit' name='button1'
                                     value='Approve'/>
                             
-                            <input type='submit' name='button2'
+                            <input class='btn deny' type='submit' name='button2'
                                     value='Deny'/>
                     </form>
                         </td>
