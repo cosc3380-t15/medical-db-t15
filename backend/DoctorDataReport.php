@@ -80,6 +80,7 @@
 <html>  
     <head>
         <link rel="stylesheet" href="/index/styles/show_patients.css">
+        <link rel="stylesheet" href="styles/form.css">
     </head>
 <body>
     <!-- Making Search Fields to scan through when needed-->
