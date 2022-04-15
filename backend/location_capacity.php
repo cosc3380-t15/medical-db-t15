@@ -9,7 +9,8 @@
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
     $select="SELECT a.location, a.max_capacity_reaching
-    FROM max_capacity AS a";
+    FROM max_capacity AS a
+    WHERE max_capacity_reaching = 'TRUE'";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
