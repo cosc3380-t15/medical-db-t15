@@ -10,8 +10,7 @@
 
     $select="SELECT a.location, a.max_capacity_reaching, m.Appt_Date
     FROM max_capacity AS, appointment AS m
-    WHERE a.max_capacity_reaching = 'TRUE' AND m.Off_ID = a.location
-    group by a.location having count(*) > 1";
+    WHERE a.max_capacity_reaching = 'TRUE' AND m.Off_ID = a.location";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
