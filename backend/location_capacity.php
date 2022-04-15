@@ -9,7 +9,7 @@
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
     $select="SELECT a.location, a.max_capacity_reaching
-    FROM appointment AS a";
+    FROM max_capacity AS a";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
@@ -38,7 +38,6 @@
                     <tr>
                         <td>".$result['location']."</td>
                         <td>".$result['max_capacity_reaching']."</td>
-
                     </tr>
                 
                 ";
