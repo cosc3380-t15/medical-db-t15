@@ -16,7 +16,7 @@
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
     // works but tryna update it to buttons
-    //This is similar to the show_patient, where you use href to pass values (DID THE EXACT SAME BUT WITH TWO VALUES)
+    // This is similar to the show_patient, where you use href to pass values (DID THE EXACT SAME BUT WITH TWO VALUES)
     // if (isset($_GET['Per_ID'])) {  
     //     $Per_ID = $_GET['Per_ID'];  
     //     $status = $_GET['choice'];
@@ -95,16 +95,15 @@
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
-                        <form  method='GET'>
-                            <input type='hidden' id='ID' name='ID' value=".$result['Per_ID'].">
-                            <input type='submit' name='button1'
-                                    value='Approve'/>
-                            
-                            <input type='submit' name='button2'
-                                    value='Deny'/>
-                    </form>
+                            <form  action = '/backend/approve_denyPrescription.php' method='GET'>
+                                <input type='hidden' id='ID' name='ID' value=".$result['Per_ID'].">
+                                <input type='submit' name='button1'
+                                        value='Approve'/>
+                                
+                                <input type='submit' name='button2'
+                                        value='Deny'/>
+                            </form> 
                         </td>
-            
                     </tr>
                 
                 ";
@@ -123,3 +122,12 @@
     <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=APPROVED'class='btn'>Approve</a>
     <a href='/backend/approve_denyPrescription.php?Per_ID=".$result['Per_ID']."&choice=DENIED'class='btn'>Deny</a>   
     -->
+<!-- 
+    <form  action = '/backend/approve_denyPrescription.php' method='GET'>
+                            <input type='hidden' id='ID' name='ID' value=".$result['Per_ID'].">
+                            <input type='submit' name='button1'
+                                    value='Approve'/>
+                            
+                            <input type='submit' name='button2'
+                                    value='Deny'/>
+                    </form> -->
