@@ -9,8 +9,7 @@
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
     $select="SELECT a.Pat_ID, a.Doc_ID, a.Off_ID, a.Appt_Time, a.Appt_Specialization, p.Pat_First, p.Pat_Last
-    FROM appointment AS a, patient AS p
-    WHERE a.Doc_ID = '".$_SESSION['id']."' AND p.Pat_ID = a.Pat_ID";
+    FROM appointment AS a, patient AS p";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
