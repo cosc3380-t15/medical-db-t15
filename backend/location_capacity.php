@@ -10,7 +10,7 @@
 
     $select="SELECT a.location, a.max_capacity_reaching, m.Appt_Date
     FROM max_capacity AS a AND appointment AS m
-    WHERE max_capacity_reaching = 'TRUE'";
+    WHERE a.max_capacity_reaching = 'TRUE'";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
