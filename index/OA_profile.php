@@ -18,10 +18,11 @@
 
 <head>
     <link rel="stylesheet" href="styles/profile_nav.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<body onload="load_html('OA_card.php')">
+<body onload="load_html('../backend/data_dashboard.php')">
     <?php
     if (isset($_SESSION['status'])) {
         echo "<script>alert('".$_SESSION['status']."');</script>";
@@ -56,6 +57,7 @@
             <span class="profile-arrow">></span>
         </a>
         <div class="profile-submenu">
+            <a href ="#" class="profile-submenu-item" onclick="load_html('../backend/data_dashboard.php')">Data Dashboard</a>
             <a href ="#" class="profile-submenu-item" onclick="load_html('OA_card.php')">View Profile</a>
             <a href ="#" class="profile-submenu-item" onclick="load_html()">Edit Profile</a>
         </div>
