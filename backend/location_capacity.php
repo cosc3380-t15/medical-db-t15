@@ -40,7 +40,7 @@
                     <tr>
                         <td>".$result['location']."</td>
                         <td>".$result['Appt_Date']."</td>
-                        <td>".$result['max_capacity_reaching']."</td>
+                        <td class='deny btn'>".$result['max_capacity_reaching']."</td>
                     </tr>
                 
                 ";
