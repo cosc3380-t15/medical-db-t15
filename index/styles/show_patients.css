@@ -30,7 +30,7 @@ table td{
 
 }
 .btn{
-    background: var(--darker);
+    background: var(--dark);
     color: var(--lighter);
     font-size: 1.2em;
     padding: 5px 30px;
