@@ -39,7 +39,7 @@
                 echo "
                     <tr>
                         <td>".$result['location']."</td>
-                        <td>".$result['Appt_Date']."</td>
+                        
                         <td class='btn deny'>".$result['max_capacity_reaching']."</td>
                     </tr>
                 
