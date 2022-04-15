@@ -157,7 +157,7 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
                     }
                 }
             });
-            
+
             // patient height vs weight scatterplot
             var pat_height_vs_weight_chart = document.getElementById("pat_height-weight").getContext('2d');
             var pat_height_vs_weight_data = [
@@ -218,7 +218,7 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
         <div class="card_container full">
             <div class="card">
                 <h4 class="label">Patient Height Vs. Weight</h4>
-                <canvas id="pat_height-weight" style="width: 75%; height: 250px;"></canvas>
+                <canvas id="pat_height-weight" style="width: 720; height: 250px;"></canvas>
             </div>
         </div>
         <div class="card_container">
