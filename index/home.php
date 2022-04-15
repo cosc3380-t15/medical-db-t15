@@ -50,16 +50,8 @@
     <div id="home" class="container shadow">
         <div class="text">
             <p>Lorem ipsum dolor sit amet</p>
-            <p class="h11">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p class="h2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua.
-                Morbi leo urna molestie at elementum eu. Quis vel eros donec ac. Ac orci phasellus egestas tellus. Leo
-                vel fringilla est ullamcorper
-                eget nulla facilisi etiam. Congue eu consequat ac felis donec et odio pellentesque diam. Aliquam purus
-                sit amet luctus venenatis lectus magna.
-                Dignissim diam quis enim lobortis scelerisque fermentum dui. Risus at ultrices mi tempus imperdiet nulla
-                malesuada pellentesque.
-                Sodales ut eu sem integer vitae justo eget magna. Amet nulla facilisi morbi tempus iaculis urna id.</p>
+            <p class="h11">Take Telemedicine Service From Our World Class Doctors</p>
+            <p class="h2">We are the Number 1 telemdicine service in America. We have more than 100+ doctors on our platform as well as emergency services. We have multiple facilities across the US, and are renown for our aptitute in security.</p>
             <a class="app-container" href="login.php">
                 <button class="app-button">Make Appointment</button>
             </a>
