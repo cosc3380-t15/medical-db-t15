@@ -17,7 +17,7 @@ mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
                                                         
 $query1 = "INSERT INTO appointment (Pat_ID,Doc_ID,Off_ID,Appt_Specialization,Appt_Date,Appt_Time)
 VALUES ('$pat_id','$doc_id','$location','$appt_spec','$date','$time')";
-
+mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
 
 if ($link->query($query1) !== TRUE) {
     printf("Error message: %s\n", $mysqli->error);
