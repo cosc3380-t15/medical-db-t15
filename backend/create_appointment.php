@@ -19,8 +19,9 @@ $query1 = "INSERT INTO appointment (Pat_ID,Doc_ID,Off_ID,Appt_Specialization,App
 VALUES ('$pat_id','$doc_id','$location','$appt_spec','$date','$time')";
 
 
-if ($link->query($query1) !== TRUE) {
-    echo "Error: " . $query1 . "<br>" . $link->error;
+if (!$mysqli->query("INSERT INTO appointment (Pat_ID,Doc_ID,Off_ID,Appt_Specialization,Appt_Date,Appt_Time)
+VALUES ('$pat_id','$doc_id','$location','$appt_spec','$date','$time')")) {
+     printf("Error message: %s\n", $mysqli->error);
 } mysqli_close($link);
 
 header('Location: ../index/pat_profile.php');                 
