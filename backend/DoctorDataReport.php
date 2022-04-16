@@ -155,16 +155,13 @@
                     <th>ID </th>
                     <th>Speciality </th>
                     <th>First </th>
-                    <th>Middle </th>
+                   
                     <th>Last </th>
                     <th>Email </th>
                     <th>Phone</th>
                     <th>Gender</th>
-                    <!-- <th>Date of Birth </th> -->
-                    <th>Street Address </th>
-                    <th>City Adress </th>
-                    <th>State Address </th>
-                    <th>ZIP Address </th>
+                    <!-- <th>Date of Birth </th> --> 
+                   
                     <th> buttons <th>
                 </tr>
             </thead>
@@ -179,16 +176,13 @@
                                 <td>".$result['Doc_ID']." </td>
                                 <td> ".$result['Doc_Spec']." </td>
                                 <td> ".$result['Doc_First']." </td>
-                                <td> ".$result['Doc_M_Init']." </td>
+                                
                                 <td> ".$result['Doc_Last']." </td>
                                 <td> ".$result['Doc_Email']." </td>
                                 <td> ".$result['Doc_Phone']." </td>
                                 <td> ".$result['Doc_Gender']." </td>
                                 <td> ".$result['Doc_DOB']." </td>
-                                <td> ".$result['Doc_Street_Addr']." </td>
-                                <td> ".$result['Doc_City_Addr']." </td>
-                                <td> ".$result['Doc_State_Addr']." </td>
-                                <td> ".$result['Doc_Zip_Addr']." </td>
+                              
                                 <td>
                                 <a href='/backend/DoctorDataReport.php?Per_ID=".$result['Doc_ID']." 'class='deny btn'>DELETE</a>
                                 <a href='/index/OA_profile.php? 'class='btn'>Edit</a>   
