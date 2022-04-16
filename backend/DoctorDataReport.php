@@ -124,23 +124,12 @@
                     <input type = "text" placeholder="Last Name" name="Lname" value = ""/>
                     <div class="input-icon"></div>
                 </div>
-            <div class="input-group">
-                <div class="col-half">
-                    <h4>location</h4>
-                    <div class="input-group input-group-icon">
-                    <select name="Location" >
+
+                <h4>location</h4>
+                <div class="input-group input-group-icon">
+                <select name="Location" >
                     <option value="" selected> None</option>
-                </div>
-                <div class="col-half">
-                    <h4>Specialty</h4>
-                    <div class="input-group input-group-icon">
-                    <select name="Spec" >
-                    <option value="" selected> None</option>
-                </div>
-                
-                
-            </div>
-                
+ 
                 
                     <?php
                     while($result=mysqli_fetch_assoc($unq_Location_query)){
@@ -160,11 +149,11 @@
                     </div>
                     <div class="col-third">
                         <input class="col-half" id="gender-female" type="radio" name="gender" value="Female" required />
-                        <label id="width" class="float-right" for="gender-female">Female</label>
+                        <label class="float-right" for="gender-female">Female</label>
                     </div>
                     <div class="col-third">
                         <input id="either" type ="radio" name="gender" value ="" checked = "checked">
-                        <label id="width" class="float-right" for="either">Either</label> 
+                        <label class="float-right" for="either">Either</label> 
                     </div>
                     
                    
