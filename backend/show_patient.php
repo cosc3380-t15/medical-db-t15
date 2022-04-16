@@ -62,13 +62,18 @@
     <div class="container-form11">  
         <form action = "/backend/show_patient.php" method  = "GET">
             
-            <div>
+            <!-- <div>
                 <label > Patient ID </label>
                 <div >
                     <input type = "text"  name = "ID" placeholder= "0000000" value = "">
                 </div>
-            </div>
-            
+            </div> -->
+
+            <h4>Patient ID</h4>
+                <div class="input-group input-group-icon">
+                    <input type = "text" placeholder="0000000" name="ID" value = ""/>
+                    <div class="input-icon"><span style="color:red;">*</span></div>
+                </div>
 
             <div >
                 <label > First Name </label>
