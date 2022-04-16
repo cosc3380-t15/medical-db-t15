@@ -115,15 +115,15 @@
                 <div class="input-group">
                     <div class="col-third">
                         <input  id="gender-male" type="radio" name="gender" value="Male" required />
-                        <label class="float-right width" for="gender-male">Male</label>
+                        <label id="width" class="float-right" for="gender-male">Male</label>
                     </div>
                    <div class="col-third">
                         <input  id="gender-female" type="radio" name="gender" value="Female" required />
-                        <label class="float-right width" for="gender-female">Female</label>
+                        <label id="width" class="float-right" for="gender-female">Female</label>
                    </div>
                     <div class="col-third">
                         <input  id="either" type ="radio" name="gender" value ="" checked = "checked">
-                        <label class="float-right width" for="either">Either</label> 
+                        <label id="width" class="float-right" for="either">Either</label> 
                     </div>
                     
 
