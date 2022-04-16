@@ -144,13 +144,23 @@
             </div>   
         </form>
         <div>
+        <div class="input-group input-group-icon">
             <form>
             <div class="row input-group">
-                <input class="button2" type="button" value="BACK" onclick="history.back()">            
-                <input class="button2" type="button" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
-                <input class="button2" type="button" onclick="location.href='/index/home.php?'" value="Home" />
+                <div class="col-third">
+                    <input class="button2" type="button" value="BACK" onclick="history.back()">      
+                </div>
+                <div class="col-third">
+                    <input class="button2" type="button" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
+                </div>
+                <div class="col-third">
+                    <input class="button2" type="button" onclick="location.href='/index/home.php?'" value="Home" />
+                </div> 
             </div>
             </form>
+        </div>
+
+        
         </div>
     </div>
 
