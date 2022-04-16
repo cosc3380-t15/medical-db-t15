@@ -77,6 +77,13 @@ foreach($pat_general_info as $dob) {
     if($age % 10 >= 5) { $index++; }
     $pat_ages[$index]++;
 }
+
+$appt_general_info = mysqli_query($link,"SELECT Appt_Date FROM appointment WHERE year(Appt_Date) = ".date("Y"));
+$appt_months = array_fill(0, 11, 0);
+foreach($appt_general_info as $appt_iterator) {
+    $month = date_create($appt_iterator['Appt_Date'])->format('m') - 1;
+    $appt_months[$month]++;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -110,7 +117,7 @@ foreach($pat_general_info as $dob) {
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    aspectRatio: 2,
+                    aspectRatio: 2.5,
                     plugins: {
                         legend: {
                             position: 'bottom',
@@ -167,9 +174,9 @@ foreach($pat_general_info as $dob) {
                 }],
                 labels: [
                     'White',
-                    'Black or African American',
+                    'African American',
                     'Asian',
-                    'Native Hawaiian or Other Pacific Islander',
+                    'Pacific Islander',
                     'Some other race',
                 ],
                 hoverOffset: 4
@@ -180,7 +187,7 @@ foreach($pat_general_info as $dob) {
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    aspectRatio: 1.5,
+                    aspectRatio: 2,
                     plugins: {
                         legend: {
                             position: 'bottom',
@@ -221,7 +228,7 @@ foreach($pat_general_info as $dob) {
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    aspectRatio: 1.5,
+                    aspectRatio: 2,
                     plugins: {
                         legend: {
                             position: 'bottom',
@@ -250,7 +257,7 @@ foreach($pat_general_info as $dob) {
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    aspectRatio: 3,
+                    aspectRatio: 2,
                     plugins: {
                         legend: {
                             display: false
@@ -317,6 +324,48 @@ foreach($pat_general_info as $dob) {
                     }
                 },
             });
+            //appointment monthly distribution
+            var appt_month_chart = document.getElementById("Appt_Month").getContext('2d');
+            var appt_month_data = [
+            <?php
+                foreach($appt_months as $x) {
+                    echo $x.",";
+                }
+            ?>];
+            var appt_month_newChart = new Chart(appt_month_chart, {
+                type: 'bar',
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May',
+                                'June', 'July', 'August','September', 'October', 'November', 'December'],
+                    datasets: [{
+                        label: 'Appointments',
+                        data: appt_month_data,
+                        backgroundColor: ['#008CFF', '#4C72D2'],
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    aspectRatio: 1.75,
+                    scales: {
+                        x: { 
+                            beginAtZero: true,
+                            ticks: { precision: 0}
+                        },
+                        y: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                },
+            });
         });
     </script>
 </head>
@@ -342,6 +391,10 @@ foreach($pat_general_info as $dob) {
             <div class="card half">
                 <h4 class="label">Patient Height Vs. Weight</h4>
                 <canvas id="pat_height-weight"></canvas>
+            </div>
+            <div class="card half">
+                <h4 class="label">Appointments Per Month</h4>
+                <canvas id="Appt_Month"></canvas>
             </div>
         </div>
         <div class="card_container full">
