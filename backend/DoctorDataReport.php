@@ -94,102 +94,82 @@
 
     <div class="container-form12">  
         <form action = "/backend/DoctorDataReport.php" method  = "GET">
-            
-            <!-- <div>
-                <label > Patient ID </label>
-                <div >
-                    <input type = "text"  name = "ID" placeholder= "0000000" value = "">
-                </div>
-            </div> -->
         <div class="row">
             <h4>Doctor ID</h4>
                 <div class="input-group input-group-icon">
                     <input type = "text" placeholder="0000000" name="ID" value = ""/>
                     <div class="input-icon"></div>
                 </div>
+                <div class="input-group">
+                    <div class="col-half">
+                        <h4>Specialty</h4>
+                        <div class="input-group input-group-icon">
+                        <select id="width" name="Spec" >
+                            <option value="" selected> None</option>
+        
+                        
+                            <?php
+                            while($result=mysqli_fetch_assoc($unq_Spec_query)){
+                                echo "<option value=".$result['Doc_Spec'].">".$result['Doc_Spec']."</option>";
+                            }
+                            ?>
+                            </select>
+                        </div>  
+                    </div>
+                    <div class="col-half">
+                        <h4>location</h4>
+                        <div class="input-group input-group-icon">
+                        <select id="width" name="Location" >
+                            <option value="" selected> None</option>
+        
+                        
+                            <?php
+                            while($result=mysqli_fetch_assoc($unq_Location_query)){
+                                echo "<option value=".$result['Doc_Location'].">".$result['Doc_Location']."</option>";
+                            }
+                            ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- <div >
-                <label > First Name </label>
-                <div >
-                    <input type = "text" name = "Fname" placeholder= "First Name" value = "">
-                </div>
-            </div> -->
-            
-            <h4>Specialty</h4>
-                <div class="input-group input-group-icon">
-                <select name="Spec" >
-                    <option value="" selected> None</option>
- 
-                
-                    <?php
-                    while($result=mysqli_fetch_assoc($unq_Spec_query)){
-                        echo "<option value=".$result['Doc_Spec'].">".$result['Doc_Spec']."</option>";
-                    }
-                    ?>
-                    </select>
-                </div>
+
 
             <h4>First Name</h4>
             <div class="input-group input-group-icon">
                 <input type = "text" placeholder="First Name" name="Fname" value = ""/>
                 <div class="input-icon"></div>
             </div>
-
-            <!-- <div >
-                <label > Last Name </label>
-                <div >
-                    <input type = "text" name = "Lname" placeholder= "Last Name" value = "">
-                </div>
-            </div>   -->
-            
             <h4>Last Name</h4>
                 <div class="input-group input-group-icon">
                     <input type = "text" placeholder="Last Name" name="Lname" value = ""/>
                     <div class="input-icon"></div>
                 </div>
 
-                <h4>location</h4>
-                <div class="input-group input-group-icon">
-                <select name="Location" >
-                    <option value="" selected> None</option>
- 
-                
-                    <?php
-                    while($result=mysqli_fetch_assoc($unq_Location_query)){
-                        echo "<option value=".$result['Doc_Location'].">".$result['Doc_Location']."</option>";
-                    }
-                    ?>
-                    </select>
-                </div>
+               
 
         </div>
-            <!-- <div >
-                <label > Gender  </label>
-                <div >
-                    <input type ="radio" name="gender" value ="Male"> Male
-                    <input type ="radio" name="gender" value ="Female"> Female
-                    <input type ="radio" name="gender" value ="" checked = "checked"> Either
-                </div>
-            </div> -->
             <div class="row"> 
                 <h4 style="float: left;">Gender &#160<h4 style="color: blue;">&nbsp</h4></h4>
                 <div class="input-group">
-                    <input class="col-half" id="gender-male" type="radio" name="gender" value="Male" required />
-                    <label for="gender-male">Male</label>
-                    <input class="col-half" id="gender-female" type="radio" name="gender" value="Female" required />
-                    <label class="float-right" for="gender-female">Female</label>
-                    <input id="either" type ="radio" name="gender" value ="" checked = "checked">
-                    <label class="float-right" for="either">Either</label> 
+                    <div class="col-third">
+                        <input class="col-half" id="gender-male" type="radio" name="gender" value="Male" required />
+                        <label id="width" for="gender-male">Male</label>
+                    </div>
+                    <div class="col-third">
+                        <input class="col-half" id="gender-female" type="radio" name="gender" value="Female" required />
+                        <label  id="width" class="float-right" for="gender-female">Female</label>
+                    </div>
+                    <div class="col-third">
+                        <input id="either" type ="radio" name="gender" value ="" checked = "checked">
+                        <label id="width" class="float-right" for="either">Either</label> 
+                    </div>
+                    
+                   
+                   
 
                 </div>
             </div>
-            
-            <!-- <div >
-                <label > DOB </label>
-                <div >
-                    <input type = "date" name = "DOB" value = "">
-                </div>
-            </div> -->
             <div >
                 <!-- <label > Last Name </label> -->
                 <div >
@@ -200,10 +180,19 @@
         </form>
         <div>
             <form>
-            <div class="row input-group">
-                <input class="button2" type="button" value="BACK" onclick="history.back()">            
-                <input class="button2" type="button" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
-                <input class="button2" type="button" onclick="location.href='/index/home.php?'" value="Home" />
+            <div class="input-group">
+                <div class="col-third">
+                    <input class="button2" type="button" value="BACK" onclick="history.back()"> 
+                </div>
+                <div class="col-third">
+                    <input class="button2" type="button" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
+                </div>
+                <div class="col-third">
+                    <input class="button2" type="button" onclick="location.href='/index/home.php?'" value="Home" />
+                </div>
+                          
+               
+               
             </div>
             </form>
         </div>
@@ -244,7 +233,7 @@
                                 <td> ".$result['Doc_Gender']." </td>
                                 <td>
                                 <a href='/backend/DoctorDataReport.php?Per_ID=".$result['Doc_ID']." 'class='deny btn'>DELETE</a>
-                                <a href='/index/OA_profile.php? 'class='btn'>Edit</a>   
+                                <a href='/backend/edit_doctor.php?Per_ID=".$result['Doc_ID']." 'class='btn'>Edit</a>   
                                 </td>
                     
                             </tr>

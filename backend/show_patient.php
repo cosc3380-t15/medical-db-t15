@@ -56,60 +56,25 @@
 </head>
 
 <body>
-    <!-- <div class="back-button">
-       <a href="/index/OA_profile.php" id="back-button" >Back</a> 
-    </div> --> 
     <div class="container-form12">  
         <form action = "/backend/show_patient.php" method  = "GET">
-            
-            <!-- <div>
-                <label > Patient ID </label>
-                <div >
-                    <input type = "text"  name = "ID" placeholder= "0000000" value = "">
-                </div>
-            </div> -->
         <div class="row">
             <h4>Patient ID</h4>
                 <div class="input-group input-group-icon">
                     <input type = "text" placeholder="0000000" name="ID" value = ""/>
                     <div class="input-icon"></div>
                 </div>
-
-            <!-- <div >
-                <label > First Name </label>
-                <div >
-                    <input type = "text" name = "Fname" placeholder= "First Name" value = "">
-                </div>
-            </div> -->
-            
             <h4>First Name</h4>
                 <div class="input-group input-group-icon">
                     <input type = "text" placeholder="First Name" name="Fname" value = ""/>
                     <div class="input-icon"></div>
                 </div>
-
-            <!-- <div >
-                <label > Last Name </label>
-                <div >
-                    <input type = "text" name = "Lname" placeholder= "Last Name" value = "">
-                </div>
-            </div>   -->
-            
             <h4>Last Name</h4>
                 <div class="input-group input-group-icon">
                     <input type = "text" placeholder="Last Name" name="Lname" value = ""/>
                     <div class="input-icon"></div>
                 </div>
-
         </div>
-            <!-- <div >
-                <label > Gender  </label>
-                <div >
-                    <input type ="radio" name="gender" value ="Male"> Male
-                    <input type ="radio" name="gender" value ="Female"> Female
-                    <input type ="radio" name="gender" value ="" checked = "checked"> Either
-                </div>
-            </div> -->
             <div class="row"> 
                 <h4 style="float: left;">Gender &#160<h4 style="color: blue;">&nbsp</h4></h4>
                 <div class="input-group">
@@ -125,17 +90,8 @@
                         <input  id="either" type ="radio" name="gender" value ="" checked = "checked">
                         <label id="width" class="float-right" for="either">Either</label> 
                     </div>
-                    
-
                 </div>
             </div>
-            
-            <!-- <div >
-                <label > DOB </label>
-                <div >
-                    <input type = "date" name = "DOB" value = "">
-                </div>
-            </div> -->
             <div >
                 <!-- <label > Last Name </label> -->
                 <div >
