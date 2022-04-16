@@ -81,61 +81,85 @@
 <html>  
     <head>
         <link rel="stylesheet" href="/index/styles/show_patients.css">
+        <link rel="stylesheet" href="/index/styles/form.css">
           
     </head>
 <body>
     <!-- Making Search Fields to scan through when needed-->
-    <div> 
-        <form action = "/backend/DoctorDataReport.php" method  = "GET">
+
+    <div class="container-form12">  
+        <form action = "/backend/show_patient.php" method  = "GET">
             
-            <div>
-                <label > Doctor ID </label>
+            <!-- <div>
+                <label > Patient ID </label>
                 <div >
                     <input type = "text"  name = "ID" placeholder= "0000000" value = "">
                 </div>
-            </div>
-            
-            <div >
-                <label> Speciality </label>
-                <div>
-                    <input type = "text" name = "Spec" placeholder= "something" value = "">
+            </div> -->
+        <div class="row">
+            <h4>Doctor ID</h4>
+                <div class="input-group input-group-icon">
+                    <input type = "text" placeholder="0000000" name="ID" value = ""/>
+                    <div class="input-icon"></div>
                 </div>
-            </div>
-                       
-            <div >
+
+            <!-- <div >
                 <label > First Name </label>
                 <div >
                     <input type = "text" name = "Fname" placeholder= "First Name" value = "">
                 </div>
-            </div>
-            
-            <!-- <div >
-                <label > Middle Initial </label>
-                <div >
-                    <input type = "text"  name = "Mname" placeholder= "Middle initial" value = "">
-                </div>
             </div> -->
             
-            <div >
+            <h4>Specialty</h4>
+                <div class="input-group input-group-icon">
+                    <input type = "text" placeholder="Specialty" name="Spec" value = ""/>
+                    <div class="input-icon"></div>
+                </div>
+
+            <h4>First Name</h4>
+            <div class="input-group input-group-icon">
+                <input type = "text" placeholder="First Name" name="Fname" value = ""/>
+                <div class="input-icon"></div>
+            </div>
+
+            <!-- <div >
                 <label > Last Name </label>
                 <div >
                     <input type = "text" name = "Lname" placeholder= "Last Name" value = "">
                 </div>
-            </div>        
-
-            <div >
-                <label > Last Name </label>
-                <div >
-                    <input type = "text" name = "Location" placeholder= "Location" value = "">
+            </div>   -->
+            
+            <h4>Last Name</h4>
+                <div class="input-group input-group-icon">
+                    <input type = "text" placeholder="Last Name" name="Lname" value = ""/>
+                    <div class="input-icon"></div>
                 </div>
-            </div>    
 
-            <div >
+            <h4>Location</h4>
+                <div class="input-group input-group-icon">
+                    <input type = "text" placeholder="Location" name="Location" value = ""/>
+                    <div class="input-icon"></div>
+                </div>
+
+        </div>
+            <!-- <div >
                 <label > Gender  </label>
                 <div >
                     <input type ="radio" name="gender" value ="Male"> Male
                     <input type ="radio" name="gender" value ="Female"> Female
                     <input type ="radio" name="gender" value ="" checked = "checked"> Either
+                </div>
+            </div> -->
+            <div class="row"> 
+                <h4 style="float: left;">Gender &#160<h4 style="color: blue;">&nbsp</h4></h4>
+                <div class="input-group">
+                    <input class="col-half" id="gender-male" type="radio" name="gender" value="Male" required />
+                    <label for="gender-male">Male</label>
+                    <input class="col-half" id="gender-female" type="radio" name="gender" value="Female" required />
+                    <label class="float-right" for="gender-female">Female</label>
+                    <input id="either" type ="radio" name="gender" value ="" checked = "checked">
+                    <label class="float-right" for="either">Either</label> 
+
                 </div>
             </div>
             
@@ -148,6 +172,7 @@
             <div >
                 <!-- <label > Last Name </label> -->
                 <div >
+
                 <input  class="button2" type='submit' name='submit' value='SEARCH'/>
                 </div> 
             </div>   
@@ -160,6 +185,7 @@
             </form>
         </div>
     </div>
+
 
     <!-- Forming table and making it readable-->
     <div>
