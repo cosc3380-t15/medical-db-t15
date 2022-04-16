@@ -182,13 +182,13 @@
             <form>
             <div class="input-group">
                 <div class="col-third">
-                    <input class="button2" type="button2" value="BACK" onclick="history.back()"> 
+                    <input class="button2" type="button" value="BACK" onclick="history.back()"> 
                 </div>
                 <div class="col-third">
-                    <input class="button2" type="button2" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
+                    <input class="button2" type="button" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
                 </div>
                 <div class="col-third">
-                    <input class="button2" type="button2" onclick="location.href='/index/home.php?'" value="Home" />
+                    <input class="button2" type="button" onclick="location.href='/index/home.php?'" value="Home" />
                 </div>
                           
                
