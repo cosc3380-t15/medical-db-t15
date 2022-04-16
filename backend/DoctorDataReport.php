@@ -174,7 +174,6 @@
                     <th>Email </th>
                     <th>Phone</th>
                     <th>Gender</th>
-                    
                     <th> Operations <th>
                 </tr>
             </thead>
@@ -194,8 +193,6 @@
                                 <td> ".$result['Doc_Email']." </td>
                                 <td> ".$result['Doc_Phone']." </td>
                                 <td> ".$result['Doc_Gender']." </td>
-                              
-                              
                                 <td>
                                 <a href='/backend/DoctorDataReport.php?Per_ID=".$result['Doc_ID']." 'class='deny btn'>DELETE</a>
                                 <a href='/index/OA_profile.php? 'class='btn'>Edit</a>   
