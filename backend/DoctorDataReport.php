@@ -1,6 +1,5 @@
 <!-- 
     SO THIS FILE IS MAKING A SEARCH FIELD ON THE TOP AND THEN HAS A TABLE LIKE BEFORE ON THE BOTTOM.
-
     REMOVING DATE OF BIRTH SEARCH CURRENTLY CAUSE IDK HOW TO GET THE DATE VALUE OR PRESET ONE
 --> 
 <?php 
@@ -33,9 +32,9 @@
         $Gender = $_GET['gender'];
         // $DOB = $_GET['DOB'];
         // initiallizing as a string this is aproblem cause idk what to do with date types
-        $DOB = " ";
+        $DOB = "";
 
-        if ($ID != ' ' ||$Spec != ' ' ||$FName != ' ' ||$Mname != ' ' ||$Lname != ' ' ||$Gender != ' ' ||$DOB != ' ')
+        if ($ID != '' ||$Spec != '' ||$FName != '' ||$Mname != '' ||$Lname != '' ||$Gender != '' ||$DOB != '')
         {
             // something changed so do this
             $select = "SELECT * FROM doctor WHERE Doc_ID = '$ID' or Doc_Spec LIKE '$Spec' or Doc_Gender = '$Gender' or Doc_First LIKE '$FName' or Doc_M_Init LIKE '$Mname' or Doc_Last LIKE '$Lname'  ";
@@ -90,35 +89,35 @@
             <div>
                 <label > Doctor ID </label>
                 <div >
-                    <input type = "text"  name = "ID" placeholder= "0000000" value = " ">
+                    <input type = "text"  name = "ID" placeholder= "0000000" value = "">
                 </div>
             </div>
             
             <div >
                 <label> Speciality </label>
                 <div>
-                    <input type = "text" name = "Spec" placeholder= "something" value = " ">
+                    <input type = "text" name = "Spec" placeholder= "something" value = "">
                 </div>
             </div>
                        
             <div >
                 <label > First Name </label>
                 <div >
-                    <input type = "text" name = "Fname" placeholder= "First Name" value = " ">
+                    <input type = "text" name = "Fname" placeholder= "First Name" value = "">
                 </div>
             </div>
             
             <div >
                 <label > Middle Initial </label>
                 <div >
-                    <input type = "text"  name = "Mname" placeholder= "Middle initial" value = " ">
+                    <input type = "text"  name = "Mname" placeholder= "Middle initial" value = "">
                 </div>
             </div>
             
             <div >
                 <label > Last Name </label>
                 <div >
-                    <input type = "text" name = "Lname" placeholder= "Last Name" value = " ">
+                    <input type = "text" name = "Lname" placeholder= "Last Name" value = "">
                 </div>
             </div>        
 
@@ -127,7 +126,7 @@
                 <div >
                     <input type ="radio" name="gender" value ="Male"> Male
                     <input type ="radio" name="gender" value ="Female"> Female
-                    <input type ="radio" name="gender" value =" " checked = "checked"> Either
+                    <input type ="radio" name="gender" value ="" checked = "checked"> Either
                 </div>
             </div>
             
@@ -160,7 +159,8 @@
                     <th>Email </th>
                     <th>Phone</th>
                     <th>Gender</th>
-                    <!-- <th>Date of Birth </th> --> 
+                    <th>Date of Birth </th>
+
                    
                     <th> buttons <th>
                 </tr>
