@@ -59,7 +59,7 @@
     <!-- <div class="back-button">
        <a href="/index/OA_profile.php" id="back-button" >Back</a> 
     </div> -->
-    <div> 
+    <div class="container-form11">  
         <form action = "/backend/show_patient.php" method  = "GET">
             
             <div>
@@ -84,14 +84,14 @@
                 </div>
             </div>        
 
-            <div >
+            <!-- <div >
                 <label > Gender  </label>
                 <div >
                     <input type ="radio" name="gender" value ="Male"> Male
                     <input type ="radio" name="gender" value ="Female"> Female
                     <input type ="radio" name="gender" value ="" checked = "checked"> Either
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <h4 style="float: left;">Gender &#160<h4 style="color: red;">*</h4></h4>
                 <div class="input-group">
