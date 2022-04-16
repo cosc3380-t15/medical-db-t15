@@ -88,12 +88,12 @@
                     <div class="input-icon"><span style="color:red;">*</span></div>
                 </div>
 
-            <div >
+            <!-- <div >
                 <label > Last Name </label>
                 <div >
                     <input type = "text" name = "Lname" placeholder= "Last Name" value = "">
                 </div>
-            </div>  
+            </div>   -->
             
             <h4>Last Name</h4>
                 <div class="input-group input-group-icon">
