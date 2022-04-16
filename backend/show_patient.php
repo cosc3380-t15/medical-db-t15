@@ -122,8 +122,14 @@
                 <input type='submit' name='submit' value='SEARCH'/>
                 </div>
             </div>   
-
         </form>
+        <div>
+            <form>
+                <input type="button" value="BACK" onclick="history.back()">            
+                <input type="button" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
+                <input type="button" onclick="location.href='/index/home.php?'" value="Home" />
+            </form>
+        </div>
     </div>
 
     <table border="1" cellpadding="0">

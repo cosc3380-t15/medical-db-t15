@@ -28,6 +28,7 @@
         $Spec = $_GET['Spec'];
         $FName = $_GET['Fname'];
         // $Mname = $_GET['Mname'];
+        $Location = $_GET['Location'];
         $Lname = $_GET['Lname'];
         $Gender = $_GET['gender'];
         // $DOB = $_GET['DOB'];
@@ -35,10 +36,10 @@
         $DOB = "";
         $Mname = "";
 
-        if ($ID != '' ||$Spec != '' ||$FName != '' ||$Mname != '' ||$Lname != '' ||$Gender != '' )
+        if ($ID != '' ||$Spec != '' ||$FName != '' ||$Location != '' ||$Lname != '' ||$Gender != '' )
         {
             // something changed so do this
-            $select = "SELECT * FROM doctor WHERE Doc_ID = '$ID' and Doc_Spec LIKE '$Spec' and Doc_Gender = '$Gender' and Doc_First LIKE '$FName' and Doc_M_Init LIKE '$Mname' and Doc_Last LIKE '$Lname'  ";
+            $select = "SELECT * FROM doctor WHERE Doc_ID = '$ID' and Doc_Spec LIKE '$Spec' and Doc_Gender = '$Gender' and Doc_First LIKE '$FName' and Doc_Location LIKE '$Location' and Doc_Last LIKE '$Lname'  ";
         }else{
             // if nothing set and pressed submit
             $select = "SELECT * FROM doctor";
@@ -121,6 +122,13 @@
                     <input type = "text" name = "Lname" placeholder= "Last Name" value = "">
                 </div>
             </div>        
+
+            <div >
+                <label > Last Name </label>
+                <div >
+                    <input type = "text" name = "Location" placeholder= "Location" value = "">
+                </div>
+            </div>    
 
             <div >
                 <label > Gender  </label>
