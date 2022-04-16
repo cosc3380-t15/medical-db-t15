@@ -138,7 +138,7 @@
         </form>
         <div>
             <form>
-            <div class="input-group">
+            <div class="row input-group">
                 <input class="button2" type="button" value="BACK" onclick="history.back()">            
                 <input class="button2" type="button" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
                 <input class="button2" type="button" onclick="location.href='/index/home.php?'" value="Home" />
