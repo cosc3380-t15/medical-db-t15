@@ -219,7 +219,17 @@ select option {
     margin-right: 0;
   }
 }
+.button{
+  margin-top: 5px;
+}
 .button:hover{
+    background-color: var(--main);
+    color: var(--lighter);
+}
+.button2{
+  margin-top: 5px;
+}
+.button2:hover{
     background-color: var(--main);
     color: var(--lighter);
 }

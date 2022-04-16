@@ -72,7 +72,7 @@
             <h4>Patient ID</h4>
                 <div class="input-group input-group-icon">
                     <input type = "text" placeholder="0000000" name="ID" value = ""/>
-                    <div class="input-icon"><span style="color:red;">*</span></div>
+                    <div class="input-icon"></div>
                 </div>
 
             <!-- <div >
@@ -85,7 +85,7 @@
             <h4>First Name</h4>
                 <div class="input-group input-group-icon">
                     <input type = "text" placeholder="First Name" name="Fname" value = ""/>
-                    <div class="input-icon"><span style="color:red;">*</span></div>
+                    <div class="input-icon"></div>
                 </div>
 
             <!-- <div >
@@ -98,7 +98,7 @@
             <h4>Last Name</h4>
                 <div class="input-group input-group-icon">
                     <input type = "text" placeholder="Last Name" name="Lname" value = ""/>
-                    <div class="input-icon"><span style="color:red;">*</span></div>
+                    <div class="input-icon"></div>
                 </div>
 
         </div>
