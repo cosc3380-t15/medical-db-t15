@@ -1,14 +1,10 @@
 <?php
 session_start();
+if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "OA") { header("Location: login.php"); }
 $dbhost = getenv("DBHOST");
 $dbuser = getenv("DBUSER");
 $dbpass = getenv("DBPASS"); 
 $dbname = getenv("DBNAME");
-
-$dbhost = "eyiece.mynetgear.com";
-$dbuser = "root";
-$dbpass = "93U#muq!fPzZ"; 
-$dbname = "medical_db";
 
 $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
                                                     
