@@ -56,10 +56,10 @@ if (isset($_SESSION['status'])) {
                         <h4 style="float: left;">Location &#160<h4 style="color: red;">*</h4></h4>
                     </div>
                     <select class="float-right" name="location" id="allergies" >
-                        <option value="1">Houston</option>
-                        <option value="2">Sugar Land</option>
-                        <option value="3">Caty</option>
-                        <option value="4">The Woodlands</option>
+                        <option value="Houston">Houston</option>
+                        <option value="Sugar Land">Sugar Land</option>
+                        <option value="Caty">Caty</option>
+                        <option value="The Woodlands">The Woodlands</option>
                     </select>
                 </div>
             </div>
