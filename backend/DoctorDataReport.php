@@ -38,7 +38,7 @@
         if ($ID != ' ' ||$Spec != ' ' ||$FName != ' ' ||$Mname != ' ' ||$Lname != ' ' ||$Gender != ' ' ||$DOB != ' ')
         {
             // something changed so do this
-            $select = "SELECT * FROM doctor WHERE Doc_ID = '$ID' or Doc_Spec = '$Spec' or Doc_Gender = '$Gender' or Doc_First = '$FName' or Doc_M_Init = '$Mname' or Doc_Last = '$Lname'  ";
+            $select = "SELECT * FROM doctor WHERE Doc_ID = '$ID' or Doc_Spec LIKE '$Spec' or Doc_Gender = '$Gender' or Doc_First LIKE '$FName' or Doc_M_Init LIKE '$Mname' or Doc_Last LIKE '$Lname'  ";
         }else{
             // if nothing set and pressed submit
             $select = "SELECT * FROM doctor";
