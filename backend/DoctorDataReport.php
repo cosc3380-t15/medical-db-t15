@@ -17,7 +17,7 @@
         $query = "DELETE FROM `doctor` WHERE Doc_ID = '$Doc_ID'";  
         $run = mysqli_query($link,$query);  
         if ($run) {  
-            header('location:/backend/approve_denyPrescription.php');  
+            header('location:/index/doc_profile.php');   
         }else{  
             echo "Error: ".mysqli_error($link);  
         }  
