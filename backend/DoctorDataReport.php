@@ -244,7 +244,7 @@
                                 <td> ".$result['Doc_Gender']." </td>
                                 <td>
                                 <a href='/backend/DoctorDataReport.php?Per_ID=".$result['Doc_ID']." 'class='deny btn'>DELETE</a>
-                                <a href='/index/OA_profile.php? 'class='btn'>Edit</a>   
+                                <a href='/backend/edit_doctor.php?Per_ID=".$result['Doc_ID']." 'class='btn'>Edit</a>   
                                 </td>
                     
                             </tr>
