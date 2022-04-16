@@ -28,6 +28,7 @@
         $Spec = $_GET['Spec'];
         $FName = $_GET['Fname'];
         // $Mname = $_GET['Mname'];
+        $Location = $_GET['Location'];
         $Lname = $_GET['Lname'];
         $Gender = $_GET['gender'];
         // $DOB = $_GET['DOB'];
@@ -35,10 +36,10 @@
         $DOB = "";
         $Mname = "";
 
-        if ($ID != '' ||$Spec != '' ||$FName != '' ||$Mname != '' ||$Lname != '' ||$Gender != '' )
+        if ($ID != '' ||$Spec != '' ||$FName != '' ||$Location != '' ||$Lname != '' ||$Gender != '' )
         {
             // something changed so do this
-            $select = "SELECT * FROM doctor WHERE Doc_ID = '$ID' and Doc_Spec LIKE '$Spec' and Doc_Gender = '$Gender' and Doc_First LIKE '$FName' and Doc_M_Init LIKE '$Mname' and Doc_Last LIKE '$Lname'  ";
+            $select = "SELECT * FROM doctor WHERE Doc_ID = '$ID' and Doc_Spec LIKE '$Spec' and Doc_Gender = '$Gender' and Doc_First LIKE '$FName' and Doc_Location LIKE '$Location' and Doc_Last LIKE '$Lname'  ";
         }else{
             // if nothing set and pressed submit
             $select = "SELECT * FROM doctor";
@@ -123,6 +124,13 @@
             </div>        
 
             <div >
+                <label > Last Name </label>
+                <div >
+                    <input type = "text" name = "Location" placeholder= "Location" value = "">
+                </div>
+            </div>    
+
+            <div >
                 <label > Gender  </label>
                 <div >
                     <input type ="radio" name="gender" value ="Male"> Male
@@ -160,12 +168,13 @@
                 <tr>
                     <th>ID </th>
                     <th>Speciality </th>
+                    <th>Location </th>
                     <th>First </th>
                     <th>Last </th>
                     <th>Email </th>
                     <th>Phone</th>
                     <th>Gender</th>
-                    <th>Date of Birth </th>
+                    
                     <th> Operations <th>
                 </tr>
             </thead>
@@ -179,12 +188,13 @@
                             <tr>
                                 <td>".$result['Doc_ID']." </td>
                                 <td> ".$result['Doc_Spec']." </td>
+                                <td> ".$result['Doc_Location']." </td>
                                 <td> ".$result['Doc_First']." </td>
                                 <td> ".$result['Doc_Last']." </td>
                                 <td> ".$result['Doc_Email']." </td>
                                 <td> ".$result['Doc_Phone']." </td>
                                 <td> ".$result['Doc_Gender']." </td>
-                                <td> ".$result['Doc_DOB']." </td>
+                              
                               
                                 <td>
                                 <a href='/backend/DoctorDataReport.php?Per_ID=".$result['Doc_ID']." 'class='deny btn'>DELETE</a>
