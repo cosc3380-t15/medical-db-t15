@@ -145,7 +145,6 @@
                     <img class="tile-img" src="images/headphones.png" alt="">
                 </div>
                 <div class="tile-80">
-                    <!-- Sorry but I can't really think of anything regarding a headphone icon except maby a hearing test(?) but I don't really see how that warrents an entire square. -->
                     <h2>Workman's Compensation</h2>
                     <p class="tile-text">Our personal have experence working with OSHA and employers in order to assess physical imparments caused during the job in order to get you the workman's compensation you deserve.</p>
                 </div>
