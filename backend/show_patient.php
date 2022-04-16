@@ -144,7 +144,7 @@
             </div>   
         </form>
         <div>
-        <div class="input-group input-group-icon">
+        <div class="input-group">
             <form>
             <div class="input-group">
                 <div class="col-third">
