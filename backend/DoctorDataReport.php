@@ -160,6 +160,7 @@
                     <th>Phone</th>
                     <th>Gender</th>
                     <th>Date of Birth </th>
+
                    
                     <th> buttons <th>
                 </tr>
