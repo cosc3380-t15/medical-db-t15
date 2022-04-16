@@ -24,9 +24,6 @@
             <a href="#prices-ancor">
                 <h3 class="menu">Prices</h3>
             </a>
-            <a href="#ancor-doctors">
-                <h3 class="menu">Doctors</h3>
-            </a>
             <a href="/backend/test3.php">
                 <h3 class="menu">test</h3>
             </a>
@@ -85,14 +82,6 @@
         </div>
     </div>
     <div id="ancor" class="container3 shadow">
-        <div class="title">
-            <!-- Not going to lie, I'm not sure what to put for this header because of the fact that we named
-            our last section "miscellaneous features" and I just can't think of an umbrella term for this section. -->
-            <h1>Lorem ipsum, dolor sit amet</h1>
-            <!-- Mabey it's just because I don't know what to put for the header, but I doubt we will even need this paragraph. -->
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, ipsum voluptas? Nihil
-                tempore obcaecati quasi eligendi impedit voluptates.</p>
-        </div>
 
         <div class="group">
             <div class="tile">
@@ -186,77 +175,8 @@
 
         </div>
     </div>
-    <div id="ancor-doctors" class="container5 shadow">
-        <div class="title-doc">
-            <h1>Our Best and Brightest</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, ipsum voluptas? Nihil
-                tempore obcaecati quasi eligendi impedit voluptates.</p>
-        </div>
+    
 
-        <div class="group">
-            <div class="tile-doc">
-                <div class="tile-40">
-                    <img class="tile-img2" src="images/doc4.JPG" alt="">
-                </div>
-                <div class="tile-50">
-                    <h2>Devan Truong</h2>
-                    <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Morbi leo urna molestie at elementum eu.
-                    </p>
-                </div>
-            </div>
-            <div class="tile-doc">
-                <div class="tile-40">
-                    <img class="tile-img2" src="images/doc1.JPG" alt="">
-                </div>
-                <div class="tile-50">
-                    <h2>Conner Mayo</h2>
-                    <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Morbi leo urna molestie at elementum eu.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="group">
-            <div class="tile-doc">
-                <div class="tile-40">
-                    <img class="tile-img2" src="images/doc2.JPG" alt="">
-                </div>
-                <div class="tile-50">
-                    <h2>Adaline Carson</h2>
-                    <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Morbi leo urna molestie at elementum eu.
-                    </p>
-                </div>
-            </div>
-            <div class="tile-doc">
-                <div class="tile-40">
-                    <img class="tile-img2" src="images/doc3.JPG" alt="">
-                </div>
-                <div class="tile-50">
-                    <h2>Benjamin Franco</h2>
-                    <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Morbi leo urna molestie at elementum eu.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <script>
-        window.addEventListener('scroll', (e) => {
-            const navbar = document.querySelector('.navbar.sticky');
-            if (window.pageYOffset > 0) {
-                navbar.classList.add("shadow");
-            } else {
-                navbar.classList.remove("shadow");
-            }
-        });
-    </script>
 </body>
 
 </html>
