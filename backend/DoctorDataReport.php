@@ -163,7 +163,7 @@
 
     <!-- Forming table and making it readable-->
     <div>
-        <table >
+        <table border="1" cellpadding="0"> 
             <thead>
                 <tr>
                     <th>ID </th>
