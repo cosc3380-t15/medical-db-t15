@@ -35,10 +35,10 @@
         $DOB = "";
         $Mname = "";
 
-        if ($ID != '' ||$Spec != '' ||$FName != '' ||$Mname != '' ||$Lname != '' ||$Gender != '' ||$DOB != '')
+        if ($ID != '' ||$Spec != '' ||$FName != '' ||$Mname != '' ||$Lname != '' ||$Gender != '' )
         {
             // something changed so do this
-            $select = "SELECT * FROM doctor WHERE Doc_ID = '$ID' or Doc_Spec LIKE '$Spec' or Doc_Gender = '$Gender' or Doc_First LIKE '$FName' or Doc_M_Init LIKE '$Mname' or Doc_Last LIKE '$Lname'  ";
+            $select = "SELECT * FROM doctor WHERE Doc_ID = '$ID' and Doc_Spec LIKE '$Spec' and Doc_Gender = '$Gender' and Doc_First LIKE '$FName' and Doc_M_Init LIKE '$Mname' and Doc_Last LIKE '$Lname'  ";
         }else{
             // if nothing set and pressed submit
             $select = "SELECT * FROM doctor";
@@ -143,12 +143,14 @@
                 <input type='submit' name='submit' value='SEARCH'/>
                 </div>
             </div>   
-
-            <div>
-                    <input type="button" value="Go back!" onclick="history.back()">
-            </div>
-
         </form>
+        <div>
+            <form>
+                <input type="button" value="BACK" onclick="history.back()">            
+                <input type="button" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
+                <input type="button" onclick="location.href='/index/home.php?'" value="Home" />
+            </form>
+        </div>
     </div>
 
     <!-- Forming table and making it readable-->
