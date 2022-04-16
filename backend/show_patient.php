@@ -111,7 +111,7 @@
                 </div>
             </div> -->
             <div class="row">
-                <h4 style="float: left;">Gender</h4>
+                <h4 style="float: left;">Gender &#160<h4 style="color: red;">*</h4></h4>
                 <div class="input-group">
                     <input class="col-half" id="gender-male" type="radio" name="gender" value="Male" required />
                     <label for="gender-male">Male</label>
