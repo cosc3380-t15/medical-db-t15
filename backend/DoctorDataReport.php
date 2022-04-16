@@ -100,19 +100,40 @@
                     <input type = "text" placeholder="0000000" name="ID" value = ""/>
                     <div class="input-icon"></div>
                 </div>
-            <h4>Specialty</h4>
-                <div class="input-group input-group-icon">
-                <select name="Spec" >
-                    <option value="" selected> None</option>
- 
-                
-                    <?php
-                    while($result=mysqli_fetch_assoc($unq_Spec_query)){
-                        echo "<option value=".$result['Doc_Spec'].">".$result['Doc_Spec']."</option>";
-                    }
-                    ?>
-                    </select>
+                <div class="input-group">
+                    <div class="col-half">
+                        <h4>Specialty</h4>
+                        <div class="input-group input-group-icon">
+                        <select name="Spec" >
+                            <option value="" selected> None</option>
+        
+                        
+                            <?php
+                            while($result=mysqli_fetch_assoc($unq_Spec_query)){
+                                echo "<option value=".$result['Doc_Spec'].">".$result['Doc_Spec']."</option>";
+                            }
+                            ?>
+                            </select>
+                        </div>  
+                    </div>
+                    <div class="col-half">
+                        <h4>location</h4>
+                        <div class="input-group input-group-icon">
+                        <select name="Location" >
+                            <option value="" selected> None</option>
+        
+                        
+                            <?php
+                            while($result=mysqli_fetch_assoc($unq_Location_query)){
+                                echo "<option value=".$result['Doc_Location'].">".$result['Doc_Location']."</option>";
+                            }
+                            ?>
+                            </select>
+                        </div>
+                    </div>
                 </div>
+
+
 
             <h4>First Name</h4>
             <div class="input-group input-group-icon">
@@ -125,19 +146,7 @@
                     <div class="input-icon"></div>
                 </div>
 
-                <h4>location</h4>
-                <div class="input-group input-group-icon">
-                <select name="Location" >
-                    <option value="" selected> None</option>
- 
-                
-                    <?php
-                    while($result=mysqli_fetch_assoc($unq_Location_query)){
-                        echo "<option value=".$result['Doc_Location'].">".$result['Doc_Location']."</option>";
-                    }
-                    ?>
-                    </select>
-                </div>
+               
 
         </div>
             <div class="row"> 
