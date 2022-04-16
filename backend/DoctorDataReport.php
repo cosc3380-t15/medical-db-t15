@@ -123,7 +123,7 @@
             </div>        
 
             <div >
-                <label > Middle Initial </label>
+                <label > Gender  </label>
                 <div >
                     <input type ="radio" name="gender" value ="Male"> Male
                     <input type ="radio" name="gender" value ="Female"> Female
@@ -138,7 +138,7 @@
                 </div>
             </div> -->
             <div >
-                <label > Last Name </label>
+                <!-- <label > Last Name </label> -->
                 <div >
                 <input type='submit' name='submit' value='SEARCH'/>
                 </div>
@@ -160,9 +160,7 @@
                     <th>Phone</th>
                     <th>Gender</th>
                     <th>Date of Birth </th>
-
-                   
-                    <th> buttons <th>
+                    <th> Operations <th>
                 </tr>
             </thead>
             <tbody>
