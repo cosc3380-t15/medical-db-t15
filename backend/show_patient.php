@@ -45,50 +45,81 @@
         $select = "SELECT * FROM patient";
     }
 
-    $query=mysqli_query($link,$select);
+    $query=mysqli_query($link,$select); 
 ?>    
 <!DOCTYPE html>
 <html>
 
 <head>
     <link rel="stylesheet" href="/index/styles/show_patients.css">
+    <link rel="stylesheet" href="/index/styles/form.css">
 </head>
 
 <body>
     <!-- <div class="back-button">
        <a href="/index/OA_profile.php" id="back-button" >Back</a> 
-    </div> -->
-    <div> 
+    </div> --> 
+    <div class="container-form12">  
         <form action = "/backend/show_patient.php" method  = "GET">
             
-            <div>
+            <!-- <div>
                 <label > Patient ID </label>
                 <div >
                     <input type = "text"  name = "ID" placeholder= "0000000" value = "">
                 </div>
-            </div>
-            
+            </div> -->
+        <div class="row">
+            <h4>Patient ID</h4>
+                <div class="input-group input-group-icon">
+                    <input type = "text" placeholder="0000000" name="ID" value = ""/>
+                    <div class="input-icon"></div>
+                </div>
 
-            <div >
+            <!-- <div >
                 <label > First Name </label>
                 <div >
                     <input type = "text" name = "Fname" placeholder= "First Name" value = "">
                 </div>
-            </div>
+            </div> -->
             
-            <div >
+            <h4>First Name</h4>
+                <div class="input-group input-group-icon">
+                    <input type = "text" placeholder="First Name" name="Fname" value = ""/>
+                    <div class="input-icon"></div>
+                </div>
+
+            <!-- <div >
                 <label > Last Name </label>
                 <div >
                     <input type = "text" name = "Lname" placeholder= "Last Name" value = "">
                 </div>
-            </div>        
+            </div>   -->
+            
+            <h4>Last Name</h4>
+                <div class="input-group input-group-icon">
+                    <input type = "text" placeholder="Last Name" name="Lname" value = ""/>
+                    <div class="input-icon"></div>
+                </div>
 
-            <div >
+        </div>
+            <!-- <div >
                 <label > Gender  </label>
                 <div >
                     <input type ="radio" name="gender" value ="Male"> Male
                     <input type ="radio" name="gender" value ="Female"> Female
                     <input type ="radio" name="gender" value ="" checked = "checked"> Either
+                </div>
+            </div> -->
+            <div class="row"> 
+                <h4 style="float: left;">Gender &#160<h4 style="color: blue;">&nbsp</h4></h4>
+                <div class="input-group">
+                    <input class="col-half" id="gender-male" type="radio" name="gender" value="Male" required />
+                    <label for="gender-male">Male</label>
+                    <input class="col-half" id="gender-female" type="radio" name="gender" value="Female" required />
+                    <label class="float-right" for="gender-female">Female</label>
+                    <input id="either" type ="radio" name="gender" value ="" checked = "checked">
+                    <label class="float-right" for="either">Either</label> 
+
                 </div>
             </div>
             
@@ -101,15 +132,15 @@
             <div >
                 <!-- <label > Last Name </label> -->
                 <div >
-                <input type='submit' name='submit' value='SEARCH'/>
+                <input class="button2" type='submit' name='submit' value='SEARCH'/> 
                 </div>
             </div>   
         </form>
         <div>
             <form>
-                <input type="button" value="BACK" onclick="history.back()">            
-                <input type="button" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
-                <input type="button" onclick="location.href='/index/home.php?'" value="Home" />
+                <input class="button2" type="button" value="BACK" onclick="history.back()">            
+                <input class="button2" type="button" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
+                <input class="button2" type="button" onclick="location.href='/index/home.php?'" value="Home" />
             </form>
         </div>
     </div>

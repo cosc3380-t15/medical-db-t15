@@ -172,8 +172,9 @@
             <div >
                 <!-- <label > Last Name </label> -->
                 <div >
-                <input class="button2" type='submit' name='submit' value='SEARCH'/> 
-                </div>
+
+                <input  class="button2" type='submit' name='submit' value='SEARCH'/>
+                </div> 
             </div>   
         </form>
         <div>
@@ -190,7 +191,7 @@
 
     <!-- Forming table and making it readable-->
     <div>
-        <table >
+        <table border="1" cellpadding="0"> 
             <thead>
                 <tr>
                     <th>ID </th>
@@ -201,7 +202,6 @@
                     <th>Email </th>
                     <th>Phone</th>
                     <th>Gender</th>
-                    
                     <th> Operations <th>
                 </tr>
             </thead>
@@ -221,8 +221,6 @@
                                 <td> ".$result['Doc_Email']." </td>
                                 <td> ".$result['Doc_Phone']." </td>
                                 <td> ".$result['Doc_Gender']." </td>
-                              
-                              
                                 <td>
                                 <a href='/backend/DoctorDataReport.php?Per_ID=".$result['Doc_ID']." 'class='deny btn'>DELETE</a>
                                 <a href='/index/OA_profile.php? 'class='btn'>Edit</a>   
