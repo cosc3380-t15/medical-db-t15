@@ -89,7 +89,7 @@
         <div class="profile-submenu">
             <!-- SAME AS DONE IN DOCS PROFILE DOESNT WORK ANYMORE IDK WHY -->
             <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/approve_denyPrescription.php')">Pending presciption </a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_prescriptions_admin.php')">All Prescriptions</a>
         </div>
     </div>
     
