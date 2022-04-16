@@ -104,7 +104,7 @@
                     <div class="col-half">
                         <h4>Specialty</h4>
                         <div class="input-group input-group-icon">
-                        <select name="Spec" >
+                        <select id="width" name="Spec" >
                             <option value="" selected> None</option>
         
                         
@@ -119,7 +119,7 @@
                     <div class="col-half">
                         <h4>location</h4>
                         <div class="input-group input-group-icon">
-                        <select name="Location" >
+                        <select id="width" name="Location" >
                             <option value="" selected> None</option>
         
                         
