@@ -50,6 +50,7 @@ body {
 }
 .card h4 {
   color: var(--dark);
+  user-select: none;
 }
 .card:hover {
   box-shadow: var(--shadow);
@@ -67,9 +68,4 @@ body {
 }
 .third:last-of-type {
   margin-right: 0;
-}
-
-/************************* element styling *************************/
-canvas{
-  margin: 0 auto;
 }
