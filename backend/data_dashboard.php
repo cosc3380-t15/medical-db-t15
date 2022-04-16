@@ -340,7 +340,7 @@ foreach($appt_general_info as $appt_iterator) {
                     datasets: [{
                         label: 'Appointments',
                         data: appt_month_data,
-                        backgroundColor: ['#008CFF', '#4C72D2'],
+                        backgroundColor: ['#203368', '#2C4A98'],
                     }]
                 },
                 options: {
