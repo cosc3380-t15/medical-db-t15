@@ -24,10 +24,10 @@ $row= mysqli_fetch_array($result);
 
 <body>
 <?php
-if (isset($_SESSION['status'])) {
-    echo "<h4>".$_SESSION['status']."</h4>";
-    unset($_SESSION['status']);
-}
+// if (isset($_SESSION['status'])) {
+//     echo "<h4>".$_SESSION['status']."</h4>";
+//     unset($_SESSION['status']);
+// }
 ?>
     <div class="container-form11">
         <form action="/backend/update_patient_data.php" method="post" onsubmit="return Validate();">

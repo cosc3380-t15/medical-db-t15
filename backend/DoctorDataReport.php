@@ -80,6 +80,7 @@
 <html>  
     <head>
         <link rel="stylesheet" href="/index/styles/show_patients.css">
+          
     </head>
 <body>
     <!-- Making Search Fields to scan through when needed-->
@@ -189,7 +190,7 @@
                                 <td> ".$result['Doc_State_Addr']." </td>
                                 <td> ".$result['Doc_Zip_Addr']." </td>
                                 <td>
-                                <a href='/backend/DoctorDataReport.php?Per_ID=".$result['Doc_ID']." 'class='btn'>DELETE</a>
+                                <a href='/backend/DoctorDataReport.php?Per_ID=".$result['Doc_ID']." 'class='deny btn'>DELETE</a>
                                 <a href='/index/OA_profile.php? 'class='btn'>Edit</a>   
                                 </td>
                     
