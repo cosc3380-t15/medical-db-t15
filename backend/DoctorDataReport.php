@@ -124,12 +124,23 @@
                     <input type = "text" placeholder="Last Name" name="Lname" value = ""/>
                     <div class="input-icon"></div>
                 </div>
-
-                <h4>location</h4>
-                <div class="input-group input-group-icon">
-                <select name="Location" >
+            <div class="input-group">
+                <div class="col-half">
+                    <h4>location</h4>
+                    <div class="input-group input-group-icon">
+                    <select name="Location" >
                     <option value="" selected> None</option>
- 
+                </div>
+                <div class="col-half">
+                    <h4>Specialty</h4>
+                    <div class="input-group input-group-icon">
+                    <select name="Spec" >
+                    <option value="" selected> None</option>
+                </div>
+                
+                
+            </div>
+                
                 
                     <?php
                     while($result=mysqli_fetch_assoc($unq_Location_query)){
