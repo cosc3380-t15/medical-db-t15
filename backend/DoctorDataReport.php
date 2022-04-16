@@ -166,7 +166,7 @@
                     <th>Email </th>
                     <th>Phone</th>
                     <th>Gender</th>
-                    <th>Date of Birth </th>
+                    
                     <th> Operations <th>
                 </tr>
             </thead>
@@ -186,7 +186,7 @@
                                 <td> ".$result['Doc_Email']." </td>
                                 <td> ".$result['Doc_Phone']." </td>
                                 <td> ".$result['Doc_Gender']." </td>
-                                <td> ".$result['Doc_DOB']." </td>
+                              
                               
                                 <td>
                                 <a href='/backend/DoctorDataReport.php?Per_ID=".$result['Doc_ID']." 'class='deny btn'>DELETE</a>
