@@ -81,7 +81,7 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    aspectRatio: 2,
+                    aspectRatio: 2.5,
                     plugins: {
                         legend: {
                             position: 'bottom',
@@ -113,7 +113,7 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    aspectRatio: 2,
+                    aspectRatio: 2.5,
                     plugins: {
                         legend: {
                             position: 'bottom',
@@ -151,7 +151,7 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    aspectRatio: 2,
+                    aspectRatio: 2.5,
                     plugins: {
                         legend: {
                             position: 'bottom',
@@ -180,7 +180,7 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    aspectRatio: 4/1,
+                    aspectRatio: 4,
                     plugins: {
                         legend: {
                             display: false
