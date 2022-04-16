@@ -20,7 +20,8 @@
     }
 
     $select="SELECT a.Pat_ID, a.Doc_ID, a.Off_ID, a.Appt_Time, a.Appt_Specialization, p.Pat_First, p.Pat_Last, a.Appt_ID
-    FROM appointment AS a, patient AS p";
+    FROM appointment AS a, patient AS p
+    WHERE p.Pat_ID = Pat_ID";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
