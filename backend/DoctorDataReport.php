@@ -27,12 +27,13 @@
         $ID = $_GET['ID'];
         $Spec = $_GET['Spec'];
         $FName = $_GET['Fname'];
-        $Mname = $_GET['Mname'];
+        // $Mname = $_GET['Mname'];
         $Lname = $_GET['Lname'];
         $Gender = $_GET['gender'];
         // $DOB = $_GET['DOB'];
         // initiallizing as a string this is aproblem cause idk what to do with date types
         $DOB = "";
+        $Mname = "";
 
         if ($ID != '' ||$Spec != '' ||$FName != '' ||$Mname != '' ||$Lname != '' ||$Gender != '' ||$DOB != '')
         {
@@ -107,12 +108,12 @@
                 </div>
             </div>
             
-            <div >
+            <!-- <div >
                 <label > Middle Initial </label>
                 <div >
                     <input type = "text"  name = "Mname" placeholder= "Middle initial" value = "">
                 </div>
-            </div>
+            </div> -->
             
             <div >
                 <label > Last Name </label>
@@ -154,7 +155,6 @@
                     <th>ID </th>
                     <th>Speciality </th>
                     <th>First </th>
-                   
                     <th>Last </th>
                     <th>Email </th>
                     <th>Phone</th>
@@ -175,7 +175,6 @@
                                 <td>".$result['Doc_ID']." </td>
                                 <td> ".$result['Doc_Spec']." </td>
                                 <td> ".$result['Doc_First']." </td>
-                                
                                 <td> ".$result['Doc_Last']." </td>
                                 <td> ".$result['Doc_Email']." </td>
                                 <td> ".$result['Doc_Phone']." </td>
