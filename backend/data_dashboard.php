@@ -347,7 +347,7 @@ foreach($appt_general_info as $appt_iterator) {
                     indexAxis: 'y',
                     responsive: true,
                     maintainAspectRatio: true,
-                    aspectRatio: 1.75,
+                    aspectRatio: 1.9,
                     scales: {
                         x: { 
                             beginAtZero: true,
