@@ -115,7 +115,7 @@
                 <div class="input-group">
                     <div class="col-third">
                         <input  id="gender-male" type="radio" name="gender" value="Male" required />
-                        <label class="float-right col-third" for="gender-male">Male</label>
+                        <label class="float-right" for="gender-male">Male</label>
                     </div>
                    <div class="col-third">
                         <input  id="gender-female" type="radio" name="gender" value="Female" required />
