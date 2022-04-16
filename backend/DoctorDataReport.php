@@ -73,6 +73,11 @@
     //         echo "Error: ".mysqli_error($link);  
     //     }  
     // }
+
+    $unq_Location_select = "SELECT DISTINCT Doc_Location From  doctor";
+    $unq_Spec_select = "SELECT DISTINCT Doc_Spec From  doctor";
+    $unq_Location_query = mysqli_query($link,$unq_Location_select);
+    $unq_Spec_query = mysqli_query($link,$unq_Spec_select);
     $query = mysqli_query($link,$select);
 
 ?>
@@ -88,7 +93,7 @@
     <!-- Making Search Fields to scan through when needed-->
 
     <div class="container-form12">  
-        <form action = "/backend/show_patient.php" method  = "GET">
+        <form action = "/backend/DoctorDataReport.php" method  = "GET">
             
             <!-- <div>
                 <label > Patient ID </label>
@@ -112,8 +117,16 @@
             
             <h4>Specialty</h4>
                 <div class="input-group input-group-icon">
-                    <input type = "text" placeholder="Specialty" name="Spec" value = ""/>
-                    <div class="input-icon"></div>
+                <select name="Spec" >
+                    <option value="" selected> None</option>
+ 
+                
+                    <?php
+                    while($result=mysqli_fetch_assoc($unq_Spec_query)){
+                        echo "<option value=".$result['Doc_Spec'].">".$result['Doc_Spec']."</option>";
+                    }
+                    ?>
+                    </select>
                 </div>
 
             <h4>First Name</h4>
@@ -135,10 +148,18 @@
                     <div class="input-icon"></div>
                 </div>
 
-            <h4>Location</h4>
+                <h4>location</h4>
                 <div class="input-group input-group-icon">
-                    <input type = "text" placeholder="Location" name="Location" value = ""/>
-                    <div class="input-icon"></div>
+                <select name="Location" >
+                    <option value="" selected> None</option>
+ 
+                
+                    <?php
+                    while($result=mysqli_fetch_assoc($unq_Location_query)){
+                        echo "<option value=".$result['Doc_Location'].">".$result['Doc_Location']."</option>";
+                    }
+                    ?>
+                    </select>
                 </div>
 
         </div>
