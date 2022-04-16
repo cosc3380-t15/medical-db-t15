@@ -57,5 +57,5 @@ for ($i = 0; $i < 80; $i++) {
 }
 echo "Refreshed Random Data Successfully";
 mysqli_close($link);
-header("Location: ../index/OA_profile.php")
+Header('Location: '.$_SERVER['PHP_SELF']);
 ?>
