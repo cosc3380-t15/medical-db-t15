@@ -68,27 +68,40 @@
                     <input type = "text"  name = "ID" placeholder= "0000000" value = "">
                 </div>
             </div> -->
-
+        <div class="row">
             <h4>Patient ID</h4>
                 <div class="input-group input-group-icon">
                     <input type = "text" placeholder="0000000" name="ID" value = ""/>
                     <div class="input-icon"><span style="color:red;">*</span></div>
                 </div>
 
-            <div >
+            <!-- <div >
                 <label > First Name </label>
                 <div >
                     <input type = "text" name = "Fname" placeholder= "First Name" value = "">
                 </div>
-            </div>
+            </div> -->
             
+            <h4>First Name</h4>
+                <div class="input-group input-group-icon">
+                    <input type = "text" placeholder="First Name" name="Fname" value = ""/>
+                    <div class="input-icon"><span style="color:red;">*</span></div>
+                </div>
+
             <div >
                 <label > Last Name </label>
                 <div >
                     <input type = "text" name = "Lname" placeholder= "Last Name" value = "">
                 </div>
-            </div>        
+            </div>  
+            
+            <h4>Last Name</h4>
+                <div class="input-group input-group-icon">
+                    <input type = "text" placeholder="Last Name" name="Lname" value = ""/>
+                    <div class="input-icon"><span style="color:red;">*</span></div>
+                </div>
 
+        </div>
             <!-- <div >
                 <label > Gender  </label>
                 <div >
