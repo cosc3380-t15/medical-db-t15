@@ -71,6 +71,7 @@
         <div class="profile-submenu">
             <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_patient.php')">Patients</a>
             <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/DoctorDataReport.php')">Doctors</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/insert_sample_patients.php')">New Random Data</a>
         </div>
 
         <a class="profile-menu-item">
