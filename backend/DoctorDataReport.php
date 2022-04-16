@@ -160,6 +160,7 @@
                 <tr>
                     <th>ID </th>
                     <th>Speciality </th>
+                    <th>Location </th>
                     <th>First </th>
                     <th>Last </th>
                     <th>Email </th>
@@ -179,6 +180,7 @@
                             <tr>
                                 <td>".$result['Doc_ID']." </td>
                                 <td> ".$result['Doc_Spec']." </td>
+                                <td> ".$result['Doc_Location']." </td>
                                 <td> ".$result['Doc_First']." </td>
                                 <td> ".$result['Doc_Last']." </td>
                                 <td> ".$result['Doc_Email']." </td>
