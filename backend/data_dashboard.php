@@ -47,7 +47,36 @@ $pat_races[3] = $row[0];
 $row = mysqli_fetch_row($pat_race_4);
 $pat_races[4] = $row[0];
 
-$pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM patient");
+//patient allergy distribution
+$pat_allergy_0 = mysqli_query($link,"SELECT COUNT(*) FROM patient WHERE pat_Allergy = '200'");
+$pat_allergy_1 = mysqli_query($link,"SELECT COUNT(*) FROM patient WHERE pat_Allergy = '201'");
+$pat_allergy_2 = mysqli_query($link,"SELECT COUNT(*) FROM patient WHERE pat_Allergy = '202'");
+$pat_allergy_3 = mysqli_query($link,"SELECT COUNT(*) FROM patient WHERE pat_Allergy = '203'");
+$pat_allergy_4 = mysqli_query($link,"SELECT COUNT(*) FROM patient WHERE pat_Allergy = '204'");
+$pat_allergy_5 = mysqli_query($link,"SELECT COUNT(*) FROM patient WHERE pat_Allergy = '205'");
+$row = mysqli_fetch_row($pat_allergy_0);
+$pat_algeries[0] = $row[0];
+$row = mysqli_fetch_row($pat_allergy_1);
+$pat_algeries[1] = $row[0];
+$row = mysqli_fetch_row($pat_allergy_2);
+$pat_algeries[2] = $row[0];
+$row = mysqli_fetch_row($pat_allergy_3);
+$pat_algeries[3] = $row[0];
+$row = mysqli_fetch_row($pat_allergy_4);
+$pat_algeries[4] = $row[0];
+$row = mysqli_fetch_row($pat_allergy_5);
+$pat_algeries[5] = $row[0];
+
+$pat_general_info = mysqli_query($link,"SELECT pat_Height, pat_Weight, pat_DOB FROM patient");
+
+$today = date("Y-m-d");
+$pat_ages = array_fill(0, 20, 0);
+foreach($pat_general_info as $dob) {
+    $age = date_diff(date_create($dob['pat_DOB']), date_create($today))->format('%y');
+    $index = intdiv($age, 10) * 2;
+    if($age % 10 >= 5) { $index++; }
+    $pat_ages[$index]++;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -81,7 +110,7 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    aspectRatio: 2.5,
+                    aspectRatio: 2,
                     plugins: {
                         legend: {
                             position: 'bottom',
@@ -151,7 +180,48 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    aspectRatio: 2.5,
+                    aspectRatio: 1.5,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {color: '#3A3B3C'}
+                        }
+                    }
+                }
+            });
+
+            //Patient Allergies
+            var pat_allergies_chart = document.getElementById("pat_allergies").getContext('2d');
+            var pat_allergy = {
+                datasets: [{
+                    data: [<?php echo $pat_algeries[0].", ".$pat_algeries[1].", ".$pat_algeries[2].", "
+                                .$pat_algeries[3].", ".$pat_algeries[4].", ".$pat_algeries[5];?>],
+                    backgroundColor: [
+                        '#008CFF',
+                        '#203368',
+                        '#9FCDFC',
+                        '#2C4A98',
+                        '#4C72D2',
+                        '#604cd2',
+                    ],
+                }],
+                labels: [
+                    'None',
+                    'Amoxicillin',
+                    'Aspirin',
+                    'Insulin',
+                    'Carbamazepine',
+                    'Ibuprofen',
+                ],
+                hoverOffset: 4
+            };
+            var pat_allergies_newChart = new Chart(pat_allergies_chart, {
+                type: 'doughnut',
+                data: pat_allergy,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    aspectRatio: 1.5,
                     plugins: {
                         legend: {
                             position: 'bottom',
@@ -165,7 +235,7 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
             var pat_height_vs_weight_chart = document.getElementById("pat_height-weight").getContext('2d');
             var pat_height_vs_weight_data = [
             <?php
-                foreach($pat_height_result as $x) {
+                foreach($pat_general_info as $x) {
                     echo "{x: ".$x['pat_Weight'].", y: ".$x['pat_Height']." },";
                 }
             ?>];
@@ -180,7 +250,7 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    aspectRatio: 4,
+                    aspectRatio: 3,
                     plugins: {
                         legend: {
                             display: false
@@ -204,6 +274,49 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
                     }
                 }
             });
+
+            //patient age distribution
+            var pat_age_chart = document.getElementById("pat_age_dist").getContext('2d');
+            var pat_age_data = [
+            <?php
+                foreach($pat_ages as $x) {
+                    echo $x.",";
+                }
+            ?>];
+            var pat_age_newChart = new Chart(pat_age_chart, {
+                type: 'bar',
+                data: {
+                    labels: ["0-4", "5-9", "10-14", "15-19", "10-24", "25-29", "30-34",
+                                "35-39", "40-44", "45-49", "50-54", "55-59","60-64", "65-69",
+                                "70-74", "75-79","80-84", "85-89","90-94", "95-99"],
+                    datasets: [{
+                        label: 'Patients',
+                        data: pat_age_data,
+                        backgroundColor: '#008CFF',
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    aspectRatio: 5,
+                    scales: {
+                        y: { 
+                            beginAtZero: true,
+                            ticks: { precision: 0}
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                },
+            });
         });
     </script>
 </head>
@@ -211,20 +324,30 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
 <body>
     <div class="container">
         <h1>Data Dashboard</h1>
-        <div class="card_container">
-            <div class="card half">
-                <h4 class="label">Patient Gender Distribution</h4>
-                <canvas id="pat_gender"></canvas>
-            </div>
-            <div class="card half">
+        <div class="card_container col-third">
+            <div class="card third">
                 <h4 class="label">Patient Race Distribution</h4>
                 <canvas id="pat_race"></canvas>
             </div>
+            <div class="card third">
+                <h4 class="label">Patient Gender Distribution</h4>
+                <canvas id="pat_gender"></canvas>
+            </div>
+            <div class="card third">
+                <h4 class="label">Patient Allergies</h4>
+                <canvas id="pat_allergies"></canvas>
+            </div>
         </div>
-        <div class="card_container full">
-            <div class="card">
+        <div class="card_container">
+            <div class="card half">
                 <h4 class="label">Patient Height Vs. Weight</h4>
                 <canvas id="pat_height-weight"></canvas>
+            </div>
+        </div>
+        <div class="card_container full">
+        <div class="card">
+                <h4 class="label">Patient Age Distribution</h4>
+                <canvas id="pat_age_dist"></canvas>
             </div>
         </div>
         <div class="card_container">

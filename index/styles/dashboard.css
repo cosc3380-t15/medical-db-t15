@@ -35,6 +35,7 @@ body {
   justify-content: center;
 }
 .full { grid-template-columns: repeat(auto-fill, 100%); }
+.col-third { grid-template-columns: repeat(auto-fill, 33%); }
 .card {
   position: relative;
   float: left;
@@ -59,13 +60,9 @@ body {
   margin-right: 2%;
   min-width: 49%;
 }
-.half:nth-child(even) {
-  margin-right: 0;
-}
+.half:nth-child(even) { margin-right: 0; }
 .third {
   margin-right: 2%;
-  width: 32%;
+  min-width: 32%;
 }
-.third:last-of-type {
-  margin-right: 0;
-}
+.third:last-of-type { margin-right: 0; }
