@@ -57,5 +57,5 @@ for ($i = 0; $i < 80; $i++) {
 }
 echo "Refreshed Random Data Successfully";
 mysqli_close($link);
-Header('Location: '.$_SERVER['PHP_SELF']);
+header("Location: ../index/login.php")
 ?>
