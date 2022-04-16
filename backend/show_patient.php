@@ -111,7 +111,7 @@
                 </div>
             </div> -->
             <div class="row">
-                <h4 style="float: left;">Gender &#160<h4 style="color: red;">*</h4></h4>
+                <h4 style="float: left;">Gender</h4>
                 <div class="input-group">
                     <input class="col-half" id="gender-male" type="radio" name="gender" value="Male" required />
                     <label for="gender-male">Male</label>
@@ -132,15 +132,15 @@
             <div >
                 <!-- <label > Last Name </label> -->
                 <div >
-                <input class="button" type='submit' name='submit' value='SEARCH'/> 
+                <input class="button2" type='submit' name='submit' value='SEARCH'/> 
                 </div>
             </div>   
         </form>
         <div>
             <form>
-                <input class="button" type="button" value="BACK" onclick="history.back()">            
-                <input class="button" type="button" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
-                <input class="button" type="button" onclick="location.href='/index/home.php?'" value="Home" />
+                <input class="button2" type="button" value="BACK" onclick="history.back()">            
+                <input class="button2" type="button" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
+                <input class="button2" type="button" onclick="location.href='/index/home.php?'" value="Home" />
             </form>
         </div>
     </div>
