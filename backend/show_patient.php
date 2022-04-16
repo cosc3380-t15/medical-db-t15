@@ -92,6 +92,18 @@
                     <input type ="radio" name="gender" value ="" checked = "checked"> Either
                 </div>
             </div>
+            <div class="row">
+                <h4 style="float: left;">Gender &#160<h4 style="color: red;">*</h4></h4>
+                <div class="input-group">
+                    <input class="col-half" id="gender-male" type="radio" name="gender" value="Male" required />
+                    <label for="gender-male">Male</label>
+                    <input class="col-half" id="gender-female" type="radio" name="gender" value="Female" required />
+                    <label class="float-right" for="gender-female">Female</label>
+                    <input id="either" type ="radio" name="gender" value ="" checked = "checked">
+                    <label class="float-right" for="either">Either</label> 
+
+                </div>
+            </div>
             
             <!-- <div >
                 <label > DOB </label>
