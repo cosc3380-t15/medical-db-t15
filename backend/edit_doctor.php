@@ -8,43 +8,8 @@ $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '
                                                     
 mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
-$result = mysqli_query($link,"SELECT * FROM patient WHERE Doc_ID='" .$_GET['Doc_ID']. "'");
+$result = mysqli_query($link,"SELECT * FROM patient WHERE Pat_ID='" .$_GET['Doc_ID']. "'");
 $row= mysqli_fetch_array($result);
-
-if (isset($_GET['submit']))
-{
-    $id = $_GET['Doc_ID'];
-    $sp = $_GET['spec'];
-    $loc = $_GET['loc'];
-    $fn = $_GET['fname'];
-    $ln = $_GET['lname'];
-    $mn = $_GET['minit'];
-    $em = $_GET['email'];
-    $ph = $_GET['phone'];
-    $gn = $_GET['gender'];
-    $dob=  $_GET['dob'];
-    $sa = $_GET['address'];
-    $ca = $_GET['city'];
-    $state = $_GET['state'];
-    $za = $_GET['zip'];
-    
-    $update = "UPDATE doctor 
-    SET  Doc_Spec = '$sp' , Doc_Location = '$loc', Doc_First = '$fn', Doc_M_Init ='$mn',Doc_Last='$ln',Doc_Email='$em',Doc_Phone='$ph',
-    Doc_Gender ='$gn',Doc_DOB ='$dob',Doc_Street_Addr='$sa',Doc_City_Addr='$ca',Doc_State_Addr='$state',Doc_Zip_Addr='$za'
-    WHERE Doc_ID = '$id' ";
-
-    $query_run = mysqli_query($link,$update);
-
-    if ($query_run) {
-        $_SESSION['status'] = "Data Updated Successfully ";
-        header("Location:/index/OA_profile.php");
-    }else {
-        $_SESSION['status'] = "Not Updated ";
-        header("Location:edit_doctor.php");
-    }
-
-}
-
 
 ?>
 <!DOCTYPE html>
@@ -63,11 +28,11 @@ if (isset($_GET['submit']))
 // }
 ?>
     <div class="container-form11">
-        <form action="/backend/edit_doctor.php" method="get" onsubmit="return Validate();">
+        <form action="/backend/update_doctor_data.php" method="post" onsubmit="return Validate();">
             <div class="row">
                 <h4>Update Docto Information</h4>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Doctor ID" name="Doc_ID" id="doc-id" value="<?php echo $row['Doc_ID']; ?>" readonly />
+                    <input type="text" placeholder="Doctor ID" name="doc_id" id="doc-id" value="<?php echo $row['Doc_ID']; ?>" required  />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
@@ -83,7 +48,7 @@ if (isset($_GET['submit']))
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Specialty" name="spec"  value="<?php echo $row['Doc_Spec']; ?>" />
+                    <input type="text" placeholder="Specialty" name="occupation"  value="<?php echo $row['Doc_Spec']; ?>" />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
