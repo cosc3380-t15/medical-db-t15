@@ -114,7 +114,7 @@
                 <h4 style="float: left;">Gender &#160<h4 style="color: blue;">&nbsp</h4></h4>
                 <div class="input-group">
                     <input class="col-third" id="gender-male" type="radio" name="gender" value="Male" required />
-                    <label class="float-right" for="gender-male">Male</label>
+                    <label class="float-right col-third" for="gender-male">Male</label>
                     <input class="col-third" id="gender-female" type="radio" name="gender" value="Female" required />
                     <label class="float-right" for="gender-female">Female</label>
                     <input class="col-third" id="either" type ="radio" name="gender" value ="" checked = "checked">
