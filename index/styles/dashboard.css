@@ -68,8 +68,3 @@ body {
 .third:last-of-type {
   margin-right: 0;
 }
-
-/************************* element styling *************************/
-canvas{
-  margin: 0 auto;
-}

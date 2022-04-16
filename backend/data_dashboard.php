@@ -79,8 +79,9 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
                 type: 'doughnut',
                 data: pat_gender,
                 options: {
-                    responsive: false,
+                    responsive: true,
                     maintainAspectRatio: true,
+                    aspectRatio: 2,
                     plugins: {
                         legend: {
                             position: 'bottom',
@@ -110,8 +111,9 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
                 type: 'doughnut',
                 data: doc_gender,
                 options: {
-                    responsive: false,
-                    maintainAspectRatio: false,
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    aspectRatio: 2,
                     plugins: {
                         legend: {
                             position: 'bottom',
@@ -147,8 +149,9 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
                 type: 'doughnut',
                 data: pat_race,
                 options: {
-                    responsive: false,
-                    maintainAspectRatio: false,
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    aspectRatio: 2,
                     plugins: {
                         legend: {
                             position: 'bottom',
@@ -175,6 +178,9 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
                     }]
                 },
                 options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    aspectRatio: 4/1,
                     plugins: {
                         legend: {
                             display: false
@@ -218,7 +224,7 @@ $pat_height_result = mysqli_query($link,"SELECT pat_Height, pat_Weight FROM pati
         <div class="card_container full">
             <div class="card">
                 <h4 class="label">Patient Height Vs. Weight</h4>
-                <canvas id="pat_height-weight" style="width: 720px; height: 250px;"></canvas>
+                <canvas id="pat_height-weight"></canvas>
             </div>
         </div>
         <div class="card_container">
