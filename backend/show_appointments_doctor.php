@@ -36,7 +36,7 @@
         <th>Appointment Specialization</th>
         <th>Doctor ID</th>
         <th>Appointment ID</th>
-        <th>Opperation</th>
+        
 
     </tr>
     <?php 
