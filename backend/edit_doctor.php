@@ -8,7 +8,7 @@ $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '
                                                     
 mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
-$result = mysqli_query($link,"SELECT * FROM patient WHERE Doc_ID='" .$_GET['Doc_ID']. "'");
+$result = mysqli_query($link,"SELECT * FROM patient WHERE Pat_ID='" .$_GET['Doc_ID']. "'");
 $row= mysqli_fetch_array($result);
 
 ?>
@@ -32,7 +32,7 @@ $row= mysqli_fetch_array($result);
             <div class="row">
                 <h4>Update Docto Information</h4>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Doctor ID" name="doc_id" id="doc-id" value="<?php echo $row['Doc_ID']; ?>" readonly />
+                    <input type="text" placeholder="Doctor ID" name="doc_id" id="doc-id" value="<?php echo $row['Doc_ID']; ?>" required  />
                     <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
