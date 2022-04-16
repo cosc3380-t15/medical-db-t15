@@ -144,6 +144,10 @@
                 </div>
             </div>   
 
+            <div>
+                    <input type="button" value="Go back!" onclick="history.back()">
+            </div>
+
         </form>
     </div>
 
