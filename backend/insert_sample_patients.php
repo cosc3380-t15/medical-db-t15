@@ -49,7 +49,7 @@ for ($i = 0; $i < 80; $i++) {
     random_int(1000000000,9999999999)."', '".$gender."', ".$Races[random_int(0,9)].", '".$dob."', ".$height.", ".$weight.", '".
     (random_int(10,9999))." ".$Street_Names[$i%8]."', '".$cities[$i%7]."', 'Texas', 77".random_int(50,999).", ".
     $Allergies[random_int(0,10)].", '".$Passwords[$i%6]."')";
-    // echo $values.", ";
+    echo $values.", ";
 
     if ($link->query($query.$values) !== TRUE) {
         echo "Error: " . $query . "<br>" . $link->error;
@@ -57,5 +57,4 @@ for ($i = 0; $i < 80; $i++) {
 }
 echo "Refreshed Random Data Successfully";
 mysqli_close($link);
-header("Location: ../index/login.php")
 ?>
