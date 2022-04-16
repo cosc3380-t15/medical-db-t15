@@ -132,7 +132,7 @@
             <div >
                 <!-- <label > Last Name </label> -->
                 <div >
-                <input type='submit' name='submit' value='SEARCH'/>
+                <input class="button" type='submit' name='submit' value='SEARCH'/> 
                 </div>
             </div>   
         </form>
