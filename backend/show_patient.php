@@ -45,13 +45,14 @@
         $select = "SELECT * FROM patient";
     }
 
-    $query=mysqli_query($link,$select);
+    $query=mysqli_query($link,$select); 
 ?>    
 <!DOCTYPE html>
 <html>
 
 <head>
     <link rel="stylesheet" href="/index/styles/show_patients.css">
+    <link rel="stylesheet" href="/index/styles/form.css">
 </head>
 
 <body>
