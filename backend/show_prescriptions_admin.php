@@ -12,7 +12,7 @@
 
     // this is the main query and it works
     $select="SELECT * FROM prescription AS p, patient AS pp 
-    WHERE p.Pat_ID = pp.Pat_ID";  
+    WHERE p.Pat_ID = Pat_ID";  
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>
