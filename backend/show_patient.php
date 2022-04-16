@@ -110,8 +110,8 @@
                     <input type ="radio" name="gender" value ="" checked = "checked"> Either
                 </div>
             </div> -->
-            <div class="row">
-                <h4 style="float: left;">Gender &#160<h4 style="color: blue;"></h4></h4>
+            <div class="row"> 
+                <h4 style="float: left;">Gender &#160<h4 style="color: blue;">&nbsp</h4></h4>
                 <div class="input-group">
                     <input class="col-half" id="gender-male" type="radio" name="gender" value="Male" required />
                     <label for="gender-male">Male</label>
