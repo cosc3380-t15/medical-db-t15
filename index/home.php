@@ -183,6 +183,7 @@
                 <ul class="pricing-features">
                     <li class="pricing-features-item">Lorem ipsum</li>
                     <li class="pricing-features-item">Lorem ipsum</li>
+                    <li class="pricing-features-item">Lorem ipsum</li>
                     <li class="pricing-features-item">Lorem ipsum</li>  
                     <li class="pricing-features-item">Lorem ipsum</li>
                 </ul>
