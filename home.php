@@ -24,6 +24,9 @@
             <a href="#prices-ancor">
                 <h3 class="menu">Prices</h3>
             </a>
+            <a href="#ancor-doctors">
+                <h3 class="menu">Doctors</h3>
+            </a>
             <a href="/backend/test3.php">
                 <h3 class="menu">test</h3>
             </a>
@@ -60,28 +63,37 @@
     </div>
     <div id="plug" class="container2">
         <div class="text2">
-            <h2>Take advantage of our miscellaneous features:</h2>
-            <p class="text3">All users of our database get to enjoy basic features, regardless of membership plan. </p>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+            <p class="text3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua.
+                Morbi leo urna molestie at elementum eu. Quis vel eros donec ac. Ac orci phasellus egestas tellus. Leo
+                vel fringilla est ullamcorper
+                eget nulla facilisi etiam.
         </div>
         <div class="box-alt">
             <img class="imgg" src="images/contacts-new.png">
-            <p class="pp">Schedule appointments with your doctor through our servers.</p>
+            <p class="pp">Lorem ipsum</p>
         </div>
         <div class="box">
             <img class="imgg" src="images/online-new.png">
-            <p class="pp">View your medical records and coordinate prescription refills online.</p>
+            <p class="pp">Lorem ipsum</p>
         </div>
         <div class="box-alt">
             <img class="imgg" src="images/expertss.png">
-            <p class="pp">Meet with our renown and diverse specialists.</p>
+            <p class="pp">Lorem ipsum</p>
 
         </div>
         <div class="box">
             <img class="imgg" src="images/emergency-new.jpg">
-            <p class="pp">Easy setup for any former patient that has visited any of our facilities in an emergancy situation.</p>
+            <p class="pp">Lorem ipsum</p>
         </div>
     </div>
     <div id="ancor" class="container3 shadow">
+        <div class="title">
+            <h1>Lorem ipsum, dolor sit amet</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, ipsum voluptas? Nihil
+                tempore obcaecati quasi eligendi impedit voluptates.</p>
+        </div>
 
         <div class="group">
             <div class="tile">
@@ -89,8 +101,10 @@
                     <img class="tile-img" src="images/24.png" alt="">
                 </div>
                 <div class="tile-80">
-                    <h2>24 Hour Access</h2>
-                    <p class="tile-text">All non-research facilities allow 24 hour access for all patients.</p>
+                    <h2>Lorem ipsum</h2>
+                    <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Morbi leo urna molestie at elementum eu.</p>
                 </div>
             </div>
             <div class="tile">
@@ -98,8 +112,10 @@
                     <img class="tile-img" src="images/emergency.png" alt="">
                 </div>
                 <div class="tile-80">
-                    <h2>Emergency Services</h2>
-                    <p class="tile-text">Our emergancy services are renown for their speedy response. All patients that enter our care via said services are automatically registered, as to make it easier for you. </p>
+                    <h2>Lorem ipsum</h2>
+                    <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Morbi leo urna molestie at elementum eu.</p>
                 </div>
             </div>
             <div class="tile">
@@ -107,8 +123,10 @@
                     <img class="tile-img" src="images/online.png" alt="">
                 </div>
                 <div class="tile-80">
-                    <h2>Record Encryption</h2>
-                    <p class="tile-text">We pride ourselves in our security, and as such have gone to great lengths to encrypt your medical information.</p>
+                    <h2>Lorem ipsum</h2>
+                    <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Morbi leo urna molestie at elementum eu.</p>
                 </div>
             </div>
             <div class="tile">
@@ -116,8 +134,10 @@
                     <img class="tile-img" src="images/doctor.png" alt="">
                 </div>
                 <div class="tile-80">
-                    <h2>Online Diagnosis Details</h2>
-                    <p class="tile-text">All information about a patient, from the details of a diagnosis to the specifics of a perscription, are updated to our databases in real time for your viewing.</p>
+                    <h2>Lorem ipsum</h2>
+                    <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Morbi leo urna molestie at elementum eu.</p>
                 </div>
             </div>
             <div class="tile">
@@ -125,8 +145,10 @@
                     <img class="tile-img" src="images/care.png" alt="">
                 </div>
                 <div class="tile-80">
-                    <h2>Schedule Procedures</h2>
-                    <p class="tile-text">Schedule medical procedures with your doctor all online. From major planned surgeries to vaccination shots.</p>
+                    <h2>Lorem ipsum</h2>
+                    <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Morbi leo urna molestie at elementum eu.</p>
                 </div>
             </div>
             <div class="tile">
@@ -134,49 +156,120 @@
                     <img class="tile-img" src="images/headphones.png" alt="">
                 </div>
                 <div class="tile-80">
-                    <h2>Workman's Compensation</h2>
-                    <p class="tile-text">Our personal have experence working with OSHA and employers in order to assess physical imparments caused during the job in order to get you the workman's compensation you deserve.</p>
+                    <h2>Lorem ipsum</h2>
+                    <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Morbi leo urna molestie at elementum eu..</p>
                 </div>
             </div>
         </div>
     </div>
     <div id="prices-ancor" class="container4">
         <div class="price-title">
-            <h1>Pricing Plans</h1>
-            <p>Pricing for most of our users is negotiated on a as needed basis; however, these are 2 common options to give you an idea of how the pricing looks.</p>
+            <h1>Lorem ipsum</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
         </div>
         <div class="panel pricing-table">
             <div class="pricing-plan">
                 <img src="images/icon1.png" alt="" class="pricing-img">
-                <h2 class="pricing-header">Individual</h2>
+                <h2 class="pricing-header">Lorem ipsum</h2>
                 <ul class="pricing-features">
-                    <li class="pricing-features-item">Yearly physicals</li>
-                    <li class="pricing-features-item">2-3 appointments with a doctor</li>
-                    <li class="pricing-features-item">Access to all our basic features</li>
-                    <li class="pricing-features-item">Basic emergancy care</li>
+                    <li class="pricing-features-item">Lorem ipsum</li>
+                    <li class="pricing-features-item">Lorem ipsum</li>
+                    <li class="pricing-features-item">Lorem ipsum</li>
+                    <li class="pricing-features-item">Lorem ipsum</li>
                 </ul>
-                <span class="pricing-price">$45</span>
+                <span class="pricing-price">$29</span>
                 <a href="#/" class="pricing-button">GET STARTED NOW</a>
             </div>
 
             <div class="pricing-plan">
                 <img src="images/icon2.png" alt="" class="pricing-img">
-                <h2 class="pricing-header">Family plan</h2>
+                <h2 class="pricing-header">Lorem ipsum</h2>
                 <ul class="pricing-features">
-                    <li class="pricing-features-item">Healthcare for 2 adults and 3 children</li>
-                    <li class="pricing-features-item">2 physicals a year for each child, 1 a year for the adults</li>
-                    <li class="pricing-features-item">appointments with doctors as needed</li>
-                    <li class="pricing-features-item">Less out-of-pocket expences for unforseen medical costs</li>
+                    <li class="pricing-features-item">Lorem ipsum</li>
+                    <li class="pricing-features-item">Lorem ipsum</li>
+                    <li class="pricing-features-item">Lorem ipsum</li>
+                    <li class="pricing-features-item">Lorem ipsum</li>
                 </ul>
-                <span class="pricing-price">$240</span>
+                <span class="pricing-price">$110</span>
                 <a href="#/" class="pricing-button is-featured">GET STARTED NOW</a>
             </div>
 
 
         </div>
     </div>
-    
+    <div id="ancor-doctors" class="container5 shadow">
+        <div class="title-doc">
+            <h1>Lorem ipsum</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, ipsum voluptas? Nihil
+                tempore obcaecati quasi eligendi impedit voluptates.</p>
+        </div>
 
+        <div class="group">
+            <div class="tile-doc">
+                <div class="tile-40">
+                    <img class="tile-img2" src="images/doc4.JPG" alt="">
+                </div>
+                <div class="tile-50">
+                    <h2>Devan Truong</h2>
+                    <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Morbi leo urna molestie at elementum eu.
+                    </p>
+                </div>
+            </div>
+            <div class="tile-doc">
+                <div class="tile-40">
+                    <img class="tile-img2" src="images/doc1.JPG" alt="">
+                </div>
+                <div class="tile-50">
+                    <h2>Conner Mayo</h2>
+                    <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Morbi leo urna molestie at elementum eu.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="group">
+            <div class="tile-doc">
+                <div class="tile-40">
+                    <img class="tile-img2" src="images/doc2.JPG" alt="">
+                </div>
+                <div class="tile-50">
+                    <h2>Adaline Carson</h2>
+                    <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Morbi leo urna molestie at elementum eu.
+                    </p>
+                </div>
+            </div>
+            <div class="tile-doc">
+                <div class="tile-40">
+                    <img class="tile-img2" src="images/doc3.JPG" alt="">
+                </div>
+                <div class="tile-50">
+                    <h2>Benjamin Franco</h2>
+                    <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Morbi leo urna molestie at elementum eu.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        window.addEventListener('scroll', (e) => {
+            const navbar = document.querySelector('.navbar.sticky');
+            if (window.pageYOffset > 0) {
+                navbar.classList.add("shadow");
+            } else {
+                navbar.classList.remove("shadow");
+            }
+        });
+    </script>
 </body>
 
 </html>
