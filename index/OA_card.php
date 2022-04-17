@@ -20,7 +20,7 @@
 <body>
 
 <div class="card">
-    <img src="" alt="Avatar" style="width:50%">
+    <img src="../index/images/admin.jpg" alt="Avatar" style="width:50%">
     <div class="container">
         <h4><b><?php foreach($result as $row){ echo $row["Ad_First"]. " " .$row["Ad_Last"];?></b></h4>
         <p><?php echo $row["Ad_Email"];?></p>

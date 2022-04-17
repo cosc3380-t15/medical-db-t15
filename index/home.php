@@ -27,12 +27,6 @@
             <a href="#ancor-doctors">
                 <h3 class="menu">Doctors</h3>
             </a>
-            <a href="/backend/test3.php">
-                <h3 class="menu">test</h3>
-            </a>
-            <!-- <a href="/backend/show_appointments.php">
-                <h3 class="menu">show appt - test</h3>
-            </a> -->
         </div>
         <div class="div-w2">
             <?php if($_SESSION['loggedin']) {
