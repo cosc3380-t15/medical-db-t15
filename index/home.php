@@ -177,7 +177,7 @@
                     <li class="pricing-features-item">Lorem ipsum</li>
                     <li class="pricing-features-item">Lorem ipsum</li>
                     <li class="pricing-features-item">Lorem ipsum</li>
-                    <li class="pricing-features-item">Lorem ipsum</li>
+                    <li class="pricing-features-item">Lorem ipsum</li> 
                 </ul>
                 <span class="pricing-price">$29</span>
                 <a href="#/" class="pricing-button">GET STARTED NOW</a>
