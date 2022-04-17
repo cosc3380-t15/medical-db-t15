@@ -1,3 +1,17 @@
+<?php
+session_start();
+if($_SESSION['loggedin']) {
+    switch($_SESSION['role']) {
+        case 'Patient':
+            header("Location: pat_profile.php"); break;
+        case 'Doc':
+            header("Location: doc_profile.php"); break;
+        case 'OA':
+            header("Location: OA_profile.php"); break;
+    }
+}
+?>
+
 <html
     class="js sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers"
     lang="zxx">
@@ -13,44 +27,32 @@
     <div class="login">
         <div class="box-login">
             <div class="half-box-login">
-                <div class="login-form">
+                <form action="../backend/validate_login.php" class="login-form" method="post">
+                    <?php
+                        if (isset($_SESSION['status'])) {
+                            echo "<h4 class = 'login-label' style='color:#aa1111;'>".$_SESSION['status']."</h4>";
+                            unset($_SESSION['status']);
+                        }
+                    ?>
                     <label for="text" class="login-label">Username:</label>
-                    <input type="text" class="login-input" id="username">
+                    <input type="text" class="login-input" id="username" name="email">
 
                     <label for="text" class="login-label">Password:</label>
-                    <input type="password" class="login-input" id="password">
+                    <input type="password" class="login-input" id="password" name="pass">
 
                     <div class="login-buttons">
                         <!-- <button class="login-button">Log In</button> -->
                         <button type="submit" class="login-button" onClick="auth(event)">Log In</button>
                         <a href="register.html"><button class="register-login">Register</button></a>
-
                     </div>
-                    <a href="home.html" class="home-button">Back</a>
-                </div>
+                    <a href="home.php" class="home-button">Back</a>
+                </form>
             </div>
             <div class="half-box-login2">
                 <img class="login-image" src="images/logo.png" alt="">
             </div>
         </div>
     </div>
-    <script>
-        function auth(event) {
-            event.preventDefault();
-
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-
-            if ((username === "admin" && password === "user") || (username === "drago" && password === "nonov")) {
-                window.location.replace("pat_profile.html");
-            } else if (username === "pat" && password === "pat") {
-                window.location.replace("pat_profile.html");
-            } else {
-                alert("Invalid information");
-                return;
-            }
-        }
-    </script>
 </body>
 
 </html>

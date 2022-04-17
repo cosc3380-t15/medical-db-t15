@@ -1,0 +1,56 @@
+
+:root {
+    --shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.199);
+    --lighter: #F5F1EB;
+    --light: #dad5cf;
+    --mid: #9FCDFC;
+    --main: #008CFF;
+    --accent: #4C72D2;
+    --dark: #2C4A98;
+    --darker: #203368;
+    --green: #138808;
+    --red: #CD5C5C;
+}
+
+table{
+    margin: 20px;
+    border-collapse: collapse;
+    width: 95%;
+    border: 1px solid var(--darker);
+}
+table th{
+    color: var(--dark);
+    padding: 10px;
+}
+table td{
+    padding: 10px;
+    color: var(--dark);
+    font-size: 1.2em;
+    text-align: center;
+
+}
+.btn{
+    background: var(--dark);
+    color: var(--lighter);
+    font-size: 1.2em;
+    padding: 5px 30px;
+    text-decoration: none;
+}
+.approve {
+    background: var(--green);
+}
+.deny {
+    background: var(--red);
+}
+.btn:hover{
+    background: var(--lighter);
+    color: var(--darker);
+}
+#back-button{
+    background-color: var(--main);
+    padding: 5px;
+    font-size: larger;
+}
+tr:nth-child(even) {
+    background-color: var(--lighter);
+}

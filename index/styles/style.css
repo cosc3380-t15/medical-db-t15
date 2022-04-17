@@ -110,13 +110,13 @@ html,body {
   margin-bottom: auto;
   display: flex;
   flex-flow: column;
-  width: auto;
-  max-width: 1300;
+  width: 120%;
   float: left;
 }
 .image1{
   margin-top: auto;
   margin-bottom: auto;
+  width: 100%;
 }
 p {
   display: flex;

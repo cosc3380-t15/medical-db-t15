@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -25,29 +27,26 @@
             <a href="#ancor-doctors">
                 <h3 class="menu">Doctors</h3>
             </a>
-            <a href="/backend/showpatient.php">
-                <h3 class="menu">show patients(test)</h3>
-            </a>
         </div>
         <div class="div-w2">
-            <a href="login.html"><button class="nav-login">Log In / Register</button></a>
-            <button class="nav-button">Contact Us</button>
+            <?php if($_SESSION['loggedin']) {
+                echo
+                '
+                <a href="../backend/logout.php"><button class="nav-login">Log Out</button></a>
+                <a href="login.php"><button class="nav-button">View Profile</button></a>';
+            } else {
+            echo
+            '<a href="login.php"><button class="nav-login">Log In / Register</button></a>';
+            }
+            ?>
         </div>
     </div>
     <div id="home" class="container shadow">
         <div class="text">
             <p>Lorem ipsum dolor sit amet</p>
-            <p class="h11">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p class="h2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua.
-                Morbi leo urna molestie at elementum eu. Quis vel eros donec ac. Ac orci phasellus egestas tellus. Leo
-                vel fringilla est ullamcorper
-                eget nulla facilisi etiam. Congue eu consequat ac felis donec et odio pellentesque diam. Aliquam purus
-                sit amet luctus venenatis lectus magna.
-                Dignissim diam quis enim lobortis scelerisque fermentum dui. Risus at ultrices mi tempus imperdiet nulla
-                malesuada pellentesque.
-                Sodales ut eu sem integer vitae justo eget magna. Amet nulla facilisi morbi tempus iaculis urna id.</p>
-            <a class="app-container" href="login.html">
+            <p class="h11">Take Telemedicine Service From Our World Class Doctors</p>
+            <p class="h2">We are the Number 1 telemdicine service in America. We have more than 100+ doctors on our platform as well as emergency services. We have multiple facilities across the US, and are renown for our aptitute in security.</p>
+            <a class="app-container" href="login.php">
                 <button class="app-button">Make Appointment</button>
             </a>
 
@@ -166,20 +165,20 @@
         </div>
         <div class="panel pricing-table">
             <div class="pricing-plan">
-                <img src="images/icon1.png" alt="" class="pricing-img">
+                <img src="images/price_chart.jpg" alt="" class="pricing-img">
                 <h2 class="pricing-header">Lorem ipsum</h2>
                 <ul class="pricing-features">
                     <li class="pricing-features-item">Lorem ipsum</li>
                     <li class="pricing-features-item">Lorem ipsum</li>
                     <li class="pricing-features-item">Lorem ipsum</li>
-                    <li class="pricing-features-item">Lorem ipsum</li>
+                    <li class="pricing-features-item">Lorem ipsum</li> 
                 </ul>
                 <span class="pricing-price">$29</span>
                 <a href="#/" class="pricing-button">GET STARTED NOW</a>
             </div>
 
             <div class="pricing-plan">
-                <img src="images/icon2.png" alt="" class="pricing-img">
+                <img src="images/price_chart2.jpg" alt="" class="pricing-img">
                 <h2 class="pricing-header">Lorem ipsum</h2>
                 <ul class="pricing-features">
                     <li class="pricing-features-item">Lorem ipsum</li>
