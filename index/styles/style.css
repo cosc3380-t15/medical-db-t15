@@ -351,6 +351,7 @@ p {
 .pricing-features {
   margin: 50px 0 25px;
   color: var(--main);
+  list-style-type: none;
 }
 .pricing-features-item {
   font-weight: 600;
