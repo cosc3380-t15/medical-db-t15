@@ -1,5 +1,7 @@
 <?php
 
+try {
+    
 $doc_id = $_POST['doc_id'];
 $pat_id = $_POST['pat_id'];
 $location = $_POST['location'];
@@ -19,12 +21,9 @@ $query1 = "INSERT INTO appointment (Pat_ID,Doc_ID,Off_ID,Appt_Specialization,App
 VALUES ('$pat_id','$doc_id','$location','$appt_spec','$date','$time')";
 
 
-
-
-if (!$link->query($query1)) {
-    printf("Error message: %s\n", $mysqli->error);
+} catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
-
 
 header('Location: ../index/pat_profile.php');                 
 
