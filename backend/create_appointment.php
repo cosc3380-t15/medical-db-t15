@@ -24,15 +24,10 @@ try{
     throw new customException($query1);
     }
 }
-catch(customException $e){
+catch(customException $e){ 
+    dd(...vars: 'Query Exception: ' . $e->getMessage());  
     
-    echo $e->errorMessage();
-} catch(QueryException $e){
-    echo $e->errorMessage();
-} catch(\Exception $e){
-    echo $e->errorMessage();
-}
-
+} 
 header('Location: ../index/pat_profile.php');                 
 
 
