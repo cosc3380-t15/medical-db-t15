@@ -26,8 +26,13 @@ try{
 }
 catch(customException $e){ 
     dd('Query Exception: ' . $e->getMessage());  
-    
-} 
+}
+catch(\Exception $e){
+    dd('Query Exception: ' . $e->getMessage()); 
+}
+catch(\Error $e){
+    dd('Query Exception: ' . $e->getMessage()); 
+}
 header('Location: ../index/pat_profile.php');                 
 
 
