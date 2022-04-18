@@ -165,7 +165,7 @@
         </div>
         <div class="panel pricing-table">
             <div class="pricing-plan">
-                <img src="images/price_chart.jpg" alt="" class="pricing-img">
+                <img src="images/price_chart3.jpg" alt="" class="pricing-img">
                 <h2 class="pricing-header">Lorem ipsum</h2>
                 <ul class="pricing-features">
                     <li class="pricing-features-item">Lorem ipsum</li>
@@ -183,7 +183,7 @@
                 <ul class="pricing-features">
                     <li class="pricing-features-item">Lorem ipsum</li>
                     <li class="pricing-features-item">Lorem ipsum</li>
-                    <li class="pricing-features-item">Lorem ipsum</li>
+                    <li class="pricing-features-item">Lorem ipsum</li>   
                     <li class="pricing-features-item">Lorem ipsum</li>
                 </ul>
                 <span class="pricing-price">$110</span>
