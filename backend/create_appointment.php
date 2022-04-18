@@ -21,7 +21,7 @@ VALUES ('$pat_id','$doc_id','$location','$appt_spec','$date','$time')";
 
 
 if ($link->query($query1) !== TRUE) {
-    printf("Error message: %s\n", mysqli_error($query1)); 
+    alert("Error message: %s\n", mysqli_error($query1)); 
 } mysqli_close($link);
 
 
