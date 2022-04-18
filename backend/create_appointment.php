@@ -29,7 +29,7 @@ catch(customException $e){
 }
 catch(\Exception $e){
     echo '<script language="javascript">';
-    echo 'alert($e->getMessage();)';
+    echo 'alert("$e->getMessage();")';
     echo '</script>';
     // echo 'Query Exception: ' . $e->getMessage(); 
 }
