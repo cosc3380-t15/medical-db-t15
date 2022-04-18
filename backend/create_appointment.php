@@ -33,7 +33,7 @@ catch(\Exception $e){
     echo '</script>';
     // echo 'Query Exception: ' . $e->getMessage(); 
 }
-
+sleep(100);
 header('Location: ../index/pat_profile.php');                 
 
 
