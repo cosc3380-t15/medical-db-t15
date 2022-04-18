@@ -22,7 +22,7 @@ VALUES ('$pat_id','$doc_id','$location','$appt_spec','$date','$time')";
 
 header('Location: ../index/pat_profile.php');   
 } catch (Exception $e) {
-    print 'Caught exception: ',  $e->getMessage(), "\n";
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
 
               
