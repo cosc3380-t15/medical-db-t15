@@ -25,7 +25,7 @@ try{
     }
 }
 catch(customException $e){ 
-    dd(...vars: 'Query Exception: ' . $e->getMessage());  
+    dd('Query Exception: ' . $e->getMessage());  
     
 } 
 header('Location: ../index/pat_profile.php');                 
