@@ -20,12 +20,12 @@ mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 $query1 = "INSERT INTO appointment (Pat_ID,Doc_ID,Off_ID,Appt_Specialization,Appt_Date,Appt_Time)
 VALUES ('$pat_id','$doc_id','$location','$appt_spec','$date','$time')";
 
-
+header('Location: ../index/pat_profile.php');   
 } catch (Exception $e) {
-    echo 'Caught exception: ',  $e->getMessage(), "\n";
+    print 'Caught exception: ',  $e->getMessage(), "\n";
 }
 
-header('Location: ../index/pat_profile.php');                 
+              
 
 
 ?>
