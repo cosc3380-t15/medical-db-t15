@@ -29,12 +29,12 @@ catch(customException $e){
 }
 catch(\Exception $e){
     echo '<script language="javascript">';
-    echo 'alert("There is an appointment at this time already, please slect different time or date.")';
+    echo 'alert("There is an appointment at this time already, please select different time or date.")';
     echo '</script>';
     // echo 'Query Exception: ' . $e->getMessage(); 
 }
 
-// header('Location: ../index/pat_profile.php');                 
+header('Location: ../index/pat_profile.php');                 
 
 
 ?>
