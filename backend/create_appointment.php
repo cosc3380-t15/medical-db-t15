@@ -18,12 +18,15 @@ mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 $query1 = "INSERT INTO appointment (Pat_ID,Doc_ID,Off_ID,Appt_Specialization,Appt_Date,Appt_Time)
 VALUES ('$pat_id','$doc_id','$location','$appt_spec','$date','$time')";
 
-
-
-if ($link->query($query1) !== TRUE) {
-    printf("Error message: %s\n", mysqli_error($query1)); 
-} mysqli_close($link);
-
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+try{
+   if (!$link->query($query1)) {
+    throw new customException($query1);
+    }
+}
+catch(customException $e){
+    echo $e->errorMessage();
+}
 
 header('Location: ../index/pat_profile.php');                 
 
