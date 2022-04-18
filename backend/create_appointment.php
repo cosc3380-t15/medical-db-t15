@@ -19,12 +19,11 @@ $query1 = "INSERT INTO appointment (Pat_ID,Doc_ID,Off_ID,Appt_Specialization,App
 VALUES ('$pat_id','$doc_id','$location','$appt_spec','$date','$time')";
 
 
-
-
-if (!$link->query($query1)) {
-    printf("Error message: %s\n", $mysqli->error);
+try{
+    $link->query($query1);
+}catch(Exception $e){
+    echo 'Message: ' .$e->getMessage();
 }
-
 
 header('Location: ../index/pat_profile.php');                 
 
