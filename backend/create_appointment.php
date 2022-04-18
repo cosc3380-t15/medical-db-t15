@@ -20,9 +20,10 @@ VALUES ('$pat_id','$doc_id','$location','$appt_spec','$date','$time')";
 
 
 try{
-    $link->query($query1);
-}catch(Exception $e){
-    echo 'Message: ' .$e->getMessage();
+   if (!$link->query($query1)) {
+    throw new customException($query1);
+}catch(customException $e){
+    echo $e->errorMessage();
 }
 
 header('Location: ../index/pat_profile.php');                 
