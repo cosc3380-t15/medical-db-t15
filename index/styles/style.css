@@ -265,6 +265,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: auto;
 }
 .tile {
   padding-bottom: 10px;
