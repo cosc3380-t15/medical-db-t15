@@ -27,6 +27,23 @@ body {
   text-align: center;
   color: var(--dark);
 }
+.toggle {
+  position: absolute;
+  top: 45px;
+  padding: 10px 20px;
+  font-weight: 800;
+  color: var(--lighter);
+  background-color: var(--main);
+  border: none;
+  border-radius: 2px;
+  outline: 1px solid var(--main);
+  transition: 200ms ease-in-out;
+}
+.clicked {
+  background-color: var(--lighter);
+  color: var(--main);
+  transition: 200ms ease-in-out;
+}
 .card_container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 50%);
