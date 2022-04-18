@@ -33,7 +33,7 @@ catch(\Exception $e){
 catch(\Error $e){
     echo 'Query Exception: ' . $e->getMessage(); 
 }
-header('Location: ../index/pat_profile.php');                 
+// header('Location: ../index/pat_profile.php');                 
 
 
 ?>
