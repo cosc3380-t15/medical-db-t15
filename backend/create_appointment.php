@@ -22,7 +22,9 @@ VALUES ('$pat_id','$doc_id','$location','$appt_spec','$date','$time')";
 try{
    if (!$link->query($query1)) {
     throw new customException($query1);
-}catch(customException $e){
+    }
+}
+catch(customException $e){
     echo $e->errorMessage();
 }
 
