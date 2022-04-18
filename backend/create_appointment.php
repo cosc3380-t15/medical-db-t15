@@ -24,11 +24,19 @@ try{
     throw new customException($query1);
     }
 }
-catch(customException $e){
-    echo $e->errorMessage();
+catch(customException $e){ 
+    echo 'Query Exception: ' . $e->getMessage();  
 }
-
-header('Location: ../index/pat_profile.php');                 
+catch(\Exception $e){
+    echo '<script language="javascript">';
+    echo 'alert("There is an appointment at this time already, please select different time or date.")';
+    echo 'window.location.replace = "/backend/show_appointments_patient.php";';
+    echo '</script>';
+    
+    // echo 'Query Exception: ' . $e->getMessage(); 
+}
+// sleep(10);
+// header('Location: ../index/pat_profile.php');                 
 
 
 ?>
