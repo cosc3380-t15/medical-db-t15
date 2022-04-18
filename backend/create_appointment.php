@@ -19,7 +19,9 @@ $query1 = "INSERT INTO appointment (Pat_ID,Doc_ID,Off_ID,Appt_Specialization,App
 VALUES ('$pat_id','$doc_id','$location','$appt_spec','$date','$time')";
 
 
-if (!$mysqli->query($query1)) {
+
+
+if (!$link->query($query1)) {
     printf("Error message: %s\n", $mysqli->error);
 }
 
