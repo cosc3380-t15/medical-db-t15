@@ -25,6 +25,11 @@ try{
     }
 }
 catch(customException $e){
+    
+    echo $e->errorMessage();
+} catch(QueryException $e){
+    echo $e->errorMessage();
+} catch(\Exception $e){
     echo $e->errorMessage();
 }
 
