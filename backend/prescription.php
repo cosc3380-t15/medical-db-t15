@@ -4,6 +4,10 @@ $dbhost = getenv("DBHOST");
 $dbuser = getenv("DBUSER");
 $dbpass = getenv("DBPASS"); 
 $dbname = getenv("DBNAME");
+$dbhost = "eyiece.mynetgear.com";
+$dbuser = "root";
+$dbpass = "93U#muq!fPzZ"; 
+$dbname = "medical_db";
 $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
                                                     
 mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
@@ -59,11 +63,12 @@ if (isset($_SESSION['status'])) {
                 <div class="input-group">
                     <div class="col-half">
                         <h4>Patient Weight</h4>
-                        <input type="text" placeholder="Weight" name="weight"  value="<?php echo $row['Pat_Weight']; ?>" readonly/>
+                        <input type="text" placeholder="Weight" name="weight"  value="<?php echo $row['Pat_Weight']." kg";?>" readonly/>
+                        <span class="input-unit">kg</span>
                     </div>
                     <div class="col-half">
                         <h4>Patient Height</h4>
-                        <input type="text" placeholder="Height" name="height"  value="<?php echo $row['Pat_Height']; ?>"readonly/>
+                        <input type="text" placeholder="Height" name="height"  value="<?php echo $row['Pat_Height']." cm"; ?>"readonly/>
                     </div>
                 </div>
             </div>
