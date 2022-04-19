@@ -36,5 +36,5 @@ catch(\Exception $e){
     // echo 'Query Exception: ' . $e->getMessage(); 
 }
 // sleep(10);
-header('Location: ../index/pat_profile.php');                 
+// header('Location: ../index/pat_profile.php');                 
 ?>
