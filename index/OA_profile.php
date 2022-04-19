@@ -58,6 +58,7 @@
         </a>
         <div class="profile-submenu">
             <a href ="#" class="profile-submenu-item" onclick="load_html('../backend/data_dashboard.php')">Data Dashboard</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('../backend/raw_data_dashboard.php')">Raw Data</a>
             <a href ="#" class="profile-submenu-item" onclick="load_html('OA_card.php')">View Profile</a>
             <a href ="#" class="profile-submenu-item" onclick="load_html()">Edit Profile</a>
         </div>

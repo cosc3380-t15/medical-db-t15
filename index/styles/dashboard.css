@@ -53,6 +53,8 @@ body {
 }
 .full { grid-template-columns: repeat(auto-fill, 100%); }
 .col-third { grid-template-columns: repeat(auto-fill, 33%); }
+.col-four { grid-template-columns: repeat(auto-fill, 25%); }
+.col-four h6{ margin: .25em; }
 .card {
   position: relative;
   float: left;
@@ -83,3 +85,5 @@ body {
   min-width: 32%;
 }
 .third:last-of-type { margin-right: 0; }
+.third h6{margin:.75em;}
+.col-third h6{margin:.75em;}
