@@ -30,7 +30,6 @@ catch(customException $e){
 catch(\Exception $e){
     echo '<script language="javascript">';
     echo 'alert("There is an appointment at this time already, please select different time or date.")';
-    echo 'window.location.href = "/backend/show_appointments_patient.php";';
     echo '</script>';
     
     // echo 'Query Exception: ' . $e->getMessage(); 
