@@ -140,7 +140,7 @@
         </div>
         <div class="panel pricing-table">
             <div class="pricing-plan">
-                <img src="images/icon1.png" alt="" class="pricing-img">
+                <img src="images/price_chart2.jpg" alt="" class="pricing-img">
                 <h2 class="pricing-header">Individual</h2>
                 <ul class="pricing-features">
                     <li class="pricing-features-item">Yearly physicals</li>
@@ -153,7 +153,7 @@
             </div>
 
             <div class="pricing-plan">
-                <img src="images/icon2.png" alt="" class="pricing-img">
+                <img src="images/price_chart3.jpg" alt="" class="pricing-img">
                 <h2 class="pricing-header">Family plan</h2>
                 <ul class="pricing-features">
                     <li class="pricing-features-item">Healthcare for 2 adults and 3 children</li>
