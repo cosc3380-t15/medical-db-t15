@@ -1,15 +1,10 @@
 <?php
 session_start();
-// if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "OA") { header("Location: ..index/login.php"); }
+if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "OA") { header("Location: ..index/login.php"); }
 $dbhost = getenv("DBHOST");
 $dbuser = getenv("DBUSER");
 $dbpass = getenv("DBPASS"); 
 $dbname = getenv("DBNAME");
-
-$dbhost = "eyiece.mynetgear.com";
-$dbuser = "root";
-$dbpass = "93U#muq!fPzZ"; 
-$dbname = "medical_db";
 
 $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
                                                     
@@ -374,7 +369,6 @@ foreach($appt_general_info as $appt_iterator) {
 <body>
     <div class="container">
         <h1>Data Dashboard</h1>
-        <button class="toggle">Toggle Charts</button>
         <div class="card_container col-third">
             <div class="card third">
                 <h4 class="label">Patient Race Distribution</h4>
@@ -414,13 +408,13 @@ foreach($appt_general_info as $appt_iterator) {
     </div>
 </body>
 
-<script>
+<!-- <script>
     var toggle_button = document.getElementsByClassName('toggle')
     toggle_button[0].addEventListener("click", function () {
         this.classList.toggle("clicked");
         
     });
 
-</script>
+</script> -->
 
 </html>
