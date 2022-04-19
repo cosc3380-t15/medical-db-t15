@@ -22,6 +22,8 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 try{
    if (!$link->query($query1)) {
     throw new customException($query1);
+    }else{
+    header('Location: ../index/pat_profile.php'); 
     }
 }
 catch(customException $e){ 
