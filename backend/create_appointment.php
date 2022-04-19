@@ -38,6 +38,4 @@ catch(\Exception $e){
 }
 // sleep(10);
 // header('Location: ../index/pat_profile.php');                 
-
-
 ?>
