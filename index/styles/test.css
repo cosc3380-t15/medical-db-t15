@@ -1,0 +1,38 @@
+.first-row {
+    font-size: large;
+    color:rgb(255, 255, 255);
+    font-weight:700;
+    background-color: blue;
+} 
+.other-row {
+    font-size: large;
+    color:rgb(255, 255, 255);
+    font-weight:normal;
+    /* background-color: rgb(0, 153, 255); */
+}
+.float-right{
+    float: right;
+}
+.container{
+    display: flex;
+    width: 100%;
+}
+.container-father{
+    display: flex;
+    margin: 0;
+}
+.container-child{
+    background-color: blue;
+    width: 25%;
+    color: white;
+    padding-left: 10px;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    padding-left: 10px;
+}
+p{
+    margin: 2px;
+}
