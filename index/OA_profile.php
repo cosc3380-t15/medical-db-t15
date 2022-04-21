@@ -60,6 +60,7 @@
             <a href ="#" class="profile-submenu-item" onclick="load_html('../backend/data_dashboard.php')">Data Dashboard</a>
             <a href ="#" class="profile-submenu-item" onclick="load_html('OA_card.php')">View Profile</a>
             <a href ="#" class="profile-submenu-item" onclick="load_html()">Edit Profile</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('../backend/Change_Password_admin.php')">Change Password</a>
         </div>
 
         <a class="profile-menu-item">
@@ -90,6 +91,15 @@
             <!-- SAME AS DONE IN DOCS PROFILE DOESNT WORK ANYMORE IDK WHY -->
             <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/approve_denyPrescription.php')">Pending presciption </a>
             <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+        </div>
+        <a class="profile-menu-item">
+            <span>Add</span>
+            <span class="profile-arrow">></span>
+        </a>
+        <div class="profile-submenu">
+            <!-- Adding this cause i bored-->
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/add_doctor.php')"> Doctor </a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/add_patient.php')"> Patient</a>
         </div>
     </div>
     
