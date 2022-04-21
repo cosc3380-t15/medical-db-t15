@@ -1,5 +1,8 @@
 <?php                                                    # code...
     session_start();
+    if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "Patient") {
+        header("Location: login.php");
+    }
     $dbhost = getenv("DBHOST");
     $dbuser = getenv("DBUSER");
     $dbpass = getenv("DBPASS"); 
@@ -35,4 +38,8 @@
         } ?>
     </div>
 </div>
+<<<<<<< HEAD
 </body>
+=======
+</body>
+>>>>>>> parent of 063dd79 (Only has the User authentication backend files)

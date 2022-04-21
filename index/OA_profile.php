@@ -58,9 +58,12 @@
         </a>
         <div class="profile-submenu">
             <a href ="#" class="profile-submenu-item" onclick="load_html('../backend/data_dashboard.php')">Data Dashboard</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('../backend/raw_data_dashboard.php')">Raw Data</a>
             <a href ="#" class="profile-submenu-item" onclick="load_html('OA_card.php')">View Profile</a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Edit Profile</a>
+
+            <a href ="#" class="profile-submenu-item" onclick="load_html('../backend/edit_admin_profile.php')">Edit Profile</a>
             <a href ="#" class="profile-submenu-item" onclick="load_html('../backend/Change_Password_admin.php')">Change Password</a>
+          
         </div>
 
         <a class="profile-menu-item">
@@ -72,6 +75,7 @@
         <div class="profile-submenu">
             <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_patient.php')">Patients</a>
             <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/DoctorDataReport.php')">Doctors</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/insert_sample_patients.php')">New Random Data</a>
         </div>
 
         <a class="profile-menu-item">
@@ -90,7 +94,7 @@
         <div class="profile-submenu">
             <!-- SAME AS DONE IN DOCS PROFILE DOESNT WORK ANYMORE IDK WHY -->
             <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/approve_denyPrescription.php')">Pending presciption </a>
-            <a href ="#" class="profile-submenu-item" onclick="load_html()">Lorem Ipsum</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_prescriptions_admin.php')">All Prescriptions</a>
         </div>
         <a class="profile-menu-item">
             <span>Add</span>

@@ -1,5 +1,8 @@
 <?php
 session_start();
+if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "Patient") {
+    header("Location: login.php");
+}
 $dbhost = getenv("DBHOST");
 $dbuser = getenv("DBUSER");
 $dbpass = getenv("DBPASS"); 
@@ -58,7 +61,7 @@ if (isset($_SESSION['status'])) {
                     <select class="float-right" name="location" id="allergies" >
                         <option value="Houston">Houston</option>
                         <option value="Sugar Land">Sugar Land</option>
-                        <option value="Caty">Caty</option>
+                        <option value="Katy">Katy</option>
                         <option value="The Woodlands">The Woodlands</option>
                     </select>
                 </div>

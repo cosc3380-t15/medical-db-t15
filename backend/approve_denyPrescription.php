@@ -5,7 +5,10 @@
 
 
 <?php   # code...
-   
+    session_start();
+    if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "OA") {
+    header("Location: login.php");
+}
    // These are just the usual establish connection
     $dbhost = getenv("DBHOST");
     $dbuser = getenv("DBUSER");

@@ -1,5 +1,11 @@
 <?php                                                    # code...
     session_start();
+<<<<<<< HEAD
+    if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "OA") {
+        header("Location: login.php");
+    }
+=======
+>>>>>>> parent of 063dd79 (Only has the User authentication backend files)
     $dbhost = getenv("DBHOST");
     $dbuser = getenv("DBUSER");
     $dbpass = getenv("DBPASS"); 
@@ -20,7 +26,7 @@
 <body>
 
 <div class="card">
-    <img src="" alt="Avatar" style="width:50%">
+    <img src="../index/images/admin.png" alt="Avatar" style="width:50%">
     <div class="container">
         <h4><b><?php foreach($result as $row){ echo $row["Ad_First"]. " " .$row["Ad_Last"];?></b></h4>
         <p><?php echo $row["Ad_Email"];?></p>
@@ -33,4 +39,8 @@
         } ?>
     </div>
 </div>
+<<<<<<< HEAD
 </body>
+=======
+</body>
+>>>>>>> parent of 063dd79 (Only has the User authentication backend files)

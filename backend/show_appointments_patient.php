@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "Patient") {
+        header("Location: login.php");
+    }
     $dbhost = getenv("DBHOST");
     $dbuser = getenv("DBUSER");
     $dbpass = getenv("DBPASS"); 
@@ -19,7 +22,7 @@
         }  
     }
 
-    $select="SELECT a.Pat_ID, a.Doc_ID, a.Off_ID, a.Appt_Time, a.Appt_Specialization, p.Pat_First, p.Pat_Last, a.Appt_ID
+    $select="SELECT a.Pat_ID, a.Doc_ID, a.Off_ID, a.Appt_Time, a.Appt_Specialization, p.Pat_First, p.Pat_Last, a.Appt_Date
     FROM appointment AS a, patient AS p
     WHERE a.Pat_ID = '".$_SESSION['id']."' AND p.Pat_ID = a.Pat_ID";
     $query=mysqli_query($link,$select);
@@ -45,7 +48,7 @@
         <th>Appointment Time</th>
         <th>Appointment Specialization</th>
         <th>Doctor ID</th>
-        <th>Appointment ID</th>
+        <th>Date</th>
         <th>Opperation</th>
 
     </tr>
@@ -62,7 +65,7 @@
                         <td>".$result['Appt_Time']."</td>
                         <td>".$result['Appt_Specialization']."</td>
                         <td>".$result['Doc_ID']."</td>
-                        <td>".$result['Appt_ID']."</td>
+                        <td>".$result['Appt_Date']."</td>
                         <td>
                             <a href='/backend/show_appointments_patient.php?Appt_ID=".$result['Appt_ID']."'class='btn'>Cancel</a>
                         </td>

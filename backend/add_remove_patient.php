@@ -7,6 +7,10 @@ THERE IS A YOUTUBE VID BUT IT USES JAVA IDK IF WANA DO THAT YET
 
 
 <?php 
+session_start();
+if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "OA") {
+    header("Location: login.php");
+}
     // establishes connection nothing else
     $dbhost = getenv("DBHOST");
     $dbuser = getenv("DBUSER");

@@ -29,7 +29,9 @@ VALUES ('Neurologist', 'Zuzanna  ', 'P', 'Phan', 'phan@clinico.org', '3331112334
 INSERT INTO `medical_db`.`doctor` (`Doc_Spec`, `Doc_First`, `Doc_M_Init`, `Doc_Last`, `Doc_Email`, `Doc_Phone`, `Doc_Gender`, `Doc_DOB`, `Doc_Street_Addr`, `Doc_City_Addr`, `Doc_State_Addr`, `Doc_Zip_Addr`, `Doc_Password`) 
 VALUES ('Oncologist', 'Safwan', 'G', 'Lane', 'lane@clinico.org', '6667778787', 'Male', '1980-07-02', '2345 spring plaza dr', 'spring', 'texas', '77546', 'lane1234');
 INSERT INTO `medical_db`.`doctor` (`Doc_Spec`, `Doc_First`, `Doc_M_Init`, `Doc_Last`, `Doc_Email`, `Doc_Phone`, `Doc_Gender`, `Doc_DOB`, `Doc_Street_Addr`, `Doc_City_Addr`, `Doc_State_Addr`, `Doc_Zip_Addr`, `Doc_Password`) 
-VALUES ('Radiologists', 'Clarissa', 'H', 'Barrera', 'barrera@clinico.org', '6657768798', 'MaFemalele', '1986-12-12', '5632 pine road', 'houston', 'texas', '77582', 'barrera1234');
+VALUES ('Radiologists', 'Clarissa', 'H', 'Barrera', 'barrera@clinico.org', '6657768798', 'Female', '1986-12-12', '5632 pine road', 'houston', 'texas', '77582', 'barrera1234');
+INSERT INTO `medical_db`.`doctor` (`Doc_Spec`, `Doc_First`, `Doc_M_Init`, `Doc_Last`, `Doc_Email`, `Doc_Phone`, `Doc_Gender`, `Doc_DOB`, `Doc_Street_Addr`, `Doc_City_Addr`, `Doc_State_Addr`, `Doc_Zip_Addr`, `Doc_Password`) 
+VALUES ('Radiologists', 'John', 'H', 'Smith', 'smith@clinico.org', '2347654589', 'Male', '1986-03-07', '3456 pine road', 'houston', 'texas', '77582', 'smith1234');
 
 
 

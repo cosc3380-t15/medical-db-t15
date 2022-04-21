@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "OA") {
+        header("Location: login.php");
+    }
     $dbhost = getenv("DBHOST");
     $dbuser = getenv("DBUSER");
     $dbpass = getenv("DBPASS"); 
@@ -21,7 +24,8 @@
 
     $select="SELECT a.Pat_ID, a.Doc_ID, a.Off_ID, a.Appt_Time, a.Appt_Specialization, p.Pat_First, p.Pat_Last, a.Appt_ID
     FROM appointment AS a, patient AS p
-    WHERE Pat_ID = a.Pat_ID";
+    -- group by a.Appt_ID having count(*) > 1
+    WHERE a.Pat_ID = p.Pat_ID";
     $query=mysqli_query($link,$select);
 ?>    
 <!DOCTYPE html>

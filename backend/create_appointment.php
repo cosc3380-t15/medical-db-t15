@@ -18,13 +18,24 @@ mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 $query1 = "INSERT INTO appointment (Pat_ID,Doc_ID,Off_ID,Appt_Specialization,Appt_Date,Appt_Time)
 VALUES ('$pat_id','$doc_id','$location','$appt_spec','$date','$time')";
 
-
-if ($link->query($query1) !== TRUE) {
-    mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
-    printf("Error message: %s\n", $mysqli->error);
-} mysqli_close($link);
-
-header('Location: ../index/pat_profile.php');                 
-
-
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+try{
+   if (!$link->query($query1)) {
+    throw new customException($query1);
+    }else{
+    header('Location: ../index/pat_profile.php'); 
+    }
+}
+catch(customException $e){ 
+    echo 'Query Exception: ' . $e->getMessage();  
+}
+catch(\Exception $e){
+    echo '<script language="javascript">';
+    echo 'alert("There is an appointment at this time already, please select different time or date.")';
+    echo '</script>';
+    
+    // echo 'Query Exception: ' . $e->getMessage(); 
+}
+// sleep(10);
+// header('Location: ../index/pat_profile.php');                 
 ?>

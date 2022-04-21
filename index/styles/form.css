@@ -233,6 +233,7 @@ select option {
     color: var(--lighter);
 }
 .button2{
+  color:  var(--main);
   margin-top: 5px;
 }
 .button2:hover{
@@ -241,4 +242,7 @@ select option {
 }
 #pat-id{
   display: none;
+}
+#width{
+ width: 100%;
 }

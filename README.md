@@ -1,7 +1,7 @@
 # medical-db-t15
 
-Webapp location: https://medical-db-team15.herokuapp.com/
+Webapp location: https://medical-db-team15.herokuapp.com/index/home.html
 
 Any changes to 'main' will automatically redeploy the webapp.
 
-Deployed using Heroku, MySQL hosted on PC, and Github with html/css frontend and php backend (no frameworks).
+Deployed using Heroku, MySQL hosted locally, and Github with html/css frontend and php backend (no frameworks).
