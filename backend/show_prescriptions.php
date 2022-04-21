@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "Doc") {
+        header("Location: login.php");
+    }
     $dbhost = getenv("DBHOST");
     $dbuser = getenv("DBUSER");
     $dbpass = getenv("DBPASS"); 

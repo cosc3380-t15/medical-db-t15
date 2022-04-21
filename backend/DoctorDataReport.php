@@ -3,6 +3,7 @@
     REMOVING DATE OF BIRTH SEARCH CURRENTLY CAUSE IDK HOW TO GET THE DATE VALUE OR PRESET ONE
 --> 
 <?php 
+
     $dbhost = getenv("DBHOST");
     $dbuser = getenv("DBUSER");
     $dbpass = getenv("DBPASS"); 
