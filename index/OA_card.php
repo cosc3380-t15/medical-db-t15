@@ -1,5 +1,8 @@
 <?php                                                    # code...
     session_start();
+    if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "OA") {
+        header("Location: login.php");
+    }
     $dbhost = getenv("DBHOST");
     $dbuser = getenv("DBUSER");
     $dbpass = getenv("DBPASS"); 
