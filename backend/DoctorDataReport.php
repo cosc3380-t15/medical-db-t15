@@ -1,6 +1,8 @@
 <!-- 
     SO THIS FILE IS MAKING A SEARCH FIELD ON THE TOP AND THEN HAS A TABLE LIKE BEFORE ON THE BOTTOM.
     REMOVING DATE OF BIRTH SEARCH CURRENTLY CAUSE IDK HOW TO GET THE DATE VALUE OR PRESET ONE
+
+    FIXED QUERY FOR doctor, also fixed the auto fill i beileve
 --> 
 <?php 
 
@@ -12,8 +14,8 @@
     $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");                                                   
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
      
-    if (isset($_GET['Per_ID'])) {  
-        $Doc_ID = $_GET['Per_ID'];  
+    if (isset($_GET['Doc_ID'])) {  
+        $Doc_ID = $_GET['Doc_ID'];  
         $query = "DELETE FROM `doctor` WHERE Doc_ID = '$Doc_ID'";  
         $run = mysqli_query($link,$query);  
         if ($run) {  
@@ -40,7 +42,7 @@
         if ($ID != '' ||$Spec != '' ||$FName != '' ||$Location != '' ||$Lname != '' ||$Gender != '' )
         {
             // something changed so do this
-            $select = "SELECT * FROM doctor WHERE Doc_ID = '$ID' or Doc_Spec LIKE '$Spec' or Doc_Gender = '$Gender' or Doc_First LIKE '$FName' or Doc_Location LIKE '$Location' or Doc_Last LIKE '$Lname'  ";
+            $select = "SELECT * FROM doctor WHERE Doc_ID = '$ID' and Doc_Spec = '$Spec' and Doc_Gender = '$Gender' and Doc_First like '%$FName%' and Doc_Location LIKE '%$Location%' and Doc_Last LIKE '%$Lname%'  ";
         }else{
             // if nothing set and pressed submit
             $select = "SELECT * FROM doctor";
@@ -233,8 +235,9 @@
                                 <td> ".$result['Doc_Phone']." </td>
                                 <td> ".$result['Doc_Gender']." </td>
                                 <td>
-                                <a href='/backend/DoctorDataReport.php?Per_ID=".$result['Doc_ID']." 'class='deny btn'>DELETE</a>
-                                <a href='/backend/edit_doctor.php?Per_ID=".$result['Doc_ID']." 'class='btn'>Edit</a>   
+                                <a href='/backend/edit_doctor.php?Doc_ID=".$result['Doc_ID']." 'class='btn'>Edit</a>   
+                                <a href='/backend/DoctorDataReport.php?Doc_ID=".$result['Doc_ID']." 'class='deny btn'>DELETE</a>
+
                                 </td>
                     
                             </tr>

@@ -39,7 +39,7 @@ if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "OA") {
         if ($ID != '' ||$FName != '' ||$Lname != '' ||$Gender != '' )
         {
             // something changed so do this
-            $select = "SELECT * FROM patient WHERE Pat_ID = '$ID' or Pat_Gender = '$Gender' or Pat_First LIKE '$FName' or  Pat_Last LIKE '$Lname'  ";
+            $select = "SELECT * FROM patient WHERE Pat_ID = '$ID' and Pat_Gender = '$Gender' and Pat_First LIKE '%$FName%' and  Pat_Last LIKE '%$Lname%'  ";
         }else{
             // if nothing set and pressed submit
             $select = "SELECT * FROM patient";
