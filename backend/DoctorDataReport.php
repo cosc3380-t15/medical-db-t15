@@ -11,8 +11,8 @@
     $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");                                                   
     mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
      
-    if (isset($_GET['Per_ID'])) {  
-        $Doc_ID = $_GET['Per_ID'];  
+    if (isset($_GET['Doc_ID'])) {  
+        $Doc_ID = $_GET['Doc_ID'];  
         $query = "DELETE FROM `doctor` WHERE Doc_ID = '$Doc_ID'";  
         $run = mysqli_query($link,$query);  
         if ($run) {  
@@ -36,7 +36,7 @@
         $DOB = "";
         $Mname = "";
 
-        if ($ID != '' ||$Spec != '' ||$FName != '' ||$Location != '' ||$Lname != '' ||$Gender != '' )
+        if ($ID != '$' ||$Spec != '$' ||$FName != '$' ||$Location != '$' ||$Lname != '$' ||$Gender != '$' )
         {
             // something changed so do this
             $select = "SELECT * FROM doctor WHERE Doc_ID = '$ID' or Doc_Spec LIKE '$Spec' or Doc_Gender = '$Gender' or Doc_First LIKE '$FName' or Doc_Location LIKE '$Location' or Doc_Last LIKE '$Lname'  ";
@@ -97,7 +97,7 @@
         <div class="row">
             <h4>Doctor ID</h4>
                 <div class="input-group input-group-icon">
-                    <input type = "text" placeholder="0000000" name="ID" value = ""/>
+                    <input type = "text" placeholder="0000000" name="ID" value = "$"/>
                     <div class="input-icon"></div>
                 </div>
                 <div class="input-group">
@@ -105,7 +105,7 @@
                         <h4>Specialty</h4>
                         <div class="input-group input-group-icon">
                         <select id="width" name="Spec" >
-                            <option value="" selected> None</option>
+                            <option value="$" selected> None</option>
         
                         
                             <?php
@@ -120,7 +120,7 @@
                         <h4>location</h4>
                         <div class="input-group input-group-icon">
                         <select id="width" name="Location" >
-                            <option value="" selected> None</option>
+                            <option value="$" selected> None</option>
         
                         
                             <?php
@@ -137,12 +137,12 @@
 
             <h4>First Name</h4>
             <div class="input-group input-group-icon">
-                <input type = "text" placeholder="First Name" name="Fname" value = ""/>
+                <input type = "text" placeholder="First Name" name="Fname" value = "$"/>
                 <div class="input-icon"></div>
             </div>
             <h4>Last Name</h4>
                 <div class="input-group input-group-icon">
-                    <input type = "text" placeholder="Last Name" name="Lname" value = ""/>
+                    <input type = "text" placeholder="Last Name" name="Lname" value = "$"/>
                     <div class="input-icon"></div>
                 </div>
 
@@ -161,7 +161,7 @@
                         <label  id="width" class="float-right" for="gender-female">Female</label>
                     </div>
                     <div class="col-third">
-                        <input id="either" type ="radio" name="gender" value ="" checked = "checked">
+                        <input id="either" type ="radio" name="gender" value ="$" checked = "checked">
                         <label id="width" class="float-right" for="either">Either</label> 
                     </div>
                     
@@ -232,8 +232,8 @@
                                 <td> ".$result['Doc_Phone']." </td>
                                 <td> ".$result['Doc_Gender']." </td>
                                 <td>
-                                <a href='/backend/DoctorDataReport.php?Per_ID=".$result['Doc_ID']." 'class='deny btn'>DELETE</a>
-                                <a href='/backend/edit_doctor.php?Per_ID=".$result['Doc_ID']." 'class='btn'>Edit</a>   
+                                <a href='/backend/DoctorDataReport.php?Doc_ID=".$result['Doc_ID']." 'class='deny btn'>DELETE</a>
+                                <a href='/backend/edit_doctor.php?Doc_ID=".$result['Doc_ID']." 'class='btn'>Edit</a>   
                                 </td>
                     
                             </tr>
