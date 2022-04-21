@@ -1,0 +1,47 @@
+:root {
+    --shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.199);
+    --lighter: #F5F1EB;
+    --light: #dad5cf;
+    --mid: #9FCDFC;
+    --main: #008CFF;
+    --accent: #4C72D2;
+    --dark: #2C4A98;
+    --darker: #203368;
+    --nav-width: 225px;
+}
+
+.profile-edit {
+    box-sizing: border-box;
+    
+}
+
+
+input[type=text] {
+    padding: 10px;
+    margin: 5px 5vh;
+    box-shadow: 0 0 15px 4px var(--light);
+    border-radius: 10px;
+    border: 0;
+
+}
+
+input[type=radio]{
+    margin: 5px 5vh;
+    font-size: 18px;;
+}
+
+
+input[type=submit]{
+    appearance:none;
+    -webkit-appearance:none;
+
+    /* usual styles */
+    padding:10px;
+    border:none;
+    background-color:#3F51B5;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    width:100%;
+    margin: 100px;
+}

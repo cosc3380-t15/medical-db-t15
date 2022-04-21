@@ -1,0 +1,89 @@
+body {
+  padding: 0;
+  background-color: var(--light);
+  font-family: sans-serif;
+}
+:root {
+  --light-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  --shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+  --lighter: #F5F1EB;
+  --light: #dad5cf;
+  --mid: #9FCDFC;
+  --main: #008CFF;
+  --accent: #4C72D2;
+  --dark: #2C4A98;
+  --darker: #203368;
+}
+/************************* main styling *************************/
+.container {
+  max-width: 60em;
+  padding: 1em 3em 2em 3em;
+  margin: 0em auto;
+  background-color: var(--lighter);
+  border-radius: .5em;
+  box-shadow: var(--shadow);
+}
+.container h1 {
+  text-align: center;
+  color: var(--dark);
+}
+.toggle {
+  position: absolute;
+  top: 45px;
+  padding: 10px 20px;
+  font-weight: 800;
+  color: var(--lighter);
+  background-color: var(--main);
+  border: none;
+  border-radius: 2px;
+  outline: 1px solid var(--main);
+  transition: 200ms ease-in-out;
+}
+.clicked {
+  background-color: var(--lighter);
+  color: var(--main);
+  transition: 200ms ease-in-out;
+}
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 50%);
+  background-color: unset;
+  box-shadow: unset;
+  justify-content: center;
+}
+.full { grid-template-columns: repeat(auto-fill, 100%); }
+.col-third { grid-template-columns: repeat(auto-fill, 33%); }
+.col-four { grid-template-columns: repeat(auto-fill, 25%); }
+.col-four h6{ margin: .25em; }
+.card {
+  position: relative;
+  float: left;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--light);
+  box-shadow: var(--light-shadow);
+  border-radius: .25em;
+  height: fit-content;
+  margin: 5px 0;
+  transition: box-shadow 100ms ease-in-out;
+  min-width: 100%;
+}
+.card h4 {
+  color: var(--dark);
+  user-select: none;
+}
+.card:hover {
+  box-shadow: var(--shadow);
+}
+.half {
+  margin-right: 2%;
+  min-width: 49%;
+}
+.half:nth-child(even) { margin-right: 0; }
+.third {
+  margin-right: 2%;
+  min-width: 32%;
+}
+.third:last-of-type { margin-right: 0; }
+.third h6{margin:.75em;}
+.col-third h6{margin:.75em;}
