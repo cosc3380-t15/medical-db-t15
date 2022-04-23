@@ -68,6 +68,15 @@ $row2= mysqli_fetch_array($result2);
             </div>
             <input class="button" type="submit" name="update_perscription_data">
         </form>
+        <div>
+            <form>
+            <div class="row input-group">
+                <input class="button2" type="button" value="BACK" onclick="history.back()">            
+                <input class="button2" type="button" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
+                <input class="button2" type="button" onclick="location.href='/index/home.php?'" value="Home" />
+            </div>
+            </form>
+        </div>
     </div>
 <?php
 if (isset($_SESSION['status'])) {

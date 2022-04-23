@@ -31,15 +31,15 @@
                     <div class="input-icon"><span style="color:red;">*</span></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="password" name="CurrentPass"  id = "pw" required/>
+                    <input type="password" placeholder="password" name="CurrentPass"  id = "pw" required/>
                     <div class="input-icon"><span style="color:red;">*</span></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="New Password" name="NewPass" id = "npw"  required />
+                    <input type="password" placeholder="New Password" name="NewPass" id = "npw"  required />
                     <div class="input-icon"><span style="color:red;">*</span></div>
                 </div>
                 <div class="input-group input-group-icon">
-                    <input type="text" placeholder="New Password" name="NewPassRe" id = "npwr"  required/>
+                    <input type="password" placeholder="New Password" name="NewPassRe" id = "npwr"  required/>
                     <div class="input-icon"><span style="color:red;">*</span></div>
                 </div>
             </div>
