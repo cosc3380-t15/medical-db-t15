@@ -60,6 +60,7 @@
         <div class="profile-submenu">
             <a href ="#" class="profile-submenu-item" onclick="load_html('pat_card.php')">View Profile</a>
             <a href ="#" onclick="load_html('/backend/edit_patient_profile.php')" class="profile-submenu-item" >Edit Profile</a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('../backend/Change_Password_patient.php')">Change Password</a>
         </div>
 
         <a class="profile-menu-item">
