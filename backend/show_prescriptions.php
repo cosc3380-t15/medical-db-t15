@@ -40,6 +40,7 @@
         <th>Patient ID</th>
         <th>Prescription</th>
         <th>Status</th>
+        <th>Date</th>
 
     </tr>
     <?php 
@@ -52,6 +53,7 @@
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Per_Status']."</td>
+                        <td>".$result['Per_Date']."<td>
                         <td>
                             <a href='/backend/prescription_edit.php?Per_ID=".$result['Per_ID']."'class='btn'>Edit</a>
                             <a href='/backend/show_prescriptions.php?Per_ID=".$result['Per_ID']."'class='btn'>Delete</a>
