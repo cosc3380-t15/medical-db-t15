@@ -72,6 +72,16 @@ if (isset($_SESSION['status'])) {
                     </div>
                 </div>
             </div>
+            </div>
+            <div class="input-group input-group-icon">
+                <div class="col-half">
+                    <h4 style="float: left;">Date &#160<h4 style="color: red;">*</h4></h4>
+                </div>        
+                <div class="input-group input-group-icon col-half">
+                    <input type="date" name="date" required />
+                    <div class="input-icon"><span style="color:red;">*</span></div>
+                </div>
+            </div>
             <div class="row">
                 <div class="input-group">
                     <h4 class="col-half">Prescribe:</h4>
