@@ -32,10 +32,10 @@
         $Mname = "";
         
 
-        if ($ID != '' ||$FName != '' ||$Lname != '' ||$Gender != '' )
+        if ($ID != '$' ||$FName != '$' ||$Lname != '$' ||$Gender != '$' )
         {
             // something changed so do this
-            $select = "SELECT * FROM patient WHERE Pat_ID = '$ID' or Pat_Gender = '$Gender' or Pat_First LIKE '$FName' or  Pat_Last LIKE '$Lname'  ";
+            $select = "SELECT * FROM patient WHERE Pat_ID = '$ID' or Pat_Gender = '$Gender' or Pat_First LIKE '%$FName%' or  Pat_Last LIKE '%$Lname%'  ";
         }else{
             // if nothing set and pressed submit
             $select = "SELECT * FROM patient";
@@ -61,17 +61,17 @@
         <div class="row">
             <h4>Patient ID</h4>
                 <div class="input-group input-group-icon">
-                    <input type = "text" placeholder="0000000" name="ID" value = ""/>
+                    <input type = "text" placeholder="0000000" name="ID" value = "$"/>
                     <div class="input-icon"></div>
                 </div>
             <h4>First Name</h4>
                 <div class="input-group input-group-icon">
-                    <input type = "text" placeholder="First Name" name="Fname" value = ""/>
+                    <input type = "text" placeholder="First Name" name="Fname" value = "$"/>
                     <div class="input-icon"></div>
                 </div>
             <h4>Last Name</h4>
                 <div class="input-group input-group-icon">
-                    <input type = "text" placeholder="Last Name" name="Lname" value = ""/>
+                    <input type = "text" placeholder="Last Name" name="Lname" value = "$"/>
                     <div class="input-icon"></div>
                 </div>
         </div>
@@ -87,7 +87,7 @@
                         <label id="width" class="float-right" for="gender-female">Female</label>
                    </div>
                     <div class="col-third">
-                        <input  id="either" type ="radio" name="gender" value ="" checked = "checked">
+                        <input  id="either" type ="radio" name="gender" value ="$" checked = "checked">
                         <label id="width" class="float-right" for="either">Either</label> 
                     </div>
                 </div>

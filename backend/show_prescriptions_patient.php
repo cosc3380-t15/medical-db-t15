@@ -31,6 +31,7 @@
         <th>Patient ID</th>
         <th>Prescription</th>
         <th>Status</th>
+        <th>Date</th>
     </tr>
     <?php 
         $num=mysqli_num_rows($query);
@@ -42,6 +43,7 @@
                         <td>".$result['Pat_ID']."</td>
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Per_Status']."</td>
+                        <td>".$result['Per_Date']."<td>
             
                     </tr>
                 

@@ -33,6 +33,7 @@
         <th>Description </th>
         <th>Patient Allergy </th>
         <th>Status </th>
+        <th>Date</th>
     </tr>
     <?php 
         $num=mysqli_num_rows($query);
@@ -47,7 +48,8 @@
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Pat_Allergy']."</td>
                         <td>".$result['Per_Status']."</td>
-                       
+                        <td>".$result['Per_Date']."<td>
+                        
                     </tr>
                 
                 ";
