@@ -95,6 +95,15 @@
             <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/approve_denyPrescription.php')">Pending presciption </a>
             <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/show_prescriptions_admin.php')">All Prescriptions</a>
         </div>
+        <a class="profile-menu-item">
+            <span>Add</span>
+            <span class="profile-arrow">></span>
+        </a>
+        <div class="profile-submenu">
+            <!-- Adding this cause i bored-->
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/add_doctor.php')"> Doctor </a>
+            <a href ="#" class="profile-submenu-item" onclick="load_html('/backend/add_patient.php')"> Patient</a>
+        </div>
     </div>
     
  
