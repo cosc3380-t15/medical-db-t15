@@ -92,7 +92,7 @@
                         <td>".$result['Per_ID']."</td>
                         <td>".$result['Doc_ID']."</td>
                         <td>".$result['Pat_ID']."</td>
-                        <td>".$result['Pat_Date']."</td>
+                        <td>".$result['Per_Date']."</td>
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
