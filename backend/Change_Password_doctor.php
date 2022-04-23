@@ -25,7 +25,7 @@
 <div class="container-form11">
         <form action="/backend/Change_Password.php" method="post" onsubmit="return Validate();">
             <div class="row">
-                <h4>Update Doctor Information</h4>
+                <h4>Update Doctor Password</h4>
                 <div class="input-group input-group-icon">
                     <input type="text" placeholder="Doctor ID" name="ID" id="pat-i" value="<?php echo $_SESSION["id"]; ?>" required readonly/>
                     <div class="input-icon"><span style="color:red;">*</span></div>
@@ -48,13 +48,13 @@
     </div>
     <script>
         function Validate() {
-            var actual =  "<?php echo"$pass"?>";
+            actual = '<?php echo $pass ;?>';
             var pw = document.getElementById("pw").value;
             var npw = document.getElementById("npw").value;
             var npwr = document.getElementById("npwr").value;
 
             if(actual== pw) {
-                if(npw == npwe) {
+                if(npw == npwr) {
                     alert("Password Changed Successfully!");
                     return true;
                 } else {
@@ -65,6 +65,9 @@
                 alert("Not Actual Password !");
                 return false;
             }
+            
+
+        }
     </script>
 
 </body>
