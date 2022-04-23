@@ -66,7 +66,7 @@ if (isset($_GET['submit']))
                 </div>
                 <div class="input-group input-group-icon">
                     <input type="text" placeholder="Middle Name" name="minit"   />
-                    <div class="input-icon"><i class="fa fa-user"></i><span style="color:red;">*</span></div>
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-group input-group-icon">
                     <input type="text" placeholder="Last Name" name="lname"  required />
