@@ -48,13 +48,13 @@
     </div>
     <script>
         function Validate() {
-            var actual =  "<?php echo"$pass"?>";
+            actual = '<?php echo $pass ;?>';
             var pw = document.getElementById("pw").value;
             var npw = document.getElementById("npw").value;
             var npwr = document.getElementById("npwr").value;
 
             if(actual== pw) {
-                if(npw == npwe) {
+                if(npw == npwr) {
                     alert("Password Changed Successfully!");
                     return true;
                 } else {
@@ -65,6 +65,9 @@
                 alert("Not Actual Password !");
                 return false;
             }
+            
+
+        }
     </script>
 
 </body>
