@@ -77,6 +77,7 @@
         <th>prescription ID</th>
         <th>Doc ID</th>
         <th>Patient ID</th>
+        <th>Date</th>
         <th>Description </th>
         <th>Patient Allergy </th>
         <th>buttons </th>
@@ -91,6 +92,7 @@
                         <td>".$result['Per_ID']."</td>
                         <td>".$result['Doc_ID']."</td>
                         <td>".$result['Pat_ID']."</td>
+                        <td>".$result['Pat_Date']."</td>
                         <td>".$result['Per_Desc']."</td>
                         <td>".$result['Pat_Allergy']."</td>
                         <td>
