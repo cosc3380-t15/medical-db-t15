@@ -19,6 +19,7 @@
 
 <head>
     <link rel="stylesheet" href="styles/card.css">
+    <link rel="stylesheet" href="/index/styles/form.css"> 
 </head>
 
 <body>
