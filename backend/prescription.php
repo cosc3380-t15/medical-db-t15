@@ -102,7 +102,7 @@ if (isset($_SESSION['status'])) {
                         </select>
                     </div>
                 </div>
-                <input class="btn" type="submit" name="update_patient_data">
+                <input class="button" type="submit" name="update_patient_data">
     </div>
 
 
