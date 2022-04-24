@@ -63,26 +63,30 @@ if (isset($_SESSION['status'])) {
                         <div class="input-icon"><span style="color:green;">&#10003;</span></div>
                     </div>
                 </div>
+
+
                 <div class="row">
                     <div class="input-group">
-                        <div class="col-half">
+                        <div class="col-half input-group-icon">
                             <h4>Patient Weight</h4>
-                            <input type="text" placeholder="Weight" name="weight" value="<?php echo $row['Pat_Weight']."
-                                kg";?>" readonly/>
+                            <input type="text" name="weight" value="<?php echo $row['Pat_Weight']."kg";?>" readonly/>
                             <span class="input-unit">kg</span>
                         </div>
-                        <div class="col-half">
+                        <div class="col-half input-group-icon">
                             <h4>Patient Height</h4>
-                            <input type="text" placeholder="Height" name="height" value="<?php echo $row['Pat_Height']."
-                                cm"; ?>"readonly/>
+                            <input type="text" name="height" value="<?php echo $row['Pat_Height']."cm"; ?>"readonly/>
+                            <span class="input-unit">kg</span>
                         </div>
                     </div>
                 </div>
 
+
+
+
                 <div class="row">
                     <div class="input-group input-group-icon">
                         <div class="col-half">
-                            <h4 style="float: left; ">Date &#160</h4> 
+                            <h4 style="float: left; ">Date &#160</h4>
                             <h4 style="color: red;">*</h4>
                         </div>
                         <div class="input-group input-group-icon col-half">
