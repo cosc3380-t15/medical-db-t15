@@ -41,7 +41,7 @@
         <th>Prescription</th>
         <th>Status</th>
         <th>Date</th>
-
+        <th>Operation</th>
     </tr>
     <?php 
         $num=mysqli_num_rows($query);
