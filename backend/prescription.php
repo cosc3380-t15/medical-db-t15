@@ -53,7 +53,7 @@ if (isset($_SESSION['status'])) {
                     </div>
                     <h4>Patient Name</h4>
                     <div class="input-group input-group-icon col-half">
-                        <input type="text" placeholder="First Name" name="fname" 
+                        <input type="text" placeholder="First Name" name="fname"
                             value="<?php echo $row['Pat_First']; ?>" readonly />
                         <div class="input-icon"><span style="color:green;">&#10003;</span></div>
                     </div>
@@ -79,30 +79,35 @@ if (isset($_SESSION['status'])) {
                     </div>
                 </div>
 
-                <div class="input-group input-group-icon">
-                    <div class="col-half">
-                        <h4>Date</h4><h4 style="color: red;">*</h4>
-                    </div>
-                    <div class="input-group input-group-icon col-half">
-                        <input type="date" name="date" required />
-                        <div class="input-icon"><span style="color:red;">*</span></div>
-                    </div>
-                </div>
                 <div class="row">
-                    <div class="input-group">
-                        <h4 class="col-half">Prescribe:</h4>
-                        <select class="float-right" name="prescription" id="allergies">
-                            <option value="N/A">N/A</option>
-                            <option value="Amoxicillin">Amoxicillin</option>
-                            <option value="Aspirin">Aspirin</option>
-                            <option value="Insulin">Insulin</option>
-                            <option value="Carbamazepine">Carbamazepine</option>
-                            <option value="Ibuprofen">Ibuprofen</option>
-                        </select>
+                    <div class="input-group input-group-icon">
+                        <div class="col-half">
+                            <h4 style="float: left; ">Date &#160</h4> 
+                            <h4 style="color: red;">*</h4>
+                        </div>
+                        <div class="input-group input-group-icon col-half">
+                            <input type="date" name="date" required />
+                            <div class="input-icon"><span style="color:red;">*</span></div>
+                        </div>
                     </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <h4 class="col-half">Prescribe:<span style="color: red;">*</span></h4>
+                            <select class="float-right" name="prescription" id="allergies">
+                                <option value="N/A">N/A</option>
+                                <option value="Amoxicillin">Amoxicillin</option>
+                                <option value="Aspirin">Aspirin</option>
+                                <option value="Insulin">Insulin</option>
+                                <option value="Carbamazepine">Carbamazepine</option>
+                                <option value="Ibuprofen">Ibuprofen</option>
+                            </select>
+                        </div>
+                    </div>
+                    <input class="button" type="submit" name="update_patient_data">
                 </div>
-                <input class="button" type="submit" name="update_patient_data">
-    </div>
+
+
 
 </body>
 
