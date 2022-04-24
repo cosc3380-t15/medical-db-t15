@@ -41,7 +41,6 @@
         <th>Prescription</th>
         <th>Status</th>
         <th>Date</th>
-        <th>Operation</th>
     </tr>
     <?php 
         $num=mysqli_num_rows($query);
@@ -58,7 +57,6 @@
                             <a href='/backend/prescription_edit.php?Per_ID=".$result['Per_ID']."'class='btn'>Edit</a>
                             <a href='/backend/show_prescriptions.php?Per_ID=".$result['Per_ID']."'class='btn'>Delete</a>
                         </td>
-            
                     </tr>
                 
                 ";
