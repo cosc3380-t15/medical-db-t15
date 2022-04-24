@@ -28,7 +28,7 @@ $row= mysqli_fetch_array($result);
 </head>
 
 <body>
-<?php
+    <?php
 if (isset($_SESSION['status'])) {
     echo "<h4>".$_SESSION['status']."</h4>";
     unset($_SESSION['status']);
@@ -36,78 +36,80 @@ if (isset($_SESSION['status'])) {
 ?>
     <div class="container-form11">
         <form action="/backend/create_prescription.php" method="post" onsubmit="return Validate();">
-        <a href="../index/doc_profile.php">&#8592; Back<a></a>    
-        <div class="row">
-                <h4 style="color: var(--accent)">Perscribe Medicine</h4>
-                <h4>Doctor ID</h4>
-                <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i" value="<?php echo $_SESSION['id']; ?>" required readonly/>
-                    <div class="input-icon"><span style="color:green;">&#10003;</span></div>
-                </div>
-                <h4>Patient ID</h4>
-                <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Patient ID" name="pat_id" id="pat-i" value="<?php echo $row['Pat_ID']; ?>" required readonly/>
-                    <div class="input-icon"><span style="color:green;">&#10003;</span></div>
-                </div>
-                <h4>Patient Name</h4>
-                <div class="input-group input-group-icon col-half">               
-                    <input type="text" placeholder="First Name" name="fname"  value="<?php echo $row['Pat_First']; ?>" readonly/>
-                    <div class="input-icon"><span style="color:green;">&#10003;</span></div>
-                </div>
-                <div class="input-group input-group-icon col-half">
-                    <input type="text" placeholder="Last Name" name="lname"  value="<?php echo $row['Pat_Last']; ?>" readonly/>
-                    <div class="input-icon"><span style="color:green;">&#10003;</span></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-group">
-                    <div class="col-half">
-                        <h4>Patient Weight</h4>
-                        <input type="text" placeholder="Weight" name="weight"  value="<?php echo $row['Pat_Weight']." kg";?>" readonly/>
-                        <span class="input-unit">kg</span>
+            <a href="../index/doc_profile.php">&#8592; Back<a></a>
+                <div class="row">
+                    <h4 style="color: var(--accent)">Perscribe Medicine</h4>
+                    <h4>Doctor ID</h4>
+                    <div class="input-group input-group-icon">
+                        <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i"
+                            value="<?php echo $_SESSION['id']; ?>" required readonly />
+                        <div class="input-icon"><span style="color:green;">&#10003;</span></div>
                     </div>
-                    <div class="col-half">
-                        <h4>Patient Height</h4>
-                        <input type="text" placeholder="Height" name="height"  value="<?php echo $row['Pat_Height']." cm"; ?>"readonly/>
+                    <h4>Patient ID</h4>
+                    <div class="input-group input-group-icon">
+                        <input type="text" placeholder="Patient ID" name="pat_id" id="pat-i"
+                            value="<?php echo $row['Pat_ID']; ?>" required readonly />
+                        <div class="input-icon"><span style="color:green;">&#10003;</span></div>
+                    </div>
+                    <h4>Patient Name</h4>
+                    <div class="input-group input-group-icon col-half">
+                        <input type="text" placeholder="First Name" name="fname" 
+                            value="<?php echo $row['Pat_First']; ?>" readonly />
+                        <div class="input-icon"><span style="color:green;">&#10003;</span></div>
+                    </div>
+                    <div class="input-group input-group-icon col-half">
+                        <input type="text" placeholder="Last Name" name="lname" value="<?php echo $row['Pat_Last']; ?>"
+                            readonly />
+                        <div class="input-icon"><span style="color:green;">&#10003;</span></div>
                     </div>
                 </div>
-            </div>
-            </div>
-            <div class="input-group input-group-icon">
-                <div class="col-half">
-                    <h4 style="float: left;">Date &#160<h4 style="color: red;">*</h4></h4>
-                </div>        
-                <div class="input-group input-group-icon col-half">
-                    <input type="date" name="date" required />
-                    <div class="input-icon"><span style="color:red;">*</span></div>
+                <div class="row">
+                    <div class="input-group">
+                        <div class="col-half">
+                            <h4>Patient Weight</h4>
+                            <input type="text" placeholder="Weight" name="weight" value="<?php echo $row['Pat_Weight']."
+                                kg";?>" readonly/>
+                            <span class="input-unit">kg</span>
+                        </div>
+                        <div class="col-half">
+                            <h4>Patient Height</h4>
+                            <input type="text" placeholder="Height" name="height" value="<?php echo $row['Pat_Height']."
+                                cm"; ?>"readonly/>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-group">
-                    <h4 class="col-half">Prescribe:</h4>
-                    <select class="float-right" name="prescription" id="allergies" >
-                        <option value="N/A">N/A</option>
-                        <option value="Amoxicillin">Amoxicillin</option>
-                        <option value="Aspirin">Aspirin</option>
-                        <option value="Insulin">Insulin</option>
-                        <option value="Carbamazepine">Carbamazepine</option>
-                        <option value="Ibuprofen">Ibuprofen</option>
-                    </select>
+
+                <div class="input-group input-group-icon">
+                    <div class="col-half">
+                        <h4 style="float: left;">Date &#160<h4 style="color: red;">*</h4>
+                        </h4>
+                    </div>
+                    <div class="input-group input-group-icon col-half">
+                        <input type="date" name="date" required />
+                        <div class="input-icon"><span style="color:red;">*</span></div>
+                    </div>
                 </div>
-            </div>
-            <input class="button" type="submit" name="update_patient_data">
-        </form>
-        <div>
-            <form>
-            <div class="row input-group">
-                <input class="button2" type="button" value="BACK" onclick="history.back()">            
-                <input class="button2" type="button" onclick="location.href='/index/OA_profile.php?'" value="Profile" />
-                <input class="button2" type="button" onclick="location.href='/index/home.php?'" value="Home" />
-            </div>
-            </form>
-        </div>
+                <div class="row">
+                    <div class="input-group">
+                        <h4 class="col-half">Prescribe:</h4>
+                        <select class="float-right" name="prescription" id="allergies">
+                            <option value="N/A">N/A</option>
+                            <option value="Amoxicillin">Amoxicillin</option>
+                            <option value="Aspirin">Aspirin</option>
+                            <option value="Insulin">Insulin</option>
+                            <option value="Carbamazepine">Carbamazepine</option>
+                            <option value="Ibuprofen">Ibuprofen</option>
+                        </select>
+                    </div>
+                </div>
+                <input class="btn" type="submit" name="update_patient_data">
     </div>
-  
+
+
+
+
+
+
 
 
 
