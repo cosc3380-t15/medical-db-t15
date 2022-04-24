@@ -38,7 +38,7 @@ if (isset($_SESSION['status'])) {
         <form action="/backend/create_prescription.php" method="post" onsubmit="return Validate();">
             <a href="../index/doc_profile.php">&#8592; Back<a></a>
                 <div class="row">
-                    <h4 style="color: var(--accent)">Perscribe Medicine</h4>
+                    <h4>Perscribe Medicine</h4>
                     <h4>Doctor ID</h4>
                     <div class="input-group input-group-icon">
                         <input type="text" placeholder="Doctor ID" name="doc_id" id="pat-i"
