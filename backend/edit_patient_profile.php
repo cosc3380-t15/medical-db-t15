@@ -140,7 +140,7 @@ if (isset($_SESSION['status'])) {
                     </div>
                 </div>
             </div>
-            <input class="button" type="submit" name="update_patient_data">
+            <input class="button2" type="submit" name="update_patient_data">
         </form>
         
     </div>
