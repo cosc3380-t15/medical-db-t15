@@ -81,8 +81,7 @@ if (isset($_SESSION['status'])) {
 
                 <div class="input-group input-group-icon">
                     <div class="col-half">
-                        <h4 style="float: left; ">Date &#160</h4><h4 style="color: red;">*</h4>
-                        
+                        <h4>Date</h4><h4 style="color: red;">*</h4>
                     </div>
                     <div class="input-group input-group-icon col-half">
                         <input type="date" name="date" required />
@@ -104,15 +103,6 @@ if (isset($_SESSION['status'])) {
                 </div>
                 <input class="button" type="submit" name="update_patient_data">
     </div>
-
-
-
-
-
-
-
-
-
 
 </body>
 
