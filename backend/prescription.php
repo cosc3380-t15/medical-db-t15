@@ -69,14 +69,14 @@ if (isset($_SESSION['status'])) {
                 <h4>Patient Weight/Height</h4>
                     <div class="input-group">
                         <div class="col-half input-group-icon">
-                            <input type="text" name="weight" value="<?php echo $row['Pat_Weight'].;?>" readonly/>
+                            <input type="text" name="weight" value="<?php echo $row['Pat_Weight']." ";?>" readonly/>
                             <div class="input-icon"><span style="color:green;">&#10003;</span></div>
-                            <span class="input-unit">kg</span>
+                            <span class="input-unit" style="top: none;">kg</span>
                         </div>
                         <div class="col-half input-group-icon">
-                            <input type="text" name="height" value="<?php echo $row['Pat_Height'].; ?>"readonly/>
+                            <input type="text" name="height" value="<?php echo $row['Pat_Height']." "; ?>"readonly/>
                             <div class="input-icon"><span style="color:green;">&#10003;</span></div>
-                            <span class="input-unit">cm</span>
+                            <span class="input-unit" style="top: none;">cm</span>
                         </div>
                     </div>
                 </div>
