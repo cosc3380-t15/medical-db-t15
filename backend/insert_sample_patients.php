@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "OA") { header("Location: login.php"); }
+if($_SESSION['loggedin'] != true  or $_SESSION['role'] != "OA") { header("Location: ../index/login.php"); }
 
 $dbhost = getenv("DBHOST");
 $dbuser = getenv("DBUSER");
