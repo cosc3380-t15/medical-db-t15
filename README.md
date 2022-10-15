@@ -1,6 +1,6 @@
 # medical-db-t15
 
-**Webapp location**: https://medical-db-team15.herokuapp.com/
+~~**Webapp location**: https://medical-db-team15.herokuapp.com/~~ **Our hosting platform has disabled the free tier. We are working to enable local instances, but until then, the app will be unavailable**
 
 Deployed using Heroku, MySQL hosted on PC, and Github with html/css/js frontend and php backend (no frameworks).
 
